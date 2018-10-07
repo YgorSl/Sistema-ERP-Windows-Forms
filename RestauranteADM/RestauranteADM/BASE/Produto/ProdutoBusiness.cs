@@ -30,5 +30,11 @@ namespace RestauranteADM.BASE.Produto
             ProdutoDatabase db = new ProdutoDatabase();
             db.Alterar(dto);
         }
+        public List<ProdutoDTO> listar(int forn)
+        {
+            ProdutoDatabase db = new ProdutoDatabase();
+            List<ProdutoDTO> prod = db.listar(forn);
+            return prod;
+        }
     }
 }

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace RestauranteADM.TELAS
 {
-    public partial class Cadastro_de_estoque : Form
+    public partial class AlterarProduto : Form
     {
-        public Cadastro_de_estoque()
+        public AlterarProduto()
         {
             InitializeComponent();
             CarregarCombo();
@@ -27,6 +27,18 @@ namespace RestauranteADM.TELAS
 
             cboforn.DataSource = comp;
             cboforn.DisplayMember = "Name";
+            cboforn.ValueMember = "Id";
+        }
+
+        ProdutoDTO produt;
+
+        public void LoadScren(ProdutoDTO produt)
+        {
+            txtnome.Text = produt.Nome;
+            txtpre.Text = produt.Preço.ToString();
+
+            cboforn.SelectedValue = produt.Fornecedor.Id;
+
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -37,15 +49,15 @@ namespace RestauranteADM.TELAS
         {
             ProdutoDTO prod = new ProdutoDTO();
             prod.Nome = txtnome.Text;
-            prod.Quantidade = Convert.ToDecimal(txtqtd.Text);
+
             prod.Preço = Convert.ToDecimal(txtpre.Text);
 
             prod.Fornecedor = cboforn.SelectedItem as FornecedorDTO;
 
             ProdutoBusiness bus = new ProdutoBusiness();
-            bus.Salvar(prod);
+            bus.Alterar(prod);
 
-            MessageBox.Show("Produto Cadastrado com sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Produto Alterado com sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

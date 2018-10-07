@@ -78,6 +78,12 @@
     <Compile Include="BASE\Login\LoginBusiness.cs" />
     <Compile Include="BASE\Login\LoginDatabase.cs" />
     <Compile Include="BASE\Login\LoginDTO.cs" />
+    <Compile Include="BASE\Produto\CompraBusiness.cs" />
+    <Compile Include="BASE\Produto\CompraDatabase.cs" />
+    <Compile Include="BASE\Produto\CompraDTO.cs" />
+    <Compile Include="BASE\Produto\CompraItemBusiness.cs" />
+    <Compile Include="BASE\Produto\CompraItemDatabase.cs" />
+    <Compile Include="BASE\Produto\CompraItemDTO.cs" />
     <Compile Include="BASE\Produto\ProdutoBusiness.cs" />
     <Compile Include="BASE\Produto\ProdutoDatabase.cs" />
     <Compile Include="BASE\Produto\ProdutoDTO.cs" />
@@ -110,6 +116,12 @@
     <Compile Include="TELAS\Cadastro\Cadastro_de_fornecedor.Designer.cs">
       <DependentUpon>Cadastro_de_fornecedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Cadastro\AlterarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Cadastro\AlterarProduto.Designer.cs">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Cadastro\Cadastro_de_produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +140,18 @@
     <Compile Include="TELAS\Cadastro\Cadastro_Funcionario.Designer.cs">
       <DependentUpon>Cadastro_Funcionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Cadastro\Comprar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Cadastro\Comprar.Designer.cs">
+      <DependentUpon>Comprar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Cadastro\PedidoCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Cadastro\PedidoCompra.Designer.cs">
+      <DependentUpon>PedidoCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Consulta\alterarfuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +169,12 @@
     </Compile>
     <Compile Include="TELAS\Consulta\Consultar Fornecedor.Designer.cs">
       <DependentUpon>Consultar Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Consulta\ConsultarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Consulta\ConsultarPedido.Designer.cs">
+      <DependentUpon>ConsultarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Consulta\Consultar_Folha_de_Pagamento.cs">
       <SubType>Form</SubType>
@@ -221,6 +251,9 @@
     <EmbeddedResource Include="TELAS\Cadastro\Cadastro_de_fornecedor.resx">
       <DependentUpon>Cadastro_de_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Cadastro\AlterarProduto.resx">
+      <DependentUpon>AlterarProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro\Cadastro_de_produto.resx">
       <DependentUpon>Cadastro_de_produto.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +263,12 @@
     <EmbeddedResource Include="TELAS\Cadastro\Cadastro_Funcionario.resx">
       <DependentUpon>Cadastro_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Cadastro\Comprar.resx">
+      <DependentUpon>Comprar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Cadastro\PedidoCompra.resx">
+      <DependentUpon>PedidoCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\alterarfuncionario.resx">
       <DependentUpon>alterarfuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\Consultar Fornecedor.resx">
       <DependentUpon>Consultar Fornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Consulta\ConsultarPedido.resx">
+      <DependentUpon>ConsultarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\Consultar_Folha_de_Pagamento.resx">
       <DependentUpon>Consultar_Folha_de_Pagamento.cs</DependentUpon>

@@ -86,5 +86,33 @@ namespace RestauranteADM.BASE.Produto
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
+        public List<ProdutoDTO> listar(int Forn)
+        {
+            string script = @"select * from tb_compras_produto where id_fornecedor = @forn";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("forn", Forn));
+
+
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            List<ProdutoDTO> lista = new List<ProdutoDTO>();
+            while (reader.Read() == true)
+            {
+                ProdutoDTO prod = new ProdutoDTO();
+                prod.Id = reader.GetInt32("id_compras");
+                prod.Nome = reader.GetString("nm_produto");
+                prod.Preço = reader.GetDecimal("vl_valor");
+
+                prod.Fornecedor = new FornecedorDTO();
+                prod.Fornecedor.Id = reader.GetInt32("id_fornecedor");
+
+                lista.Add(prod);
+            }
+            return lista;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestauranteADM.BASE.Cliente;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,44 @@ namespace RestauranteADM.TELAS
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ClienteBusiness bunisess= new ClienteBusiness();
+            List<ClienteDTO> com = bunisess.filtro(txtcliente.Text, txtcpf.Text);
+
+            dgvcliente.DataSource = com;
+        }
+
+        private void dgvcliente_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 9)
+            {
+                ClienteDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
+                AlterarFornecedor frm = new AlterarFornecedor();
+                frm.ShowDialog();
+
+            }
+            if (e.ColumnIndex == 10)
+            {
+                DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (r == DialogResult.Yes)
+                {
+                    ClienteDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
+
+                    ClienteDatabase bus = new ClienteDatabase();
+                    bus.Remover(forn.Id);
+
+                    MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+            
+
+        private void Consultar_cliente_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

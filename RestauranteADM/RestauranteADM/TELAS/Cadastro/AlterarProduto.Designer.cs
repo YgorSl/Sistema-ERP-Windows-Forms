@@ -29,32 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AlterarProduto));
-            this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
-            this.txtqtd = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
             this.txtpre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cboforn = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(140, 167);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 16);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Quantidade";
             // 
             // label1
             // 
@@ -86,22 +73,53 @@
             this.txtnome.Size = new System.Drawing.Size(204, 20);
             this.txtnome.TabIndex = 11;
             // 
-            // txtqtd
-            // 
-            this.txtqtd.Location = new System.Drawing.Point(75, 186);
-            this.txtqtd.Name = "txtqtd";
-            this.txtqtd.Size = new System.Drawing.Size(204, 20);
-            this.txtqtd.TabIndex = 13;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(204, 277);
+            this.button1.Location = new System.Drawing.Point(204, 221);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 14;
             this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.Yellow;
+            this.label36.Location = new System.Drawing.Point(70, 9);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(188, 30);
+            this.label36.TabIndex = 47;
+            this.label36.Text = "Cadastro produto";
+            // 
+            // txtpre
+            // 
+            this.txtpre.Location = new System.Drawing.Point(75, 187);
+            this.txtpre.Name = "txtpre";
+            this.txtpre.Size = new System.Drawing.Size(204, 20);
+            this.txtpre.TabIndex = 49;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(163, 166);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "Preço";
+            // 
+            // cboforn
+            // 
+            this.cboforn.FormattingEnabled = true;
+            this.cboforn.Location = new System.Drawing.Point(75, 126);
+            this.cboforn.Name = "cboforn";
+            this.cboforn.Size = new System.Drawing.Size(204, 21);
+            this.cboforn.TabIndex = 50;
             // 
             // pictureBox2
             // 
@@ -129,51 +147,13 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Yellow;
-            this.label36.Location = new System.Drawing.Point(70, 9);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(188, 30);
-            this.label36.TabIndex = 47;
-            this.label36.Text = "Cadastro produto";
-            // 
-            // txtpre
-            // 
-            this.txtpre.Location = new System.Drawing.Point(75, 243);
-            this.txtpre.Name = "txtpre";
-            this.txtpre.Size = new System.Drawing.Size(204, 20);
-            this.txtpre.TabIndex = 49;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(163, 222);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
-            this.label3.TabIndex = 48;
-            this.label3.Text = "Preço";
-            // 
-            // cboforn
-            // 
-            this.cboforn.FormattingEnabled = true;
-            this.cboforn.Location = new System.Drawing.Point(75, 126);
-            this.cboforn.Name = "cboforn";
-            this.cboforn.Size = new System.Drawing.Size(204, 21);
-            this.cboforn.TabIndex = 50;
-            // 
             // AlterarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(362, 312);
+            this.ClientSize = new System.Drawing.Size(362, 268);
             this.ControlBox = false;
             this.Controls.Add(this.cboforn);
             this.Controls.Add(this.txtpre);
@@ -182,11 +162,9 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtqtd);
             this.Controls.Add(this.txtnome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AlterarProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -199,11 +177,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnome;
-        private System.Windows.Forms.TextBox txtqtd;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;

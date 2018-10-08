@@ -26,7 +26,7 @@ namespace RestauranteADM.TELAS
             List<FornecedorDTO> comp = bus.Listar();
 
             cboforn.DataSource = comp;
-            cboforn.DisplayMember = "Name";
+            cboforn.DisplayMember = "Nome";
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -37,7 +37,6 @@ namespace RestauranteADM.TELAS
         {
             ProdutoDTO prod = new ProdutoDTO();
             prod.Nome = txtnome.Text;
-            prod.Quantidade = Convert.ToDecimal(txtqtd.Text);
             prod.Preço = Convert.ToDecimal(txtpre.Text);
 
             prod.Fornecedor = cboforn.SelectedItem as FornecedorDTO;
@@ -56,6 +55,11 @@ namespace RestauranteADM.TELAS
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cboforn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

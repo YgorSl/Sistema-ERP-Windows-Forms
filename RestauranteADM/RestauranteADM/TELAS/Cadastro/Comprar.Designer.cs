@@ -30,14 +30,14 @@
         {
             this.cboforn = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nupt = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblt = new System.Windows.Forms.Label();
             this.lblp = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupt)).BeginInit();
             this.SuspendLayout();
             // 
             // cboforn
@@ -60,13 +60,13 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Produto";
             // 
-            // numericUpDown1
+            // nupt
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(99, 162);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(204, 20);
-            this.numericUpDown1.TabIndex = 55;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.nupt.Location = new System.Drawing.Point(99, 162);
+            this.nupt.Name = "nupt";
+            this.nupt.Size = new System.Drawing.Size(204, 20);
+            this.nupt.TabIndex = 55;
+            this.nupt.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label2
             // 
@@ -145,12 +145,12 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nupt);
             this.Controls.Add(this.cboforn);
             this.Controls.Add(this.label1);
             this.Name = "Comprar";
             this.Text = "Compra";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nupt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,7 +160,7 @@
 
         private System.Windows.Forms.ComboBox cboforn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nupt;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;

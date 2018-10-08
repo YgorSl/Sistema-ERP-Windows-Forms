@@ -20,7 +20,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new splash());
+            Application.Run(new Cadastro_de_estoque());
         }
     }
 }

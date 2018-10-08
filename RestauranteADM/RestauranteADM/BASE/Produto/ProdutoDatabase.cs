@@ -13,12 +13,12 @@ namespace RestauranteADM.BASE.Produto
     {
         public void Salvar(ProdutoDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_compras_produto` (nm_produto, vl_valor, ds_quantidade, id_fornecedor) 
-                            VALUES (@nm_produto, @vl_valor, @ds_quantidade, @id_fornecedor)";
+            string script = @"INSERT INTO `mydb`.`tb_compras_produto` (nm_produto, vl_valor,  id_fornecedor) 
+                            VALUES (@nm_produto, @vl_valor,  @id_fornecedor)";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_produto", dto.Nome));
             parms.Add(new MySqlParameter("vl_valor", dto.Preço));
-            parms.Add(new MySqlParameter("ds_quantidade", dto.Quantidade));
+            
             parms.Add(new MySqlParameter("id_fornecedor", dto.Fornecedor.Id));
             
 
@@ -48,7 +48,7 @@ namespace RestauranteADM.BASE.Produto
                 prod.Id = reader.GetInt32("id_compras");
                 prod.Nome = reader.GetString("nm_produto");
                 prod.Preço = reader.GetDecimal("vl_valor");
-                prod.Quantidade = reader.GetDecimal("ds_quantidade");
+          
                 prod.Fornecedor = new FornecedorDTO(); 
                 prod.Fornecedor.Id = reader.GetInt32("id_fornecedor");
 
@@ -71,13 +71,13 @@ namespace RestauranteADM.BASE.Produto
         }
         public void Alterar(ProdutoDTO dto)
         {
-            string script = @" UPDATE  `mydb`.`tb_compras_produto` SET nm_produto = @nm_produto, vl_valor = @vl_valor, ds_quantidade = @ds_quantidade, id_fornecedor = @id_fornecedor WHERE id_compras = @id_compras 
+            string script = @" UPDATE  `mydb`.`tb_compras_produto` SET nm_produto = @nm_produto, vl_valor = @vl_valor,  id_fornecedor = @id_fornecedor WHERE id_compras = @id_compras 
                             ";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_compras", dto.Id));
             parms.Add(new MySqlParameter("nm_produto", dto.Nome));
             parms.Add(new MySqlParameter("vl_valor", dto.Preço));
-            parms.Add(new MySqlParameter("ds_quantidade", dto.Quantidade));
+ 
             parms.Add(new MySqlParameter("id_fornecedor", dto.Fornecedor.Id));
 
 

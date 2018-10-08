@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using RestauranteADM.BASE.Fornecedor;
 using RestauranteADM.DB;
 using System;
 using System.Collections.Generic;

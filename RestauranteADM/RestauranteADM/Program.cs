@@ -1,4 +1,5 @@
 ﻿using RestauranteADM.TELAS;
+using RestauranteADM.TELAS.Alterar;
 using RestauranteADM.TELAS.Consulta;
 using RestauranteADM.TELAS.RH;
 using System;

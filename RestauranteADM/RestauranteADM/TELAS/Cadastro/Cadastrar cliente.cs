@@ -140,7 +140,17 @@ namespace RestauranteADM.TELAS
             dto.Cep = txtcep.Text;
             dto.Bairro = txtbairro.Text;
             dto.NumeroCasa = txtnumcasa.Text;
-        
+
+            if (txtfisica.Checked==true )
+            {
+                dto.Tipopessoa="PF";
+            }
+            else if(txtjuridica.Checked ==true)
+            {
+                dto.Tipopessoa = "PJ";
+
+            }
+
             dto.Cnpj = txtcnpj.Text;
             dto.anotaçao_cliente = rtvanotaçoes.Text;
 

@@ -40,6 +40,7 @@ namespace RestauranteADM.BASE.Cliente
             string script = @"UPDATE tb_cliente SET nm_nome=@nm_nome ,ds_cpf=@ds_cpf, ds_telefone=@ds_telefone, ds_cep=@ds_cep, ds_bairro=@ds_bairro,ds_numero_casa=@ds_numero_casa, ds_tipo_pessoa=@ds_tipo_pessoa, ds_cnpj=@ds_cnpj, ds_anotaçao_cliente=@ds_anotaçao_cliente, ds_data_hoje=@ds_data_hoje   where id_cliente=@id_cliente";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_cliente", dto.Id));
             parms.Add(new MySqlParameter("nm_nome", dto.Nome));
             parms.Add(new MySqlParameter("ds_cpf", dto.Cpf));
             parms.Add(new MySqlParameter("ds_telefone", dto.Telefone));
@@ -92,7 +93,9 @@ namespace RestauranteADM.BASE.Cliente
                 dto.Cep = reader.GetString("ds_cep");
                 dto.Bairro = reader.GetString("ds_bairro");
                 dto.NumeroCasa = reader.GetString("ds_numero_casa");
-                
+
+ 
+                dto.Tipopessoa = reader.GetString("ds_tipo_pessoa");
                 dto.Cnpj = reader.GetString("ds_cnpj");
                 dto.anotaçao_cliente = reader.GetString("ds_anotaçao_cliente");
                 dto.data_hoje = reader.GetDateTime("ds_data_hoje");

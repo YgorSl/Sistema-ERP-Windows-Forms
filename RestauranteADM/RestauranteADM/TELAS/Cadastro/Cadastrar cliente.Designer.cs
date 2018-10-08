@@ -53,8 +53,8 @@
             this.dtphoje = new System.Windows.Forms.DateTimePicker();
             this.rtvanotaçoes = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbojuridica = new System.Windows.Forms.CheckBox();
-            this.cbofisica = new System.Windows.Forms.CheckBox();
+            this.txtjuridica = new System.Windows.Forms.RadioButton();
+            this.txtfisica = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -296,25 +296,27 @@
             this.label8.TabIndex = 77;
             this.label8.Text = "Nome";
             // 
-            // cbojuridica
+            // txtjuridica
             // 
-            this.cbojuridica.AutoSize = true;
-            this.cbojuridica.Location = new System.Drawing.Point(463, 68);
-            this.cbojuridica.Name = "cbojuridica";
-            this.cbojuridica.Size = new System.Drawing.Size(59, 17);
-            this.cbojuridica.TabIndex = 78;
-            this.cbojuridica.Text = "juridica";
-            this.cbojuridica.UseVisualStyleBackColor = true;
+            this.txtjuridica.AutoSize = true;
+            this.txtjuridica.Location = new System.Drawing.Point(463, 81);
+            this.txtjuridica.Name = "txtjuridica";
+            this.txtjuridica.Size = new System.Drawing.Size(58, 17);
+            this.txtjuridica.TabIndex = 80;
+            this.txtjuridica.TabStop = true;
+            this.txtjuridica.Text = "juridica";
+            this.txtjuridica.UseVisualStyleBackColor = true;
             // 
-            // cbofisica
+            // txtfisica
             // 
-            this.cbofisica.AutoSize = true;
-            this.cbofisica.Location = new System.Drawing.Point(549, 68);
-            this.cbofisica.Name = "cbofisica";
-            this.cbofisica.Size = new System.Drawing.Size(56, 17);
-            this.cbofisica.TabIndex = 79;
-            this.cbofisica.Text = "dfisica";
-            this.cbofisica.UseVisualStyleBackColor = true;
+            this.txtfisica.AutoSize = true;
+            this.txtfisica.Location = new System.Drawing.Point(566, 81);
+            this.txtfisica.Name = "txtfisica";
+            this.txtfisica.Size = new System.Drawing.Size(49, 17);
+            this.txtfisica.TabIndex = 81;
+            this.txtfisica.TabStop = true;
+            this.txtfisica.Text = "fisica";
+            this.txtfisica.UseVisualStyleBackColor = true;
             // 
             // Cadastrar_cliente
             // 
@@ -325,8 +327,8 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(865, 380);
             this.ControlBox = false;
-            this.Controls.Add(this.cbofisica);
-            this.Controls.Add(this.cbojuridica);
+            this.Controls.Add(this.txtfisica);
+            this.Controls.Add(this.txtjuridica);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.rtvanotaçoes);
             this.Controls.Add(this.dtphoje);
@@ -389,7 +391,7 @@
         private System.Windows.Forms.DateTimePicker dtphoje;
         private System.Windows.Forms.RichTextBox rtvanotaçoes;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox cbojuridica;
-        private System.Windows.Forms.CheckBox cbofisica;
+        private System.Windows.Forms.RadioButton txtjuridica;
+        private System.Windows.Forms.RadioButton txtfisica;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultar_cliente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.a = new System.Windows.Forms.Label();
             this.txtcliente = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -37,6 +37,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,10 +48,9 @@
             this.Tipo_Pessoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Data_Cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anotaçao_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -122,6 +123,7 @@
             // 
             // dgvcliente
             // 
+            this.dgvcliente.AllowUserToAddRows = false;
             this.dgvcliente.AllowUserToDeleteRows = false;
             this.dgvcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -135,22 +137,41 @@
             this.Tipo_Pessoa,
             this.Cnpj,
             this.Data_Cadastro,
+            this.anotaçao_cliente,
             this.Column2,
             this.Column1});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvcliente.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcliente.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvcliente.Location = new System.Drawing.Point(-1, 147);
             this.dgvcliente.Name = "dgvcliente";
             this.dgvcliente.ReadOnly = true;
             this.dgvcliente.Size = new System.Drawing.Size(697, 269);
             this.dgvcliente.TabIndex = 48;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(112, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 16);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "cpf";
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Location = new System.Drawing.Point(161, 89);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(380, 20);
+            this.txtcpf.TabIndex = 50;
             // 
             // Nome
             // 
@@ -221,6 +242,13 @@
             this.Data_Cadastro.Name = "Data_Cadastro";
             this.Data_Cadastro.ReadOnly = true;
             // 
+            // anotaçao_cliente
+            // 
+            this.anotaçao_cliente.DataPropertyName = "anotaçao_cliente";
+            this.anotaçao_cliente.HeaderText = "anotaçao_cliente";
+            this.anotaçao_cliente.Name = "anotaçao_cliente";
+            this.anotaçao_cliente.ReadOnly = true;
+            // 
             // Column2
             // 
             this.Column2.FillWeight = 300F;
@@ -241,24 +269,6 @@
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column1.Width = 50;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 16);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "cpf";
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(161, 89);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(380, 20);
-            this.txtcpf.TabIndex = 50;
             // 
             // Consultar_cliente
             // 
@@ -299,6 +309,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridView dgvcliente;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtcpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rg;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
@@ -308,9 +320,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Pessoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cnpj;
         private System.Windows.Forms.DataGridViewTextBoxColumn Data_Cadastro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anotaçao_cliente;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtcpf;
     }
 }

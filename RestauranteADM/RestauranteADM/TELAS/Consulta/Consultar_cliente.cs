@@ -1,4 +1,5 @@
 ﻿using RestauranteADM.BASE.Cliente;
+using RestauranteADM.TELAS.Alterar;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace RestauranteADM.TELAS
         public Consultar_cliente()
         {
             InitializeComponent();
+
+            dgvcliente.AutoGenerateColumns = false;
         }
 
         private void dgvcliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -43,14 +46,16 @@ namespace RestauranteADM.TELAS
 
         private void dgvcliente_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 9)
+            if (e.ColumnIndex == 10)
             {
                 ClienteDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
-                AlterarFornecedor frm = new AlterarFornecedor();
-                frm.ShowDialog();
+                alterarcliente frm = new alterarcliente();
+                frm.Loadscreen(comp);
+                frm.Show();
+                this.Hide();
 
             }
-            if (e.ColumnIndex == 10)
+            if (e.ColumnIndex == 11)
             {
                 DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (r == DialogResult.Yes)

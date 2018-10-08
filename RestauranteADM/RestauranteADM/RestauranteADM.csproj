@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -92,6 +92,12 @@
     <Compile Include="BASE\Usuario\UsuarioDTO.cs" />
     <Compile Include="DB\Connection.cs" />
     <Compile Include="DB\Database.cs" />
+    <Compile Include="TELAS\Alterar\alterarcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Alterar\alterarcliente.Designer.cs">
+      <DependentUpon>alterarcliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Cadastro\Cadastrar cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,10 +110,10 @@
     <Compile Include="TELAS\Cadastro\Cadastro ] de Cardapio.Designer.cs">
       <DependentUpon>Cadastro ] de Cardapio.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro\AlterarFornecedor.cs">
+    <Compile Include="TELAS\Alterar\AlterarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro\AlterarFornecedor.Designer.cs">
+    <Compile Include="TELAS\Alterar\AlterarFornecedor.Designer.cs">
       <DependentUpon>AlterarFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Cadastro\Cadastro_de_fornecedor.cs">
@@ -116,10 +122,10 @@
     <Compile Include="TELAS\Cadastro\Cadastro_de_fornecedor.Designer.cs">
       <DependentUpon>Cadastro_de_fornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro\AlterarProduto.cs">
+    <Compile Include="TELAS\Alterar\AlterarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro\AlterarProduto.Designer.cs">
+    <Compile Include="TELAS\Alterar\AlterarProduto.Designer.cs">
       <DependentUpon>AlterarProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Cadastro\Cadastro_de_produto.cs">
@@ -152,10 +158,10 @@
     <Compile Include="TELAS\Cadastro\PedidoCompra.Designer.cs">
       <DependentUpon>PedidoCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Consulta\alterarfuncionario.cs">
+    <Compile Include="TELAS\Alterar\alterarfuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Consulta\alterarfuncionario.Designer.cs">
+    <Compile Include="TELAS\Alterar\alterarfuncionario.Designer.cs">
       <DependentUpon>alterarfuncionario.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Consulta\Consultar Cardapio.cs">
@@ -239,19 +245,22 @@
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Validacao.cs" />
+    <EmbeddedResource Include="TELAS\Alterar\alterarcliente.resx">
+      <DependentUpon>alterarcliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro\Cadastrar cliente.resx">
       <DependentUpon>Cadastrar cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro\Cadastro ] de Cardapio.resx">
       <DependentUpon>Cadastro ] de Cardapio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro\AlterarFornecedor.resx">
+    <EmbeddedResource Include="TELAS\Alterar\AlterarFornecedor.resx">
       <DependentUpon>AlterarFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro\Cadastro_de_fornecedor.resx">
       <DependentUpon>Cadastro_de_fornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro\AlterarProduto.resx">
+    <EmbeddedResource Include="TELAS\Alterar\AlterarProduto.resx">
       <DependentUpon>AlterarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro\Cadastro_de_produto.resx">
@@ -269,7 +278,7 @@
     <EmbeddedResource Include="TELAS\Cadastro\PedidoCompra.resx">
       <DependentUpon>PedidoCompra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Consulta\alterarfuncionario.resx">
+    <EmbeddedResource Include="TELAS\Alterar\alterarfuncionario.resx">
       <DependentUpon>alterarfuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\Consultar Cardapio.resx">
@@ -334,9 +343,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="TELAS\Alterar\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\cccc.jpg" />
   </ItemGroup>

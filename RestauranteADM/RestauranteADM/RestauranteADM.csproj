@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -212,6 +212,18 @@
     <Compile Include="TELAS\Financeiro\Fluxo de Caixa.Designer.cs">
       <DependentUpon>Fluxo de Caixa.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\MENU\menu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\MENU\menu2.Designer.cs">
+      <DependentUpon>menu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\MENU\Menu_Cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\MENU\Menu_Cadastro.Designer.cs">
+      <DependentUpon>Menu_Cadastro.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -304,6 +316,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Financeiro\Fluxo de Caixa.resx">
       <DependentUpon>Fluxo de Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\MENU\menu2.resx">
+      <DependentUpon>menu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\MENU\Menu_Cadastro.resx">
+      <DependentUpon>Menu_Cadastro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\splash.resx">
       <DependentUpon>splash.cs</DependentUpon>

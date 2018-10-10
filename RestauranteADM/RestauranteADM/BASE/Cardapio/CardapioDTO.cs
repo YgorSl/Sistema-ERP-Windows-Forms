@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace RestauranteADM.BASE.Cardapio
 {
-    class CardapioDTO
+   public  class CardapioDTO
     {
         public int Id { get; set; }
-        public string Prato { get; set; }
+        public string nome_Prato { get; set; }
         public string Descrição { get; set; }
         public string Tamanho { get; set; }
         public double Valor { get; set; }

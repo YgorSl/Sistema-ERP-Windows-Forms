@@ -6,7 +6,32 @@ using System.Threading.Tasks;
 
 namespace RestauranteADM.BASE.Cardapio
 {
-    class CardapioBusiness
+    public class CardapioBusiness
     {
+        public int salvar(CardapioDTO dto)
+        {
+            CardapioDatabase salva = new CardapioDatabase();
+            int salv = salva.Salvar(dto);
+            return salv;
+        }
+        public void Remover(int id)
+        {
+            CardapioDatabase excluir = new CardapioDatabase();
+            excluir.Remover(id);
+            
+        }
+
+        public List<CardapioDTO> lista(string nome,double valor)
+        {
+            CardapioDatabase lista = new CardapioDatabase();
+            return lista.Consultar(nome,valor);
+
+        }
+        public void Alterar(CardapioDTO dto)
+        {
+            CardapioDatabase db = new CardapioDatabase();
+            db.Update(dto);
+        }
+
     }
 }

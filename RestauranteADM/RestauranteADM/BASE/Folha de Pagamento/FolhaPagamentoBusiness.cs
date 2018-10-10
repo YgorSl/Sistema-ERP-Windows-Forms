@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using RestauranteADM.BASE.Cardapio;
 using RestauranteADM.DB;
 using System;
 using System.Collections.Generic;
@@ -22,11 +23,14 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
             return db.Consultar(folha);
         }
 
-        public List<FolhaPagamentoDTO> Listar()
+        public  void Remover(int id)
         {
             FolhaPagamentoDatabase db = new FolhaPagamentoDatabase();
-            return db.Listar();
+             db.Remover(id);
         }
+
+       
+
 
     }
 }

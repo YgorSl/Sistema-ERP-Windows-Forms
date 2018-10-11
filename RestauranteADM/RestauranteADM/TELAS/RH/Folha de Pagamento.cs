@@ -351,6 +351,11 @@ namespace RestauranteADM.TELAS.RH
             Menuinicial oi = new Menuinicial();
             oi.Show();
         }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

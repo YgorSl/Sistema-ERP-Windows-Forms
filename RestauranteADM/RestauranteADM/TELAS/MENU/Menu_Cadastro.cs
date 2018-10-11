@@ -48,29 +48,35 @@ namespace RestauranteADM.TELAS._1._0._1
                 MenuVertical.Width = 200;
         }
 
-        private void btn1_Click(object sender, EventArgs e)
-        {
-            AbrirForminPanel(new menu2());
-        }
+        
+        
 
-        private void btn1_Click_1(object sender, EventArgs e)
+        
+        private void btn1_Click_2(object sender, EventArgs e)
         {
             AbrirForminPanel(new Cadastrar_cliente());
         }
 
-        private void btnentrar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            AbrirForminPanel(new Cadastro_de_fornecedor());
+        }
 
+        private void btnentrar_Click_1(object sender, EventArgs e)
+        {
+            menu2 menu = new menu2();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 

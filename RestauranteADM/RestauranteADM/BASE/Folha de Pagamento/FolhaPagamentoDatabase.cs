@@ -14,7 +14,7 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
 
         public int Salva(FolhaPagamentoDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_folha_de_pagamento` (id_funcionario, vl_VR, vl_DSR, vl_SalarioLiquido, ds_He, ds_VT, ds_INSS, ds_IRRF, ds_FGTS, ds_convenio, ds_cestabasica, desco_atraso, ds_faltas, ds_bonus,@nm_nome,@ds_cpf) 
+            string script = @"INSERT INTO `mydb`.`tb_folha_de_pagamento` (id_funcionario, vl_VR, vl_DSR, vl_SalarioLiquido, ds_He, ds_VT, ds_INSS, ds_IRRF, ds_FGTS, ds_convenio, ds_cestabasica, desco_atraso, ds_faltas, ds_bonus,nm_nome,ds_cpf) 
                                                                   VALUES (@id_funcionario,@vl_VR,@vl_DSR,@vl_SalarioLiquido,@ds_He,@ds_VT,@ds_INSS,@ds_IRRF,@ds_FGTS,@ds_convenio,@ds_cestabasica,@desco_atraso,@ds_faltas,@ds_bonus,@nm_nome,@ds_cpf);";
 
 

@@ -208,6 +208,7 @@ namespace RestauranteADM.TELAS.RH
             lblID.Text = Convert.ToString(dto.Id);
             txtcpf.Text = dto.Cpf;
             txtnome.Text = dto.Nome;
+    
 
 
 
@@ -285,6 +286,7 @@ namespace RestauranteADM.TELAS.RH
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             try
             {
                 FolhaPagamentoDTO dto = new FolhaPagamentoDTO();
@@ -305,21 +307,22 @@ namespace RestauranteADM.TELAS.RH
                 dto.Bonus = Convert.ToDouble(lblsubBonus.Text);
                 dto.SalarioLiquido = Convert.ToDouble(lblTotal.Text);
                 dto.Nome = txtnome.Text;
-                dto.CPF = txtnome.Text;
+                dto.CPF = txtcpf.Text;
 
 
                 FolhaPagamentoBusiness ft = new FolhaPagamentoBusiness();
                 ft.salvar(dto);
 
                 MessageBox.Show("Folha de Pagamento foi salva com sucesso! :)");
+
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(" Ocorreu algum erro. Confira se todos os campos estão preenchidos corretamente e certifique-se de que não há valores nulos. Caso o problema persista entre em contato com o Administrador." + ex.Message,
-                    "Toc Toc Brasil",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                MessageBox.Show("Folha de Pagamento foi errada com sucesso! :)");
+
             }
+               
+           
         }
 
         private void lblSalarioBase_Click(object sender, EventArgs e)

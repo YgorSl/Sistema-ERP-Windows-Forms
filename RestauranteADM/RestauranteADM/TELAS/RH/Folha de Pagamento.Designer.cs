@@ -112,8 +112,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.txtnome = new System.Windows.Forms.Label();
             this.txtcpf = new System.Windows.Forms.Label();
+            this.txtnome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox10.SuspendLayout();
@@ -1000,17 +1000,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // txtnome
-            // 
-            this.txtnome.AutoSize = true;
-            this.txtnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtnome.ForeColor = System.Drawing.Color.Olive;
-            this.txtnome.Location = new System.Drawing.Point(221, 46);
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(42, 16);
-            this.txtnome.TabIndex = 89;
-            this.txtnome.Text = "nome";
-            // 
             // txtcpf
             // 
             this.txtcpf.AutoSize = true;
@@ -1021,6 +1010,17 @@
             this.txtcpf.Size = new System.Drawing.Size(26, 16);
             this.txtcpf.TabIndex = 90;
             this.txtcpf.Text = "cpf";
+            // 
+            // txtnome
+            // 
+            this.txtnome.AutoSize = true;
+            this.txtnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.ForeColor = System.Drawing.Color.Olive;
+            this.txtnome.Location = new System.Drawing.Point(221, 46);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(42, 16);
+            this.txtnome.TabIndex = 89;
+            this.txtnome.Text = "nome";
             // 
             // Folha_de_Pagamento
             // 
@@ -1166,7 +1166,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label lblAtraso;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label txtnome;
         private System.Windows.Forms.Label txtcpf;
+        private System.Windows.Forms.Label txtnome;
     }
 }

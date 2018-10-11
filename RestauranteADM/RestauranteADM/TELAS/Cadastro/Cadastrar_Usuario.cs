@@ -46,8 +46,8 @@ namespace RestauranteADM.TELAS
                 FuncionarioDTO dto = new FuncionarioDTO();
 
 
-                dto.Nome = txtcpf.Text;
-                dto.Cpf = txtrg.Text;
+                dto.Nome = txtnome.Text;
+                dto.Cpf = txtcpf.Text;
 
                 dto.Rg = txtrg.Text;
                 dto.Endereço = txtendereço.Text;

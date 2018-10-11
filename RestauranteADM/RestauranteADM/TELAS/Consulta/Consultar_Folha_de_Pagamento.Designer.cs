@@ -68,6 +68,7 @@
             // 
             // dgvcliente
             // 
+            this.dgvcliente.AllowUserToAddRows = false;
             this.dgvcliente.AllowUserToDeleteRows = false;
             this.dgvcliente.ColumnHeadersHeight = 40;
             this.dgvcliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

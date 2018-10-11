@@ -112,6 +112,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtnome = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox10.SuspendLayout();
@@ -919,7 +921,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.Yellow;
-            this.label36.Location = new System.Drawing.Point(268, 12);
+            this.label36.Location = new System.Drawing.Point(418, 12);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(215, 30);
             this.label36.TabIndex = 79;
@@ -998,6 +1000,28 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // txtnome
+            // 
+            this.txtnome.AutoSize = true;
+            this.txtnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.ForeColor = System.Drawing.Color.Olive;
+            this.txtnome.Location = new System.Drawing.Point(210, 47);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(42, 16);
+            this.txtnome.TabIndex = 89;
+            this.txtnome.Text = "nome";
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.AutoSize = true;
+            this.txtcpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcpf.ForeColor = System.Drawing.Color.Olive;
+            this.txtcpf.Location = new System.Drawing.Point(283, 46);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(26, 16);
+            this.txtcpf.TabIndex = 90;
+            this.txtcpf.Text = "cpf";
+            // 
             // Folha_de_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1005,6 +1029,8 @@
             this.BackgroundImage = global::RestauranteADM.Properties.Resources.ddd;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(776, 660);
+            this.Controls.Add(this.txtcpf);
+            this.Controls.Add(this.txtnome);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.comboBox1);
@@ -1140,5 +1166,7 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label lblAtraso;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label txtnome;
+        private System.Windows.Forms.Label txtcpf;
     }
 }

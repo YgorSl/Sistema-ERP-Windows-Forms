@@ -203,9 +203,13 @@ namespace RestauranteADM.TELAS.RH
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             FuncionarioDTO dto = comboBox1.SelectedItem as FuncionarioDTO;
-
             lblSalarioBase.Text = Convert.ToString(dto.Salario);
             lblID.Text = Convert.ToString(dto.Id);
+            txtcpf.Text = dto.Cpf;
+            txtnome.Text = dto.Nome;
+
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

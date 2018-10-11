@@ -26,19 +26,27 @@ namespace RestauranteADM.TELAS.Consulta
         UsuarioDTO usuario;
 
 
-        public void Loadscreen(FuncionarioDTO funcio)
+        public void Loadscreen(FuncionarioDTO funcio, UsuarioDTO usuario)
 
         {
             this.funcio = funcio;
-           
+            this.usuario = usuario;
+
 
             txtnome.Text = this.funcio.Nome;
             txtcpf.Text = this.funcio.Cpf;
              txtsalario.Text= this.funcio.Salario.ToString();
             txtrg.Text = this.funcio.Rg;
             txtendereço.Text = this.funcio.Rg;
-
-
+            
+            txtusuario.Text = this.usuario.login;
+            txtsenha.Text = this.usuario.senha;
+            chbtotal.Checked = this.usuario.permissaototal;
+            chbrh.Checked = this.usuario.permissaoRH;
+            chbfinanceiro.Checked = this.usuario.permissaofinanceiro;
+            chbcadastro.Checked = this.usuario.permissaocadastro;
+            chbvendas.Checked = this.usuario.permissaovendas;
+            chbcompras.Checked = this.usuario.permissaocompras;
 
 
 
@@ -54,27 +62,26 @@ namespace RestauranteADM.TELAS.Consulta
         {
             
 
-            FuncionarioDTO funcio = new FuncionarioDTO();
+        
 
-            funcio.Nome = txtnome.Text;
-            funcio.Cpf = txtcpf.Text;
-            funcio.Salario = Convert.ToDouble(txtsalario.Text);
-            funcio.Rg = txtrg.Text;
-            funcio.Endereço = txtendereço.Text;
-            
+           this.funcio.Nome = txtnome.Text;
+            this.funcio.Cpf = txtcpf.Text;
+            this.funcio.Salario = Convert.ToDouble(txtsalario.Text);
+            this.funcio.Rg = txtrg.Text;
+            this.funcio.Endereço = txtendereço.Text;
 
-            UsuarioDTO usuario = new UsuarioDTO();
-            usuario.login = txtusuario.Text;
-            usuario.senha = txtsenha.Text;
-            usuario.permissaototal = chbtotal.Checked;
-            usuario.permissaoRH = chbrh.Checked;
-            usuario.permissaofinanceiro = chbfinanceiro.Checked;
-            usuario.permissaocadastro = chbcadastro.Checked;
-            usuario.permissaovendas = chbvendas.Checked;
-            usuario.permissaocompras = chbcompras.Checked;
+
+            this.usuario.login = txtusuario.Text;
+            this.usuario.senha = txtsenha.Text;
+            this.usuario.permissaototal = chbtotal.Checked;
+            this.usuario.permissaoRH = chbrh.Checked;
+            this.usuario.permissaofinanceiro = chbfinanceiro.Checked;
+            this.usuario.permissaocadastro = chbcadastro.Checked;
+            this.usuario.permissaovendas = chbvendas.Checked;
+            this.usuario.permissaocompras = chbcompras.Checked;
 
             FuncionarioBusiness iop = new FuncionarioBusiness();
-            iop.Update(funcio, usuario);
+            iop.Update(this.funcio, this.usuario);
 
             MessageBox.Show("foi alterou");
 

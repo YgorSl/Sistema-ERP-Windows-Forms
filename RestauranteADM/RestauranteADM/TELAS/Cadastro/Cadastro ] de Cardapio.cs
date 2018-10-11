@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestauranteADM.BASE.Cardapio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,5 +27,49 @@ namespace RestauranteADM.TELAS.Cadastro
         {
             this.WindowState = FormWindowState.Minimized;
         }
-    }
+
+        private void Cadastro___de_Cardapio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CardapioDTO dto = new CardapioDTO();
+
+
+            dto.nome_Prato = txtnomeprato.Text;
+            dto.Tamanho = txttamanho.Text;
+
+            dto.Descrição = rtvanotaçoes.Text;
+            dto.Valor = Convert.ToDouble(txtvalor.Text);
+
+            CardapioBusiness bus = new CardapioBusiness();
+            bus.salvar(dto);
+
+
+            MessageBox.Show("Prato salvo com sucesso! :)");
+        }
+           
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+    
+
+

@@ -21,11 +21,7 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void dgvcliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 10)
-            {
-              
-
-            }
+     
             if (e.ColumnIndex == 15)
             {
                 DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

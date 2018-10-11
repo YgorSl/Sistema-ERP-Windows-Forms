@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RestauranteADM.TELAS.Consulta;
+using RestauranteADM.BASE.Usuario;
 
 namespace RestauranteADM.TELAS.Consulta
 {
@@ -63,10 +64,12 @@ namespace RestauranteADM.TELAS.Consulta
             if(e.ColumnIndex==4)
             {
               
+
                 FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
 
+
                 alterarfuncionario menu = new alterarfuncionario();
-                menu.Loadscreen(pr);
+                
                 menu.Show();
                 this.Hide();
 

@@ -61,10 +61,7 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
 
         public List<FolhaPagamentoDTO> Consultar(string Nome,string cpf)
         {
-            string script = @"select * from tb_funcionarios" +
-                              " inner join tb_folha_de_pagamento" +
-                               "  on tb_folha_de_pagamento.id_funcionario=tb_funcionarios.id_funcionarios" +
-                               "where nm_nome like @nome and ds_cpf like @cpf";
+            string script = @"select * from tb_folha_de_pagamento where nm_nome like @nome and ds_cpf like @cpf";
 
 
             List<MySqlParameter> parms = new List<MySqlParameter>();

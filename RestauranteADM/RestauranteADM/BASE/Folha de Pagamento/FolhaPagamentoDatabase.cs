@@ -14,8 +14,8 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
 
         public int Salva(FolhaPagamentoDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_folha_de_pagamento` (id_funcionario, vl_VR, vl_DSR, vl_SalarioLiquido, ds_He, ds_VT, ds_INSS, ds_IRRF, ds_FGTS, ds_convenio, ds_cestabasica, desco_atraso, ds_faltas, ds_bonus) 
-                                                                  VALUES (@id_funcionario,@vl_VR,@vl_DSR,@vl_SalarioLiquido,@ds_He,@ds_VT,@ds_INSS,@ds_IRRF,@ds_FGTS,@ds_convenio,@ds_cestabasica,@desco_atraso,@ds_faltas,@ds_bonus);";
+            string script = @"INSERT INTO `mydb`.`tb_folha_de_pagamento` (id_funcionario, vl_VR, vl_DSR, vl_SalarioLiquido, ds_He, ds_VT, ds_INSS, ds_IRRF, ds_FGTS, ds_convenio, ds_cestabasica, desco_atraso, ds_faltas, ds_bonus,@nm_nome,@ds_cpf) 
+                                                                  VALUES (@id_funcionario,@vl_VR,@vl_DSR,@vl_SalarioLiquido,@ds_He,@ds_VT,@ds_INSS,@ds_IRRF,@ds_FGTS,@ds_convenio,@ds_cestabasica,@desco_atraso,@ds_faltas,@ds_bonus,@nm_nome,@ds_cpf);";
 
 
 
@@ -36,8 +36,9 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
             parms.Add(new MySqlParameter("ds_cestabasica", dto.CestaBasica));
             parms.Add(new MySqlParameter("desco_atraso", dto.Atraso));
             parms.Add(new MySqlParameter("ds_faltas", dto.Falta));
-
             parms.Add(new MySqlParameter("ds_bonus", dto.Bonus));
+            parms.Add(new MySqlParameter("nm_nome", dto.Nome));
+            parms.Add(new MySqlParameter("ds_cpf", dto.CPF));
 
 
 
@@ -58,19 +59,20 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
         }
 
 
-        public List<FolhaPagamentoDTO> Consultar(string nome,string cpf)
+        public List<FolhaPagamentoDTO> Consultar(string Nome,string cpf)
         {
             string script = @"select * from tb_funcionarios" +
                               " inner join tb_folha_de_pagamento" +
-                               "  on tb_folha_de_pagamento.id_funcionario=tb_funcionarios.id_funcionarios";
-                             
+                               "  on tb_folha_de_pagamento.id_funcionario=tb_funcionarios.id_funcionarios" +
+                               "where nm_nome like @nome and ds_cpf like @cpf";
 
 
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nome", "%" + Nome + "%"));
+            parms.Add(new MySqlParameter("Cpf", "%" + cpf + "%"));
 
-         
-        
             Database db = new Database();
-            MySqlDataReader reader = db.ExecuteSelectScript(script, null);
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
             List<FolhaPagamentoDTO> lista = new List<FolhaPagamentoDTO>();
             while (reader.Read())
@@ -91,18 +93,12 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
                 dto.Atraso = reader.GetDouble("desco_atraso");
                 dto.Falta = reader.GetDouble("ds_faltas");
                 dto.Bonus = reader.GetDouble("ds_bonus");
+                dto.Nome = reader.GetString("nm_nome");
+                dto.CPF = reader.GetString("ds_cpf");
 
 
 
-                dto.funcio = new FuncionarioDTO();
-                dto.funcio.fpama = new FolhaPagamentoDTO();
-                dto.funcio.fpama.Id = dto.Id;
-                dto.funcio.Nome = reader.GetString("nm_nome");
-                dto.funcio.Cpf = reader.GetString("ds_cpf");
-                dto.funcio.Rg = reader.GetString("ds_RG");
-                dto.funcio.Endereço = reader.GetString("ds_endereco");
-                dto.funcio. Salario = reader.GetDouble("ds_Salario");
-
+       
 
 
                 lista.Add(dto);

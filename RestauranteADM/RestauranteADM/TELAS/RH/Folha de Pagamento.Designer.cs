@@ -1005,7 +1005,7 @@
             this.txtnome.AutoSize = true;
             this.txtnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnome.ForeColor = System.Drawing.Color.Olive;
-            this.txtnome.Location = new System.Drawing.Point(210, 47);
+            this.txtnome.Location = new System.Drawing.Point(221, 46);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(42, 16);
             this.txtnome.TabIndex = 89;

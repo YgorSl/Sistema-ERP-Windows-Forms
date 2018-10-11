@@ -78,6 +78,7 @@ namespace RestauranteADM.TELAS.RH
                 lblSubConvenio.Text = Convert.ToString(ValorConvenio);
                 double ValorCestaBasica = Convert.ToDouble(txtCestaBasica.Text);
                 lblSubCesta.Text = Convert.ToString(ValorCestaBasica);
+               
 
 
                 if (lblSalarioBase != null)
@@ -303,6 +304,8 @@ namespace RestauranteADM.TELAS.RH
                 dto.CestaBasica = Convert.ToDouble(lblSubCesta.Text);
                 dto.Bonus = Convert.ToDouble(lblsubBonus.Text);
                 dto.SalarioLiquido = Convert.ToDouble(lblTotal.Text);
+                dto.Nome = txtnome.Text;
+                dto.CPF = txtnome.Text;
 
 
                 FolhaPagamentoBusiness ft = new FolhaPagamentoBusiness();

@@ -27,6 +27,9 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
         public double FGTS { get; set; }
         public double SalarioLiquido { get; set; }
 
+        public string Nome { get; set; }
+
+        public string CPF { get; set; }
 
         public FuncionarioDTO funcio { get; set; }
 

@@ -17,10 +17,10 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
             FolhaPagamentoDatabase bd = new FolhaPagamentoDatabase();
             bd.Salva(i);
         }
-        public List<FolhaPagamentoDTO> Consultar(string folha)
+        public List<FolhaPagamentoDTO> Consultar(string nome,string cpf)
         {
             FolhaPagamentoDatabase db = new FolhaPagamentoDatabase();
-            return db.Consultar(folha);
+            return db.Consultar(nome,cpf);
         }
 
         public  void Remover(int id)

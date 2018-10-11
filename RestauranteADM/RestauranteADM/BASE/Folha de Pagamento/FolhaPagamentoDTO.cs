@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestauranteADM.BASE.Funcionario;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,6 +26,9 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
         public double IRRF { get; set; }
         public double FGTS { get; set; }
         public double SalarioLiquido { get; set; }
+
+
+        public FuncionarioDTO funcio { get; set; }
 
 
     }

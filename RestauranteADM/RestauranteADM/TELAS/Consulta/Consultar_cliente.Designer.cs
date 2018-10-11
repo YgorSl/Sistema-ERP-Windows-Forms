@@ -37,8 +37,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +49,8 @@
             this.anotaçao_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -65,6 +65,7 @@
             this.a.Size = new System.Drawing.Size(60, 16);
             this.a.TabIndex = 17;
             this.a.Text = "Cliente:";
+            this.a.Click += new System.EventHandler(this.a_Click);
             // 
             // txtcliente
             // 
@@ -72,6 +73,7 @@
             this.txtcliente.Name = "txtcliente";
             this.txtcliente.Size = new System.Drawing.Size(380, 20);
             this.txtcliente.TabIndex = 16;
+            this.txtcliente.TextChanged += new System.EventHandler(this.txtcliente_TextChanged);
             // 
             // button1
             // 
@@ -154,24 +156,6 @@
             this.dgvcliente.Size = new System.Drawing.Size(697, 269);
             this.dgvcliente.TabIndex = 48;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 16);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "cpf";
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(161, 89);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(380, 20);
-            this.txtcpf.TabIndex = 50;
             // 
             // Nome
             // 
@@ -269,6 +253,26 @@
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column1.Width = 50;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(112, 93);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 16);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "cpf";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Location = new System.Drawing.Point(161, 89);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(380, 20);
+            this.txtcpf.TabIndex = 50;
+            this.txtcpf.TextChanged += new System.EventHandler(this.txtcpf_TextChanged);
             // 
             // Consultar_cliente
             // 

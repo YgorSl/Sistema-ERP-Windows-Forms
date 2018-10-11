@@ -75,5 +75,25 @@ namespace RestauranteADM.TELAS
         {
 
         }
+
+        private void txtcpf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void a_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

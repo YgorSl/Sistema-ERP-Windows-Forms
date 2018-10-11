@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RestauranteADM.BASE.Login;
 using RestauranteADM.BASE.Usuario;
+using RestauranteADM.BASE.Folha_de_Pagamento;
 
 namespace RestauranteADM.BASE.Funcionario
 {
@@ -22,5 +23,8 @@ namespace RestauranteADM.BASE.Funcionario
    
 
         public UsuarioDTO eui { get; set; }
+
+        public FolhaPagamentoDTO fpama { get; set; }
+
     }
 }

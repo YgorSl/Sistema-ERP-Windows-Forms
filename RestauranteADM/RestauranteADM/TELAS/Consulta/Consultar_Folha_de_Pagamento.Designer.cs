@@ -31,23 +31,26 @@
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtnome = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idfuncionario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.he = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dsr = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dsr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salarioliquido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HEr = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inss = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.irrf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fgts = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.convenio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.atraso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cesta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.faltas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.j = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,21 +71,22 @@
             this.dgvcliente.AllowUserToDeleteRows = false;
             this.dgvcliente.ColumnHeadersHeight = 40;
             this.dgvcliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.idfuncionario,
-            this.he,
-            this.dsr,
-            this.bonus,
+            this.Nome,
+            this.CPF,
             this.vr,
+            this.dsr,
             this.salarioliquido,
+            this.HEr,
             this.vt,
             this.inss,
             this.irrf,
             this.fgts,
             this.convenio,
-            this.cesta,
             this.atraso,
-            this.faltas});
+            this.cesta,
+            this.faltas,
+            this.bonus,
+            this.j});
             this.dgvcliente.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvcliente.Location = new System.Drawing.Point(0, 132);
             this.dgvcliente.Name = "dgvcliente";
@@ -100,14 +104,14 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 50;
-            this.label2.Text = "Prato:";
+            this.label2.Text = "Nome";
             // 
-            // textBox1
+            // txtnome
             // 
-            this.textBox1.Location = new System.Drawing.Point(192, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 20);
-            this.textBox1.TabIndex = 49;
+            this.txtnome.Location = new System.Drawing.Point(192, 57);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(380, 20);
+            this.txtnome.TabIndex = 49;
             // 
             // button1
             // 
@@ -117,111 +121,153 @@
             this.button1.TabIndex = 48;
             this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Column1
+            // Nome
             // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "ID";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
             // 
-            // idfuncionario
+            // CPF
             // 
-            this.idfuncionario.HeaderText = "ID do Funcionário";
-            this.idfuncionario.Name = "idfuncionario";
-            this.idfuncionario.ReadOnly = true;
-            // 
-            // he
-            // 
-            this.he.HeaderText = "Horas Extras";
-            this.he.Name = "he";
-            this.he.ReadOnly = true;
-            // 
-            // dsr
-            // 
-            this.dsr.HeaderText = "DSR";
-            this.dsr.Name = "dsr";
-            this.dsr.ReadOnly = true;
-            // 
-            // bonus
-            // 
-            this.bonus.HeaderText = "Bonus";
-            this.bonus.Name = "bonus";
-            this.bonus.ReadOnly = true;
+            this.CPF.DataPropertyName = "Cpf";
+            this.CPF.HeaderText = "CPF";
+            this.CPF.Name = "CPF";
+            this.CPF.ReadOnly = true;
             // 
             // vr
             // 
+            this.vr.DataPropertyName = "VR";
             this.vr.HeaderText = "VR";
             this.vr.Name = "vr";
             this.vr.ReadOnly = true;
             // 
+            // dsr
+            // 
+            this.dsr.DataPropertyName = "DSR";
+            this.dsr.HeaderText = "DSR";
+            this.dsr.Name = "dsr";
+            this.dsr.ReadOnly = true;
+            // 
             // salarioliquido
             // 
+            this.salarioliquido.DataPropertyName = "SalarioLiquido";
             this.salarioliquido.HeaderText = "Salario Liquido";
             this.salarioliquido.Name = "salarioliquido";
             this.salarioliquido.ReadOnly = true;
             // 
+            // HEr
+            // 
+            this.HEr.DataPropertyName = "HE";
+            this.HEr.HeaderText = "HE";
+            this.HEr.Name = "HEr";
+            this.HEr.ReadOnly = true;
+            // 
             // vt
             // 
+            this.vt.DataPropertyName = "VT";
             this.vt.HeaderText = "VT";
             this.vt.Name = "vt";
             this.vt.ReadOnly = true;
             // 
             // inss
             // 
+            this.inss.DataPropertyName = "INSS";
             this.inss.HeaderText = "INSS";
             this.inss.Name = "inss";
             this.inss.ReadOnly = true;
             // 
             // irrf
             // 
+            this.irrf.DataPropertyName = "IRRF";
             this.irrf.HeaderText = "IRRF";
             this.irrf.Name = "irrf";
             this.irrf.ReadOnly = true;
             // 
             // fgts
             // 
+            this.fgts.DataPropertyName = "FGTS";
             this.fgts.HeaderText = "FGTS";
             this.fgts.Name = "fgts";
             this.fgts.ReadOnly = true;
             // 
             // convenio
             // 
+            this.convenio.DataPropertyName = "Convenio";
             this.convenio.HeaderText = "Convenio";
             this.convenio.Name = "convenio";
             this.convenio.ReadOnly = true;
             // 
-            // cesta
-            // 
-            this.cesta.HeaderText = "Cesta Basica";
-            this.cesta.Name = "cesta";
-            this.cesta.ReadOnly = true;
-            // 
             // atraso
             // 
+            this.atraso.DataPropertyName = "Atraso";
             this.atraso.HeaderText = "Desconto do Atraso";
             this.atraso.Name = "atraso";
             this.atraso.ReadOnly = true;
             // 
+            // cesta
+            // 
+            this.cesta.DataPropertyName = "CestaBasica";
+            this.cesta.HeaderText = "Cesta Basica";
+            this.cesta.Name = "cesta";
+            this.cesta.ReadOnly = true;
+            // 
             // faltas
             // 
+            this.faltas.DataPropertyName = "Falta";
             this.faltas.HeaderText = "Desconto das Faltas";
             this.faltas.Name = "faltas";
             this.faltas.ReadOnly = true;
+            // 
+            // bonus
+            // 
+            this.bonus.DataPropertyName = "Bonus";
+            this.bonus.HeaderText = "Bonus";
+            this.bonus.Name = "bonus";
+            this.bonus.ReadOnly = true;
+            // 
+            // j
+            // 
+            this.j.HeaderText = "";
+            this.j.Image = global::RestauranteADM.Properties.Resources.erro;
+            this.j.Name = "j";
+            this.j.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(157, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 16);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "cpf";
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Location = new System.Drawing.Point(192, 84);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(380, 20);
+            this.txtcpf.TabIndex = 55;
+            this.txtcpf.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // Consultar_Folha_de_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.dgvcliente);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtnome);
             this.Controls.Add(this.button1);
             this.Name = "Consultar_Folha_de_Pagamento";
             this.Text = "Consultar_Folha_de_Pagamento";
+            this.Load += new System.EventHandler(this.Consultar_Folha_de_Pagamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -233,22 +279,25 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridView dgvcliente;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idfuncionario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn he;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dsr;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bonus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn vr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dsr;
         private System.Windows.Forms.DataGridViewTextBoxColumn salarioliquido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HEr;
         private System.Windows.Forms.DataGridViewTextBoxColumn vt;
         private System.Windows.Forms.DataGridViewTextBoxColumn inss;
         private System.Windows.Forms.DataGridViewTextBoxColumn irrf;
         private System.Windows.Forms.DataGridViewTextBoxColumn fgts;
         private System.Windows.Forms.DataGridViewTextBoxColumn convenio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cesta;
         private System.Windows.Forms.DataGridViewTextBoxColumn atraso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cesta;
         private System.Windows.Forms.DataGridViewTextBoxColumn faltas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bonus;
+        private System.Windows.Forms.DataGridViewImageColumn j;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtcpf;
     }
 }

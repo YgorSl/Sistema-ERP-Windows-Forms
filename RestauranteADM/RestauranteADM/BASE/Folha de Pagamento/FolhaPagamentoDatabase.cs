@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using RestauranteADM.BASE.Funcionario;
 using RestauranteADM.DB;
 using System;
 using System.Collections.Generic;
@@ -57,15 +58,19 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
         }
 
 
-        public List<FolhaPagamentoDTO> Consultar(string folha)
+        public List<FolhaPagamentoDTO> Consultar(string nome,string cpf)
         {
-            string script = @"SELECT * FROM tb_folha_de_pagamento WHERE nm_nome like @Nome";
+            string script = @"select * from tb_funcionarios" +
+                              " inner join tb_folha_de_pagamento" +
+                               "  on tb_folha_de_pagamento.id_funcionario=tb_funcionarios.id_funcionarios";
+                             
 
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nome", folha + "%"));
 
+
+         
+        
             Database db = new Database();
-            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            MySqlDataReader reader = db.ExecuteSelectScript(script, null);
 
             List<FolhaPagamentoDTO> lista = new List<FolhaPagamentoDTO>();
             while (reader.Read())
@@ -73,20 +78,33 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
                 FolhaPagamentoDTO dto = new FolhaPagamentoDTO();
                 dto.Id = reader.GetInt32("id_folha_pagamento");
                 dto.IdFuncionario = reader.GetInt32("id_funcionario");
-                dto.HE = reader.GetDouble("ds_He");
-                dto.DSR = reader.GetDouble("vl_DSR");
                 dto.VR = reader.GetDouble("vl_VR");
+                dto.DSR = reader.GetDouble("vl_DSR");
+                dto.SalarioLiquido = reader.GetDouble("vl_SalarioLiquido");
+                dto.HE = reader.GetDouble("ds_He");
                 dto.VT = reader.GetDouble("ds_VT");
-                dto.SalarioFamilia = reader.GetDouble("vl_SF");
-                dto.Bonus = reader.GetDouble("ds_bonus");
-                dto.Convenio = reader.GetDouble("ds_convenio");
-                dto.Atraso = reader.GetDouble("desco_atraso");
-                dto.Falta = reader.GetDouble("ds_faltas");
-                dto.CestaBasica = reader.GetDouble("ds_cestabasica");
                 dto.INSS = reader.GetDouble("ds_INSS");
                 dto.IRRF = reader.GetDouble("ds_IRRF");
                 dto.FGTS = reader.GetDouble("ds_FGTS");
-                dto.SalarioLiquido = reader.GetDouble("vl_SalarioLiquido");
+                dto.Convenio = reader.GetDouble("ds_convenio");
+                dto.CestaBasica = reader.GetDouble("ds_cestabasica");
+                dto.Atraso = reader.GetDouble("desco_atraso");
+                dto.Falta = reader.GetDouble("ds_faltas");
+                dto.Bonus = reader.GetDouble("ds_bonus");
+
+
+
+                dto.funcio = new FuncionarioDTO();
+                dto.funcio.fpama = new FolhaPagamentoDTO();
+                dto.funcio.fpama.Id = dto.Id;
+                dto.funcio.Nome = reader.GetString("nm_nome");
+                dto.funcio.Cpf = reader.GetString("ds_cpf");
+                dto.funcio.Rg = reader.GetString("ds_RG");
+                dto.funcio.Endereço = reader.GetString("ds_endereco");
+                dto.funcio. Salario = reader.GetDouble("ds_Salario");
+
+
+
                 lista.Add(dto);
             }
             reader.Close();

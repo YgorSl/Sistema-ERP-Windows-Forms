@@ -1,6 +1,6 @@
-﻿namespace RestauranteADM.TELAS._1._0._1
+﻿namespace RestauranteADM.TELAS.MENU
 {
-    partial class Menu_Cadastros
+    partial class Menu_Consultar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Cadastros));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu_Consultar));
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(752, 34);
-            this.panel3.TabIndex = 69;
+            this.panel3.TabIndex = 71;
             // 
             // label6
             // 
@@ -85,7 +85,7 @@
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.DarkRed;
+            this.MenuVertical.BackColor = System.Drawing.Color.DarkOrchid;
             this.MenuVertical.Controls.Add(this.btnentrar);
             this.MenuVertical.Controls.Add(this.button4);
             this.MenuVertical.Controls.Add(this.button3);
@@ -96,8 +96,8 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(200, 631);
-            this.MenuVertical.TabIndex = 68;
+            this.MenuVertical.Size = new System.Drawing.Size(200, 613);
+            this.MenuVertical.TabIndex = 70;
             // 
             // btnentrar
             // 
@@ -111,7 +111,7 @@
             this.btnentrar.TabIndex = 76;
             this.btnentrar.Text = "Voltar";
             this.btnentrar.UseVisualStyleBackColor = false;
-            this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click_1);
+            this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
             // 
             // button4
             // 
@@ -197,7 +197,7 @@
             this.btn1.TabIndex = 70;
             this.btn1.Text = "Clientes";
             this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.btn1_Click_2);
+            this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
             // pctmenu
             // 
@@ -209,28 +209,28 @@
             this.pctmenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctmenu.TabIndex = 6;
             this.pctmenu.TabStop = false;
-            this.pctmenu.Click += new System.EventHandler(this.pctmenu_Click_1);
+            this.pctmenu.Click += new System.EventHandler(this.pctmenu_Click);
             // 
             // panelmenu
             // 
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmenu.Location = new System.Drawing.Point(200, 34);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(752, 597);
-            this.panelmenu.TabIndex = 76;
+            this.panelmenu.Size = new System.Drawing.Size(752, 579);
+            this.panelmenu.TabIndex = 75;
             // 
-            // Menu_Cadastros
+            // Menu_Consultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 631);
+            this.ClientSize = new System.Drawing.Size(952, 613);
             this.Controls.Add(this.panelmenu);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Menu_Cadastros";
+            this.Name = "Menu_Consultar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu_Cadastro";
+            this.Text = "Menu_Consultar";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
@@ -243,6 +243,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pctmenu;
         private System.Windows.Forms.Panel MenuVertical;
         private System.Windows.Forms.Button btnentrar;
@@ -252,8 +254,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panelmenu;
     }
 }

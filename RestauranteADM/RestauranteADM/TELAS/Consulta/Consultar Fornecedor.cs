@@ -43,6 +43,7 @@ namespace RestauranteADM.TELAS.Consulta
             {
                 FornecedorDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as FornecedorDTO;
                 AlterarFornecedor frm = new AlterarFornecedor();
+                frm.LoadScreen(comp);
                 frm.ShowDialog();
                
             }

@@ -29,7 +29,7 @@ namespace RestauranteADM.BASE.Produto
             string script = @"select *from tb_compra where dt_compra >= @start and  dt_compra<=@end ";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("star", start));
+            parms.Add(new MySqlParameter("start", start));
             parms.Add(new MySqlParameter("end", end));
 
 
@@ -46,10 +46,12 @@ namespace RestauranteADM.BASE.Produto
                 comp.Data = reader.GetDateTime("dt_compra");
 
                 comp.Forneceddor = new FornecedorDTO();
-                comp.Forneceddor.Id = reader.GetInt32("id_forncedor");
+                comp.Forneceddor.Id = reader.GetInt32("id_fornecedor");
                 lista.Add(comp);
             }
             return lista;
         }
+
+
     }
 }

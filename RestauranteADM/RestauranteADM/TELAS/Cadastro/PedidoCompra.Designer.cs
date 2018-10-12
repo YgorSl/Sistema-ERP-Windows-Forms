@@ -115,6 +115,7 @@
             this.gvprod.ReadOnly = true;
             this.gvprod.Size = new System.Drawing.Size(483, 221);
             this.gvprod.TabIndex = 86;
+            this.gvprod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvprod_CellContentClick);
             // 
             // label4
             // 
@@ -140,18 +141,21 @@
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "Id";
             this.Column1.HeaderText = "Id";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Nome
             // 
+            this.Nome.DataPropertyName = "Nome";
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "Preço";
             this.Column2.HeaderText = "Preço";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;

@@ -21,8 +21,8 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CompraBusiness bus = new CompraBusiness();
-            List<CompraDTO> compra = bus.filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+            ComprasViewBusiness bus = new ComprasViewBusiness();
+            List<ComprasView> compra = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
 
             gvprod.DataSource = compra;
         }

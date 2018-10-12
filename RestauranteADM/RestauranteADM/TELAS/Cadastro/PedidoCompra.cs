@@ -26,7 +26,7 @@ namespace RestauranteADM.TELAS.Cadastro
             List<FornecedorDTO> comp = bus.Listar();
 
             cboforn.DataSource = comp;
-            cboforn.DisplayMember = "Name";
+            cboforn.DisplayMember = "Nome";
             cboforn.ValueMember = "Id";
         }
 
@@ -69,7 +69,7 @@ namespace RestauranteADM.TELAS.Cadastro
             compra.Data = dtpdate.Value;
             compra.Forneceddor = forn;
             List<ProdutoDTO> prods = gvprod.DataSource as List<ProdutoDTO>;
-            List<CompraItemDTO> compitem = gvprod.DataSource as List<CompraItemDTO>;
+            List<CompraItemDTO> compitem = new List<CompraItemDTO>();
             foreach (ProdutoDTO item in prods)
             {
                 CompraItemDTO itemcomp = new CompraItemDTO();
@@ -84,6 +84,11 @@ namespace RestauranteADM.TELAS.Cadastro
         }
 
         private void PedidoCompra_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gvprod_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

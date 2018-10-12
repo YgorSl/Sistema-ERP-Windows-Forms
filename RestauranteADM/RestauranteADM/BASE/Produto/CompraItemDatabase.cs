@@ -12,7 +12,7 @@ namespace RestauranteADM.BASE.Produto
     {
         public void Salvar(CompraItemDTO dto)
         {
-            string script = @"INSERT INTO `tb_compra` (id_compra, id_compra_produto) 
+            string script = @"INSERT INTO `tb_compra_item` (id_compra, id_compra_produto) 
                             VALUES (@id_compra, @id_compra_produto)"
 ;
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -24,5 +24,6 @@ namespace RestauranteADM.BASE.Produto
             db.ExecuteInsertScript(script, parms);
 
         }
+       
     }
 }

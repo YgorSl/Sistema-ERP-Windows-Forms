@@ -35,10 +35,10 @@
             this.dti = new System.Windows.Forms.DateTimePicker();
             this.dtpdate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvprod)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,10 +48,10 @@
             this.gvprod.AllowUserToDeleteRows = false;
             this.gvprod.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvprod.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4});
+            this.Column4,
+            this.Column1});
             this.gvprod.Location = new System.Drawing.Point(2, 174);
             this.gvprod.Name = "gvprod";
             this.gvprod.ReadOnly = true;
@@ -111,13 +111,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Consultar Pedido";
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
             // Column2
             // 
             this.Column2.DataPropertyName = "Data";
@@ -127,15 +120,24 @@
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "Qtd";
             this.Column3.HeaderText = "Quantidade";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "Nome";
             this.Column4.HeaderText = "Fornecedor";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Total";
+            this.Column1.HeaderText = "Total";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // ConsultarPedido
             // 
@@ -160,15 +162,15 @@
         #endregion
 
         private System.Windows.Forms.DataGridView gvprod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dti;
         private System.Windows.Forms.DateTimePicker dtpdate;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

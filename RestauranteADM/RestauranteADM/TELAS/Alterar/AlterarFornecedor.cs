@@ -36,7 +36,7 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             forn.Nome = txtnome.Text;
             forn.Cnpj = txtcnpj.Text;
             forn.Telefone = txttelefone.Text;

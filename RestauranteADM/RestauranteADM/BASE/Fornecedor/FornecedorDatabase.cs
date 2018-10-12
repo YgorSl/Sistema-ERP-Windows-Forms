@@ -71,7 +71,7 @@ namespace RestauranteADM.BASE.Fornecedor
             string script = @"DELETE FROM  tb_fornecedor WHERE id_fornecedor = @id_fornecedor";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_funcionarios", id));
+            parms.Add(new MySqlParameter("id_fornecedor", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -82,7 +82,7 @@ namespace RestauranteADM.BASE.Fornecedor
             string script = @"UPDATE 
 
 
-  tb_fornecedor SET nm_nome = @nm_nome, ds_cnpj = @ds_cnpj, ds_telefone = @ds_telefone, ds_endereço =@ds_endereço , ds_cidade = @ds_cidade, ds_estado = @ds_estado
+  tb_fornecedor SET nm_nome = @nm_nome, ds_cnpj = @ds_cnpj, ds_telefone = @ds_telefone, ds_endereço =@ds_endereço , ds_cidade = @ds_cidade , ds_estado = @ds_estado
                             
 
                               WHERE id_fornecedor= @id_fornecedor";
@@ -93,8 +93,8 @@ namespace RestauranteADM.BASE.Fornecedor
             parms.Add(new MySqlParameter("ds_cnpj", dto.Cnpj));
             parms.Add(new MySqlParameter("ds_telefone", dto.Telefone));
             parms.Add(new MySqlParameter("ds_endereço", dto.Endereço));
-            parms.Add(new MySqlParameter("ds_cidade ", dto.Cidade));
-            parms.Add(new MySqlParameter("ds_estado ", dto.Estado));
+            parms.Add(new MySqlParameter("ds_cidade", dto.Cidade));
+            parms.Add(new MySqlParameter("ds_estado", dto.Estado));
 
 
 

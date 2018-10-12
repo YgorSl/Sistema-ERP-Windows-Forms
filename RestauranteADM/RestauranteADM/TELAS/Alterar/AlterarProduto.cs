@@ -69,5 +69,12 @@ namespace RestauranteADM.TELAS
         {
             Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Consulta_produto oi = new Consulta_produto();
+            oi.Show();
+            this.Hide();
+        }
     }
 }

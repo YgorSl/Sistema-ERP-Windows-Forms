@@ -12,6 +12,7 @@ using RestauranteADM.Acesso;
 using RestauranteADM.TELAS.Cadastro;
 using RestauranteADM.TELAS.RH;
 using RestauranteADM.TELAS.Financeiro;
+using RestauranteADM.TELAS.Consulta;
 
 namespace RestauranteADM.TELAS
 {
@@ -171,6 +172,51 @@ namespace RestauranteADM.TELAS
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void realizarCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PedidoCompra form = new PedidoCompra();
+            form.Show();
+            this.Hide();
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consulta_produto form = new Consulta_produto();
+            form.Show();
+            this.Hide();
+
+        }
+
+        private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultar_Fornecedor form = new Consultar_Fornecedor();
+            form.Show();
+            this.Hide();
+        }
+
+        private void folhaDePagamentoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Consultar_Folha_de_Pagamento form = new Consultar_Folha_de_Pagamento();
+            form.Show();
+            this.Hide();
+
+        }
+
+        private void pedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarPedido FORM = new ConsultarPedido();
+            FORM.Show();
+            this.Hide();
+
+        }
+
+        private void funcionarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            crud_funcionario form = new crud_funcionario();
+            form.Show();
+            this.Hide();
         }
     }
 }

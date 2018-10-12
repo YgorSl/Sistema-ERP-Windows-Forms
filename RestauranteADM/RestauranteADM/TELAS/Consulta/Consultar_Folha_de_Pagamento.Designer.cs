@@ -30,9 +30,6 @@
         {
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtnome = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vr = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,8 +46,12 @@
             this.faltas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bonus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.j = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtnome = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtcpf = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,33 +97,6 @@
             this.dgvcliente.Size = new System.Drawing.Size(800, 318);
             this.dgvcliente.TabIndex = 51;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(137, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
-            this.label2.TabIndex = 50;
-            this.label2.Text = "Nome";
-            // 
-            // txtnome
-            // 
-            this.txtnome.Location = new System.Drawing.Point(192, 57);
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(380, 20);
-            this.txtnome.TabIndex = 49;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(578, 57);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Nome
             // 
@@ -236,6 +210,33 @@
             this.j.Name = "j";
             this.j.ReadOnly = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(137, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Nome";
+            // 
+            // txtnome
+            // 
+            this.txtnome.Location = new System.Drawing.Point(192, 57);
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(380, 20);
+            this.txtnome.TabIndex = 49;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(578, 57);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Consultar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -254,11 +255,22 @@
             this.txtcpf.TabIndex = 55;
             this.txtcpf.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 103);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 57;
+            this.button2.Text = "volta";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Consultar_Folha_de_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.label36);
@@ -300,5 +312,6 @@
         private System.Windows.Forms.DataGridViewImageColumn j;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtcpf;
+        private System.Windows.Forms.Button button2;
     }
 }

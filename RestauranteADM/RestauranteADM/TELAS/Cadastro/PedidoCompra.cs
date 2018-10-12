@@ -92,5 +92,12 @@ namespace RestauranteADM.TELAS.Cadastro
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Menuinicial oi = new Menuinicial();
+            oi.Show();
+            this.Hide();
+        }
     }
 }

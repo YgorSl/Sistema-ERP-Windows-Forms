@@ -71,5 +71,12 @@ namespace RestauranteADM.TELAS.Consulta
         {
             Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Menuinicial oi = new Menuinicial();
+            oi.Show();
+            this.Hide();
+        }
     }
 }

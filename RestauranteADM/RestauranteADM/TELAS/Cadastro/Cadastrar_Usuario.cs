@@ -224,6 +224,7 @@ namespace RestauranteADM.TELAS
         {
             Menuinicial oi = new Menuinicial();
             oi.Show();
+            this.Hide();
         }
     }
 }

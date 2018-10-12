@@ -97,6 +97,7 @@ namespace RestauranteADM.TELAS.Consulta
         {
             crud_funcionario oi = new crud_funcionario();
             oi.Show();
+            this.Hide();
         }
     }
 }

@@ -101,6 +101,12 @@ namespace RestauranteADM.TELAS.Consulta
         {
             Menuinicial oi = new Menuinicial();
             oi.Show();
+            this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

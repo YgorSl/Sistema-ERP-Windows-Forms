@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acesso\acesso.cs" />
+    <Compile Include="alterarcardapio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alterarcardapio.Designer.cs">
+      <DependentUpon>alterarcardapio.cs</DependentUpon>
+    </Compile>
     <Compile Include="BASE\BaterPonto\BaterPontoBusiness.cs" />
     <Compile Include="BASE\BaterPonto\BaterPontoDatabase.cs" />
     <Compile Include="BASE\BaterPonto\BaterPontoDTO.cs" />
@@ -95,6 +101,12 @@
     <Compile Include="BASE\Usuario\UsuarioDTO.cs" />
     <Compile Include="DB\Connection.cs" />
     <Compile Include="DB\Database.cs" />
+    <Compile Include="escolhavenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="escolhavenda.Designer.cs">
+      <DependentUpon>escolhavenda.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Alterar\alterarcliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -277,7 +289,19 @@
     <Compile Include="TELAS\RH\Folha de Pagamento.Designer.cs">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="telavendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="telavendas.Designer.cs">
+      <DependentUpon>telavendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validacao.cs" />
+    <EmbeddedResource Include="alterarcardapio.resx">
+      <DependentUpon>alterarcardapio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="escolhavenda.resx">
+      <DependentUpon>escolhavenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Alterar\alterarcliente.resx">
       <DependentUpon>alterarcliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\RH\Folha de Pagamento.resx">
       <DependentUpon>Folha de Pagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="telavendas.resx">
+      <DependentUpon>telavendas.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -32,7 +32,7 @@ namespace RestauranteADM.TELAS.Cadastro
             List<ProdutoDTO> pro = prod.listar(this.forn);
 
             cboforn.DataSource = pro;
-            cboforn.DisplayMember = "Name";
+            cboforn.DisplayMember = "Nome";
             cboforn.ValueMember = "Id";
         }
 

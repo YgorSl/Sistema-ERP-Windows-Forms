@@ -36,15 +36,17 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.dgvcliente = new System.Windows.Forms.DataGridView();
+            this.dgvcardapio = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcardapio)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -111,18 +113,20 @@
             this.label36.TabIndex = 47;
             this.label36.Text = "Consultar cardapio";
             // 
-            // dgvcliente
+            // dgvcardapio
             // 
-            this.dgvcliente.AllowUserToAddRows = false;
-            this.dgvcliente.AllowUserToDeleteRows = false;
-            this.dgvcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvcliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvcardapio.AllowUserToAddRows = false;
+            this.dgvcardapio.AllowUserToDeleteRows = false;
+            this.dgvcardapio.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvcardapio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvcardapio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.nome,
             this.tamanho,
             this.valor,
-            this.descricao});
+            this.descricao,
+            this.Column2,
+            this.Column1});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,12 +134,13 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvcliente.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvcliente.Location = new System.Drawing.Point(-68, 100);
-            this.dgvcliente.Name = "dgvcliente";
-            this.dgvcliente.ReadOnly = true;
-            this.dgvcliente.Size = new System.Drawing.Size(634, 199);
-            this.dgvcliente.TabIndex = 49;
+            this.dgvcardapio.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvcardapio.Location = new System.Drawing.Point(-68, 100);
+            this.dgvcardapio.Name = "dgvcardapio";
+            this.dgvcardapio.ReadOnly = true;
+            this.dgvcardapio.Size = new System.Drawing.Size(634, 199);
+            this.dgvcardapio.TabIndex = 49;
+            this.dgvcardapio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcardapio_CellContentClick);
             // 
             // id
             // 
@@ -145,18 +150,21 @@
             // 
             // nome
             // 
+            this.nome.DataPropertyName = "nome_Prato";
             this.nome.HeaderText = "Nome";
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
             // 
             // tamanho
             // 
+            this.tamanho.DataPropertyName = "Tamanho";
             this.tamanho.HeaderText = "Tamanho";
             this.tamanho.Name = "tamanho";
             this.tamanho.ReadOnly = true;
             // 
             // valor
             // 
+            this.valor.DataPropertyName = "Valor";
             this.valor.HeaderText = "Valor";
             this.valor.Name = "valor";
             this.valor.ReadOnly = true;
@@ -164,9 +172,24 @@
             // descricao
             // 
             this.descricao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.descricao.DataPropertyName = "Descrição";
             this.descricao.HeaderText = "Descrição";
             this.descricao.Name = "descricao";
             this.descricao.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "";
+            this.Column2.Image = global::RestauranteADM.Properties.Resources._1;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Image = global::RestauranteADM.Properties.Resources.erro;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Consultar_Cardapio
             // 
@@ -175,7 +198,7 @@
             this.BackgroundImage = global::RestauranteADM.Properties.Resources.ddd;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(560, 328);
-            this.Controls.Add(this.dgvcliente);
+            this.Controls.Add(this.dgvcardapio);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -188,7 +211,7 @@
             this.Text = "Consultar_Cardapio";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvcardapio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,11 +224,13 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.DataGridView dgvcliente;
+        private System.Windows.Forms.DataGridView dgvcardapio;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn tamanho;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
+        private System.Windows.Forms.DataGridViewImageColumn Column2;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

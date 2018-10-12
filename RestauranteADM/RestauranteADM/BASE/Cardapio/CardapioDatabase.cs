@@ -32,10 +32,10 @@ namespace RestauranteADM.BASE.Cardapio
 
         public void Update(CardapioDTO dto)
         {
-            string script = @"UPDATE tb_cliente SET nm_prato=@nm_prato, ds_prato@=ds_prato , ds_tamanho=@ds_tamanho , vl_valor=@vl_valor   where id_cardapio=@id_cardapio";
+            string script = @"UPDATE tb_cardapio SET nm_prato=@nm_prato, ds_prato=@ds_prato , ds_tamanho=@ds_tamanho , vl_valor=@vl_valor   where id_cardapio=@id_cardapio";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_cliente", dto.Id));
+            parms.Add(new MySqlParameter("id_cardapio", dto.Id));
             parms.Add(new MySqlParameter("nm_prato", dto.nome_Prato));
             parms.Add(new MySqlParameter("ds_prato", dto.Descrição));
             parms.Add(new MySqlParameter("ds_tamanho", dto.Tamanho));
@@ -51,22 +51,22 @@ namespace RestauranteADM.BASE.Cardapio
             string script = @"DELETE FROM tb_cardapio WHERE  id_cardapio = @id_cardapio";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_cliente", id));
+            parms.Add(new MySqlParameter("id_cardapio", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
 
 
-        public List<CardapioDTO> Consultar(string nome, double valor)
+        public List<CardapioDTO> Consultar(string nome, string tamanho)
         {
 
 
-            string script = @"select *from tb_cardapio where nm_nome like @nome and valor like @valor";
+            string script = @"select *from tb_cardapio where nm_prato like @nome and ds_tamanho like @tamanho";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nome", "%" + nome + "%"));
-            parms.Add(new MySqlParameter("valor", "%" + valor + "%"));
+            parms.Add(new MySqlParameter("tamanho", "%" + tamanho + "%"));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -75,7 +75,7 @@ namespace RestauranteADM.BASE.Cardapio
             while (reader.Read())
             {
                 CardapioDTO dto = new CardapioDTO();
-                dto.Id = reader.GetInt32("id_cliente");
+                dto.Id = reader.GetInt32("id_cardapio");
                 dto.nome_Prato = reader.GetString("nm_prato");
                 dto.Descrição = reader.GetString("ds_prato");
                 dto.Tamanho = reader.GetString("ds_tamanho");

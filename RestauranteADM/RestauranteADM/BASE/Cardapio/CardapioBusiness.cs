@@ -21,10 +21,10 @@ namespace RestauranteADM.BASE.Cardapio
             
         }
 
-        public List<CardapioDTO> lista(string nome,double valor)
+        public List<CardapioDTO> lista(string nome,string tamanho)
         {
             CardapioDatabase lista = new CardapioDatabase();
-            return lista.Consultar(nome,valor);
+            return lista.Consultar(nome, tamanho);
 
         }
         public void Alterar(CardapioDTO dto)

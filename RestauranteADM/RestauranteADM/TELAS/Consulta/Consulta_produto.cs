@@ -45,7 +45,7 @@ namespace RestauranteADM.TELAS
 
         private void dgvcliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 3)
             {
                 ProdutoDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProdutoDTO;
                 AlterarProduto frm = new AlterarProduto();
@@ -53,7 +53,7 @@ namespace RestauranteADM.TELAS
                 frm.ShowDialog();
 
             }
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 4)
             {
                 DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (r == DialogResult.Yes)

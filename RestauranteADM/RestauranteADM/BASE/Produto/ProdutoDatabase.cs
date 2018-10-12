@@ -114,5 +114,33 @@ namespace RestauranteADM.BASE.Produto
             }
             return lista;
         }
+        public List<ProdView> Filtro(string nome)
+        {
+
+            string script = @"select * from prodvw where nm_produto like @nome";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nome","%"+ nome+"%"));
+            
+
+
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            List<ProdView> lista = new List<ProdView>();
+            while (reader.Read() == true)
+            {
+                ProdView vw = new ProdView();
+                vw.Nome = reader.GetString("nm_nome");
+                vw.Produto = reader.GetString("nm_produto");
+                vw.Preço = reader.GetDecimal("vl_valor");
+                
+
+                lista.Add(vw);
+            }
+            return lista;
+        }
     }
 }

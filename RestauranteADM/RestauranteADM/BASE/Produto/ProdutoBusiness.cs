@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestauranteADM.BASE.Produto
 {
-    class ProdutoBusiness
+    public class ProdutoBusiness
     {
 
         public void Salvar(ProdutoDTO dto)
@@ -35,6 +35,13 @@ namespace RestauranteADM.BASE.Produto
             ProdutoDatabase db = new ProdutoDatabase();
             List<ProdutoDTO> prod = db.listar(forn);
             return prod;
+        }
+        public List<ProdView> Filtro(string nome)
+        {
+            ProdutoDatabase bd = new ProdutoDatabase();
+            List<ProdView> item = bd.Filtro(nome);
+
+            return item;
         }
     }
 }

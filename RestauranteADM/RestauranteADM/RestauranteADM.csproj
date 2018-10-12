@@ -90,6 +90,7 @@
     <Compile Include="BASE\Produto\ProdutoBusiness.cs" />
     <Compile Include="BASE\Produto\ProdutoDatabase.cs" />
     <Compile Include="BASE\Produto\ProdutoDTO.cs" />
+    <Compile Include="BASE\Produto\ProdView.cs" />
     <Compile Include="BASE\Usuario\UsuarioBusiness.cs" />
     <Compile Include="BASE\Usuario\UsuarioDatabase.cs" />
     <Compile Include="BASE\Usuario\UsuarioDTO.cs" />

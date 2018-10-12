@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using RestauranteADM.TELAS.MENU;
+using RestauranteADM.TELAS.Cadastro;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
@@ -102,6 +103,13 @@ namespace RestauranteADM.TELAS._1._0._1
             }
             else
                 MenuVertical.Width = 200;
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            PedidoCompra form = new PedidoCompra();
+            form.Show();
+            this.Hide();
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using RestauranteADM.TELAS.MENU;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
@@ -34,15 +35,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            if (MenuVertical.Width == 200)
-            {
-                MenuVertical.Width = 70;
-            }
-            else
-                MenuVertical.Width = 200;
-        }
+       
         public void AbrirForminPanel(object Formhijo)
         {
             if (this.MenuVertical.Controls.Count > 0)
@@ -82,7 +75,33 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            Menu_Vendas form = new Menu_Vendas();
+            form.Show();
+            this.Hide();
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Menu_Consultar form = new Menu_Consultar();
+            form.Show();
+            this.Hide();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Menu_RH form = new Menu_RH();
+            form.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            if (MenuVertical.Width == 200)
+            {
+                MenuVertical.Width = 70;
+            }
+            else
+                MenuVertical.Width = 200;
         }
     }
 }

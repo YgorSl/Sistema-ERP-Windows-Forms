@@ -31,10 +31,19 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FornecedorBusiness bus = new FornecedorBusiness();
-            List<FornecedorDTO> com = bus.filtro(txtforn.Text, txtc.Text);
+            try
+            {
 
-            dgvcliente.DataSource = com;
+
+                FornecedorBusiness bus = new FornecedorBusiness();
+                List<FornecedorDTO> com = bus.filtro(txtforn.Text, txtc.Text);
+
+                dgvcliente.DataSource = com;
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
+            }
         }
 
         private void dgvcliente_CellContentClick(object sender, DataGridViewCellEventArgs e)

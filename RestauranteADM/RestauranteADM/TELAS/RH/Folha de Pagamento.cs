@@ -113,6 +113,7 @@ namespace RestauranteADM.TELAS.RH
 
 
                     double BaseINSS = (SalarioBase + HE + DSR) - (Faltas + Atraso);
+                    BaseINSS = Math.Round (BaseINSS, 2);
                     double fgts = folha.CalcularFGTS(BaseINSS);
                     lblFGTS.Text = Convert.ToString(fgts);
 
@@ -147,7 +148,7 @@ namespace RestauranteADM.TELAS.RH
             }
             catch (Exception ex)
             {
-                MessageBox.Show(" Todos os campos devem conter digitos presentes no conjunto dos numeros reais, porém não devem ser nulos. Preencha os campos corretamente e tente outra vez." + ex.Message,
+                MessageBox.Show(" Todos os campos devem conter digitos presentes no conjunto dos numeros naturais, porém não devem ser nulos. Preencha os campos corretamente e tente outra vez." + ex.Message,
                     "Toc Toc Brasil",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -306,7 +307,7 @@ namespace RestauranteADM.TELAS.RH
                 dto.CestaBasica = Convert.ToDouble(lblSubCesta.Text);
                 dto.Bonus = Convert.ToDouble(lblsubBonus.Text);
                 dto.SalarioLiquido = Convert.ToDouble(lblTotal.Text);
-                dto.Nome = txtnome.Text;
+               
                 dto.CPF = txtcpf.Text;
 
 
@@ -318,7 +319,7 @@ namespace RestauranteADM.TELAS.RH
             }
             catch 
             {
-                MessageBox.Show("Folha de Pagamento foi errada com sucesso! :)");
+                MessageBox.Show("Ocorreu um erro! Verifique se todos os campos estão preenchidos corretamente ou entre em contato com o administrador. :(");
 
             }
                

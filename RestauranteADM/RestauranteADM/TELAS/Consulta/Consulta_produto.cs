@@ -26,10 +26,19 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProdutoBusiness bus = new ProdutoBusiness();
-            List<ProdutoDTO> prod = bus.filtro(textBox1.Text);
+            try
+            {
 
-            dgvcliente.DataSource = prod;
+
+                ProdutoBusiness bus = new ProdutoBusiness();
+                List<ProdutoDTO> prod = bus.filtro(textBox1.Text);
+
+                dgvcliente.DataSource = prod;
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
+            }
 
         }
 

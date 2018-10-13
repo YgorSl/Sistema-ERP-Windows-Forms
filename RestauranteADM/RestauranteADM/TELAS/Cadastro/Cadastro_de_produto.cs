@@ -35,16 +35,25 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProdutoDTO prod = new ProdutoDTO();
-            prod.Nome = txtnome.Text;
-            prod.Preço = Convert.ToDecimal(txtpre.Text);
+            try
+            {
 
-            prod.Fornecedor = cboforn.SelectedItem as FornecedorDTO;
 
-            ProdutoBusiness bus = new ProdutoBusiness();
-            bus.Salvar(prod);
+                ProdutoDTO prod = new ProdutoDTO();
+                prod.Nome = txtnome.Text;
+                prod.Preço = Convert.ToDecimal(txtpre.Text);
 
-            MessageBox.Show("Produto Cadastrado com sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                prod.Fornecedor = cboforn.SelectedItem as FornecedorDTO;
+
+                ProdutoBusiness bus = new ProdutoBusiness();
+                bus.Salvar(prod);
+
+                MessageBox.Show("Produto Cadastrado com sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Verifique se todos os campos estão preenchidos corretamente ou entre em contato com o administrador. :(");
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

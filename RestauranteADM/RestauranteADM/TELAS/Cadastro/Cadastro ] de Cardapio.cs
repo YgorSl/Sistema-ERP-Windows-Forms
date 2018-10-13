@@ -35,20 +35,29 @@ namespace RestauranteADM.TELAS.Cadastro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CardapioDTO dto = new CardapioDTO();
+            try
+            {
 
 
-            dto.nome_Prato = txtnomeprato.Text;
-            dto.Tamanho = txttamanho.Text;
-
-            dto.Descrição = rtvanotaçoes.Text;
-            dto.Valor = Convert.ToDouble(txtvalor.Text);
-
-            CardapioBusiness bus = new CardapioBusiness();
-            bus.salvar(dto);
+                CardapioDTO dto = new CardapioDTO();
 
 
-            MessageBox.Show("Prato salvo com sucesso! :)");
+                dto.nome_Prato = txtnomeprato.Text;
+                dto.Tamanho = txttamanho.Text;
+
+                dto.Descrição = rtvanotaçoes.Text;
+                dto.Valor = Convert.ToDouble(txtvalor.Text);
+
+                CardapioBusiness bus = new CardapioBusiness();
+                bus.salvar(dto);
+
+
+                MessageBox.Show("Prato salvo com sucesso! :)");
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Verifique se todos os campos estão preenchidos corretamente ou entre em contato com o administrador. :(");
+            }
         }
            
 }

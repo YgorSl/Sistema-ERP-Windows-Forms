@@ -57,13 +57,22 @@ namespace RestauranteADM.TELAS.Cadastro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ProdutoDTO pro = cboforn.SelectedItem as ProdutoDTO;
-            int qtd = Convert.ToInt32(nupt.Value);
+            try
+            {
 
-            this.ProdSelec = pro;
-            this.Qtd = qtd;
 
-            Close();
+                ProdutoDTO pro = cboforn.SelectedItem as ProdutoDTO;
+                int qtd = Convert.ToInt32(nupt.Value);
+
+                this.ProdSelec = pro;
+                this.Qtd = qtd;
+
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Verifique se todos os campos estão preenchidos corretamente ou entre em contato com o administrador. :(");
+            }
         }
     }
 }

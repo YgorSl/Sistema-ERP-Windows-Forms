@@ -37,26 +37,35 @@ namespace RestauranteADM.TELAS.Cadastro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FornecedorDTO forn = cboforn.SelectedItem as FornecedorDTO;
-
-            Comprar frm = new Comprar();
-            frm.LoadSreen(forn.Id);
-            frm.ShowDialog();
-
-            if (frm.ProdSelec != null)
+            try
             {
-                List<ProdutoDTO> prods = gvprod.DataSource as List<ProdutoDTO>;
-                if (prods == null)
-                    prods = new List<ProdutoDTO>();
 
 
-                for (int i = 0; i < frm.Qtd; i++)
+                FornecedorDTO forn = cboforn.SelectedItem as FornecedorDTO;
+
+                Comprar frm = new Comprar();
+                frm.LoadSreen(forn.Id);
+                frm.ShowDialog();
+
+                if (frm.ProdSelec != null)
                 {
-                    prods.Add(frm.ProdSelec);
-                }
-                gvprod.DataSource = null;
-                gvprod.DataSource = prods;
+                    List<ProdutoDTO> prods = gvprod.DataSource as List<ProdutoDTO>;
+                    if (prods == null)
+                        prods = new List<ProdutoDTO>();
 
+
+                    for (int i = 0; i < frm.Qtd; i++)
+                    {
+                        prods.Add(frm.ProdSelec);
+                    }
+                    gvprod.DataSource = null;
+                    gvprod.DataSource = prods;
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
             }
         }
 

@@ -46,12 +46,20 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FuncionarioBusiness ii = new FuncionarioBusiness();
-            List<FuncionarioDTO> opi=ii.filtro(txtfuncio.Text);
+            try
+            {
 
 
-            dgvfuncio.DataSource = opi;
+                FuncionarioBusiness ii = new FuncionarioBusiness();
+                List<FuncionarioDTO> opi = ii.filtro(txtfuncio.Text);
 
+
+                dgvfuncio.DataSource = opi;
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)

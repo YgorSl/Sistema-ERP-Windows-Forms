@@ -57,10 +57,19 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CardapioBusiness bunisess = new CardapioBusiness();
-            List<CardapioDTO> com = bunisess.lista(txtnome.Text, txttamanho.Text);
+            try
+            {
 
-            dgvcardapio.DataSource = com;
+
+                CardapioBusiness bunisess = new CardapioBusiness();
+                List<CardapioDTO> com = bunisess.lista(txtnome.Text, txttamanho.Text);
+
+                dgvcardapio.DataSource = com;
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
+            }
         }
 
         private void Consultar_Cardapio_Load(object sender, EventArgs e)

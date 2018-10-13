@@ -21,10 +21,19 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ComprasViewBusiness bus = new ComprasViewBusiness();
-            List<ComprasView> compra = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+            try
+            {
 
-            gvprod.DataSource = compra;
+
+                ComprasViewBusiness bus = new ComprasViewBusiness();
+                List<ComprasView> compra = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+
+                gvprod.DataSource = compra;
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

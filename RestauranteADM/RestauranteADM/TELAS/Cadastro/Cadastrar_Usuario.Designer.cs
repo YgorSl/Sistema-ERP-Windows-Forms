@@ -350,9 +350,9 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(14, 208);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(89, 16);
+            this.label17.Size = new System.Drawing.Size(75, 16);
             this.label17.TabIndex = 56;
-            this.label17.Text = "txtendereço";
+            this.label17.Text = "Endereço";
             // 
             // salario
             // 

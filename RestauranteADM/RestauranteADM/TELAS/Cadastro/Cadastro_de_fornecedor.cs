@@ -20,19 +20,27 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FornecedorDTO forn = new FornecedorDTO();
-            forn.Nome = txtnome.Text;
-            forn.Cnpj = txtcnpj.Text;
-            forn.Telefone = txttelefone.Text;
-            forn.Endereço = txtend.Text;
-            forn.Cidade = txtcid.Text;
-            forn.Estado = txtest.Text;
+            try
+            {
 
-            FornecedorBusiness bus = new FornecedorBusiness();
-            bus.Salvar(forn);
 
-            MessageBox.Show("Fornecedor Cadastrado com Sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FornecedorDTO forn = new FornecedorDTO();
+                forn.Nome = txtnome.Text;
+                forn.Cnpj = txtcnpj.Text;
+                forn.Telefone = txttelefone.Text;
+                forn.Endereço = txtend.Text;
+                forn.Cidade = txtcid.Text;
+                forn.Estado = txtest.Text;
 
+                FornecedorBusiness bus = new FornecedorBusiness();
+                bus.Salvar(forn);
+
+                MessageBox.Show("Fornecedor Cadastrado com Sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Ocorreu um erro! Verifique se todos os campos estão preenchidos corretamente ou entre em contato com o administrador. :(");
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

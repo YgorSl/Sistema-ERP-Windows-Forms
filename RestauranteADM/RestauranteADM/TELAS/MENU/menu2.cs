@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using RestauranteADM.TELAS.MENU;
 using RestauranteADM.TELAS.Cadastro;
+using RestauranteADM.TELAS.Financeiro;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
@@ -110,6 +111,15 @@ namespace RestauranteADM.TELAS._1._0._1
             PedidoCompra form = new PedidoCompra();
             form.Show();
             this.Hide();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Fluxo_de_Caixa());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -139,7 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(477, 230);
+            this.ClientSize = new System.Drawing.Size(752, 579);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblp);
             this.Controls.Add(this.lblt);
@@ -149,6 +149,7 @@
             this.Controls.Add(this.nupt);
             this.Controls.Add(this.cboforn);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Comprar";
             this.Text = "Compra";
             ((System.ComponentModel.ISupportInitialize)(this.nupt)).EndInit();

@@ -108,7 +108,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.txtcpf = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.Label();
             this.groupBox10.SuspendLayout();
@@ -226,7 +225,7 @@
             this.groupBox4.Controls.Add(this.lblINSS);
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(405, 98);
+            this.groupBox4.Location = new System.Drawing.Point(395, 98);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(361, 497);
             this.groupBox4.TabIndex = 83;
@@ -640,7 +639,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(621, 42);
+            this.lblID.Location = new System.Drawing.Point(611, 42);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(12, 16);
             this.lblID.TabIndex = 64;
@@ -949,7 +948,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(297, 9);
+            this.label36.Location = new System.Drawing.Point(287, 9);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(231, 24);
             this.label36.TabIndex = 79;
@@ -957,7 +956,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(547, 66);
+            this.dateTimePicker1.Location = new System.Drawing.Point(537, 66);
             this.dateTimePicker1.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(217, 20);
@@ -969,7 +968,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(480, 66);
+            this.label3.Location = new System.Drawing.Point(470, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 75;
@@ -980,7 +979,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(648, 42);
+            this.label2.Location = new System.Drawing.Point(638, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 74;
@@ -1011,24 +1010,12 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Silver;
-            this.label34.Location = new System.Drawing.Point(706, 42);
+            this.label34.Location = new System.Drawing.Point(696, 42);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(60, 16);
             this.label34.TabIndex = 77;
             this.label34.Text = "[Codigo]";
             this.label34.Click += new System.EventHandler(this.label34_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(-4, -1);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 23);
-            this.button1.TabIndex = 88;
-            this.button1.Text = "voltar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // txtcpf
             // 
@@ -1061,7 +1048,6 @@
             this.ClientSize = new System.Drawing.Size(776, 660);
             this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.txtnome);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBox10);
@@ -1189,7 +1175,6 @@
         private System.Windows.Forms.Label lblsl;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label lblAtraso;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label txtcpf;
         private System.Windows.Forms.Label txtnome;
     }

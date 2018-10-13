@@ -150,8 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::RestauranteADM.Properties.Resources.ddd;
-            this.ClientSize = new System.Drawing.Size(386, 235);
+            this.ClientSize = new System.Drawing.Size(752, 579);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtcep);
             this.Controls.Add(this.label2);
@@ -162,6 +161,7 @@
             this.Controls.Add(this.txtnome);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cadastro_Funcionario";
             this.Text = "Cadastro_Funcionario";
             this.Load += new System.EventHandler(this.Cadastro_Funcionario_Load);

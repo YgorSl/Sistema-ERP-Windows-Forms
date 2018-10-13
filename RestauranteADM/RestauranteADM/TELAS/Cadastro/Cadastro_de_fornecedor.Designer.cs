@@ -215,9 +215,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.BackgroundImage = global::RestauranteADM.Properties.Resources.ddd;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(342, 333);
+            this.ClientSize = new System.Drawing.Size(752, 579);
             this.ControlBox = false;
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label36);

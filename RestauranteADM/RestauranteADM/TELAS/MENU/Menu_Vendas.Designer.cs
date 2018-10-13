@@ -32,15 +32,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pctmenu = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.btnentrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btn1 = new System.Windows.Forms.Button();
-            this.pctmenu = new System.Windows.Forms.PictureBox();
             this.panelmenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).BeginInit();
+            this.MenuVertical.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -79,9 +81,23 @@
             this.label5.TabIndex = 53;
             this.label5.Text = "X";
             // 
+            // pctmenu
+            // 
+            this.pctmenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctmenu.Image = ((System.Drawing.Image)(resources.GetObject("pctmenu.Image")));
+            this.pctmenu.Location = new System.Drawing.Point(3, 5);
+            this.pctmenu.Name = "pctmenu";
+            this.pctmenu.Size = new System.Drawing.Size(32, 24);
+            this.pctmenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctmenu.TabIndex = 6;
+            this.pctmenu.TabStop = false;
+            this.pctmenu.Click += new System.EventHandler(this.pctmenu_Click);
+            // 
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.MenuVertical.Controls.Add(this.button2);
+            this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.btnentrar);
             this.MenuVertical.Controls.Add(this.label3);
             this.MenuVertical.Controls.Add(this.btn1);
@@ -123,24 +139,12 @@
             this.btn1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.ForeColor = System.Drawing.Color.White;
-            this.btn1.Location = new System.Drawing.Point(-4, 106);
+            this.btn1.Location = new System.Drawing.Point(1, 106);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(198, 32);
             this.btn1.TabIndex = 70;
-            this.btn1.Text = "Clientes";
+            this.btn1.Text = "Tela de Vendas";
             this.btn1.UseVisualStyleBackColor = true;
-            // 
-            // pctmenu
-            // 
-            this.pctmenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctmenu.Image = ((System.Drawing.Image)(resources.GetObject("pctmenu.Image")));
-            this.pctmenu.Location = new System.Drawing.Point(3, 5);
-            this.pctmenu.Name = "pctmenu";
-            this.pctmenu.Size = new System.Drawing.Size(32, 24);
-            this.pctmenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctmenu.TabIndex = 6;
-            this.pctmenu.TabStop = false;
-            this.pctmenu.Click += new System.EventHandler(this.pctmenu_Click);
             // 
             // panelmenu
             // 
@@ -149,6 +153,34 @@
             this.panelmenu.Name = "panelmenu";
             this.panelmenu.Size = new System.Drawing.Size(752, 597);
             this.panelmenu.TabIndex = 76;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(2, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(198, 32);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "Escolher Venda";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1, 181);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(198, 32);
+            this.button2.TabIndex = 78;
+            this.button2.Text = "Alterar Cardápio";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Menu_Vendas
             // 
@@ -164,9 +196,9 @@
             this.Text = "Menu_Vendas";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,5 +214,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Panel panelmenu;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

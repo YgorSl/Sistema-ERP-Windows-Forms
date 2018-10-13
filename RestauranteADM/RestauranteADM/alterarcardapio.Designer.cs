@@ -142,6 +142,7 @@
             this.Controls.Add(this.label1);
             this.Name = "alterarcardapio";
             this.Text = "alterarcardapio";
+            this.Load += new System.EventHandler(this.alterarcardapio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

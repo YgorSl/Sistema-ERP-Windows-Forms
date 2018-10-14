@@ -107,6 +107,43 @@ namespace RestauranteADM.BASE.Cliente
             return lista;
 
         }
+        public List<ClienteDTO> listar()
+        {
+
+
+            string script = @"select *from tb_cliente " ;
+
+    
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, null);
+
+            List<ClienteDTO> lista = new List<ClienteDTO>();
+            while (reader.Read())
+            {
+                ClienteDTO dto = new ClienteDTO();
+                dto.Id = reader.GetInt32("id_cliente");
+                dto.Nome = reader.GetString("nm_nome");
+                dto.Cpf = reader.GetString("ds_cpf");
+                dto.Telefone = reader.GetString("ds_telefone");
+                dto.Cep = reader.GetString("ds_cep");
+                dto.Bairro = reader.GetString("ds_bairro");
+                dto.NumeroCasa = reader.GetString("ds_numero_casa");
+
+
+                dto.Tipopessoa = reader.GetString("ds_tipo_pessoa");
+                dto.Cnpj = reader.GetString("ds_cnpj");
+                dto.anotaçao_cliente = reader.GetString("ds_anotaçao_cliente");
+                dto.data_hoje = reader.GetDateTime("ds_data_hoje");
+
+                lista.Add(dto);
+            }
+            reader.Close();
+
+            return lista;
+
+        }
 
     }
 

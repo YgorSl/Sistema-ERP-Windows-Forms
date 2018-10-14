@@ -87,5 +87,36 @@ namespace RestauranteADM.BASE.Cardapio
             return lista;
 
         }
+
+
+        public List<CardapioDTO> listar()
+        {
+
+
+            string script = @"select *from tb_cardapio  ";
+
+
+         
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script,null);
+
+            List<CardapioDTO> lista = new List<CardapioDTO>();
+            while (reader.Read())
+            {
+                CardapioDTO dto = new CardapioDTO();
+                dto.Id = reader.GetInt32("id_cardapio");
+                dto.nome_Prato = reader.GetString("nm_prato");
+                dto.Descrição = reader.GetString("ds_prato");
+                dto.Tamanho = reader.GetString("ds_tamanho");
+                dto.Valor = reader.GetDouble("vl_valor");
+                lista.Add(dto);
+            }
+            reader.Close();
+
+            return lista;
+
+        }
     }
 }

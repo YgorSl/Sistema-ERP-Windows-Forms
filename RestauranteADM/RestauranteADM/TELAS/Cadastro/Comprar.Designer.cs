@@ -93,7 +93,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(346, 82);
+            this.button1.Location = new System.Drawing.Point(354, 93);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 57);
             this.button1.TabIndex = 85;
@@ -139,7 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(752, 579);
+            this.ClientSize = new System.Drawing.Size(479, 236);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblp);
             this.Controls.Add(this.lblt);
@@ -152,6 +152,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Comprar";
             this.Text = "Compra";
+            this.Load += new System.EventHandler(this.Comprar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

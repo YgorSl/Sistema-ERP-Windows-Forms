@@ -33,5 +33,13 @@ namespace RestauranteADM.BASE.Cardapio
             db.Update(dto);
         }
 
+        public List<CardapioDTO> lista()
+        {
+          CardapioDatabase db = new CardapioDatabase();
+            List<CardapioDTO> tb = db.listar();
+
+            return tb;
+        }
+
     }
 }

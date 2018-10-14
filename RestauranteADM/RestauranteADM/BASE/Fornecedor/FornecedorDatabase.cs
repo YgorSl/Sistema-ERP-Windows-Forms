@@ -106,6 +106,9 @@ namespace RestauranteADM.BASE.Fornecedor
         {
             string script = @"select *from tb_fornecedor ";
 
+
+
+
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, null);
 

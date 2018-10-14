@@ -74,5 +74,10 @@ namespace RestauranteADM.TELAS.Cadastro
                 MessageBox.Show("Ocorreu um erro! Verifique se todos os campos estão preenchidos corretamente ou entre em contato com o administrador. :(");
             }
         }
+
+        private void Comprar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

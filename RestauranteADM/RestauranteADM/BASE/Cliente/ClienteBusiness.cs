@@ -43,5 +43,14 @@ namespace RestauranteADM.BASE.Cliente
 
         }
 
+        public List<ClienteDTO> lista()
+        {
+            ClienteDatabase db = new ClienteDatabase();
+            List<ClienteDTO> tb = db.listar();
+
+            return tb;
+        }
+ 
+
     }
 }

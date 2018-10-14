@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbmprato = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nupqnt = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblpreço = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.lbltotal = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.nupqnt)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbmprato
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(147, 71);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(199, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbmprato.FormattingEnabled = true;
+            this.cbmprato.Location = new System.Drawing.Point(147, 71);
+            this.cbmprato.Name = "cbmprato";
+            this.cbmprato.Size = new System.Drawing.Size(199, 21);
+            this.cbmprato.TabIndex = 0;
+            this.cbmprato.SelectedIndexChanged += new System.EventHandler(this.cbmprato_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -68,12 +69,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "qnt";
             // 
-            // numericUpDown1
+            // nupqnt
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(147, 157);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(199, 20);
-            this.numericUpDown1.TabIndex = 3;
+            this.nupqnt.Location = new System.Drawing.Point(147, 157);
+            this.nupqnt.Name = "nupqnt";
+            this.nupqnt.Size = new System.Drawing.Size(199, 20);
+            this.nupqnt.TabIndex = 3;
+            this.nupqnt.ValueChanged += new System.EventHandler(this.nupqnt_ValueChanged);
             // 
             // button1
             // 
@@ -83,6 +85,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "adicionar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -94,15 +97,15 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "preço";
             // 
-            // label4
+            // lblpreço
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(222, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 24);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "0,00";
+            this.lblpreço.AutoSize = true;
+            this.lblpreço.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpreço.Location = new System.Drawing.Point(222, 95);
+            this.lblpreço.Name = "lblpreço";
+            this.lblpreço.Size = new System.Drawing.Size(85, 24);
+            this.lblpreço.TabIndex = 6;
+            this.lblpreço.Text = "R$ 0,00";
             // 
             // label5
             // 
@@ -114,33 +117,34 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "total";
             // 
-            // label6
+            // lbltotal
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(209, 180);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 24);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "0,00";
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotal.Location = new System.Drawing.Point(209, 180);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(85, 24);
+            this.lbltotal.TabIndex = 8;
+            this.lbltotal.Text = "R$ 0,00";
             // 
             // escolhavenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(550, 361);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lbltotal);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblpreço);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nupqnt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbmprato);
             this.Name = "escolhavenda";
             this.Text = "escolhavenda";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.Load += new System.EventHandler(this.escolhavenda_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nupqnt)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,14 +152,14 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbmprato;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nupqnt;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblpreço;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbltotal;
     }
 }

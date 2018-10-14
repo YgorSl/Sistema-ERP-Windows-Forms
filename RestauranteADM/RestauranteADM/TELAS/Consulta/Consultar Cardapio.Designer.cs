@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultar_Cardapio));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcardapio = new System.Windows.Forms.DataGridView();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,73 +42,48 @@
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txttamanho = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcardapio)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 53);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(105, 91);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.Size = new System.Drawing.Size(47, 17);
             this.label2.TabIndex = 36;
             this.label2.Text = "Prato:";
             // 
             // txtnome
             // 
-            this.txtnome.Location = new System.Drawing.Point(75, 52);
+            this.txtnome.Location = new System.Drawing.Point(160, 90);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(380, 20);
             this.txtnome.TabIndex = 35;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(461, 52);
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(546, 90);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 34;
             this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(509, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 45;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(535, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Yellow;
-            this.label36.Location = new System.Drawing.Point(176, 9);
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(263, 42);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(201, 30);
+            this.label36.Size = new System.Drawing.Size(206, 24);
             this.label36.TabIndex = 47;
             this.label36.Text = "Consultar cardapio";
             // 
@@ -128,18 +100,19 @@
             this.descricao,
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvcardapio.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvcardapio.Location = new System.Drawing.Point(16, 153);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcardapio.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvcardapio.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvcardapio.Location = new System.Drawing.Point(0, 185);
             this.dgvcardapio.Name = "dgvcardapio";
             this.dgvcardapio.ReadOnly = true;
-            this.dgvcardapio.Size = new System.Drawing.Size(634, 199);
+            this.dgvcardapio.Size = new System.Drawing.Size(752, 412);
             this.dgvcardapio.TabIndex = 49;
             this.dgvcardapio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcardapio_CellContentClick);
             // 
@@ -189,16 +162,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(2, 82);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(87, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
+            this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 51;
             this.label1.Text = "tamanho";
             // 
             // txttamanho
             // 
-            this.txttamanho.Location = new System.Drawing.Point(75, 78);
+            this.txttamanho.Location = new System.Drawing.Point(160, 116);
             this.txttamanho.Name = "txttamanho";
             this.txttamanho.Size = new System.Drawing.Size(380, 20);
             this.txttamanho.TabIndex = 50;
@@ -207,15 +181,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::RestauranteADM.Properties.Resources.ddd;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(662, 378);
+            this.ClientSize = new System.Drawing.Size(752, 597);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txttamanho);
             this.Controls.Add(this.dgvcardapio);
             this.Controls.Add(this.label36);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtnome);
             this.Controls.Add(this.button1);
@@ -224,8 +196,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar_Cardapio";
             this.Load += new System.EventHandler(this.Consultar_Cardapio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcardapio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,8 +206,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridView dgvcardapio;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;

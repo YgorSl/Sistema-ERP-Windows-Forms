@@ -11,6 +11,7 @@ using System.Runtime.InteropServices;
 using RestauranteADM.TELAS.MENU;
 using RestauranteADM.TELAS.Cadastro;
 using RestauranteADM.TELAS.Financeiro;
+using RestauranteADM.Acesso;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
@@ -37,7 +38,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         }
 
-       
+
         public void AbrirForminPanel(object Formhijo)
         {
             if (this.MenuVertical.Controls.Count > 0)
@@ -60,7 +61,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button2_Click(object sender, EventArgs e)
         {
-          //  AbrirForminPanel(new MenuVendas());
+            //  AbrirForminPanel(new MenuVendas());
         }
 
         private void MenuVertical_Paint_1(object sender, PaintEventArgs e)
@@ -120,6 +121,47 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button4_Click(object sender, EventArgs e)
         {
+        }
+
+        private void panel2_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+        void VerificarPermissoes()
+        {
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaocadastro == false)
+                {
+                    btnmenucad.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaovendas == false)
+                {
+                    btnmenuven.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocompras == false)
+                {
+                    btnmenucom.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaoRH == false)
+                {
+                    btnmenurh.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaofinanceiro == false)
+                {
+                    btnmenufin.Enabled = false;
+                }
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -28,13 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Consultar_cliente));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.a = new System.Windows.Forms.Label();
             this.txtcliente = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,25 +48,25 @@
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.txtcpf = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
             this.SuspendLayout();
             // 
             // a
             // 
             this.a.AutoSize = true;
-            this.a.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.a.Location = new System.Drawing.Point(90, 62);
+            this.a.BackColor = System.Drawing.Color.Transparent;
+            this.a.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a.ForeColor = System.Drawing.Color.White;
+            this.a.Location = new System.Drawing.Point(90, 83);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(60, 16);
+            this.a.Size = new System.Drawing.Size(58, 17);
             this.a.TabIndex = 17;
             this.a.Text = "Cliente:";
             this.a.Click += new System.EventHandler(this.a_Click);
             // 
             // txtcliente
             // 
-            this.txtcliente.Location = new System.Drawing.Point(152, 60);
+            this.txtcliente.Location = new System.Drawing.Point(152, 81);
             this.txtcliente.Name = "txtcliente";
             this.txtcliente.Size = new System.Drawing.Size(380, 20);
             this.txtcliente.TabIndex = 16;
@@ -77,49 +74,25 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(538, 60);
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(538, 81);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 15;
             this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(639, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 21);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 45;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(665, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 21);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 44;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Yellow;
-            this.label36.Location = new System.Drawing.Point(241, 9);
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(263, 42);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(184, 30);
+            this.label36.Size = new System.Drawing.Size(183, 24);
             this.label36.TabIndex = 47;
             this.label36.Text = "Consultar cliente";
             // 
@@ -150,10 +123,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvcliente.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvcliente.Location = new System.Drawing.Point(-1, 147);
+            this.dgvcliente.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvcliente.Location = new System.Drawing.Point(0, 185);
             this.dgvcliente.Name = "dgvcliente";
             this.dgvcliente.ReadOnly = true;
-            this.dgvcliente.Size = new System.Drawing.Size(697, 269);
+            this.dgvcliente.Size = new System.Drawing.Size(752, 412);
             this.dgvcliente.TabIndex = 48;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick_1);
             // 
@@ -257,18 +231,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(112, 93);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(112, 114);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 16);
+            this.label1.Size = new System.Drawing.Size(29, 17);
             this.label1.TabIndex = 53;
             this.label1.Text = "cpf";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtcpf
             // 
-            this.txtcpf.Location = new System.Drawing.Point(161, 89);
+            this.txtcpf.Location = new System.Drawing.Point(161, 110);
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(380, 20);
             this.txtcpf.TabIndex = 50;
@@ -278,17 +253,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(696, 428);
+            this.ClientSize = new System.Drawing.Size(752, 597);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.dgvcliente);
             this.Controls.Add(this.label36);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.a);
             this.Controls.Add(this.txtcliente);
             this.Controls.Add(this.button1);
@@ -297,8 +269,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar_cliente";
             this.Load += new System.EventHandler(this.Consultar_cliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -309,8 +279,6 @@
         private System.Windows.Forms.Label a;
         private System.Windows.Forms.TextBox txtcliente;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridView dgvcliente;
         private System.Windows.Forms.Label label1;

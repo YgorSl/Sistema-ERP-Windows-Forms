@@ -51,6 +51,10 @@
             this.rtvanotaçoes = new System.Windows.Forms.RichTextBox();
             this.txtjuridica = new System.Windows.Forms.RadioButton();
             this.txtfisica = new System.Windows.Forms.RadioButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label36
@@ -59,7 +63,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(330, 19);
+            this.label36.Location = new System.Drawing.Point(288, 31);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(189, 24);
             this.label36.TabIndex = 47;
@@ -69,7 +73,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(547, 298);
+            this.button1.Location = new System.Drawing.Point(555, 379);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 36);
             this.button1.TabIndex = 66;
@@ -82,7 +86,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(126, 142);
+            this.label3.Location = new System.Drawing.Point(52, 116);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 17);
             this.label3.TabIndex = 13;
@@ -95,7 +99,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(139, 91);
+            this.label5.Location = new System.Drawing.Point(65, 44);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 15;
@@ -104,7 +108,7 @@
             // 
             // txttelefone
             // 
-            this.txttelefone.Location = new System.Drawing.Point(212, 141);
+            this.txttelefone.Location = new System.Drawing.Point(138, 115);
             this.txttelefone.Name = "txttelefone";
             this.txttelefone.Size = new System.Drawing.Size(262, 20);
             this.txttelefone.TabIndex = 22;
@@ -115,7 +119,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(153, 168);
+            this.label2.Location = new System.Drawing.Point(79, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 11;
@@ -124,7 +128,7 @@
             // 
             // txtcep
             // 
-            this.txtcep.Location = new System.Drawing.Point(212, 167);
+            this.txtcep.Location = new System.Drawing.Point(138, 152);
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(262, 20);
             this.txtcep.TabIndex = 23;
@@ -135,7 +139,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(154, 117);
+            this.label4.Location = new System.Drawing.Point(80, 81);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 14;
@@ -144,7 +148,7 @@
             // 
             // txtnome
             // 
-            this.txtnome.Location = new System.Drawing.Point(212, 88);
+            this.txtnome.Location = new System.Drawing.Point(138, 41);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(262, 20);
             this.txtnome.TabIndex = 20;
@@ -155,7 +159,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(92, 225);
+            this.label6.Location = new System.Drawing.Point(18, 233);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(95, 17);
             this.label6.TabIndex = 16;
@@ -167,7 +171,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(143, 197);
+            this.label9.Location = new System.Drawing.Point(69, 194);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(44, 17);
             this.label9.TabIndex = 19;
@@ -176,7 +180,7 @@
             // 
             // txtcpf
             // 
-            this.txtcpf.Location = new System.Drawing.Point(212, 114);
+            this.txtcpf.Location = new System.Drawing.Point(138, 78);
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(262, 20);
             this.txtcpf.TabIndex = 21;
@@ -184,7 +188,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(212, 250);
+            this.textBox7.Location = new System.Drawing.Point(138, 266);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(262, 20);
             this.textBox7.TabIndex = 26;
@@ -192,7 +196,7 @@
             // 
             // txtnumcasa
             // 
-            this.txtnumcasa.Location = new System.Drawing.Point(212, 222);
+            this.txtnumcasa.Location = new System.Drawing.Point(138, 230);
             this.txtnumcasa.Name = "txtnumcasa";
             this.txtnumcasa.Size = new System.Drawing.Size(262, 20);
             this.txtnumcasa.TabIndex = 25;
@@ -200,7 +204,7 @@
             // 
             // txtbairro
             // 
-            this.txtbairro.Location = new System.Drawing.Point(212, 194);
+            this.txtbairro.Location = new System.Drawing.Point(138, 191);
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(262, 20);
             this.txtbairro.TabIndex = 24;
@@ -210,7 +214,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 168);
+            this.label1.Location = new System.Drawing.Point(88, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 69;
@@ -220,7 +224,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(518, 88);
+            this.label7.Location = new System.Drawing.Point(38, 31);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 17);
             this.label7.TabIndex = 70;
@@ -231,7 +235,7 @@
             this.txtcnpj.AutoSize = true;
             this.txtcnpj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcnpj.ForeColor = System.Drawing.Color.White;
-            this.txtcnpj.Location = new System.Drawing.Point(151, 251);
+            this.txtcnpj.Location = new System.Drawing.Point(77, 267);
             this.txtcnpj.Name = "txtcnpj";
             this.txtcnpj.Size = new System.Drawing.Size(36, 17);
             this.txtcnpj.TabIndex = 71;
@@ -242,7 +246,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(508, 141);
+            this.label10.Location = new System.Drawing.Point(28, 84);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(125, 17);
             this.label10.TabIndex = 72;
@@ -250,7 +254,7 @@
             // 
             // dtphoje
             // 
-            this.dtphoje.Location = new System.Drawing.Point(511, 110);
+            this.dtphoje.Location = new System.Drawing.Point(31, 53);
             this.dtphoje.Name = "dtphoje";
             this.dtphoje.Size = new System.Drawing.Size(200, 20);
             this.dtphoje.TabIndex = 74;
@@ -258,7 +262,7 @@
             // 
             // rtvanotaçoes
             // 
-            this.rtvanotaçoes.Location = new System.Drawing.Point(511, 168);
+            this.rtvanotaçoes.Location = new System.Drawing.Point(31, 111);
             this.rtvanotaçoes.Name = "rtvanotaçoes";
             this.rtvanotaçoes.Size = new System.Drawing.Size(193, 96);
             this.rtvanotaçoes.TabIndex = 76;
@@ -269,7 +273,7 @@
             this.txtjuridica.AutoSize = true;
             this.txtjuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtjuridica.ForeColor = System.Drawing.Color.White;
-            this.txtjuridica.Location = new System.Drawing.Point(212, 276);
+            this.txtjuridica.Location = new System.Drawing.Point(138, 292);
             this.txtjuridica.Name = "txtjuridica";
             this.txtjuridica.Size = new System.Drawing.Size(69, 20);
             this.txtjuridica.TabIndex = 80;
@@ -282,7 +286,7 @@
             this.txtfisica.AutoSize = true;
             this.txtfisica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfisica.ForeColor = System.Drawing.Color.White;
-            this.txtfisica.Location = new System.Drawing.Point(276, 276);
+            this.txtfisica.Location = new System.Drawing.Point(202, 292);
             this.txtfisica.Name = "txtfisica";
             this.txtfisica.Size = new System.Drawing.Size(57, 20);
             this.txtfisica.TabIndex = 81;
@@ -290,43 +294,65 @@
             this.txtfisica.Text = "fisica";
             this.txtfisica.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtfisica);
+            this.panel1.Controls.Add(this.txtjuridica);
+            this.panel1.Controls.Add(this.txtcnpj);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txtnumcasa);
+            this.panel1.Controls.Add(this.txtbairro);
+            this.panel1.Controls.Add(this.txtcep);
+            this.panel1.Controls.Add(this.txttelefone);
+            this.panel1.Controls.Add(this.txtcpf);
+            this.panel1.Controls.Add(this.txtnome);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(36, 74);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(422, 361);
+            this.panel1.TabIndex = 82;
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.rtvanotaçoes);
+            this.panel2.Controls.Add(this.dtphoje);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(480, 77);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(247, 241);
+            this.panel2.TabIndex = 83;
+            // 
             // Cadastrar_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(865, 380);
+            this.ClientSize = new System.Drawing.Size(752, 597);
             this.ControlBox = false;
-            this.Controls.Add(this.txtfisica);
-            this.Controls.Add(this.txtjuridica);
-            this.Controls.Add(this.rtvanotaçoes);
-            this.Controls.Add(this.dtphoje);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtcnpj);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label36);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.txtnumcasa);
-            this.Controls.Add(this.txtbairro);
-            this.Controls.Add(this.txtcep);
-            this.Controls.Add(this.txttelefone);
-            this.Controls.Add(this.txtcpf);
-            this.Controls.Add(this.txtnome);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cadastrar_cliente";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastrar_cliente";
             this.Load += new System.EventHandler(this.Cadastrar_cliente_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,5 +382,7 @@
         private System.Windows.Forms.RichTextBox rtvanotaçoes;
         private System.Windows.Forms.RadioButton txtjuridica;
         private System.Windows.Forms.RadioButton txtfisica;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

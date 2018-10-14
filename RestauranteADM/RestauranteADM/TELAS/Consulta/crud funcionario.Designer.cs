@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.dgvfuncio = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,25 +42,8 @@
             this.txtfuncio = new System.Windows.Forms.TextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfuncio)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dgvfuncio);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.a);
-            this.panel1.Controls.Add(this.txtfuncio);
-            this.panel1.Location = new System.Drawing.Point(12, 27);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(757, 455);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dgvfuncio
             // 
@@ -83,10 +65,11 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvfuncio.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvfuncio.Location = new System.Drawing.Point(-1, 199);
+            this.dgvfuncio.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvfuncio.Location = new System.Drawing.Point(0, 185);
             this.dgvfuncio.Name = "dgvfuncio";
             this.dgvfuncio.ReadOnly = true;
-            this.dgvfuncio.Size = new System.Drawing.Size(756, 269);
+            this.dgvfuncio.Size = new System.Drawing.Size(752, 412);
             this.dgvfuncio.TabIndex = 33;
             this.dgvfuncio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -148,38 +131,42 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(-2, 0);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(289, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 18);
+            this.label1.Size = new System.Drawing.Size(127, 24);
             this.label1.TabIndex = 32;
-            this.label1.Text = "Funcionario:";
+            this.label1.Text = "Funcionario";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(560, 106);
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(644, 106);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(164, 43);
+            this.button1.Size = new System.Drawing.Size(69, 23);
             this.button1.TabIndex = 31;
             this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // a
             // 
             this.a.AutoSize = true;
-            this.a.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.a.Location = new System.Drawing.Point(51, 38);
+            this.a.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a.ForeColor = System.Drawing.Color.White;
+            this.a.Location = new System.Drawing.Point(59, 108);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(96, 18);
+            this.a.Size = new System.Drawing.Size(87, 17);
             this.a.TabIndex = 28;
             this.a.Text = "Funcionario:";
             // 
             // txtfuncio
             // 
             this.txtfuncio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfuncio.Location = new System.Drawing.Point(153, 31);
+            this.txtfuncio.Location = new System.Drawing.Point(161, 99);
             this.txtfuncio.Name = "txtfuncio";
             this.txtfuncio.Size = new System.Drawing.Size(465, 25);
             this.txtfuncio.TabIndex = 27;
@@ -204,36 +191,28 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(16, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "volta";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // crud_funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 494);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(752, 597);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvfuncio);
+            this.Controls.Add(this.a);
+            this.Controls.Add(this.txtfuncio);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "crud_funcionario";
             this.Text = "crud_funcionario";
             this.Load += new System.EventHandler(this.crud_funcionario_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfuncio)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label a;
@@ -247,6 +226,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
-        private System.Windows.Forms.Button button2;
     }
 }

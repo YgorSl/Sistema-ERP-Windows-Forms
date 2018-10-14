@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RestauranteADM.Acesso;
+using RestauranteADM.TELAS._1._0._1;
 
 namespace RestauranteADM
 {
@@ -63,7 +64,7 @@ namespace RestauranteADM
             if (usuario != null)
             {
                 acesso.usuariologado = usuario;
-                Menuinicial menu = new Menuinicial();
+                menu2 menu = new menu2();
                 menu.Show();
                 this.Hide();
             }

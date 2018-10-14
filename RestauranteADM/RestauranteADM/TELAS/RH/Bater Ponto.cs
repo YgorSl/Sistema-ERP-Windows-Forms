@@ -31,5 +31,10 @@ namespace RestauranteADM.TELAS.RH
         {
             Close();
         }
+
+        private void Bater_Ponto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pctmenu = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.btnentrar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -40,11 +41,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btn1 = new System.Windows.Forms.Button();
-            this.pctmenu = new System.Windows.Forms.PictureBox();
             this.panelmenu = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).BeginInit();
+            this.MenuVertical.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -83,9 +84,22 @@
             this.label5.TabIndex = 53;
             this.label5.Text = "X";
             // 
+            // pctmenu
+            // 
+            this.pctmenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctmenu.Image = ((System.Drawing.Image)(resources.GetObject("pctmenu.Image")));
+            this.pctmenu.Location = new System.Drawing.Point(3, 5);
+            this.pctmenu.Name = "pctmenu";
+            this.pctmenu.Size = new System.Drawing.Size(32, 24);
+            this.pctmenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctmenu.TabIndex = 6;
+            this.pctmenu.TabStop = false;
+            this.pctmenu.Click += new System.EventHandler(this.pctmenu_Click);
+            // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.DarkOrchid;
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(80)))), ((int)(((byte)(60)))));
+            this.MenuVertical.Controls.Add(this.button5);
             this.MenuVertical.Controls.Add(this.btnentrar);
             this.MenuVertical.Controls.Add(this.button4);
             this.MenuVertical.Controls.Add(this.button3);
@@ -124,7 +138,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(198, 32);
             this.button4.TabIndex = 75;
-            this.button4.Text = "cardapio";
+            this.button4.Text = "cardápio";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -199,18 +213,6 @@
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
-            // pctmenu
-            // 
-            this.pctmenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctmenu.Image = ((System.Drawing.Image)(resources.GetObject("pctmenu.Image")));
-            this.pctmenu.Location = new System.Drawing.Point(3, 5);
-            this.pctmenu.Name = "pctmenu";
-            this.pctmenu.Size = new System.Drawing.Size(32, 24);
-            this.pctmenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctmenu.TabIndex = 6;
-            this.pctmenu.TabStop = false;
-            this.pctmenu.Click += new System.EventHandler(this.pctmenu_Click);
-            // 
             // panelmenu
             // 
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -218,6 +220,21 @@
             this.panelmenu.Name = "panelmenu";
             this.panelmenu.Size = new System.Drawing.Size(752, 579);
             this.panelmenu.TabIndex = 75;
+            // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(1, 297);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(198, 32);
+            this.button5.TabIndex = 77;
+            this.button5.Text = "Funcionário";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Menu_Consultar
             // 
@@ -233,9 +250,9 @@
             this.Text = "Menu_Consultar";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,5 +272,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Panel panelmenu;
+        private System.Windows.Forms.Button button5;
     }
 }

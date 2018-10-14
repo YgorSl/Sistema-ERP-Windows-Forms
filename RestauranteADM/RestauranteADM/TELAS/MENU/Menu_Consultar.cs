@@ -80,5 +80,10 @@ namespace RestauranteADM.TELAS.MENU
             else
                 MenuVertical.Width = 200;
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new crud_funcionario());
+        }
     }
 }

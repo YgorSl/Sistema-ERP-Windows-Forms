@@ -32,16 +32,16 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pctmenu = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.btnentrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btn1 = new System.Windows.Forms.Button();
-            this.pctmenu = new System.Windows.Forms.PictureBox();
             this.panelmenu = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
-            this.MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).BeginInit();
+            this.MenuVertical.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -79,10 +79,23 @@
             this.label5.Size = new System.Drawing.Size(17, 16);
             this.label5.TabIndex = 53;
             this.label5.Text = "X";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // pctmenu
+            // 
+            this.pctmenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pctmenu.Image = ((System.Drawing.Image)(resources.GetObject("pctmenu.Image")));
+            this.pctmenu.Location = new System.Drawing.Point(3, 5);
+            this.pctmenu.Name = "pctmenu";
+            this.pctmenu.Size = new System.Drawing.Size(32, 24);
+            this.pctmenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctmenu.TabIndex = 6;
+            this.pctmenu.TabStop = false;
+            this.pctmenu.Click += new System.EventHandler(this.pctmenu_Click);
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.DarkGreen;
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(80)))), ((int)(((byte)(60)))));
             this.MenuVertical.Controls.Add(this.btnentrar);
             this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.label3);
@@ -90,7 +103,7 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(200, 631);
+            this.MenuVertical.Size = new System.Drawing.Size(200, 684);
             this.MenuVertical.TabIndex = 72;
             // 
             // btnentrar
@@ -148,31 +161,21 @@
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click);
             // 
-            // pctmenu
-            // 
-            this.pctmenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pctmenu.Image = ((System.Drawing.Image)(resources.GetObject("pctmenu.Image")));
-            this.pctmenu.Location = new System.Drawing.Point(3, 5);
-            this.pctmenu.Name = "pctmenu";
-            this.pctmenu.Size = new System.Drawing.Size(32, 24);
-            this.pctmenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctmenu.TabIndex = 6;
-            this.pctmenu.TabStop = false;
-            this.pctmenu.Click += new System.EventHandler(this.pctmenu_Click);
-            // 
             // panelmenu
             // 
+            this.panelmenu.AutoScroll = true;
+            this.panelmenu.AutoScrollMargin = new System.Drawing.Size(0, 660);
             this.panelmenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelmenu.Location = new System.Drawing.Point(200, 34);
             this.panelmenu.Name = "panelmenu";
-            this.panelmenu.Size = new System.Drawing.Size(752, 597);
-            this.panelmenu.TabIndex = 75;
+            this.panelmenu.Size = new System.Drawing.Size(752, 650);
+            this.panelmenu.TabIndex = 76;
             // 
             // Menu_RH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 631);
+            this.ClientSize = new System.Drawing.Size(952, 684);
             this.Controls.Add(this.panelmenu);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.MenuVertical);
@@ -182,9 +185,9 @@
             this.Text = "Menu_RH";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).EndInit();
             this.ResumeLayout(false);
 
         }

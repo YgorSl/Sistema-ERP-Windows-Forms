@@ -132,7 +132,7 @@
             this.groupBox10.Controls.Add(this.label15);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox10.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.groupBox10.Location = new System.Drawing.Point(5, 596);
+            this.groupBox10.Location = new System.Drawing.Point(5, 542);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(298, 52);
             this.groupBox10.TabIndex = 86;
@@ -187,7 +187,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(622, 617);
+            this.button2.Location = new System.Drawing.Point(622, 607);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(107, 31);
             this.button2.TabIndex = 85;
@@ -200,7 +200,7 @@
             this.btnCalcular.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCalcular.Location = new System.Drawing.Point(500, 617);
+            this.btnCalcular.Location = new System.Drawing.Point(500, 605);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(107, 31);
             this.btnCalcular.TabIndex = 84;
@@ -225,9 +225,9 @@
             this.groupBox4.Controls.Add(this.lblINSS);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(395, 98);
+            this.groupBox4.Location = new System.Drawing.Point(378, 97);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(361, 497);
+            this.groupBox4.Size = new System.Drawing.Size(361, 504);
             this.groupBox4.TabIndex = 83;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Descontos";
@@ -640,7 +640,7 @@
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(611, 42);
+            this.lblID.Location = new System.Drawing.Point(592, 42);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(12, 16);
             this.lblID.TabIndex = 64;
@@ -957,7 +957,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(537, 66);
+            this.dateTimePicker1.Location = new System.Drawing.Point(518, 66);
             this.dateTimePicker1.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(217, 20);
@@ -969,7 +969,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(470, 66);
+            this.label3.Location = new System.Drawing.Point(451, 66);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 75;
@@ -980,7 +980,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(638, 42);
+            this.label2.Location = new System.Drawing.Point(619, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 74;
@@ -1011,7 +1011,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Silver;
-            this.label34.Location = new System.Drawing.Point(696, 42);
+            this.label34.Location = new System.Drawing.Point(677, 42);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(60, 16);
             this.label34.TabIndex = 77;

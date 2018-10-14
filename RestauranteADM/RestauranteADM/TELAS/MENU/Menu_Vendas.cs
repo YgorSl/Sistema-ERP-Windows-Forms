@@ -54,5 +54,11 @@ namespace RestauranteADM.TELAS.MENU
             else
                 MenuVertical.Width = 200;
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Close();
+
+        }
     }
 }

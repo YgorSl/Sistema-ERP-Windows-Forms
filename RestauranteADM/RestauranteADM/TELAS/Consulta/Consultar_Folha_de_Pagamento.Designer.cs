@@ -51,7 +51,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtcpf = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,11 +58,11 @@
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.Yellow;
-            this.label36.Location = new System.Drawing.Point(281, 9);
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(229, 41);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(318, 30);
+            this.label36.Size = new System.Drawing.Size(332, 24);
             this.label36.TabIndex = 54;
             this.label36.Text = "Consultar Folha de Pagamento";
             // 
@@ -90,11 +89,11 @@
             this.bonus,
             this.j});
             this.dgvcliente.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvcliente.Location = new System.Drawing.Point(0, 132);
+            this.dgvcliente.Location = new System.Drawing.Point(0, 185);
             this.dgvcliente.Name = "dgvcliente";
             this.dgvcliente.ReadOnly = true;
             this.dgvcliente.RowHeadersVisible = false;
-            this.dgvcliente.Size = new System.Drawing.Size(800, 318);
+            this.dgvcliente.Size = new System.Drawing.Size(752, 412);
             this.dgvcliente.TabIndex = 51;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick);
             // 
@@ -213,64 +212,58 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(137, 58);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(131, 87);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 16);
+            this.label2.Size = new System.Drawing.Size(48, 17);
             this.label2.TabIndex = 50;
             this.label2.Text = "Nome";
             // 
             // txtnome
             // 
-            this.txtnome.Location = new System.Drawing.Point(192, 57);
+            this.txtnome.Location = new System.Drawing.Point(186, 86);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(380, 20);
             this.txtnome.TabIndex = 49;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(578, 57);
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(572, 86);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 48;
             this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(157, 84);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(151, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 16);
+            this.label1.Size = new System.Drawing.Size(29, 17);
             this.label1.TabIndex = 56;
             this.label1.Text = "cpf";
             // 
             // txtcpf
             // 
-            this.txtcpf.Location = new System.Drawing.Point(192, 84);
+            this.txtcpf.Location = new System.Drawing.Point(186, 113);
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(380, 20);
             this.txtcpf.TabIndex = 55;
             this.txtcpf.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 103);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "volta";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // Consultar_Folha_de_Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(752, 597);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.label36);
@@ -278,6 +271,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtnome);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultar_Folha_de_Pagamento";
             this.Text = "Consultar_Folha_de_Pagamento";
             this.Load += new System.EventHandler(this.Consultar_Folha_de_Pagamento_Load);
@@ -312,6 +306,5 @@
         private System.Windows.Forms.DataGridViewImageColumn j;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtcpf;
-        private System.Windows.Forms.Button button2;
     }
 }

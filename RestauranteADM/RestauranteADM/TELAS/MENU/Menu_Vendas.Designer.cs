@@ -34,12 +34,12 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pctmenu = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnentrar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btn1 = new System.Windows.Forms.Button();
             this.panelmenu = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).BeginInit();
             this.MenuVertical.SuspendLayout();
@@ -80,6 +80,7 @@
             this.label5.Size = new System.Drawing.Size(17, 16);
             this.label5.TabIndex = 53;
             this.label5.Text = "X";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // pctmenu
             // 
@@ -95,7 +96,7 @@
             // 
             // MenuVertical
             // 
-            this.MenuVertical.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(80)))), ((int)(((byte)(60)))));
             this.MenuVertical.Controls.Add(this.button2);
             this.MenuVertical.Controls.Add(this.button1);
             this.MenuVertical.Controls.Add(this.btnentrar);
@@ -106,6 +107,34 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(200, 631);
             this.MenuVertical.TabIndex = 74;
+            // 
+            // button2
+            // 
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(1, 181);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(198, 32);
+            this.button2.TabIndex = 78;
+            this.button2.Text = "Alterar Cardápio";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(2, 144);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(198, 32);
+            this.button1.TabIndex = 77;
+            this.button1.Text = "Escolher Venda";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // btnentrar
             // 
@@ -153,34 +182,6 @@
             this.panelmenu.Name = "panelmenu";
             this.panelmenu.Size = new System.Drawing.Size(752, 597);
             this.panelmenu.TabIndex = 76;
-            // 
-            // button1
-            // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(2, 144);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 32);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "Escolher Venda";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(1, 181);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(198, 32);
-            this.button2.TabIndex = 78;
-            this.button2.Text = "Alterar Cardápio";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // Menu_Vendas
             // 

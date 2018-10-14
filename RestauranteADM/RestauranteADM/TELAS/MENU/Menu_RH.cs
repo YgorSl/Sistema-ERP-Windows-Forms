@@ -69,5 +69,28 @@ namespace RestauranteADM.TELAS.MENU
             else
                 MenuVertical.Width = 200;
         }
+
+        private void panelmenu_Scroll(object sender, ScrollEventArgs e)
+        {
+            panelmenu.AutoScroll = false;
+            panelmenu.HorizontalScroll.Enabled = false;
+            panelmenu.HorizontalScroll.Visible = false;
+            panelmenu.HorizontalScroll.Maximum = 660;
+            panelmenu.AutoScroll = true;
+        }
+
+        private void panelmenu_Paint(object sender, PaintEventArgs e)
+        {
+            panelmenu.AutoScroll = false;
+            panelmenu.HorizontalScroll.Enabled = false;
+            panelmenu.HorizontalScroll.Visible = false;
+            panelmenu.HorizontalScroll.Maximum = 660;
+            panelmenu.AutoScroll = true;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

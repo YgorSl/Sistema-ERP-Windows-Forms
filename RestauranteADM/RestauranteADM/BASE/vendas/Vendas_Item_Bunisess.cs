@@ -10,10 +10,10 @@ namespace RestauranteADM.BASE.vendas
     {
 
         
-            public void Salvar(Vendas_Item_Bunisess dto)
+          public void Salvar(vendas_item_DTO item)
         {
-            Vendas_Item_Bunisess db = new Vendas_Item_Bunisess();
-            db.Salvar(dto);
+            Vendas_Item_Database db = new Vendas_Item_Database();
+            db.Salvar(item);
         }
     }
     }

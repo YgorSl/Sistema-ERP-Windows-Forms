@@ -145,11 +145,25 @@ namespace RestauranteADM
             VendasDTO compra = new VendasDTO();
             compra.Data = dtpdata.Value;
             compra.cliente = forn;
-            compra.cardapio = cardapio;
 
 
+            List<VendasDTO> itens=dgvvendas.DataSource as List<VendasDTO>;
+            List<vendas_item_DTO> item =new List<vendas_item_DTO>();
+
+            foreach (VendasDTO ite in itens)
+            {
+                vendas_item_DTO itemvenda= new vendas_item_DTO();
+                itemvenda.vendas = ite;
+
+                item.Add(itemvenda);
+            }
             VendasBunisess bus = new VendasBunisess();
-            bus.Salvar(compra);
+            bus.Salvar(compra,item);
+
+
+
+
+
 
             MessageBox.Show("Compra Feita com sucesso!", "Compras", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

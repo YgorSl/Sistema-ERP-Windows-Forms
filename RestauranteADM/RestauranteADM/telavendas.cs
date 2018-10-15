@@ -20,7 +20,7 @@ namespace RestauranteADM
         {
             InitializeComponent();
             CarregarCombo();
-
+            dgvvendas.AutoGenerateColumns = false;
 
         }
         public CardapioDTO ProdSelec { get; set; }
@@ -170,17 +170,45 @@ namespace RestauranteADM
 
         private void button1_Click(object sender, EventArgs e)
         {
+           
+           
+
+            ClienteDTO cliente = cmbcliente.SelectedItem as ClienteDTO;
+            CardapioDTO cardapio = cbmprato.SelectedItem as CardapioDTO;
+
+            int qtd = Convert.ToInt32(nupqnt.Value);
+
+            this.ProdSelec = cardapio;
+            this.Qtd = qtd;
+
+
+            if (ProdSelec != null)
+            {
+                List<CardapioDTO> prods = dgvvendas.DataSource as List<CardapioDTO>;
+                if (prods == null)
+                    prods = new List<CardapioDTO>();
+
+
+                for (int i = 0; i < Qtd; i++)
+                {
+                    prods.Add(ProdSelec);
+                }
+                dgvvendas.DataSource = null;
+                dgvvendas.DataSource = prods;
+
+            }
 
 
 
 
 
+             ///   int m = dgvvendas.Rows.Add();
+          ///  dgvvendas.Rows[m].Cells[0].Value = cbmprato.Text;
+          ///  dgvvendas.Rows[m].Cells[1].Value = lblpreço.Text;
+         ///   dgvvendas.Rows[m].Cells[2].Value = nupqnt.Text;
+          ///  dgvvendas.Rows[m].Cells[3].Value = lbltotal.Text;
 
-            int m = dgvvendas.Rows.Add();
-            dgvvendas.Rows[m].Cells[0].Value = cbmprato.Text;
-            dgvvendas.Rows[m].Cells[1].Value = lblpreço.Text;
-            dgvvendas.Rows[m].Cells[2].Value = nupqnt.Text;
-            dgvvendas.Rows[m].Cells[3].Value = lbltotal.Text;
+           /// dgvvendas.DataSource = m;
 
 
         }

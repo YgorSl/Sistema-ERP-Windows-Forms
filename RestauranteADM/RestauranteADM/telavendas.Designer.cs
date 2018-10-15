@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpdata = new System.Windows.Forms.DateTimePicker();
             this.cmbcliente = new System.Windows.Forms.ComboBox();
@@ -47,14 +47,12 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cbmprato = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvvendas = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor_final = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuddes)).BeginInit();
@@ -250,16 +248,6 @@
             this.cbmprato.TabIndex = 103;
             this.cbmprato.SelectedIndexChanged += new System.EventHandler(this.cbmprato_SelectedIndexChanged);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(580, 538);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 23);
-            this.button2.TabIndex = 102;
-            this.button2.Text = "Finalizar Compra";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -296,23 +284,31 @@
             this.dgvvendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvvendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nome,
-            this.valor,
-            this.quantidade,
             this.valor_final});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvvendas.Location = new System.Drawing.Point(81, 234);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
             this.dgvvendas.Size = new System.Drawing.Size(634, 199);
             this.dgvvendas.TabIndex = 99;
             this.dgvvendas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvendas_CellContentClick);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(580, 538);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(215, 23);
+            this.button2.TabIndex = 102;
+            this.button2.Text = "Finalizar Compra";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // nome
             // 
@@ -322,22 +318,10 @@
             this.nome.Name = "nome";
             this.nome.ReadOnly = true;
             // 
-            // valor
-            // 
-            this.valor.DataPropertyName = "Valor";
-            this.valor.HeaderText = "Valor";
-            this.valor.Name = "valor";
-            this.valor.ReadOnly = true;
-            // 
-            // quantidade
-            // 
-            this.quantidade.HeaderText = "quantidade";
-            this.quantidade.Name = "quantidade";
-            this.quantidade.ReadOnly = true;
-            // 
             // valor_final
             // 
-            this.valor_final.HeaderText = "valor final";
+            this.valor_final.DataPropertyName = "Valor";
+            this.valor_final.HeaderText = "Valor";
             this.valor_final.Name = "valor_final";
             this.valor_final.ReadOnly = true;
             // 
@@ -389,12 +373,10 @@
         private System.Windows.Forms.DataGridView dgvvendas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valor_final;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown nuddes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valor_final;
     }
 }

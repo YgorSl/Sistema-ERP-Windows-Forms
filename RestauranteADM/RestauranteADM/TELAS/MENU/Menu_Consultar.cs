@@ -85,5 +85,10 @@ namespace RestauranteADM.TELAS.MENU
         {
             AbrirForminPanel(new crud_funcionario());
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new ConsultarPedido());
+        }
     }
 }

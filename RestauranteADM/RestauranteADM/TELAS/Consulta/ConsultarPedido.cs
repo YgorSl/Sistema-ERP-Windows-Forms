@@ -21,8 +21,7 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+           
 
 
                 ComprasViewBusiness bus = new ComprasViewBusiness();
@@ -30,17 +29,9 @@ namespace RestauranteADM.TELAS.Consulta
 
                 gvprod.DataSource = compra;
             }
-            catch
-            {
-                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
-            }
+           
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Menuinicial oi = new Menuinicial();
-            oi.Show();
-            this.Hide();
-        }
+       
     }
-}
+

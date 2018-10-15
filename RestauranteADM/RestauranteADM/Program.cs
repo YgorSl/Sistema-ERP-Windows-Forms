@@ -23,7 +23,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new telavendas());
+            Application.Run(new menu2());
         }
     }
 }

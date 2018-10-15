@@ -41,14 +41,14 @@ namespace RestauranteADM.TELAS._1._0._1
 
         public void AbrirForminPanel(object Formhijo)
         {
-            if (this.MenuVertical.Controls.Count > 0)
-                this.MenuVertical.Controls.RemoveAt(0);
+            if (this.panel2.Controls.Count > 0)
+                this.panel2.Controls.RemoveAt(0);
             Form fh = Formhijo as Form;
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
-            this.MenuVertical.Controls.Add(fh);
-            this.MenuVertical.Tag = fh;
+            this.panel2.Controls.Add(fh);
+            this.panel2.Tag = fh;
             fh.Show();
         }
 
@@ -109,9 +109,8 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            PedidoCompra form = new PedidoCompra();
-            form.Show();
-            this.Hide();
+            
+            AbrirForminPanel(new PedidoCompra());
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -151,6 +150,7 @@ namespace RestauranteADM.TELAS._1._0._1
                 {
                     btnmenufin.Enabled = false;
                 }
+
             }
         }
 

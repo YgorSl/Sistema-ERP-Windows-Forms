@@ -34,6 +34,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.pctmenu = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.button5 = new System.Windows.Forms.Button();
             this.btnentrar = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -42,7 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn1 = new System.Windows.Forms.Button();
             this.panelmenu = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctmenu)).BeginInit();
             this.MenuVertical.SuspendLayout();
@@ -99,6 +100,7 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(80)))), ((int)(((byte)(60)))));
+            this.MenuVertical.Controls.Add(this.button6);
             this.MenuVertical.Controls.Add(this.button5);
             this.MenuVertical.Controls.Add(this.btnentrar);
             this.MenuVertical.Controls.Add(this.button4);
@@ -112,6 +114,21 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(200, 613);
             this.MenuVertical.TabIndex = 70;
+            // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(1, 297);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(198, 32);
+            this.button5.TabIndex = 77;
+            this.button5.Text = "Funcionário";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnentrar
             // 
@@ -221,20 +238,20 @@
             this.panelmenu.Size = new System.Drawing.Size(752, 579);
             this.panelmenu.TabIndex = 75;
             // 
-            // button5
+            // button6
             // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(1, 297);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(198, 32);
-            this.button5.TabIndex = 77;
-            this.button5.Text = "Funcionário";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(2, 333);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(198, 32);
+            this.button6.TabIndex = 78;
+            this.button6.Text = "Pedido";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Menu_Consultar
             // 
@@ -273,5 +290,6 @@
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Panel panelmenu;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }

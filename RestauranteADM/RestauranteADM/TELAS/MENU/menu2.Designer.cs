@@ -132,7 +132,7 @@
             this.btnmenucon.Name = "btnmenucon";
             this.btnmenucon.Size = new System.Drawing.Size(198, 32);
             this.btnmenucon.TabIndex = 70;
-            this.btnmenucon.Text = "Consultar ";
+            this.btnmenucon.Text = "Consultar/Alterar";
             this.btnmenucon.UseVisualStyleBackColor = true;
             this.btnmenucon.Click += new System.EventHandler(this.button6_Click);
             // 

@@ -178,7 +178,9 @@
             this.Controls.Add(this.label36);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(365, 210);
             this.Name = "Comprar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Compra";
             this.Load += new System.EventHandler(this.Comprar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupt)).EndInit();

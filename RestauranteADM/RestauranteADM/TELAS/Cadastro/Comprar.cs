@@ -84,5 +84,10 @@ namespace RestauranteADM.TELAS.Cadastro
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

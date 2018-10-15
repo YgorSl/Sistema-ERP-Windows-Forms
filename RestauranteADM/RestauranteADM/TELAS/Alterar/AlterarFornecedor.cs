@@ -1,5 +1,6 @@
 ﻿using RestauranteADM.BASE.Fornecedor;
 using RestauranteADM.TELAS.Consulta;
+using RestauranteADM.TELAS.MENU;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -55,21 +56,10 @@ namespace RestauranteADM.TELAS
             
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            Consultar_Fornecedor oi = new Consultar_Fornecedor();
-            oi.Show();
-            this.Hide();
+
+            Close();
         }
     }
 }

@@ -39,6 +39,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nupt)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -98,9 +103,9 @@
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(382, 437);
+            this.button1.Location = new System.Drawing.Point(201, 307);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 39);
+            this.button1.Size = new System.Drawing.Size(118, 47);
             this.button1.TabIndex = 85;
             this.button1.Text = "Colocar no Carrinho";
             this.button1.UseVisualStyleBackColor = false;
@@ -145,7 +150,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(349, 96);
+            this.label36.Location = new System.Drawing.Point(124, 25);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(102, 24);
             this.label36.TabIndex = 89;
@@ -163,24 +168,77 @@
             this.panel1.Controls.Add(this.nupt);
             this.panel1.Controls.Add(this.cboforn);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(247, 176);
+            this.panel1.Location = new System.Drawing.Point(22, 64);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(297, 237);
             this.panel1.TabIndex = 90;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(336, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 379);
+            this.panel2.TabIndex = 91;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 369);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(336, 10);
+            this.panel3.TabIndex = 92;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 369);
+            this.panel4.TabIndex = 93;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(10, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(326, 10);
+            this.panel5.TabIndex = 94;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SeaGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(22, 331);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 95;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Comprar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(752, 579);
+            this.ClientSize = new System.Drawing.Size(346, 379);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(365, 210);
             this.Name = "Comprar";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compra";
             this.Load += new System.EventHandler(this.Comprar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nupt)).EndInit();
@@ -204,5 +262,10 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button button2;
     }
 }

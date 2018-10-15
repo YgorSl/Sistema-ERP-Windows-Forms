@@ -147,13 +147,13 @@ namespace RestauranteADM
             compra.cliente = forn;
 
 
-            List<VendasDTO> itens=dgvvendas.DataSource as List<VendasDTO>;
+            List<CardapioDTO> itens=dgvvendas.DataSource as List<CardapioDTO>;
             List<vendas_item_DTO> item =new List<vendas_item_DTO>();
 
-            foreach (VendasDTO ite in itens)
+            foreach (CardapioDTO ite in itens)
             {
                 vendas_item_DTO itemvenda= new vendas_item_DTO();
-                itemvenda.vendas = ite;
+                itemvenda.cardapio = ite;
 
                 item.Add(itemvenda);
             }

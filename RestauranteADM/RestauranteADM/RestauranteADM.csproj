@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acesso\acesso.cs" />
+    <Compile Include="BASE\vendas\VendasViewBunisess.cs" />
+    <Compile Include="BASE\vendas\VendasViewDatabase.cs" />
+    <Compile Include="BASE\vendas\VendasViewDto.cs" />
     <Compile Include="BASE\vendas\Vendas_Item_Bunisess.cs" />
     <Compile Include="BASE\vendas\Vendas_Item_Database.cs" />
     <Compile Include="BASE\vendas\vendas_item_DTO.cs" />
@@ -204,6 +207,12 @@
     <Compile Include="TELAS\Consulta\ConsultarPedido.Designer.cs">
       <DependentUpon>ConsultarPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Consulta\ConsultarVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Consulta\ConsultarVendas.Designer.cs">
+      <DependentUpon>ConsultarVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Consulta\Consultar_Folha_de_Pagamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +362,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\ConsultarPedido.resx">
       <DependentUpon>ConsultarPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Consulta\ConsultarVendas.resx">
+      <DependentUpon>ConsultarVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\Consultar_Folha_de_Pagamento.resx">
       <DependentUpon>Consultar_Folha_de_Pagamento.cs</DependentUpon>

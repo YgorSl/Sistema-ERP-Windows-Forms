@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using RestauranteADM.BASE.Cliente;
 using RestauranteADM.DB;
 using System;
 using System.Collections.Generic;
@@ -23,5 +24,7 @@ namespace RestauranteADM.BASE.vendas
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
             return pk;
         }
+
+      
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestauranteADM.BASE.Produto
 {
-    class CompraBusiness
+  public  class CompraBusiness
     {
         public void Salvar(CompraDTO compra, List<CompraItemDTO> Itens)
         {

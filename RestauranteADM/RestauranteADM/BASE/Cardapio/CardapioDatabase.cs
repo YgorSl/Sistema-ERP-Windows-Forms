@@ -92,11 +92,7 @@ namespace RestauranteADM.BASE.Cardapio
         public List<CardapioDTO> listar()
         {
 
-
-            string script = @"select *from tb_cardapio  ";
-
-
-         
+            string script = @"select *from tb_cardapio";
 
 
             Database db = new Database();

@@ -130,8 +130,6 @@ namespace RestauranteADM.BASE.Cliente
                 dto.Cep = reader.GetString("ds_cep");
                 dto.Bairro = reader.GetString("ds_bairro");
                 dto.NumeroCasa = reader.GetString("ds_numero_casa");
-
-
                 dto.Tipopessoa = reader.GetString("ds_tipo_pessoa");
                 dto.Cnpj = reader.GetString("ds_cnpj");
                 dto.anotaçao_cliente = reader.GetString("ds_anotaçao_cliente");

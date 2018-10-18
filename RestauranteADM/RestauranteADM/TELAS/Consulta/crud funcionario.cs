@@ -79,7 +79,7 @@ namespace RestauranteADM.TELAS.Consulta
                 alterarfuncionario menu = new alterarfuncionario();
                 
                 menu.Show();
-                this.Hide();
+               
 
             }
             if (e.ColumnIndex == 5)

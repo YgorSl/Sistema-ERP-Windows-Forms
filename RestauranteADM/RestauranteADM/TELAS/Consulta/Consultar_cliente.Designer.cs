@@ -29,14 +29,17 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.a = new System.Windows.Forms.Label();
             this.txtcliente = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero_da_casa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,8 +49,6 @@
             this.anotaçao_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +77,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(538, 81);
+            this.button1.Location = new System.Drawing.Point(538, 107);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 15;
@@ -100,12 +101,14 @@
             // 
             this.dgvcliente.AllowUserToAddRows = false;
             this.dgvcliente.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvcliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvcliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
-            this.Rg,
             this.CPF,
+            this.Telefone,
             this.CEP,
             this.Bairro,
             this.Numero_da_casa,
@@ -115,14 +118,14 @@
             this.anotaçao_cliente,
             this.Column2,
             this.Column1});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvcliente.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcliente.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvcliente.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvcliente.Location = new System.Drawing.Point(0, 185);
             this.dgvcliente.Name = "dgvcliente";
@@ -130,6 +133,27 @@
             this.dgvcliente.Size = new System.Drawing.Size(752, 412);
             this.dgvcliente.TabIndex = 48;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(108, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 17);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "CPF:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Location = new System.Drawing.Point(152, 110);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(380, 20);
+            this.txtcpf.TabIndex = 50;
+            this.txtcpf.TextChanged += new System.EventHandler(this.txtcpf_TextChanged);
             // 
             // Nome
             // 
@@ -139,23 +163,22 @@
             this.Nome.MinimumWidth = 40;
             this.Nome.Name = "Nome";
             this.Nome.ReadOnly = true;
-            this.Nome.Width = 200;
-            // 
-            // Rg
-            // 
-            this.Rg.DataPropertyName = "Cpf";
-            this.Rg.HeaderText = "CPF";
-            this.Rg.Name = "Rg";
-            this.Rg.ReadOnly = true;
             // 
             // CPF
             // 
-            this.CPF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CPF.DataPropertyName = "Telefone";
-            this.CPF.HeaderText = "Telefone";
-            this.CPF.MinimumWidth = 20;
+            this.CPF.DataPropertyName = "Cpf";
+            this.CPF.HeaderText = "CPF";
             this.CPF.Name = "CPF";
             this.CPF.ReadOnly = true;
+            // 
+            // Telefone
+            // 
+            this.Telefone.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Telefone.DataPropertyName = "Telefone";
+            this.Telefone.HeaderText = "Telefone";
+            this.Telefone.MinimumWidth = 70;
+            this.Telefone.Name = "Telefone";
+            this.Telefone.ReadOnly = true;
             // 
             // CEP
             // 
@@ -178,6 +201,7 @@
             this.Numero_da_casa.HeaderText = "Numero_da_casa";
             this.Numero_da_casa.Name = "Numero_da_casa";
             this.Numero_da_casa.ReadOnly = true;
+            this.Numero_da_casa.Width = 48;
             // 
             // Tipo_Pessoa
             // 
@@ -185,6 +209,7 @@
             this.Tipo_Pessoa.HeaderText = "Tipo_Pessoa";
             this.Tipo_Pessoa.Name = "Tipo_Pessoa";
             this.Tipo_Pessoa.ReadOnly = true;
+            this.Tipo_Pessoa.Width = 70;
             // 
             // Cnpj
             // 
@@ -212,42 +237,23 @@
             this.Column2.FillWeight = 300F;
             this.Column2.HeaderText = "";
             this.Column2.Image = global::RestauranteADM.Properties.Resources._1;
+            this.Column2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column2.Width = 50;
+            this.Column2.Width = 25;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "";
             this.Column1.Image = global::RestauranteADM.Properties.Resources.erro;
+            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column1.Width = 50;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(112, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 17);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "cpf";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(161, 110);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(380, 20);
-            this.txtcpf.TabIndex = 50;
-            this.txtcpf.TextChanged += new System.EventHandler(this.txtcpf_TextChanged);
+            this.Column1.Width = 25;
             // 
             // Consultar_cliente
             // 
@@ -284,8 +290,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtcpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rg;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bairro;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero_da_casa;

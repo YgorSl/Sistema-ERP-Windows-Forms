@@ -83,7 +83,8 @@ namespace RestauranteADM.TELAS.Consulta
             FuncionarioBusiness iop = new FuncionarioBusiness();
             iop.Update(this.funcio, this.usuario);
 
-            MessageBox.Show("foi alterou");
+            MessageBox.Show("Alterado Com Sucesso!");
+            this.Hide();
 
 
         }
@@ -98,6 +99,11 @@ namespace RestauranteADM.TELAS.Consulta
             crud_funcionario oi = new crud_funcionario();
             oi.Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

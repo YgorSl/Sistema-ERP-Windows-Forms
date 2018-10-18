@@ -90,11 +90,11 @@
             this.Column2,
             this.Column3});
             this.dgvcliente.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvcliente.Location = new System.Drawing.Point(0, 185);
+            this.dgvcliente.Location = new System.Drawing.Point(0, 186);
             this.dgvcliente.Name = "dgvcliente";
             this.dgvcliente.ReadOnly = true;
             this.dgvcliente.RowHeadersVisible = false;
-            this.dgvcliente.Size = new System.Drawing.Size(752, 412);
+            this.dgvcliente.Size = new System.Drawing.Size(752, 411);
             this.dgvcliente.TabIndex = 33;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick);
             // 

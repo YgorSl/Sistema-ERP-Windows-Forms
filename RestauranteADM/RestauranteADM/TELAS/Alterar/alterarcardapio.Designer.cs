@@ -37,13 +37,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // rtvanotaçoes
             // 
-            this.rtvanotaçoes.Location = new System.Drawing.Point(449, 134);
+            this.rtvanotaçoes.Location = new System.Drawing.Point(92, 148);
             this.rtvanotaçoes.Name = "rtvanotaçoes";
-            this.rtvanotaçoes.Size = new System.Drawing.Size(133, 98);
+            this.rtvanotaçoes.Size = new System.Drawing.Size(187, 40);
             this.rtvanotaçoes.TabIndex = 86;
             this.rtvanotaçoes.Text = "";
             this.rtvanotaçoes.TextChanged += new System.EventHandler(this.rtvanotaçoes_TextChanged);
@@ -52,35 +58,35 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(449, 323);
+            this.button1.Location = new System.Drawing.Point(204, 213);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 35);
+            this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 85;
-            this.button1.Text = "Cadastrar ";
+            this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtvalor
             // 
-            this.txtvalor.Location = new System.Drawing.Point(158, 242);
+            this.txtvalor.Location = new System.Drawing.Point(92, 115);
             this.txtvalor.Name = "txtvalor";
-            this.txtvalor.Size = new System.Drawing.Size(232, 20);
+            this.txtvalor.Size = new System.Drawing.Size(187, 20);
             this.txtvalor.TabIndex = 84;
             this.txtvalor.TextChanged += new System.EventHandler(this.txtvalor_TextChanged);
             // 
             // txttamanho
             // 
-            this.txttamanho.Location = new System.Drawing.Point(158, 216);
+            this.txttamanho.Location = new System.Drawing.Point(92, 89);
             this.txttamanho.Name = "txttamanho";
-            this.txttamanho.Size = new System.Drawing.Size(232, 20);
+            this.txttamanho.Size = new System.Drawing.Size(187, 20);
             this.txttamanho.TabIndex = 83;
             this.txttamanho.TextChanged += new System.EventHandler(this.txttamanho_TextChanged);
             // 
             // txtnomeprato
             // 
-            this.txtnomeprato.Location = new System.Drawing.Point(126, 107);
+            this.txtnomeprato.Location = new System.Drawing.Point(92, 63);
             this.txtnomeprato.Name = "txtnomeprato";
-            this.txtnomeprato.Size = new System.Drawing.Size(232, 20);
+            this.txtnomeprato.Size = new System.Drawing.Size(187, 20);
             this.txtnomeprato.TabIndex = 82;
             this.txtnomeprato.TextChanged += new System.EventHandler(this.txtnomeprato_TextChanged);
             // 
@@ -89,7 +95,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(61, 107);
+            this.label5.Location = new System.Drawing.Point(33, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 81;
@@ -101,7 +107,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(446, 107);
+            this.label4.Location = new System.Drawing.Point(9, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 80;
@@ -113,7 +119,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(61, 216);
+            this.label3.Location = new System.Drawing.Point(12, 92);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 17);
             this.label3.TabIndex = 79;
@@ -125,19 +131,85 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(61, 242);
+            this.label1.Location = new System.Drawing.Point(39, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 78;
             this.label1.Text = "Valor";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(80, 23);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(179, 24);
+            this.label36.TabIndex = 87;
+            this.label36.Text = "Alterar Cardápio";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel2.Location = new System.Drawing.Point(309, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 274);
+            this.panel2.TabIndex = 88;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 264);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(309, 10);
+            this.panel1.TabIndex = 89;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 264);
+            this.panel4.TabIndex = 90;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(10, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(299, 10);
+            this.panel3.TabIndex = 91;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SeaGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(123, 213);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 92;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // alterarcardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(666, 414);
+            this.ClientSize = new System.Drawing.Size(319, 274);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.label36);
             this.Controls.Add(this.rtvanotaçoes);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtvalor);
@@ -147,7 +219,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "alterarcardapio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "alterarcardapio";
             this.Load += new System.EventHandler(this.alterarcardapio_Load);
             this.ResumeLayout(false);
@@ -166,5 +240,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button2;
     }
 }

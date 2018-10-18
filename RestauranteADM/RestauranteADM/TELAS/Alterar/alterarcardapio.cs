@@ -46,6 +46,7 @@ namespace RestauranteADM
 
             CardapioDatabase oi = new CardapioDatabase();
             oi.Update(cardapio);
+            this.Hide();
 
         }
 
@@ -92,6 +93,11 @@ namespace RestauranteADM
         private void alterarcardapio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

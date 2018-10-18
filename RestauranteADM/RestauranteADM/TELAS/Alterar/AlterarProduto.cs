@@ -58,6 +58,7 @@ namespace RestauranteADM.TELAS
             bus.Alterar(produt);
 
             MessageBox.Show("Produto Alterado com sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -75,6 +76,13 @@ namespace RestauranteADM.TELAS
             Consulta_produto oi = new Consulta_produto();
             oi.Show();
             this.Hide();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Close();
+
+
         }
     }
 }

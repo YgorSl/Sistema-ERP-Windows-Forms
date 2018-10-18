@@ -49,6 +49,7 @@ namespace RestauranteADM.TELAS
             bus.Alterar(forn);
 
             MessageBox.Show("Fornecedor Alterado com Sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Hide();
         }
 
         private void AlterarFornecedor_Load(object sender, EventArgs e)

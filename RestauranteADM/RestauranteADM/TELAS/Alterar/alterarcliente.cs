@@ -78,8 +78,14 @@ namespace RestauranteADM.TELAS.Alterar
             ft.Update(cliente);
 
             MessageBox.Show("cliente alterado:)");
+
+            this.Hide();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
     }
 

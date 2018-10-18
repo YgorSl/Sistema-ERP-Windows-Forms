@@ -61,7 +61,7 @@ namespace RestauranteADM.TELAS
                 alterarcliente frm = new alterarcliente();
                 frm.Loadscreen(comp);
                 frm.Show();
-                this.Hide();
+               
 
             }
             if (e.ColumnIndex == 11)

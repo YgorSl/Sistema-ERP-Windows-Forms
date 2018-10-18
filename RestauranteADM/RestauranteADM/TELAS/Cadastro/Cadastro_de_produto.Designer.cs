@@ -150,6 +150,7 @@
             this.Name = "Cadastro_de_estoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ,";
+            this.Load += new System.EventHandler(this.Cadastro_de_estoque_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

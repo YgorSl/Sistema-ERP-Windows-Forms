@@ -37,11 +37,17 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.Operação = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblsituaçao = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.Operação = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_de_operaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Movimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfluxo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,6 +62,7 @@
             this.dtpfim.Size = new System.Drawing.Size(294, 20);
             this.dtpfim.TabIndex = 60;
             this.dtpfim.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
+            this.dtpfim.ValueChanged += new System.EventHandler(this.dtpfim_ValueChanged);
             // 
             // dtpinicio
             // 
@@ -66,6 +73,7 @@
             this.dtpinicio.Size = new System.Drawing.Size(294, 20);
             this.dtpinicio.TabIndex = 55;
             this.dtpinicio.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
+            this.dtpinicio.ValueChanged += new System.EventHandler(this.dtpinicio_ValueChanged);
             // 
             // label2
             // 
@@ -91,12 +99,16 @@
             // 
             // dgvfluxo
             // 
+            this.dgvfluxo.AllowUserToDeleteRows = false;
             this.dgvfluxo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvfluxo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Operação,
-            this.Total});
+            this.tipo_de_operaca,
+            this.Total,
+            this.Movimento});
             this.dgvfluxo.Location = new System.Drawing.Point(0, 128);
             this.dgvfluxo.Name = "dgvfluxo";
+            this.dgvfluxo.ReadOnly = true;
             this.dgvfluxo.Size = new System.Drawing.Size(660, 177);
             this.dgvfluxo.TabIndex = 61;
             this.dgvfluxo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfluxo_CellContentClick);
@@ -139,24 +151,11 @@
             this.label36.TabIndex = 64;
             this.label36.Text = "Fluxo de caixa";
             // 
-            // Operação
-            // 
-            this.Operação.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Operação.DataPropertyName = "valorpagar";
-            this.Operação.HeaderText = "Operação";
-            this.Operação.Name = "Operação";
-            // 
-            // Total
-            // 
-            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Total.DataPropertyName = "valorareceber";
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            // 
             // lblsituaçao
             // 
             this.lblsituaçao.AutoSize = true;
             this.lblsituaçao.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsituaçao.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblsituaçao.Location = new System.Drawing.Point(454, 339);
             this.lblsituaçao.Name = "lblsituaçao";
             this.lblsituaçao.Size = new System.Drawing.Size(80, 22);
@@ -167,6 +166,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label3.Location = new System.Drawing.Point(550, 339);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 22);
@@ -183,6 +183,80 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // Operação
+            // 
+            this.Operação.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Operação.DataPropertyName = "Data";
+            this.Operação.HeaderText = "data";
+            this.Operação.Name = "Operação";
+            this.Operação.ReadOnly = true;
+            // 
+            // tipo_de_operaca
+            // 
+            this.tipo_de_operaca.DataPropertyName = "tipo_de_operacao";
+            this.tipo_de_operaca.HeaderText = "Operaçao";
+            this.tipo_de_operaca.Name = "tipo_de_operaca";
+            this.tipo_de_operaca.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Total.DataPropertyName = "valortotal";
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Movimento
+            // 
+            this.Movimento.DataPropertyName = "movimento";
+            this.Movimento.HeaderText = "Movimento";
+            this.Movimento.Name = "Movimento";
+            this.Movimento.ReadOnly = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(137, 339);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 22);
+            this.label4.TabIndex = 69;
+            this.label4.Text = "-------";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(41, 339);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 22);
+            this.label5.TabIndex = 68;
+            this.label5.Text = "situaçao";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(137, 361);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 22);
+            this.label6.TabIndex = 71;
+            this.label6.Text = "-------";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(41, 361);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 22);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "situaçao";
+            // 
             // Fluxo_de_Caixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +264,10 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(666, 410);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblsituaçao);
@@ -224,10 +302,16 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Operação;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.Label lblsituaçao;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Operação;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_de_operaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Movimento;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

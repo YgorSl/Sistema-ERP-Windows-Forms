@@ -3,6 +3,7 @@ using RestauranteADM.TELAS._1._0._1;
 using RestauranteADM.TELAS.Alterar;
 using RestauranteADM.TELAS.Cadastro;
 using RestauranteADM.TELAS.Consulta;
+using RestauranteADM.TELAS.Financeiro;
 using RestauranteADM.TELAS.RH;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new ConsultarVendas());
+            Application.Run(new Fluxo_de_Caixa());
         }
     }
 }

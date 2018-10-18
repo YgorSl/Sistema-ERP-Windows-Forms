@@ -74,11 +74,11 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(359, 304);
+            this.button1.Location = new System.Drawing.Point(404, 375);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 36);
             this.button1.TabIndex = 14;
-            this.button1.Text = "Salvar";
+            this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -88,7 +88,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(298, 24);
+            this.label36.Location = new System.Drawing.Point(274, 61);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(192, 24);
             this.label36.TabIndex = 47;
@@ -130,7 +130,7 @@
             this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(177, 85);
+            this.panel1.Location = new System.Drawing.Point(180, 141);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(381, 187);
             this.panel1.TabIndex = 51;

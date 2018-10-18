@@ -35,13 +35,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.gvprod = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvprod)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -115,33 +115,12 @@
             this.Column1,
             this.Nome,
             this.Column2});
-            this.gvprod.Location = new System.Drawing.Point(94, 258);
+            this.gvprod.Location = new System.Drawing.Point(94, 282);
             this.gvprod.Name = "gvprod";
             this.gvprod.ReadOnly = true;
             this.gvprod.Size = new System.Drawing.Size(540, 221);
             this.gvprod.TabIndex = 86;
             this.gvprod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvprod_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Preço";
-            this.Column2.HeaderText = "Preço";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // label4
             // 
@@ -159,9 +138,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(453, 485);
+            this.button2.Location = new System.Drawing.Point(477, 509);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(163, 45);
+            this.button2.Size = new System.Drawing.Size(157, 36);
             this.button2.TabIndex = 88;
             this.button2.Text = "Finalizar Compra";
             this.button2.UseVisualStyleBackColor = false;
@@ -177,7 +156,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cboforn);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(224, 73);
+            this.panel1.Location = new System.Drawing.Point(224, 97);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(254, 179);
             this.panel1.TabIndex = 89;
@@ -188,11 +167,34 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(312, 9);
+            this.label36.Location = new System.Drawing.Point(312, 48);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(81, 24);
             this.label36.TabIndex = 90;
             this.label36.Text = "Pedido";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id";
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "Preço";
+            this.Column2.HeaderText = "Preço";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // PedidoCompra
             // 
@@ -228,10 +230,10 @@
         private System.Windows.Forms.DataGridView gvprod;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label36;
     }
 }

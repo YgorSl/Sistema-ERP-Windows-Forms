@@ -54,7 +54,8 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.pictureBox2);
@@ -69,7 +70,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(705, 11);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 16);
@@ -82,7 +83,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(723, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(17, 16);
@@ -105,6 +106,7 @@
             // MenuVertical
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
+            this.MenuVertical.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MenuVertical.Controls.Add(this.btnmenucon);
             this.MenuVertical.Controls.Add(this.btnmenufin);
             this.MenuVertical.Controls.Add(this.btnmenuest);
@@ -127,10 +129,11 @@
             this.btnmenucon.FlatAppearance.BorderSize = 0;
             this.btnmenucon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenucon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenucon.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenucon.ForeColor = System.Drawing.Color.White;
-            this.btnmenucon.Location = new System.Drawing.Point(0, 145);
+            this.btnmenucon.Location = new System.Drawing.Point(0, 153);
             this.btnmenucon.Name = "btnmenucon";
-            this.btnmenucon.Size = new System.Drawing.Size(198, 32);
+            this.btnmenucon.Size = new System.Drawing.Size(198, 37);
             this.btnmenucon.TabIndex = 70;
             this.btnmenucon.Text = "Consultar/Alterar";
             this.btnmenucon.UseVisualStyleBackColor = true;
@@ -142,10 +145,11 @@
             this.btnmenufin.FlatAppearance.BorderSize = 0;
             this.btnmenufin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenufin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenufin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenufin.ForeColor = System.Drawing.Color.White;
-            this.btnmenufin.Location = new System.Drawing.Point(1, 330);
+            this.btnmenufin.Location = new System.Drawing.Point(1, 338);
             this.btnmenufin.Name = "btnmenufin";
-            this.btnmenufin.Size = new System.Drawing.Size(198, 32);
+            this.btnmenufin.Size = new System.Drawing.Size(198, 37);
             this.btnmenufin.TabIndex = 69;
             this.btnmenufin.Text = "Financeiro";
             this.btnmenufin.UseVisualStyleBackColor = true;
@@ -157,10 +161,11 @@
             this.btnmenuest.FlatAppearance.BorderSize = 0;
             this.btnmenuest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenuest.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuest.ForeColor = System.Drawing.Color.White;
-            this.btnmenuest.Location = new System.Drawing.Point(1, 292);
+            this.btnmenuest.Location = new System.Drawing.Point(1, 300);
             this.btnmenuest.Name = "btnmenuest";
-            this.btnmenuest.Size = new System.Drawing.Size(198, 32);
+            this.btnmenuest.Size = new System.Drawing.Size(198, 37);
             this.btnmenuest.TabIndex = 68;
             this.btnmenuest.Text = "Estoque";
             this.btnmenuest.UseVisualStyleBackColor = true;
@@ -172,10 +177,11 @@
             this.btnmenucom.FlatAppearance.BorderSize = 0;
             this.btnmenucom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenucom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenucom.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenucom.ForeColor = System.Drawing.Color.White;
-            this.btnmenucom.Location = new System.Drawing.Point(0, 254);
+            this.btnmenucom.Location = new System.Drawing.Point(0, 262);
             this.btnmenucom.Name = "btnmenucom";
-            this.btnmenucom.Size = new System.Drawing.Size(198, 32);
+            this.btnmenucom.Size = new System.Drawing.Size(198, 37);
             this.btnmenucom.TabIndex = 67;
             this.btnmenucom.Text = "Compras";
             this.btnmenucom.UseVisualStyleBackColor = true;
@@ -187,10 +193,11 @@
             this.btnmenuven.FlatAppearance.BorderSize = 0;
             this.btnmenuven.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenuven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenuven.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuven.ForeColor = System.Drawing.Color.White;
-            this.btnmenuven.Location = new System.Drawing.Point(0, 217);
+            this.btnmenuven.Location = new System.Drawing.Point(0, 225);
             this.btnmenuven.Name = "btnmenuven";
-            this.btnmenuven.Size = new System.Drawing.Size(198, 32);
+            this.btnmenuven.Size = new System.Drawing.Size(198, 37);
             this.btnmenuven.TabIndex = 66;
             this.btnmenuven.Text = "Vendas";
             this.btnmenuven.UseVisualStyleBackColor = true;
@@ -202,10 +209,11 @@
             this.btnmenurh.FlatAppearance.BorderSize = 0;
             this.btnmenurh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenurh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenurh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenurh.ForeColor = System.Drawing.Color.White;
-            this.btnmenurh.Location = new System.Drawing.Point(1, 182);
+            this.btnmenurh.Location = new System.Drawing.Point(1, 190);
             this.btnmenurh.Name = "btnmenurh";
-            this.btnmenurh.Size = new System.Drawing.Size(198, 32);
+            this.btnmenurh.Size = new System.Drawing.Size(198, 37);
             this.btnmenurh.TabIndex = 65;
             this.btnmenurh.Text = "RH";
             this.btnmenurh.UseVisualStyleBackColor = true;
@@ -238,10 +246,11 @@
             this.btnmenucad.FlatAppearance.BorderSize = 0;
             this.btnmenucad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenucad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenucad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenucad.ForeColor = System.Drawing.Color.White;
-            this.btnmenucad.Location = new System.Drawing.Point(0, 107);
+            this.btnmenucad.Location = new System.Drawing.Point(0, 115);
             this.btnmenucad.Name = "btnmenucad";
-            this.btnmenucad.Size = new System.Drawing.Size(198, 32);
+            this.btnmenucad.Size = new System.Drawing.Size(198, 37);
             this.btnmenucad.TabIndex = 0;
             this.btnmenucad.Text = "Cadastro";
             this.btnmenucad.UseVisualStyleBackColor = true;
@@ -249,7 +258,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(200, 34);
@@ -263,7 +273,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(317, 183);
+            this.label1.Location = new System.Drawing.Point(330, 191);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 42);
             this.label1.TabIndex = 63;

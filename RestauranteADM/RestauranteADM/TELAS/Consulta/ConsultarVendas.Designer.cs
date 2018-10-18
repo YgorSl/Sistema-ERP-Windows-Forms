@@ -48,7 +48,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(263, 21);
+            this.label3.Location = new System.Drawing.Point(248, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(191, 24);
             this.label3.TabIndex = 13;
@@ -116,10 +116,10 @@
             this.Nome_prato,
             this.Column1});
             this.dgvvendas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvvendas.Location = new System.Drawing.Point(0, 165);
+            this.dgvvendas.Location = new System.Drawing.Point(0, 185);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
-            this.dgvvendas.Size = new System.Drawing.Size(705, 412);
+            this.dgvvendas.Size = new System.Drawing.Size(752, 412);
             this.dgvvendas.TabIndex = 7;
             // 
             // Column2
@@ -165,8 +165,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(705, 577);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(752, 597);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpdate);
             this.Controls.Add(this.dti);
@@ -174,6 +174,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvvendas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultarVendas";
             this.Text = "ConsultarVendas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).EndInit();

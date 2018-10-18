@@ -158,7 +158,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(361, 419);
+            this.button1.Location = new System.Drawing.Point(377, 434);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 36);
             this.button1.TabIndex = 40;
@@ -172,7 +172,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(231, 52);
+            this.label36.Location = new System.Drawing.Point(247, 67);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(241, 24);
             this.label36.TabIndex = 47;
@@ -192,7 +192,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtcid);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(134, 114);
+            this.panel1.Location = new System.Drawing.Point(150, 129);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(444, 261);
             this.panel1.TabIndex = 48;

@@ -46,7 +46,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(453, 299);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(99, 34);
+            this.button1.Size = new System.Drawing.Size(157, 36);
             this.button1.TabIndex = 84;
             this.button1.Text = "Cadastrar ";
             this.button1.UseVisualStyleBackColor = false;
@@ -134,7 +134,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(12, 125);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(724, 159);
+            this.panel1.Size = new System.Drawing.Size(728, 168);
             this.panel1.TabIndex = 85;
             // 
             // Cadastro_Funcionario

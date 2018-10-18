@@ -304,7 +304,7 @@
             // 
             this.btnCadastrarusuario.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarusuario.Location = new System.Drawing.Point(531, 471);
+            this.btnCadastrarusuario.Location = new System.Drawing.Point(531, 503);
             this.btnCadastrarusuario.Name = "btnCadastrarusuario";
             this.btnCadastrarusuario.Size = new System.Drawing.Size(157, 36);
             this.btnCadastrarusuario.TabIndex = 52;
@@ -377,7 +377,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(266, 35);
+            this.label36.Location = new System.Drawing.Point(274, 61);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(187, 24);
             this.label36.TabIndex = 66;
@@ -431,7 +431,7 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Controls.Add(this.panel1);
-            this.panel3.Location = new System.Drawing.Point(12, 76);
+            this.panel3.Location = new System.Drawing.Point(12, 108);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(728, 354);
             this.panel3.TabIndex = 69;
@@ -442,7 +442,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(752, 597);
+            this.ClientSize = new System.Drawing.Size(752, 579);
             this.ControlBox = false;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label36);

@@ -60,5 +60,15 @@ namespace RestauranteADM.TELAS.MENU
             Close();
 
         }
+
+        private void btn1_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new telavendas());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new escolhavenda());
+        }
     }
 }

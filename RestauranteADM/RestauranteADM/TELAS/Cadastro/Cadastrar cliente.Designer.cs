@@ -63,7 +63,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(288, 31);
+            this.label36.Location = new System.Drawing.Point(274, 61);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(189, 24);
             this.label36.TabIndex = 47;
@@ -73,7 +73,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(555, 379);
+            this.button1.Location = new System.Drawing.Point(554, 431);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 36);
             this.button1.TabIndex = 66;
@@ -271,11 +271,11 @@
             // txtjuridica
             // 
             this.txtjuridica.AutoSize = true;
-            this.txtjuridica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtjuridica.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtjuridica.ForeColor = System.Drawing.Color.White;
             this.txtjuridica.Location = new System.Drawing.Point(138, 292);
             this.txtjuridica.Name = "txtjuridica";
-            this.txtjuridica.Size = new System.Drawing.Size(69, 20);
+            this.txtjuridica.Size = new System.Drawing.Size(80, 24);
             this.txtjuridica.TabIndex = 80;
             this.txtjuridica.TabStop = true;
             this.txtjuridica.Text = "juridica";
@@ -284,11 +284,11 @@
             // txtfisica
             // 
             this.txtfisica.AutoSize = true;
-            this.txtfisica.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfisica.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtfisica.ForeColor = System.Drawing.Color.White;
-            this.txtfisica.Location = new System.Drawing.Point(202, 292);
+            this.txtfisica.Location = new System.Drawing.Point(217, 292);
             this.txtfisica.Name = "txtfisica";
-            this.txtfisica.Size = new System.Drawing.Size(57, 20);
+            this.txtfisica.Size = new System.Drawing.Size(64, 24);
             this.txtfisica.TabIndex = 81;
             this.txtfisica.TabStop = true;
             this.txtfisica.Text = "fisica";
@@ -314,7 +314,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(36, 74);
+            this.panel1.Location = new System.Drawing.Point(35, 126);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(422, 361);
             this.panel1.TabIndex = 82;
@@ -326,7 +326,7 @@
             this.panel2.Controls.Add(this.dtphoje);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(480, 77);
+            this.panel2.Location = new System.Drawing.Point(479, 129);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(247, 241);
             this.panel2.TabIndex = 83;

@@ -47,9 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acesso\acesso.cs" />
-    <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaBunisess.cs" />
-    <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaDatabase.cs" />
-    <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaDTO.cs" />
+    <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaBunisessView.cs" />
+    <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaDatabaseView.cs" />
+    <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaView.cs" />
     <Compile Include="BASE\vendas\VendasViewBunisess.cs" />
     <Compile Include="BASE\vendas\VendasViewDatabase.cs" />
     <Compile Include="BASE\vendas\VendasViewDto.cs" />

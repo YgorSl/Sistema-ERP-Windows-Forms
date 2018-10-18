@@ -19,9 +19,21 @@ namespace RestauranteADM.TELAS.Financeiro
             InitializeComponent();
 
             dgvfluxo.AutoGenerateColumns = false;
+            carregamentoFluxo(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
         }
 
-        FluxodecaixaDTO fluxo;
+         void carregamentoFluxo(DateTime inicio,DateTime fim)
+        {
+         FluxodecaixaBunisessView tb = new FluxodecaixaBunisessView();
+            List<FluxodecaixaView> bt = tb.filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+
+
+            dgvfluxo.DataSource = bt;
+
+
+        }
+
+
         private void Fluxo_de_Caixa_Load(object sender, EventArgs e)
         {
 
@@ -39,17 +51,15 @@ namespace RestauranteADM.TELAS.Financeiro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FluxodecaixaBunisess bus = new FluxodecaixaBunisess();
-            List<FluxodecaixaDTO> vendas = bus.filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+            FluxodecaixaBunisessView bus = new FluxodecaixaBunisessView();
+            List<FluxodecaixaView> vendas = bus.filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
 
            dgvfluxo.DataSource = vendas;
         }
 
         private void dgvfluxo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            FluxodecaixaDTO comp = dgvfluxo.Rows[e.RowIndex].DataBoundItem as FluxodecaixaDTO;
-            this.fluxo = comp.valorareceber;
-            this.fluxo = comp.valorpagar;
+          
         }
     }
 }

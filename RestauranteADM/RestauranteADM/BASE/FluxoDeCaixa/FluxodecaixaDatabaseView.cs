@@ -8,31 +8,34 @@ using System.Threading.Tasks;
 
 namespace RestauranteADM.BASE.FluxoDeCaixa
 {
-    public class FluxodecaixaDatabase
+    public class FluxodecaixaDatabaseView
     {
 
-        public List<FluxodecaixaDTO> Filtro(DateTime start, DateTime end)
+        public List<FluxodecaixaView> Filtro(DateTime start, DateTime end)
         {
 
-            string script = @"select *from Fluxo_view where data >= @start and data <= @end";
+            string script = @"select* from Fluxo_view where dt_data>= @start and dt_data <= @end order by dt_data, ds_caixa";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("start", start));
             parms.Add(new MySqlParameter("end", end));
 
-
+         
 
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-            List<FluxodecaixaDTO> lista = new List<FluxodecaixaDTO>();
+            List<FluxodecaixaView> lista = new List<FluxodecaixaView>();
             while (reader.Read() == true)
             {
-                FluxodecaixaDTO vw = new FluxodecaixaDTO();
-                vw.valorareceber = reader.GetDecimal("nm_prato");
-                vw.valorpagar = reader.GetDecimal("data_venda");
-            
+                FluxodecaixaView vw = new FluxodecaixaView();
+                vw.data = reader.GetDateTime("dt_data");
+                vw.valortotal = reader.GetDecimal("dt_total");
+                vw.tipo_de_operacao = reader.GetString("ds_caixa");
+                vw.movimento = reader.GetString("ds_movimento");
+
+
                 lista.Add(vw);
             }
             return lista;

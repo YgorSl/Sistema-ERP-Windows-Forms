@@ -19,10 +19,19 @@ namespace RestauranteADM.TELAS.Financeiro
             InitializeComponent();
 
             dgvfluxo.AutoGenerateColumns = false;
-         
+            carregamentoFluxo(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
         }
 
-     
+        void carregamentoFluxo(DateTime inicio, DateTime fim)
+        {
+            FluxodecaixaBunisessView tb = new FluxodecaixaBunisessView();
+            List<FluxodecaixaView> bt = tb.filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+
+
+            dgvfluxo.DataSource = bt;
+
+
+        }
 
 
         private void Fluxo_de_Caixa_Load(object sender, EventArgs e)
@@ -45,22 +54,64 @@ namespace RestauranteADM.TELAS.Financeiro
             FluxodecaixaBunisessView bus = new FluxodecaixaBunisessView();
             List<FluxodecaixaView> vendas = bus.filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
 
-           dgvfluxo.DataSource = vendas;
+            dgvfluxo.DataSource = vendas;
         }
 
         private void dgvfluxo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+
+
         }
 
         private void dtpinicio_ValueChanged(object sender, EventArgs e)
         {
-          
+            carregamentoFluxo(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
         }
 
         private void dtpfim_ValueChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void dgvfluxo_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+
+
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FluxodecaixaView dto = dgvfluxo.CurrentRow.DataBoundItem as FluxodecaixaView;
+
+            
+
+            decimal saldo = 0;
+            decimal totalentrada = 0;
+            decimal totalsaida = 0;
+
+            foreach (DataGridViewRow row in dgvfluxo.Rows)
+            {
+                if (dto.tipo_de_operacao == "Entrada")
+                {
+                    decimal entrada = dto.valortotal;
+                    totalentrada = entrada + totalentrada;
+                }
+                else
+                {
+                    decimal saida = dto.valortotal;
+                    totalsaida = saida + totalsaida;
+                }
+            }
+
+            lblcompra1.Text = totalentrada.ToString();
+            lblvenda.Text = totalsaida.ToString();
+
+
+        }
+
+
     }
-}
+}  
+
+

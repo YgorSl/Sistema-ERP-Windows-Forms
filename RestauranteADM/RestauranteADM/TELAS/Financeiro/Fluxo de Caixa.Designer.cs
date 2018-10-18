@@ -34,20 +34,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvfluxo = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.lblsituaçao = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.Operação = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipo_de_operaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Movimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.lblsituaçao = new System.Windows.Forms.Label();
+            this.lblsituacao = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblcompra1 = new System.Windows.Forms.Label();
+            this.lblcompra = new System.Windows.Forms.Label();
+            this.lblvenda = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfluxo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,6 +100,7 @@
             // 
             // dgvfluxo
             // 
+            this.dgvfluxo.AllowUserToAddRows = false;
             this.dgvfluxo.AllowUserToDeleteRows = false;
             this.dgvfluxo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvfluxo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -108,10 +110,36 @@
             this.Movimento});
             this.dgvfluxo.Location = new System.Drawing.Point(0, 128);
             this.dgvfluxo.Name = "dgvfluxo";
-            this.dgvfluxo.ReadOnly = true;
             this.dgvfluxo.Size = new System.Drawing.Size(660, 177);
             this.dgvfluxo.TabIndex = 61;
             this.dgvfluxo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfluxo_CellContentClick);
+            this.dgvfluxo.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvfluxo_DataBindingComplete);
+            // 
+            // Operação
+            // 
+            this.Operação.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Operação.DataPropertyName = "Data";
+            this.Operação.HeaderText = "data";
+            this.Operação.Name = "Operação";
+            // 
+            // tipo_de_operaca
+            // 
+            this.tipo_de_operaca.DataPropertyName = "tipo_de_operacao";
+            this.tipo_de_operaca.HeaderText = "Operaçao";
+            this.tipo_de_operaca.Name = "tipo_de_operaca";
+            // 
+            // Total
+            // 
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Total.DataPropertyName = "valortotal";
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            // 
+            // Movimento
+            // 
+            this.Movimento.DataPropertyName = "movimento";
+            this.Movimento.HeaderText = "Movimento";
+            this.Movimento.Name = "Movimento";
             // 
             // pictureBox2
             // 
@@ -162,16 +190,16 @@
             this.lblsituaçao.TabIndex = 65;
             this.lblsituaçao.Text = "situaçao";
             // 
-            // label3
+            // lblsituacao
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(550, 339);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 22);
-            this.label3.TabIndex = 66;
-            this.label3.Text = "-------";
+            this.lblsituacao.AutoSize = true;
+            this.lblsituacao.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsituacao.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblsituacao.Location = new System.Drawing.Point(550, 339);
+            this.lblsituacao.Name = "lblsituacao";
+            this.lblsituacao.Size = new System.Drawing.Size(52, 22);
+            this.lblsituacao.TabIndex = 66;
+            this.lblsituacao.Text = "-------";
             // 
             // button1
             // 
@@ -183,79 +211,58 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Operação
+            // lblcompra1
             // 
-            this.Operação.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Operação.DataPropertyName = "Data";
-            this.Operação.HeaderText = "data";
-            this.Operação.Name = "Operação";
-            this.Operação.ReadOnly = true;
+            this.lblcompra1.AutoSize = true;
+            this.lblcompra1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcompra1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblcompra1.Location = new System.Drawing.Point(164, 339);
+            this.lblcompra1.Name = "lblcompra1";
+            this.lblcompra1.Size = new System.Drawing.Size(52, 22);
+            this.lblcompra1.TabIndex = 69;
+            this.lblcompra1.Text = "-------";
             // 
-            // tipo_de_operaca
+            // lblcompra
             // 
-            this.tipo_de_operaca.DataPropertyName = "tipo_de_operacao";
-            this.tipo_de_operaca.HeaderText = "Operaçao";
-            this.tipo_de_operaca.Name = "tipo_de_operaca";
-            this.tipo_de_operaca.ReadOnly = true;
+            this.lblcompra.AutoSize = true;
+            this.lblcompra.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcompra.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblcompra.Location = new System.Drawing.Point(68, 339);
+            this.lblcompra.Name = "lblcompra";
+            this.lblcompra.Size = new System.Drawing.Size(80, 22);
+            this.lblcompra.TabIndex = 68;
+            this.lblcompra.Text = "situaçao";
             // 
-            // Total
+            // lblvenda
             // 
-            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Total.DataPropertyName = "valortotal";
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Movimento
-            // 
-            this.Movimento.DataPropertyName = "movimento";
-            this.Movimento.HeaderText = "Movimento";
-            this.Movimento.Name = "Movimento";
-            this.Movimento.ReadOnly = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(137, 339);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 22);
-            this.label4.TabIndex = 69;
-            this.label4.Text = "-------";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(41, 339);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 22);
-            this.label5.TabIndex = 68;
-            this.label5.Text = "situaçao";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(137, 361);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 22);
-            this.label6.TabIndex = 71;
-            this.label6.Text = "-------";
+            this.lblvenda.AutoSize = true;
+            this.lblvenda.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvenda.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblvenda.Location = new System.Drawing.Point(164, 361);
+            this.lblvenda.Name = "lblvenda";
+            this.lblvenda.Size = new System.Drawing.Size(0, 22);
+            this.lblvenda.TabIndex = 71;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(41, 361);
+            this.label7.Location = new System.Drawing.Point(68, 361);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 22);
             this.label7.TabIndex = 70;
             this.label7.Text = "situaçao";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(305, 312);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 72;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Fluxo_de_Caixa
             // 
@@ -264,12 +271,13 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(666, 410);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.lblvenda);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lblcompra1);
+            this.Controls.Add(this.lblcompra);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblsituacao);
             this.Controls.Add(this.lblsituaçao);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.pictureBox2);
@@ -303,15 +311,16 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label lblsituaçao;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblsituacao;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Operação;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo_de_operaca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Movimento;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblcompra1;
+        private System.Windows.Forms.Label lblcompra;
+        private System.Windows.Forms.Label lblvenda;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button2;
     }
 }

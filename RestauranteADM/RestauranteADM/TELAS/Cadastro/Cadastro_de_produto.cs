@@ -77,5 +77,10 @@ namespace RestauranteADM.TELAS
             oi.Show();
             this.Hide();
         }
+
+        private void Cadastro_de_estoque_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

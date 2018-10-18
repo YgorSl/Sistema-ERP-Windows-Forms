@@ -14,7 +14,10 @@ namespace RestauranteADM.BASE.FluxoDeCaixa
         public List<FluxodecaixaView> Filtro(DateTime start, DateTime end)
         {
 
-            string script = @"select* from Fluxo_view where dt_data>= @start and dt_data <= @end order by dt_data, ds_caixa";
+            string script = @"select* from Fluxo_view where dt_data>= @start and @end <= dt_data";
+
+
+ 
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("start", start));
@@ -31,7 +34,7 @@ namespace RestauranteADM.BASE.FluxoDeCaixa
             {
                 FluxodecaixaView vw = new FluxodecaixaView();
                 vw.data = reader.GetDateTime("dt_data");
-                vw.valortotal = reader.GetDecimal("dt_total");
+                vw.valortotal = reader.GetDecimal("vl_valor");
                 vw.tipo_de_operacao = reader.GetString("ds_caixa");
                 vw.movimento = reader.GetString("ds_movimento");
 

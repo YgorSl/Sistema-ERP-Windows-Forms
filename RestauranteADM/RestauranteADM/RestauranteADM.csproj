@@ -51,6 +51,7 @@
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaDatabaseView.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaView.cs" />
     <Compile Include="BASE\Senhar.cs" />
+    <Compile Include="BASE\senharlogin.cs" />
     <Compile Include="BASE\vendas\VendasViewBunisess.cs" />
     <Compile Include="BASE\vendas\VendasViewDatabase.cs" />
     <Compile Include="BASE\vendas\VendasViewDto.cs" />

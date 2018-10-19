@@ -18,7 +18,7 @@ namespace RestauranteADM.TELAS.recuperaçao
             InitializeComponent();
         }
 
-        Senhar senhar = new Senhar();
+       
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -29,7 +29,8 @@ namespace RestauranteADM.TELAS.recuperaçao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txtmensagem.Text = senhar.recuperaçaosenhar(txtnome.Text);
+            senharlogin senhar = new senharlogin();
+            txtmensagem.Text = senhar.recuperaçao(txtnome.Text);
         }
 
         private void adicionar_o_codigo_Load(object sender, EventArgs e)

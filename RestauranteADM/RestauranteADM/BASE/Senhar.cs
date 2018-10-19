@@ -24,7 +24,7 @@ namespace RestauranteADM.BASE
       public string recuperaçaosenhar(string cpf)
         {
 
-            string script = @"select *from tb_funcionarios  nm_cpf=@cpf ";
+            string script = @"select *from tb_funcionarios where ds_cpf=@cpf ";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("cpf", "%" + cpf + "%"));
@@ -40,8 +40,8 @@ namespace RestauranteADM.BASE
                 email = reader["ds_email"].ToString();
                 nome = reader["ds_nome"].ToString();
                 senha = reader["ds_senha"].ToString();
+                login = reader["ds_login"].ToString();
                 enviaremail();
-                senha = reader["ds_login"].ToString();
                 mensagem = "olá " + nome + "enviado para seu email" + email + "a recuperaçao de login e senhar ";
                 reader.Close();
             }

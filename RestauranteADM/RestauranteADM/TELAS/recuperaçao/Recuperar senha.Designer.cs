@@ -118,6 +118,7 @@
             this.Controls.Add(this.label4);
             this.Name = "Recuperar_senha";
             this.Text = "Recuperar_senha";
+            this.Load += new System.EventHandler(this.Recuperar_senha_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

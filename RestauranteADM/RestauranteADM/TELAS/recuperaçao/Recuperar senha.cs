@@ -16,5 +16,10 @@ namespace RestauranteADM
         {
             InitializeComponent();
         }
+
+        private void Recuperar_senha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

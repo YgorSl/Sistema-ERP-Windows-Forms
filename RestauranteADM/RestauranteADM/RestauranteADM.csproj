@@ -454,6 +454,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DB\script.txt" />
+    <Content Include="DB\ScriptEstranho.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cccc.jpg" />

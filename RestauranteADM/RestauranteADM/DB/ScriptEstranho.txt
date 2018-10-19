@@ -1,0 +1,384 @@
+﻿-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_cardapio`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_cardapio` (
+  `id_cardapio` INT(11) NOT NULL AUTO_INCREMENT,
+  `nm_prato` VARCHAR(45) NOT NULL,
+  `ds_prato` VARCHAR(45) NOT NULL,
+  `ds_tamanho` VARCHAR(45) NOT NULL,
+  `vl_valor` DOUBLE(10,2) NOT NULL,
+  PRIMARY KEY (`id_cardapio`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_cliente`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_cliente` (
+  `id_cliente` INT(11) NOT NULL AUTO_INCREMENT,
+  `nm_nome` VARCHAR(16) NULL DEFAULT NULL,
+  `ds_cpf` CHAR(16) NULL DEFAULT NULL,
+  `ds_telefone` CHAR(11) NULL DEFAULT NULL,
+  `ds_cep` VARCHAR(45) NULL DEFAULT NULL,
+  `ds_bairro` VARCHAR(45) NULL DEFAULT NULL,
+  `ds_numero_casa` VARCHAR(45) NULL DEFAULT NULL,
+  `ds_tipo_pessoa` VARCHAR(50) NULL DEFAULT NULL,
+  `ds_cnpj` VARCHAR(20) NULL DEFAULT NULL,
+  `ds_anotaçao_cliente` VARCHAR(200) NULL DEFAULT NULL,
+  `ds_data_hoje` DATE NULL DEFAULT NULL,
+  PRIMARY KEY (`id_cliente`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 8
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_fornecedor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_fornecedor` (
+  `id_fornecedor` INT(11) NOT NULL AUTO_INCREMENT,
+  `nm_nome` VARCHAR(45) NOT NULL,
+  `ds_cnpj` VARCHAR(45) NOT NULL,
+  `ds_telefone` VARCHAR(45) NOT NULL,
+  `ds_endereço` VARCHAR(45) NOT NULL,
+  `ds_cidade` VARCHAR(45) NOT NULL,
+  `ds_estado` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id_fornecedor`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_compra`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_compra` (
+  `id_compra` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_fornecedor` INT(11) NOT NULL,
+  `dt_compra` DATETIME NOT NULL,
+  PRIMARY KEY (`id_compra`),
+  INDEX `id_forncedor_idx` (`id_fornecedor` ASC),
+  CONSTRAINT `id_forncedor`
+    FOREIGN KEY (`id_fornecedor`)
+    REFERENCES `mydb`.`tb_fornecedor` (`id_fornecedor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_compras_produto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_compras_produto` (
+  `id_compras` INT(11) NOT NULL AUTO_INCREMENT,
+  `nm_produto` VARCHAR(45) NOT NULL,
+  `vl_valor` DOUBLE(10,2) NOT NULL,
+  `id_fornecedor` INT(11) NOT NULL,
+  PRIMARY KEY (`id_compras`),
+  INDEX `id_fornecedor_idx` (`id_fornecedor` ASC),
+  CONSTRAINT `id_fornecedor`
+    FOREIGN KEY (`id_fornecedor`)
+    REFERENCES `mydb`.`tb_fornecedor` (`id_fornecedor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 3
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_compra_item`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_compra_item` (
+  `id_compra_item` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_compra` INT(11) NOT NULL,
+  `id_compra_produto` INT(11) NOT NULL,
+  PRIMARY KEY (`id_compra_item`),
+  INDEX `id_compra_idx` (`id_compra` ASC),
+  INDEX `id_compra_produto_idx` (`id_compra_produto` ASC),
+  CONSTRAINT `id_compra`
+    FOREIGN KEY (`id_compra`)
+    REFERENCES `mydb`.`tb_compra` (`id_compra`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `id_compra_produt`
+    FOREIGN KEY (`id_compra_produto`)
+    REFERENCES `mydb`.`tb_compras_produto` (`id_compras`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+AUTO_INCREMENT = 19
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_conta_pagar`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_conta_pagar` (
+  `id_conta_pagar` INT(11) NOT NULL AUTO_INCREMENT,
+  `nm_nome` VARCHAR(45) NOT NULL,
+  `id_comprar_produto` INT(11) NULL DEFAULT NULL,
+  `id_folha_pagamento` INT(11) NULL DEFAULT NULL,
+  `vl_preço` DOUBLE(10,2) NULL DEFAULT NULL,
+  `dt_data` DATE NULL DEFAULT NULL,
+  PRIMARY KEY (`id_conta_pagar`),
+  INDEX `id_compra_produto` (`id_comprar_produto` ASC),
+  INDEX `id_folha_pagamento` (`id_folha_pagamento` ASC),
+  CONSTRAINT `id_compra_produto`
+    FOREIGN KEY (`id_comprar_produto`)
+    REFERENCES `mydb`.`tb_compras_produto` (`id_compras`),
+  CONSTRAINT `id_folha_pagamento`
+    FOREIGN KEY (`id_folha_pagamento`)
+    REFERENCES `mydb`.`tb_folha_pagamento` (`id_folha_pagamento`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_contas_a_receber`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_contas_a_receber` (
+  `id_contas _a_receber` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_vendas` INT(11) NOT NULL,
+  `dt_data` DATE NOT NULL,
+  PRIMARY KEY (`id_contas _a_receber`),
+  INDEX `id_vendasr_idx` (`id_vendas` ASC),
+  CONSTRAINT `id_vendas`
+    FOREIGN KEY (`id_vendas`)
+    REFERENCES `mydb`.`tb_venda_prato` (`id_venda_prato`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_estoque`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_estoque` (
+  `id_estoque` INT(11) NOT NULL AUTO_INCREMENT,
+  `dt_validade` DATE NOT NULL,
+  `dt_entrada` DATE NOT NULL,
+  `dt_saida` DATE NULL DEFAULT NULL,
+  `id_compras_produto` INT(11) NOT NULL,
+  PRIMARY KEY (`id_estoque`),
+  INDEX `id_compras_produto` (`id_compras_produto` ASC),
+  CONSTRAINT `tb_estoque_ibfk_1`
+    FOREIGN KEY (`id_compras_produto`)
+    REFERENCES `mydb`.`tb_compras_produto` (`id_compras`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_venda`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_venda` (
+  `id_venda` INT(11) NOT NULL AUTO_INCREMENT,
+  `data_venda` DATETIME NOT NULL,
+  `id_cliente` INT(11) NOT NULL,
+  PRIMARY KEY (`id_venda`),
+  INDEX `id_cliente` (`id_cliente` ASC),
+  CONSTRAINT `tb_venda_ibfk_1`
+    FOREIGN KEY (`id_cliente`)
+    REFERENCES `mydb`.`tb_cliente` (`id_cliente`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 5
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_venda_item`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_venda_item` (
+  `id_venda_item` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_cardapio` INT(11) NOT NULL,
+  `id_venda` INT(11) NOT NULL,
+  PRIMARY KEY (`id_venda_item`),
+  INDEX `id_venda` (`id_venda` ASC),
+  INDEX `id_cardapio` (`id_cardapio` ASC),
+  CONSTRAINT `tb_venda_item_ibfk_1`
+    FOREIGN KEY (`id_venda`)
+    REFERENCES `mydb`.`tb_venda` (`id_venda`),
+  CONSTRAINT `tb_venda_item_ibfk_2`
+    FOREIGN KEY (`id_cardapio`)
+    REFERENCES `mydb`.`tb_cardapio` (`id_cardapio`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 28
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_funcionarios`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_funcionarios` (
+  `id_funcionarios` INT(11) NOT NULL AUTO_INCREMENT,
+  `nm_nome` VARCHAR(45) NOT NULL,
+  `ds_cpf` VARCHAR(45) NULL DEFAULT NULL,
+  `ds_RG` VARCHAR(45) NULL DEFAULT NULL,
+  `ds_endereco` VARCHAR(45) NULL DEFAULT NULL,
+  `ds_salario` DECIMAL(10,2) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_funcionarios`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_folha_de_pagamento`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_folha_de_pagamento` (
+  `id_folha_pagamento` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_funcionario` INT(11) NOT NULL,
+  `vl_VR` DOUBLE(8,2) NULL DEFAULT NULL,
+  `vl_DSR` DOUBLE(8,2) NULL DEFAULT NULL,
+  `vl_SalarioLiquido` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_He` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_VT` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_INSS` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_IRRF` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_FGTS` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_convenio` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_cestabasica` DOUBLE(8,2) NULL DEFAULT NULL,
+  `desco_atraso` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_faltas` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_bonus` DOUBLE(8,2) NULL DEFAULT NULL,
+  `nm_nome` VARCHAR(50) NULL DEFAULT NULL,
+  `ds_cpf` VARCHAR(50) NULL DEFAULT NULL,
+  `dt_data` DATE NULL DEFAULT NULL,
+  PRIMARY KEY (`id_folha_pagamento`),
+  INDEX `tb_folha_pagamento_fk_1` (`id_funcionario` ASC),
+  CONSTRAINT `tb_folha_pagamento_fk_1`
+    FOREIGN KEY (`id_funcionario`)
+    REFERENCES `mydb`.`tb_funcionarios` (`id_funcionarios`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_fluxo_caixa`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_fluxo_caixa` (
+  `id_fluxo_caixa` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_venda_item` INT(11) NOT NULL,
+  `id_conta_pagar` INT(11) NOT NULL,
+  `id_folha_pagamento` INT(11) NOT NULL,
+  PRIMARY KEY (`id_fluxo_caixa`),
+  INDEX `tb_fluxo_caixa_ibfk_1` (`id_venda_item` ASC),
+  INDEX `tb_fluxo_caixa_ibfk_2` (`id_conta_pagar` ASC),
+  INDEX `tb_fluxo_caixa_ibfk_3` (`id_folha_pagamento` ASC),
+  CONSTRAINT `tb_fluxo_caixa_ibfk_1`
+    FOREIGN KEY (`id_venda_item`)
+    REFERENCES `mydb`.`tb_venda_item` (`id_venda_item`),
+  CONSTRAINT `tb_fluxo_caixa_ibfk_2`
+    FOREIGN KEY (`id_conta_pagar`)
+    REFERENCES `mydb`.`tb_conta_pagar` (`id_conta_pagar`),
+  CONSTRAINT `tb_fluxo_caixa_ibfk_3`
+    FOREIGN KEY (`id_folha_pagamento`)
+    REFERENCES `mydb`.`tb_folha_de_pagamento` (`id_folha_pagamento`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_permissao`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_permissao` (
+  `id_permissao` INT(11) NOT NULL AUTO_INCREMENT,
+  `nm_login` VARCHAR(45) NOT NULL,
+  `ds_senha` VARCHAR(45) NOT NULL,
+  `id_funcionario` INT(11) NOT NULL,
+  `perm_total` TINYINT(1) NULL DEFAULT NULL,
+  `perm_cadastro` TINYINT(1) NULL DEFAULT NULL,
+  `perm_vendas` TINYINT(1) NULL DEFAULT NULL,
+  `perm_compras` TINYINT(1) NULL DEFAULT NULL,
+  `perm_rh` TINYINT(1) NULL DEFAULT NULL,
+  `perm_financeiro` TINYINT(1) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_permissao`),
+  INDEX `id_funcionario` (`id_funcionario` ASC),
+  CONSTRAINT `tb_permissao_ibfk_1`
+    FOREIGN KEY (`id_funcionario`)
+    REFERENCES `mydb`.`tb_funcionarios` (`id_funcionarios`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_ponto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_ponto` (
+  `id_ponto` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_funcionario` INT(11) NOT NULL,
+  `dt_data` DATE NOT NULL,
+  `hr_entrada` TIME NOT NULL,
+  `hr_almoço_ida` TIME NULL DEFAULT NULL,
+  `hr_almoço_volta` TIME NULL DEFAULT NULL,
+  PRIMARY KEY (`id_ponto`),
+  INDEX `id_funcionario` (`id_funcionario` ASC),
+  CONSTRAINT `tb_ponto_ibfk_1`
+    FOREIGN KEY (`id_funcionario`)
+    REFERENCES `mydb`.`tb_funcionarios` (`id_funcionarios`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+USE `mydb` ;
+
+
+-- -----------------------------------------------------
+-- Placeholder table for view `mydb`.`compravw`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`compravw` (`dt_compra` INT, `vl_total` INT, `vl_qtd` INT, `nm_nome` INT);
+
+-- -----------------------------------------------------
+-- Placeholder table for view `mydb`.`fluxo_view`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`fluxo_view` (`dt_data` INT, `vl_valor` INT, `ds_caixa` INT, `ds_movimento` INT);
+
+-- -----------------------------------------------------
+-- Placeholder table for view `mydb`.`impor`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`impor` (`date(data_venda)` INT, `vl_total` INT, `ds_qtd` INT, `nm_prato` INT);
+
+-- -----------------------------------------------------
+-- View `mydb`.`compravw`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`compravw`;
+USE `mydb`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `mydb`.`compravw` AS select cast(`mydb`.`tb_compra`.`dt_compra` as date) AS `dt_compra`,sum(`mydb`.`tb_compras_produto`.`vl_valor`) AS `vl_total`,count(`mydb`.`tb_compra_item`.`id_compra_item`) AS `vl_qtd`,`mydb`.`tb_fornecedor`.`nm_nome` AS `nm_nome` from (((`mydb`.`tb_compra` join `mydb`.`tb_compra_item` on((`mydb`.`tb_compra`.`id_compra` = `mydb`.`tb_compra_item`.`id_compra`))) join `mydb`.`tb_compras_produto` on((`mydb`.`tb_compra_item`.`id_compra_produto` = `mydb`.`tb_compras_produto`.`id_compras`))) join `mydb`.`tb_fornecedor` on((`mydb`.`tb_fornecedor`.`id_fornecedor` = `mydb`.`tb_compras_produto`.`id_fornecedor`)));
+
+-- -----------------------------------------------------
+-- View `mydb`.`fluxo_view`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`fluxo_view`;
+USE `mydb`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `mydb`.`fluxo_view` AS select cast(`mydb`.`tb_folha_de_pagamento`.`dt_data` as date) AS `dt_data`,sum(((`mydb`.`tb_folha_de_pagamento`.`vl_SalarioLiquido` + `mydb`.`tb_folha_de_pagamento`.`ds_cestabasica`) + `mydb`.`tb_folha_de_pagamento`.`ds_convenio`)) AS `vl_valor`,'saida' AS `ds_caixa`,'Folha de Pagamento' AS `ds_movimento` from `mydb`.`tb_folha_de_pagamento` group by `mydb`.`tb_folha_de_pagamento`.`dt_data` union select cast(`mydb`.`tb_compra`.`dt_compra` as date) AS `dt_data`,sum(`mydb`.`tb_compras_produto`.`vl_valor`) AS `vl_total`,'saida' AS `ds_caixa`,'Compra' AS `ds_movimento` from (((`mydb`.`tb_compra` join `mydb`.`tb_compra_item` on((`mydb`.`tb_compra`.`id_compra` = `mydb`.`tb_compra_item`.`id_compra`))) join `mydb`.`tb_compras_produto` on((`mydb`.`tb_compra_item`.`id_compra_produto` = `mydb`.`tb_compras_produto`.`id_compras`))) join `mydb`.`tb_fornecedor` on((`mydb`.`tb_fornecedor`.`id_fornecedor` = `mydb`.`tb_compras_produto`.`id_fornecedor`))) group by `dt_data` union select cast(`mydb`.`tb_venda`.`data_venda` as date) AS `dt_data`,sum(`mydb`.`tb_cardapio`.`vl_valor`) AS `vl_total`,'Entrada' AS `ds_caixa`,' venda' AS `ds_movimento` from (((`mydb`.`tb_venda_item` join `mydb`.`tb_venda` on((`mydb`.`tb_venda_item`.`id_venda` = `mydb`.`tb_venda`.`id_venda`))) join `mydb`.`tb_cardapio` on((`mydb`.`tb_venda_item`.`id_cardapio` = `mydb`.`tb_cardapio`.`id_cardapio`))) join `mydb`.`tb_cliente` on((`mydb`.`tb_venda`.`id_cliente` = `mydb`.`tb_cliente`.`id_cliente`))) group by `dt_data` union select cast(`mydb`.`tb_conta_pagar`.`dt_data` as date) AS `dt_data`,sum(`mydb`.`tb_conta_pagar`.`vl_preço`) AS `vl_total`,'saida' AS `ds_caixa`,'conta' AS `ds_movimento` from `mydb`.`tb_conta_pagar`;
+
+-- -----------------------------------------------------
+-- View `mydb`.`impor`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `mydb`.`impor`;
+USE `mydb`;
+CREATE  OR REPLACE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `mydb`.`impor` AS select cast(`mydb`.`tb_venda`.`data_venda` as date) AS `date(data_venda)`,sum(`mydb`.`tb_cardapio`.`vl_valor`) AS `vl_total`,count(`mydb`.`tb_venda_item`.`id_venda_item`) AS `ds_qtd`,`mydb`.`tb_cardapio`.`nm_prato` AS `nm_prato` from ((`mydb`.`tb_venda_item` join `mydb`.`tb_venda` on((`mydb`.`tb_venda_item`.`id_venda` = `mydb`.`tb_venda`.`id_venda`))) join `mydb`.`tb_cardapio` on((`mydb`.`tb_venda_item`.`id_cardapio` = `mydb`.`tb_cardapio`.`id_cardapio`)));
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

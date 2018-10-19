@@ -103,38 +103,33 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`tb_folha_pagamento`
+-- Table `mydb`.`tb_folha_de_pagamento`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`tb_folha_de_pagamento` (
   `id_folha_pagamento` INT(11) NOT NULL AUTO_INCREMENT,
   `id_funcionario` INT(11) NOT NULL,
-  `vl_VR` double(8,2)  NULL,
-  `vl_DSR` double(8, 2)  NULL,
-  `vl_SalarioLiquido` double (8,2) NULL,
-   `ds_He` double (8,2) NULL,
-  `ds_VT` double(8,2) NULL DEFAULT NULL,
-`ds_INSS` double(8,2) NULL DEFAULT NULL,
-`ds_IRRF` double(8,2) NULL DEFAULT NULL,
-`ds_FGTS` double(8,2) NULL DEFAULT NULL,
-
-
-`ds_convenio` double(8,2) NULL DEFAULT NULL,
-`ds_cestabasica` double(8,2) NULL DEFAULT NULL,
-
-`desco_atraso` double(8,2) NULL DEFAULT NULL,
-
-`ds_faltas` double(8,2) NULL DEFAULT NULL,
-
-`ds_bonus` double(8,2) NULL DEFAULT NULL,
-`nm_nome` varchar(50) ,
-`ds_cpf`  varchar(50),
-
+  `vl_VR` DOUBLE(8,2) NULL DEFAULT NULL,
+  `vl_DSR` DOUBLE(8,2) NULL DEFAULT NULL,
+  `vl_SalarioLiquido` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_He` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_VT` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_INSS` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_IRRF` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_FGTS` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_convenio` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_cestabasica` DOUBLE(8,2) NULL DEFAULT NULL,
+  `desco_atraso` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_faltas` DOUBLE(8,2) NULL DEFAULT NULL,
+  `ds_bonus` DOUBLE(8,2) NULL DEFAULT NULL,
+  `nm_nome` VARCHAR(50) NULL DEFAULT NULL,
+  `ds_cpf` VARCHAR(50) NULL DEFAULT NULL,
+  `dt_data` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`id_folha_pagamento`),
-  INDEX `id_funcionario` (`id_funcionario` ASC),
   CONSTRAINT `tb_folha_pagamento_fk_1`
     FOREIGN KEY (`id_funcionario`)
     REFERENCES `mydb`.`tb_funcionarios` (`id_funcionarios`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8;
 
  
@@ -149,9 +144,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`tb_conta_pagar` (
   `id_comprar_produto` INT(11) NULL DEFAULT NULL,
   `id_folha_pagamento` INT(11) NULL DEFAULT NULL,
   `vl_preço` DOUBLE(10,2) NULL DEFAULT NULL,
+  `dt_data` DATE NULL DEFAULT NULL,
   PRIMARY KEY (`id_conta_pagar`),
-  INDEX `id_compra_produto` (`id_comprar_produto` ASC),
-  INDEX `id_folha_pagamento_idx` (`id_folha_pagamento` ASC),
   CONSTRAINT `id_compra_produto`
     FOREIGN KEY (`id_comprar_produto`)
     REFERENCES `mydb`.`tb_compras_produto` (`id_compras`),
@@ -159,8 +153,8 @@ CREATE TABLE IF NOT EXISTS `mydb`.`tb_conta_pagar` (
     FOREIGN KEY (`id_folha_pagamento`)
     REFERENCES `mydb`.`tb_folha_pagamento` (`id_folha_pagamento`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8;
-
 
 -- -----------------------------------------------------
 -- Table `mydb`.`tb_estoque`
@@ -245,6 +239,39 @@ CREATE TABLE IF NOT EXISTS `mydb`.`tb_permissao` (
   `perm_compras` TINYINT(1) NULL DEFAULT NULL,
   `perm_rh` TINYINT(1) NULL DEFAULT NULL,
   `perm_financeiro` TINYINT(1) NULL DEFAULT NULL,
+  `perm_cadastrarcliente` TINYINT(1) NULL DEFAULT NULL,
+  `perm_cadastrarfornecedor` TINYINT(1) NULL DEFAULT NULL,
+  `perm_cadastrarproduto` TINYINT(1) NULL DEFAULT NULL,
+  `perm_cadastrarcardapio` TINYINT(1) NULL DEFAULT NULL,
+  `perm_cadastrarfuncionario` TINYINT(1) NULL DEFAULT NULL,
+  `perm_cadastrarpedido` TINYINT(1) NULL DEFAULT NULL,
+  `perm_cadastrarvenda` TINYINT(1) NULL DEFAULT NULL,
+  `perm_cadastrarfolha` TINYINT(1) NULL DEFAULT NULL,
+  `perm_consultarcliente` TINYINT(1) NULL DEFAULT NULL,
+  `perm_consultarfornecedor` TINYINT(1) NULL DEFAULT NULL,
+  `perm_consultarproduto` TINYINT(1) NULL DEFAULT NULL,
+  `perm_consultarcardapio` TINYINT(1) NULL DEFAULT NULL,
+  `perm_consultarfuncionario` TINYINT(1) NULL DEFAULT NULL,
+  `perm_consultarpedido` TINYINT(1) NULL DEFAULT NULL,
+  `perm_consultarvenda` TINYINT(1) NULL DEFAULT NULL,
+  `perm_consultarfolha` TINYINT(1) NULL DEFAULT NULL,
+  `perm_alterarcliente` TINYINT(1) NULL DEFAULT NULL,
+  `perm_alterarfornecedor` TINYINT(1) NULL DEFAULT NULL,
+  `perm_alterarfuncionario` TINYINT(1) NULL DEFAULT NULL,
+  `perm_alterarproduto` TINYINT(1) NULL DEFAULT NULL,
+  `perm_alterarcardapio` TINYINT(1) NULL DEFAULT NULL,
+  `perm_alterarpedido` TINYINT(1) NULL DEFAULT NULL,
+  `perm_alterarvenda` TINYINT(1) NULL DEFAULT NULL,
+  `perm_excluircliente` TINYINT(1) NULL DEFAULT NULL,
+  `perm_excluirfornecedor` TINYINT(1) NULL DEFAULT NULL,
+  `perm_excluirfuncionario` TINYINT(1) NULL DEFAULT NULL,
+  `perm_excluirproduto` TINYINT(1) NULL DEFAULT NULL,
+  `perm_excluircardapio` TINYINT(1) NULL DEFAULT NULL,
+  `perm_excluirpedido` TINYINT(1) NULL DEFAULT NULL,
+  `perm_excluirvenda` TINYINT(1) NULL DEFAULT NULL,
+  `perm_excluirfolha` TINYINT(1) NULL DEFAULT NULL,
+  
+
   PRIMARY KEY (`id_permissao`),
   INDEX `id_funcionario` (`id_funcionario` ASC),
   CONSTRAINT `tb_permissao_ibfk_1`
@@ -314,10 +341,90 @@ CREATE TABLE IF NOT EXISTS `mydb`.`tb_compra_item` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `mydb`.`tb_fluxo_caixa`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`tb_fluxo_caixa` (
+  `id_fluxo_caixa` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_venda_item` INT(11) NOT NULL,
+  `id_conta_pagar` INT(11) NOT NULL,
+  `id_folha_pagamento` INT(11) NOT NULL,
+  PRIMARY KEY (`id_fluxo_caixa`),
+  CONSTRAINT `tb_fluxo_caixa_ibfk_1`
+    FOREIGN KEY (`id_venda_item`)
+    REFERENCES `mydb`.`tb_venda_item` (`id_venda_item`),
+  CONSTRAINT `tb_fluxo_caixa_ibfk_2`
+    FOREIGN KEY (`id_conta_pagar`)
+    REFERENCES `mydb`.`tb_conta_pagar` (`id_conta_pagar`),
+  CONSTRAINT `tb_fluxo_caixa_ibfk_3`
+    FOREIGN KEY (`id_folha_pagamento`)
+    REFERENCES `mydb`.`tb_folha_de_pagamento` (`id_folha_pagamento`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
 use mydb;
 
 
+select* from Fluxo_view where dt_data>= '2018-10-18' and '2018-10-18' <=  dt_data order by dt_data, ds_caixa;
 
+select * from Fluxo_view where dt_data like'%%' and dt_data like '%%' ;
+
+
+
+ 
+SELECT 
+     date(dt_data) dt_data,
+    SUM(vl_SalarioLiquido + ds_cestabasica+ds_convenio) as vl_valor,
+    'saida'    as			ds_caixa,
+	'Folha de Pagamento'   as  ds_movimento
+FROM
+    tb_folha_de_pagamento group by dt_data
+
+
+union
+		SELECT
+		date(dt_compra) as dt_data,
+		 sum( vl_valor)    as vl_total,
+            'saida'    as			ds_caixa,
+			'Compra'   as  ds_movimento
+          
+          
+FROM tb_compra
+
+INNER JOIN tb_compra_item
+ON tb_compra.id_compra = tb_compra_item.id_compra
+JOIN tb_compras_produto
+ON tb_compra_item.id_compra_produto = tb_compras_produto.id_compras
+JOIN tb_fornecedor
+ON tb_fornecedor.id_fornecedor= tb_compras_produto.id_fornecedor
+group by dt_data
+
+union
+
+       SELECT date(data_venda) as dt_data,
+          sum(vl_valor)    as vl_total,
+		 'Entrada'  as ds_caixa,
+        ' venda'   as ds_movimento
+        from tb_venda_item
+    
+
+inner join tb_venda
+on tb_venda_item.id_venda=tb_venda.id_venda
+inner join tb_cardapio
+on tb_venda_item.id_cardapio=tb_cardapio.id_cardapio
+inner join tb_cliente
+on tb_venda.id_cliente=tb_cliente.id_cliente
+group by dt_data
+
+union
+
+select date(dt_data) as dt_data,
+sum(vl_preço) as vl_total,
+ 'saida'  as ds_caixa,
+'conta'   as ds_movimento
+ from tb_conta_pagar;
+ 
+ 
 
 create view compravw as 
        SELECT date(dt_compra)   as    dt_compra,
@@ -357,3 +464,8 @@ inner join tb_venda
 on tb_venda_item.id_venda=tb_venda.id_venda
 inner join tb_cardapio
 on tb_venda_item.id_cardapio=tb_cardapio.id_cardapio;
+
+
+
+
+

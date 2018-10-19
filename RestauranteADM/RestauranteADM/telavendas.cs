@@ -232,6 +232,11 @@ namespace RestauranteADM
         {
             dtpdata.Value = DateTime.Now;
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

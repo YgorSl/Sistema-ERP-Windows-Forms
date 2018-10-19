@@ -180,6 +180,7 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtend);
             this.panel1.Controls.Add(this.txtest);
             this.panel1.Controls.Add(this.txtnome);

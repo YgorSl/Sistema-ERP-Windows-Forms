@@ -77,8 +77,8 @@ namespace RestauranteADM.TELAS.Consulta
 
 
                 alterarfuncionario menu = new alterarfuncionario();
-                
-                menu.Show();
+                menu.Loadscreen(pr);
+                menu.ShowDialog();
                
 
             }

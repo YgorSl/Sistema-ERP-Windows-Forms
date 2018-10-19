@@ -34,14 +34,14 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcardapio = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txttamanho = new System.Windows.Forms.TextBox();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txttamanho = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcardapio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,11 +98,11 @@
             this.tamanho,
             this.valor,
             this.descricao,
-            this.Column1,
-            this.Column2});
+            this.Column2,
+            this.Column1});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -115,6 +115,24 @@
             this.dgvcardapio.Size = new System.Drawing.Size(752, 412);
             this.dgvcardapio.TabIndex = 49;
             this.dgvcardapio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcardapio_CellContentClick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(87, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "tamanho";
+            // 
+            // txttamanho
+            // 
+            this.txttamanho.Location = new System.Drawing.Point(160, 116);
+            this.txttamanho.Name = "txttamanho";
+            this.txttamanho.Size = new System.Drawing.Size(380, 20);
+            this.txttamanho.TabIndex = 50;
             // 
             // nome
             // 
@@ -145,37 +163,23 @@
             this.descricao.Name = "descricao";
             this.descricao.ReadOnly = true;
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Image = global::RestauranteADM.Properties.Resources.erro;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
             // Column2
             // 
             this.Column2.HeaderText = "";
             this.Column2.Image = global::RestauranteADM.Properties.Resources._1;
+            this.Column2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 40;
             // 
-            // label1
+            // Column1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(87, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "tamanho";
-            // 
-            // txttamanho
-            // 
-            this.txttamanho.Location = new System.Drawing.Point(160, 116);
-            this.txttamanho.Name = "txttamanho";
-            this.txttamanho.Size = new System.Drawing.Size(380, 20);
-            this.txttamanho.TabIndex = 50;
+            this.Column1.HeaderText = "";
+            this.Column1.Image = global::RestauranteADM.Properties.Resources.erro;
+            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 40;
             // 
             // Consultar_Cardapio
             // 
@@ -208,13 +212,13 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridView dgvcardapio;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txttamanho;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn tamanho;
         private System.Windows.Forms.DataGridViewTextBoxColumn valor;
         private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txttamanho;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

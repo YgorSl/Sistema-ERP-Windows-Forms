@@ -108,7 +108,8 @@ namespace RestauranteADM.TELAS.Financeiro
             }
             lblentrada.Text = totalentrada.ToString();
             lblsaida.Text = totalsaida.ToString();
-
+            saldo = totalentrada - totalsaida;
+            lblsituaçao.Text = saldo.ToString();
 
 
 

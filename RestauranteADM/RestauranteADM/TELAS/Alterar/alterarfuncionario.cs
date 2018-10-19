@@ -26,28 +26,20 @@ namespace RestauranteADM.TELAS.Consulta
         UsuarioDTO usuario;
 
 
-        public void Loadscreen(FuncionarioDTO funcio, UsuarioDTO usuario)
+        public void Loadscreen(FuncionarioDTO funcio)
 
         {
             this.funcio = funcio;
-            this.usuario = usuario;
-
-
-            txtnome.Text = this.funcio.Nome;
-            txtcpf.Text = this.funcio.Cpf;
-             txtsalario.Text= this.funcio.Salario.ToString();
-            txtrg.Text = this.funcio.Rg;
-            txtendereço.Text = this.funcio.Rg;
             
-            txtusuario.Text = this.usuario.login;
-            txtsenha.Text = this.usuario.senha;
-            chbtotal.Checked = this.usuario.permissaototal;
-            chbrh.Checked = this.usuario.permissaoRH;
-            chbfinanceiro.Checked = this.usuario.permissaofinanceiro;
-            chbcadastro.Checked = this.usuario.permissaocadastro;
-            chbvendas.Checked = this.usuario.permissaovendas;
-            chbcompras.Checked = this.usuario.permissaocompras;
 
+
+            txtnome.Text = funcio.Nome;
+            txtcpf.Text = funcio.Cpf;
+             txtsalario.Text= funcio.Salario.ToString();
+            txtrg.Text = funcio.Rg;
+            txtendereço.Text = funcio.Rg;
+            
+          
 
 
 

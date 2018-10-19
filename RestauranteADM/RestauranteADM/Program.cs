@@ -24,7 +24,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Fluxo_de_Caixa());
+            Application.Run(new menu2());
         }
     }
 }

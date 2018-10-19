@@ -31,6 +31,7 @@
             this.btnentrar = new System.Windows.Forms.Button();
             this.txtsenha = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             this.btnentrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnentrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnentrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnentrar.Location = new System.Drawing.Point(81, 286);
+            this.btnentrar.Location = new System.Drawing.Point(80, 286);
             this.btnentrar.Name = "btnentrar";
             this.btnentrar.Size = new System.Drawing.Size(251, 33);
             this.btnentrar.TabIndex = 44;
@@ -78,6 +78,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 218);
             this.panel1.TabIndex = 47;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(97, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(140, 16);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Esqueceu sua senha !";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label3
             // 
@@ -153,18 +165,6 @@
             this.label6.TabIndex = 50;
             this.label6.Text = "_";
             this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(97, 188);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(140, 16);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "Esqueceu sua senha !";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Login
             // 

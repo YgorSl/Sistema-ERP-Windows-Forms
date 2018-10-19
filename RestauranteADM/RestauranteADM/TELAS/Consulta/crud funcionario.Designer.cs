@@ -30,23 +30,24 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvfuncio = new System.Windows.Forms.DataGridView();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.a = new System.Windows.Forms.Label();
             this.txtfuncio = new System.Windows.Forms.TextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfuncio)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvfuncio
             // 
+            this.dgvfuncio.AllowUserToAddRows = false;
             this.dgvfuncio.AllowUserToDeleteRows = false;
             this.dgvfuncio.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvfuncio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -59,7 +60,7 @@
             this.Column1});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -72,61 +73,6 @@
             this.dgvfuncio.Size = new System.Drawing.Size(752, 412);
             this.dgvfuncio.TabIndex = 33;
             this.dgvfuncio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Nome
-            // 
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.FillWeight = 300F;
-            this.Nome.HeaderText = "Nome";
-            this.Nome.MinimumWidth = 40;
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            this.Nome.Width = 200;
-            // 
-            // Rg
-            // 
-            this.Rg.DataPropertyName = "Rg";
-            this.Rg.HeaderText = "Rg";
-            this.Rg.Name = "Rg";
-            this.Rg.ReadOnly = true;
-            // 
-            // CPF
-            // 
-            this.CPF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CPF.DataPropertyName = "Cpf";
-            this.CPF.HeaderText = "CPF";
-            this.CPF.MinimumWidth = 20;
-            this.CPF.Name = "CPF";
-            this.CPF.ReadOnly = true;
-            // 
-            // CEP
-            // 
-            this.CEP.DataPropertyName = "endereço";
-            this.CEP.HeaderText = "endereço";
-            this.CEP.MinimumWidth = 20;
-            this.CEP.Name = "CEP";
-            this.CEP.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 300F;
-            this.Column2.HeaderText = "";
-            this.Column2.Image = global::RestauranteADM.Properties.Resources._1;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column2.Width = 50;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Image = global::RestauranteADM.Properties.Resources.erro;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column1.Width = 50;
             // 
             // label1
             // 
@@ -190,6 +136,63 @@
             this.dataGridViewImageColumn2.ReadOnly = true;
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Nome
+            // 
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.FillWeight = 300F;
+            this.Nome.HeaderText = "Nome";
+            this.Nome.MinimumWidth = 40;
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            this.Nome.Width = 200;
+            // 
+            // Rg
+            // 
+            this.Rg.DataPropertyName = "Rg";
+            this.Rg.HeaderText = "Rg";
+            this.Rg.Name = "Rg";
+            this.Rg.ReadOnly = true;
+            // 
+            // CPF
+            // 
+            this.CPF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CPF.DataPropertyName = "Cpf";
+            this.CPF.HeaderText = "CPF";
+            this.CPF.MinimumWidth = 20;
+            this.CPF.Name = "CPF";
+            this.CPF.ReadOnly = true;
+            // 
+            // CEP
+            // 
+            this.CEP.DataPropertyName = "Endereço";
+            this.CEP.HeaderText = "endereço";
+            this.CEP.MinimumWidth = 20;
+            this.CEP.Name = "CEP";
+            this.CEP.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 300F;
+            this.Column2.HeaderText = "";
+            this.Column2.Image = global::RestauranteADM.Properties.Resources._1;
+            this.Column2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column2.Width = 50;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Image = global::RestauranteADM.Properties.Resources.erro;
+            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column1.Width = 50;
             // 
             // crud_funcionario
             // 

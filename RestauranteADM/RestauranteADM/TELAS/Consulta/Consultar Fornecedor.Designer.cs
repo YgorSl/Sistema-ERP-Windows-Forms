@@ -32,15 +32,15 @@
             this.txtforn = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
-            this.label36 = new System.Windows.Forms.Label();
-            this.txtc = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label36 = new System.Windows.Forms.Label();
+            this.txtc = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,45 +88,14 @@
             this.CEP,
             this.Column3,
             this.Column2});
-            this.dgvcliente.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvcliente.Location = new System.Drawing.Point(0, 185);
+            this.dgvcliente.Margin = new System.Windows.Forms.Padding(3, 3, 3, 32);
             this.dgvcliente.Name = "dgvcliente";
             this.dgvcliente.ReadOnly = true;
             this.dgvcliente.RowHeadersVisible = false;
             this.dgvcliente.Size = new System.Drawing.Size(752, 412);
             this.dgvcliente.TabIndex = 32;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick);
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(263, 42);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(232, 24);
-            this.label36.TabIndex = 47;
-            this.label36.Text = "Consultar Fornecedor";
-            // 
-            // txtc
-            // 
-            this.txtc.Location = new System.Drawing.Point(188, 120);
-            this.txtc.Name = "txtc";
-            this.txtc.Size = new System.Drawing.Size(380, 20);
-            this.txtc.TabIndex = 48;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(139, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Cnpj:";
             // 
             // Column1
             // 
@@ -181,6 +150,37 @@
             this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column2.Width = 30;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(263, 42);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(232, 24);
+            this.label36.TabIndex = 47;
+            this.label36.Text = "Consultar Fornecedor";
+            // 
+            // txtc
+            // 
+            this.txtc.Location = new System.Drawing.Point(188, 120);
+            this.txtc.Name = "txtc";
+            this.txtc.Size = new System.Drawing.Size(380, 20);
+            this.txtc.TabIndex = 48;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(139, 124);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 17);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Cnpj:";
             // 
             // Consultar_Fornecedor
             // 

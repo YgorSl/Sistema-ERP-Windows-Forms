@@ -44,7 +44,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(453, 299);
+            this.button1.Location = new System.Drawing.Point(442, 364);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 36);
             this.button1.TabIndex = 84;
@@ -54,7 +54,7 @@
             // 
             // txtcep
             // 
-            this.txtcep.Location = new System.Drawing.Point(281, 106);
+            this.txtcep.Location = new System.Drawing.Point(104, 102);
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(259, 20);
             this.txtcep.TabIndex = 83;
@@ -66,7 +66,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(213, 110);
+            this.label2.Location = new System.Drawing.Point(36, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 17);
             this.label2.TabIndex = 82;
@@ -86,7 +86,7 @@
             // 
             // txtcpf
             // 
-            this.txtcpf.Location = new System.Drawing.Point(282, 69);
+            this.txtcpf.Location = new System.Drawing.Point(105, 65);
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(258, 20);
             this.txtcpf.TabIndex = 78;
@@ -94,7 +94,7 @@
             // 
             // txtnome
             // 
-            this.txtnome.Location = new System.Drawing.Point(282, 34);
+            this.txtnome.Location = new System.Drawing.Point(105, 30);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(258, 20);
             this.txtnome.TabIndex = 77;
@@ -106,7 +106,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(210, 36);
+            this.label5.Location = new System.Drawing.Point(33, 32);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 76;
@@ -118,7 +118,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(214, 70);
+            this.label4.Location = new System.Drawing.Point(37, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 17);
             this.label4.TabIndex = 75;
@@ -126,15 +126,16 @@
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtcep);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtcpf);
             this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(12, 125);
+            this.panel1.Location = new System.Drawing.Point(196, 148);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(728, 168);
+            this.panel1.Size = new System.Drawing.Size(403, 168);
             this.panel1.TabIndex = 85;
             // 
             // Cadastro_Funcionario

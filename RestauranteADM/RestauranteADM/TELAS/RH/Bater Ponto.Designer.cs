@@ -44,6 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Silver;
-            this.label35.Location = new System.Drawing.Point(213, 27);
+            this.label35.Location = new System.Drawing.Point(95, 27);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(86, 16);
             this.label35.TabIndex = 43;
@@ -63,7 +64,7 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Silver;
-            this.label34.Location = new System.Drawing.Point(213, 52);
+            this.label34.Location = new System.Drawing.Point(95, 52);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(60, 16);
             this.label34.TabIndex = 42;
@@ -71,11 +72,12 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker1.Location = new System.Drawing.Point(111, 152);
+            this.dateTimePicker1.Location = new System.Drawing.Point(11, 152);
             this.dateTimePicker1.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(118, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(102, 20);
             this.dateTimePicker1.TabIndex = 41;
             this.dateTimePicker1.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
             // 
@@ -84,7 +86,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(148, 190);
+            this.label3.Location = new System.Drawing.Point(30, 190);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 17);
             this.label3.TabIndex = 40;
@@ -95,7 +97,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(155, 52);
+            this.label2.Location = new System.Drawing.Point(37, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
             this.label2.TabIndex = 39;
@@ -106,7 +108,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(129, 27);
+            this.label1.Location = new System.Drawing.Point(11, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 17);
             this.label1.TabIndex = 38;
@@ -116,7 +118,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(573, 424);
+            this.button1.Location = new System.Drawing.Point(549, 448);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 34);
             this.button1.TabIndex = 44;
@@ -129,7 +131,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(296, 190);
+            this.label4.Location = new System.Drawing.Point(178, 190);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 17);
             this.label4.TabIndex = 45;
@@ -137,31 +139,34 @@
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker2.Location = new System.Drawing.Point(268, 152);
+            this.dateTimePicker2.Location = new System.Drawing.Point(156, 152);
             this.dateTimePicker2.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(108, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(102, 20);
             this.dateTimePicker2.TabIndex = 46;
             this.dateTimePicker2.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
             // 
             // dateTimePicker3
             // 
+            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker3.Location = new System.Drawing.Point(411, 152);
+            this.dateTimePicker3.Location = new System.Drawing.Point(294, 152);
             this.dateTimePicker3.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(108, 20);
+            this.dateTimePicker3.Size = new System.Drawing.Size(102, 20);
             this.dateTimePicker3.TabIndex = 47;
             this.dateTimePicker3.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
             // 
             // dateTimePicker4
             // 
+            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dateTimePicker4.Location = new System.Drawing.Point(544, 152);
+            this.dateTimePicker4.Location = new System.Drawing.Point(423, 152);
             this.dateTimePicker4.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
             this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(108, 20);
+            this.dateTimePicker4.Size = new System.Drawing.Size(102, 20);
             this.dateTimePicker4.TabIndex = 48;
             this.dateTimePicker4.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
             // 
@@ -170,7 +175,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(564, 190);
+            this.label5.Location = new System.Drawing.Point(446, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 17);
             this.label5.TabIndex = 49;
@@ -181,7 +186,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(418, 190);
+            this.label6.Location = new System.Drawing.Point(300, 190);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 17);
             this.label6.TabIndex = 50;
@@ -192,7 +197,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(541, 96);
+            this.label7.Location = new System.Drawing.Point(423, 96);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 17);
             this.label7.TabIndex = 51;
@@ -213,6 +218,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -226,10 +232,18 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(14, 121);
+            this.panel1.Location = new System.Drawing.Point(114, 123);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(752, 270);
+            this.panel1.Size = new System.Drawing.Size(543, 270);
             this.panel1.TabIndex = 55;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(98, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(131, 21);
+            this.comboBox1.TabIndex = 52;
             // 
             // Bater_Ponto
             // 
@@ -270,5 +284,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

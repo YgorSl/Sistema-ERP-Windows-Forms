@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RestauranteADM.Acesso;
 using RestauranteADM.TELAS._1._0._1;
+using RestauranteADM.TELAS.recuperaçao;
 
 namespace RestauranteADM
 {
@@ -86,6 +87,12 @@ namespace RestauranteADM
         private void label5_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            adicionar_o_codigo sho = new adicionar_o_codigo();
+            sho.ShowDialog();
         }
     }
 }

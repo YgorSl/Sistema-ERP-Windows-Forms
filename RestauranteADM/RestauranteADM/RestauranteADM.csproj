@@ -50,26 +50,20 @@
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaBunisessView.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaDatabaseView.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaView.cs" />
-    <Compile Include="BASE\Senhar.cs" />
-    <Compile Include="BASE\senharlogin.cs" />
+    <Compile Include="BASE\Recuperação\RecuperaçaoDTO.cs" />
+    <Compile Include="BASE\Recuperação\Senhar.cs" />
+    <Compile Include="BASE\Recuperação\senharBunisess.cs" />
     <Compile Include="BASE\vendas\VendasViewBunisess.cs" />
     <Compile Include="BASE\vendas\VendasViewDatabase.cs" />
     <Compile Include="BASE\vendas\VendasViewDto.cs" />
     <Compile Include="BASE\vendas\Vendas_Item_Bunisess.cs" />
     <Compile Include="BASE\vendas\Vendas_Item_Database.cs" />
     <Compile Include="BASE\vendas\vendas_item_DTO.cs" />
-    <Compile Include="senhalogin.cs" />
     <Compile Include="TELAS\recuperaçao\adicionar o codigo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TELAS\recuperaçao\adicionar o codigo.Designer.cs">
       <DependentUpon>adicionar o codigo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\recuperaçao\Recuperar senha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\recuperaçao\Recuperar senha.Designer.cs">
-      <DependentUpon>Recuperar senha.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Alterar\alterarcardapio.cs">
       <SubType>Form</SubType>
@@ -332,9 +326,6 @@
     <Compile Include="Validacao.cs" />
     <EmbeddedResource Include="TELAS\recuperaçao\adicionar o codigo.resx">
       <DependentUpon>adicionar o codigo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\recuperaçao\Recuperar senha.resx">
-      <DependentUpon>Recuperar senha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Alterar\alterarcardapio.resx">
       <DependentUpon>alterarcardapio.cs</DependentUpon>

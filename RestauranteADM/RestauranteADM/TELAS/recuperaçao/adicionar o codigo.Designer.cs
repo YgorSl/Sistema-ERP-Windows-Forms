@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtnome = new System.Windows.Forms.TextBox();
+            this.txtRecuperacao = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtmensagem = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // txtnome
+            // txtRecuperacao
             // 
-            this.txtnome.Location = new System.Drawing.Point(162, 69);
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(258, 20);
-            this.txtnome.TabIndex = 88;
+            this.txtRecuperacao.Location = new System.Drawing.Point(39, 55);
+            this.txtRecuperacao.Name = "txtRecuperacao";
+            this.txtRecuperacao.Size = new System.Drawing.Size(258, 20);
+            this.txtRecuperacao.TabIndex = 88;
+            this.txtRecuperacao.TextChanged += new System.EventHandler(this.txtRecuperacao_TextChanged);
             // 
             // label5
             // 
@@ -47,18 +48,18 @@
             this.label5.BackColor = System.Drawing.Color.Black;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(47, 69);
+            this.label5.Location = new System.Drawing.Point(36, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 16);
+            this.label5.Size = new System.Drawing.Size(203, 16);
             this.label5.TabIndex = 87;
-            this.label5.Text = "adicionar CPF";
+            this.label5.Text = "adicionar senha de recuperaçao";
             // 
             // txtmensagem
             // 
             this.txtmensagem.Enabled = false;
-            this.txtmensagem.Location = new System.Drawing.Point(179, 126);
+            this.txtmensagem.Location = new System.Drawing.Point(93, 126);
             this.txtmensagem.Name = "txtmensagem";
-            this.txtmensagem.Size = new System.Drawing.Size(222, 104);
+            this.txtmensagem.Size = new System.Drawing.Size(387, 141);
             this.txtmensagem.TabIndex = 89;
             this.txtmensagem.Text = "";
             // 
@@ -79,7 +80,7 @@
             this.ClientSize = new System.Drawing.Size(550, 348);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtmensagem);
-            this.Controls.Add(this.txtnome);
+            this.Controls.Add(this.txtRecuperacao);
             this.Controls.Add(this.label5);
             this.Name = "adicionar_o_codigo";
             this.Text = "adicionar_o_codigo";
@@ -91,7 +92,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtnome;
+        private System.Windows.Forms.TextBox txtRecuperacao;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox txtmensagem;
         private System.Windows.Forms.Button button1;

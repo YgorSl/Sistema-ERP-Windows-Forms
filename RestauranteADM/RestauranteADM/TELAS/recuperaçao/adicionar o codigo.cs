@@ -29,11 +29,20 @@ namespace RestauranteADM.TELAS.recuperaçao
 
         private void button1_Click(object sender, EventArgs e)
         {
-            senharlogin senhar = new senharlogin();
-            txtmensagem.Text = senhar.recuperaçao(txtnome.Text);
+
+            senharBunisess senhar = new senharBunisess();
+            txtRecuperacao.Text
+
+
+        
         }
 
         private void adicionar_o_codigo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRecuperacao_TextChanged(object sender, EventArgs e)
         {
 
         }

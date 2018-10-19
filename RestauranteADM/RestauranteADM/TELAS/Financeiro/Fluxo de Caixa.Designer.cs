@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Fluxo_de_Caixa));
             this.dtpfim = new System.Windows.Forms.DateTimePicker();
             this.dtpinicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,11 +43,12 @@
             this.lblsituaçao = new System.Windows.Forms.Label();
             this.lblsituacao = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblcompra1 = new System.Windows.Forms.Label();
+            this.lblsaida = new System.Windows.Forms.Label();
             this.lblcompra = new System.Windows.Forms.Label();
             this.lblvenda = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblentrada = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfluxo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -144,7 +144,6 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(603, 9);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -157,7 +156,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(629, 9);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
@@ -211,16 +209,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblcompra1
+            // lblsaida
             // 
-            this.lblcompra1.AutoSize = true;
-            this.lblcompra1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcompra1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblcompra1.Location = new System.Drawing.Point(164, 339);
-            this.lblcompra1.Name = "lblcompra1";
-            this.lblcompra1.Size = new System.Drawing.Size(52, 22);
-            this.lblcompra1.TabIndex = 69;
-            this.lblcompra1.Text = "-------";
+            this.lblsaida.AutoSize = true;
+            this.lblsaida.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsaida.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblsaida.Location = new System.Drawing.Point(164, 339);
+            this.lblsaida.Name = "lblsaida";
+            this.lblsaida.Size = new System.Drawing.Size(52, 22);
+            this.lblsaida.TabIndex = 69;
+            this.lblsaida.Text = "-------";
             // 
             // lblcompra
             // 
@@ -229,9 +227,9 @@
             this.lblcompra.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblcompra.Location = new System.Drawing.Point(68, 339);
             this.lblcompra.Name = "lblcompra";
-            this.lblcompra.Size = new System.Drawing.Size(80, 22);
+            this.lblcompra.Size = new System.Drawing.Size(55, 22);
             this.lblcompra.TabIndex = 68;
-            this.lblcompra.Text = "situaçao";
+            this.lblcompra.Text = "saida";
             // 
             // lblvenda
             // 
@@ -250,9 +248,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label7.Location = new System.Drawing.Point(68, 361);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 22);
+            this.label7.Size = new System.Drawing.Size(73, 22);
             this.label7.TabIndex = 70;
-            this.label7.Text = "situaçao";
+            this.label7.Text = "entrada";
             // 
             // button2
             // 
@@ -264,6 +262,17 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // lblentrada
+            // 
+            this.lblentrada.AutoSize = true;
+            this.lblentrada.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblentrada.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblentrada.Location = new System.Drawing.Point(164, 361);
+            this.lblentrada.Name = "lblentrada";
+            this.lblentrada.Size = new System.Drawing.Size(52, 22);
+            this.lblentrada.TabIndex = 73;
+            this.lblentrada.Text = "-------";
+            // 
             // Fluxo_de_Caixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,10 +280,11 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(666, 410);
+            this.Controls.Add(this.lblentrada);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblvenda);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lblcompra1);
+            this.Controls.Add(this.lblsaida);
             this.Controls.Add(this.lblcompra);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblsituacao);
@@ -317,10 +327,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo_de_operaca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Movimento;
-        private System.Windows.Forms.Label lblcompra1;
+        private System.Windows.Forms.Label lblsaida;
         private System.Windows.Forms.Label lblcompra;
         private System.Windows.Forms.Label lblvenda;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblentrada;
     }
 }

@@ -82,7 +82,7 @@ namespace RestauranteADM.TELAS.Financeiro
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FluxodecaixaView dto = dgvfluxo.CurrentRow.DataBoundItem as FluxodecaixaView;
+            
 
             
 
@@ -92,6 +92,8 @@ namespace RestauranteADM.TELAS.Financeiro
 
             foreach (DataGridViewRow row in dgvfluxo.Rows)
             {
+                FluxodecaixaView dto = row.DataBoundItem as FluxodecaixaView;
+
                 if (dto.tipo_de_operacao == "Entrada")
                 {
                     decimal entrada = dto.valortotal;
@@ -102,10 +104,14 @@ namespace RestauranteADM.TELAS.Financeiro
                     decimal saida = dto.valortotal;
                     totalsaida = saida + totalsaida;
                 }
+               
             }
+            lblentrada.Text = totalentrada.ToString();
+            lblsaida.Text = totalsaida.ToString();
 
-            lblcompra1.Text = totalentrada.ToString();
-            lblvenda.Text = totalsaida.ToString();
+
+
+
 
 
         }

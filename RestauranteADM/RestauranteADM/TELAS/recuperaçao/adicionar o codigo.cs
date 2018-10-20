@@ -30,8 +30,8 @@ namespace RestauranteADM.TELAS.recuperaçao
         private void button1_Click(object sender, EventArgs e)
         {
 
-            senharBunisess senhar = new senharBunisess();
-            txtRecuperacao.Text
+            //senharBunisess senhar = new senharBunisess();
+            //txtRecuperacao.Text
 
 
         

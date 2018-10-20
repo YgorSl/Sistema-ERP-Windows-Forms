@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace RestauranteADM.BASE.Estoque
 {
-    class EstoqueBusiness
+    public class EstoqueBusiness
     {
+        public void Salvar(List<EstoqueDTO> estoques)
+        {
+            EstoqueDatabase db = new EstoqueDatabase();
+
+            foreach (EstoqueDTO estoque in estoques)
+            {
+                db.Salvar(estoque);
+            }
+        }
+        public List<EstoqueDTO> Listar()
+        {
+            EstoqueDatabase db = new EstoqueDatabase();
+            List<EstoqueDTO> estoque = db.Listar();
+
+            return estoque;
+        }
     }
 }

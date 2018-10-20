@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +59,18 @@
     <Compile Include="BASE\vendas\Vendas_Item_Bunisess.cs" />
     <Compile Include="BASE\vendas\Vendas_Item_Database.cs" />
     <Compile Include="BASE\vendas\vendas_item_DTO.cs" />
+    <Compile Include="TELAS\Estoque\Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Estoque\Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Estoque\ReceberEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Estoque\ReceberEstoque.Designer.cs">
+      <DependentUpon>ReceberEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\recuperaçao\adicionar o codigo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -318,6 +330,12 @@
       <DependentUpon>telavendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Validacao.cs" />
+    <EmbeddedResource Include="TELAS\Estoque\Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Estoque\ReceberEstoque.resx">
+      <DependentUpon>ReceberEstoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\recuperaçao\adicionar o codigo.resx">
       <DependentUpon>adicionar o codigo.cs</DependentUpon>
     </EmbeddedResource>
@@ -477,6 +495,8 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,6 +13,11 @@ namespace RestauranteADM.BASE.Produto
             CompraItemDatabase db = new CompraItemDatabase();
             db.Salvar(item);
         }
-        
+        public List<CompraItemDTO> Filtro(int CompraId)
+        {
+            CompraItemDatabase db = new CompraItemDatabase();
+            List<CompraItemDTO> items = db.Filtro(CompraId);
+            return items;
+        }
     }
 }

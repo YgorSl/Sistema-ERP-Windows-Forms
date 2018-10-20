@@ -130,38 +130,44 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ClienteDTO dto = new ClienteDTO();
-
-
-
-            dto.Nome = txtnome.Text;
-            dto.Cpf = txtcpf.Text;
-            dto.Telefone = txttelefone.Text;
-            dto.Cep = txtcep.Text;
-            dto.Bairro = txtbairro.Text;
-            dto.NumeroCasa = txtnumcasa.Text;
-
-            if (txtfisica.Checked==true )
+            if (txtnome.Text != string.Empty || txtcpf.Text != string.Empty || txttelefone.Text != string.Empty || txtcep.Text != string.Empty || txtbairro.Text != string.Empty || txtnumcasa.Text != string.Empty || txtfisica.Checked == false & txtjuridica.Checked == false)
             {
-                dto.Tipopessoa="PF";
+
+                ClienteDTO dto = new ClienteDTO();
+
+                dto.Nome = txtnome.Text;
+                dto.Cpf = txtcpf.Text;
+                dto.Telefone = txttelefone.Text;
+                dto.Cep = txtcep.Text;
+                dto.Bairro = txtbairro.Text;
+                dto.NumeroCasa = txtnumcasa.Text;
+
+                if (txtfisica.Checked == true)
+                {
+                    dto.Tipopessoa = "PF";
+                }
+                else if (txtjuridica.Checked == true)
+                {
+                    dto.Tipopessoa = "PJ";
+
+                }
+
+                dto.Cnpj = txtcnpj.Text;
+                dto.anotaçao_cliente = rtvanotaçoes.Text;
+
+
+                dto.data_hoje = dtphoje.Value;
+
+
+                ClienteBusiness ft = new ClienteBusiness();
+                ft.Salvar(dto);
+
+                MessageBox.Show("cliente Salvo com sucesso! :)");
             }
-            else if(txtjuridica.Checked ==true)
+            else
             {
-                dto.Tipopessoa = "PJ";
-
+                MessageBox.Show("Por favor preencha todos os campos! Principalmente se o cliente é pessoa fisica ou juridica.");
             }
-
-            dto.Cnpj = txtcnpj.Text;
-            dto.anotaçao_cliente = rtvanotaçoes.Text;
-
-
-            dto.data_hoje = dtphoje.Value;
-
-
-            ClienteBusiness ft = new ClienteBusiness();
-            ft.Salvar(dto);
-
-            MessageBox.Show("cliente Salvo com sucesso! :)");
         }
     }
 }

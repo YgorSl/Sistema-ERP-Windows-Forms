@@ -24,5 +24,12 @@ namespace RestauranteADM.BASE.Estoque
 
             return estoque;
         }
+        public List<Estoque_View> Lista()
+        {
+            EstoqueDatabase db = new EstoqueDatabase();
+            List<Estoque_View> estoque = db.Lista();
+
+            return estoque;
+        }
     }
 }

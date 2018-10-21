@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using RestauranteADM.BASE.Estoque;
 using RestauranteADM.DB;
 using System;
 using System.Collections.Generic;
@@ -25,10 +26,10 @@ namespace RestauranteADM.BASE.Produto
 
         }
 
-        public List<CompraItemDTO> Filtro (int CompraId)
+        public List<Estoque_View> Filtro (int CompraId)
         {
             {
-                string script = @"select *from tb_compra_item where id_compra= @id_compra ";
+                string script = @"select *from estoquevw where id_compra= @id_compra ";
 
                 List<MySqlParameter> parms = new List<MySqlParameter>();
                 parms.Add(new MySqlParameter("id_compra", CompraId));
@@ -36,19 +37,20 @@ namespace RestauranteADM.BASE.Produto
                 Database db = new Database();
                 MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-                List<CompraItemDTO> lista = new List<CompraItemDTO>();
+                List<Estoque_View> lista = new List<Estoque_View>();
                 while (reader.Read() == true)
                 {
-                    CompraItemDTO comp = new CompraItemDTO();
-                    comp.Id = reader.GetInt32("id_compra_item");
+                    Estoque_View comp = new Estoque_View();
+                    comp.Id = reader.GetInt32("id_estoque");
+                    comp.IdCompra = reader.GetInt32("id_compra");
+                    comp.IdCompraItem = reader.GetInt32("id_compra_item");
+                    comp.IdProduto = reader.GetInt32("id_compras");
+                    comp.Preço = reader.GetInt32("vl_valor");
+                    comp.Produto = reader.GetString("nm_produto");
+                    comp.Fornecedor = reader.GetString("nm_fornecedor");
+    
 
-                    comp.Compra = new CompraDTO();
-                    comp.Compra.Id = reader.GetInt32("Id_compra");
-
-                    comp.Produto = new ProdutoDTO();
-                    comp.Produto.Id = reader.GetInt32("id_compra_produto");
-
-                    lista.Add(comp);
+                        lista.Add(comp);
                 }
                 return lista;
             }

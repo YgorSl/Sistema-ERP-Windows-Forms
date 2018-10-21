@@ -23,7 +23,7 @@ namespace RestauranteADM.TELAS.Estoque
         {
             int compraId = Convert.ToInt32(txtfuncio.Text);
             CompraItemBusiness bus = new CompraItemBusiness();
-            List<CompraItemDTO> item = bus.Filtro(compraId);
+            List<Estoque_View> item = bus.Filtro(compraId);
 
             dataGridView1.DataSource = item;
         }

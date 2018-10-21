@@ -22,7 +22,7 @@ namespace RestauranteADM.TELAS.Estoque
         void CarregarEstoque()
         {
             EstoqueBusiness bus = new EstoqueBusiness();
-            List<EstoqueDTO> estoq = bus.Listar();
+            List<Estoque_View> estoq = bus.Lista();
 
             dataGridView1.DataSource = estoq;
         }

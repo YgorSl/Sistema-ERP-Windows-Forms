@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestauranteADM.BASE.Estoque;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,10 +14,10 @@ namespace RestauranteADM.BASE.Produto
             CompraItemDatabase db = new CompraItemDatabase();
             db.Salvar(item);
         }
-        public List<CompraItemDTO> Filtro(int CompraId)
+        public List<Estoque_View> Filtro(int CompraId)
         {
             CompraItemDatabase db = new CompraItemDatabase();
-            List<CompraItemDTO> items = db.Filtro(CompraId);
+            List<Estoque_View> items = db.Filtro(CompraId);
             return items;
         }
     }

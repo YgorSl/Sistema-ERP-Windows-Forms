@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acesso\acesso.cs" />
+    <Compile Include="BASE\Estoque\Estoque View.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaBunisessView.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaDatabaseView.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaView.cs" />

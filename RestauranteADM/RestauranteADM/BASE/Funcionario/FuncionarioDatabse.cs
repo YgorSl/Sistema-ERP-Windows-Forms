@@ -14,8 +14,8 @@ namespace RestauranteADM.BASE.Funcionario
 
         public int Salvar(FuncionarioDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_funcionarios` (nm_nome, ds_cpf, ds_RG, ds_endereco, ds_salario) 
-                                                            VALUES (@nm_nome, @ds_cpf, @ds_RG, @ds_endereco, @ds_salario)";
+            string script = @"INSERT INTO `mydb`.`tb_funcionarios` (nm_nome, ds_cpf, ds_RG, ds_endereco, ds_salario,ds_gmail,ds_senha_recupecao) 
+                                                            VALUES (@nm_nome, @ds_cpf, @ds_RG, @ds_endereco, @ds_salario,@ds_gmail,@ds_senha_recupecao)";
 
 
 
@@ -26,9 +26,9 @@ namespace RestauranteADM.BASE.Funcionario
             parms.Add(new MySqlParameter("ds_cpf", dto.Cpf));
             parms.Add(new MySqlParameter("ds_RG", dto.Rg));
             parms.Add(new MySqlParameter("ds_endereco", dto.Endereço));
-
             parms.Add(new MySqlParameter("ds_Salario", dto.Salario));
-     
+            parms.Add(new MySqlParameter("ds_gmail", dto.Gmail));
+            parms.Add(new MySqlParameter("ds_senha_recupecao", dto.senha_recuperaçao));
 
 
 
@@ -70,7 +70,8 @@ namespace RestauranteADM.BASE.Funcionario
                 funcio.Rg = reader.GetString("ds_RG");
                 funcio.Endereço = reader.GetString("ds_endereco");
                 funcio.Salario = reader.GetDouble("ds_Salario");
-             
+                funcio.Gmail = reader.GetString("ds_gmail");
+                funcio.senha_recuperaçao = reader.GetString("ds_senha_recupecao");
 
                 funcio.eui = new UsuarioDTO();
                 funcio.eui.usuario = new FuncionarioDTO();
@@ -121,7 +122,13 @@ namespace RestauranteADM.BASE.Funcionario
             parms.Add(new MySqlParameter("ds_RG", dto.Rg));
             parms.Add(new MySqlParameter("ds_endereco", dto.Endereço));
             parms.Add(new MySqlParameter("ds_salario", dto.Salario));
-    
+            parms.Add(new MySqlParameter("ds_gmail", dto.Gmail));
+            parms.Add(new MySqlParameter("ds_senha_recupecao", dto.senha_recuperaçao));
+
+
+
+
+
 
 
             Database db = new Database();
@@ -148,8 +155,10 @@ namespace RestauranteADM.BASE.Funcionario
                 dto.Rg = reader.GetString("ds_RG");
                 dto.Endereço = reader.GetString("ds_endereco");
                 dto.Salario = reader.GetDouble("ds_salario");
-             
-              
+                dto.Gmail = reader.GetString("ds_gmail");
+                dto.senha_recuperaçao = reader.GetString("ds_senha_recupecao");
+
+
 
                 lista.Add(dto);
             }

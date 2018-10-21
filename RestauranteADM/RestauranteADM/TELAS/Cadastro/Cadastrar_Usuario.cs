@@ -52,6 +52,11 @@ namespace RestauranteADM.TELAS
                 dto.Rg = txtrg.Text;
                 dto.Endereço = txtendereço.Text;
 
+                dto.Gmail = txtgmail.Text;
+                dto.senha_recuperaçao = txtrecuperacao.Text;
+
+
+
 
                 dto.Salario = Convert.ToDouble(txtsalario.Text);
 

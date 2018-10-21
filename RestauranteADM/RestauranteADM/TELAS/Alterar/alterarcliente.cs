@@ -51,19 +51,24 @@ namespace RestauranteADM.TELAS.Alterar
 
 
             cliente.Nome = txtnome.Text;
-            cliente.Cpf = txtcpf.Text;
+          
             cliente.Telefone = txttelefone.Text;
             cliente.Cep = txtcep.Text;
             cliente.Bairro = txtbairro.Text;
             cliente.NumeroCasa = txtnumcasa.Text;
+            cliente.Cpf = txtcpf.Text;
 
             if (txtfisica.Checked == true)
             {
                 cliente.Tipopessoa = "PF";
+             
+
             }
             else if (txtjuridica.Checked == true)
             {
                 cliente.Tipopessoa = "PJ";
+          
+
 
             }
 
@@ -82,10 +87,48 @@ namespace RestauranteADM.TELAS.Alterar
             this.Hide();
         }
 
+
+
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        private void txtfisica_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtfisica.Checked == true)
+            {
+                txtcnpj.Enabled = false;
+
+            }
+            else
+            {
+                txtcnpj.Enabled = true;
+
+            }
+
+        }
+
+        private void txtjuridica_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtjuridica.Checked == true)
+            {
+                txtcpf.Enabled = false;
+
+            }
+            else
+            {
+                txtcpf.Enabled = true;
+
+            }
+
+        
+
+        }
+
+      
     }
     }
 

@@ -40,12 +40,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtcpf = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtcnpj = new System.Windows.Forms.TextBox();
             this.txtnumcasa = new System.Windows.Forms.TextBox();
             this.txtbairro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtcnpj = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dtphoje = new System.Windows.Forms.DateTimePicker();
             this.rtvanotaçoes = new System.Windows.Forms.RichTextBox();
@@ -186,13 +186,13 @@
             this.txtcpf.TabIndex = 21;
             this.txtcpf.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox7
+            // txtcnpj
             // 
-            this.textBox7.Location = new System.Drawing.Point(138, 266);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(262, 20);
-            this.textBox7.TabIndex = 26;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
+            this.txtcnpj.Location = new System.Drawing.Point(138, 266);
+            this.txtcnpj.Name = "txtcnpj";
+            this.txtcnpj.Size = new System.Drawing.Size(262, 20);
+            this.txtcnpj.TabIndex = 26;
+            this.txtcnpj.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // txtnumcasa
             // 
@@ -230,16 +230,16 @@
             this.label7.TabIndex = 70;
             this.label7.Text = "data";
             // 
-            // txtcnpj
+            // lbl1
             // 
-            this.txtcnpj.AutoSize = true;
-            this.txtcnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcnpj.ForeColor = System.Drawing.Color.White;
-            this.txtcnpj.Location = new System.Drawing.Point(77, 267);
-            this.txtcnpj.Name = "txtcnpj";
-            this.txtcnpj.Size = new System.Drawing.Size(33, 16);
-            this.txtcnpj.TabIndex = 71;
-            this.txtcnpj.Text = "cnpj";
+            this.lbl1.AutoSize = true;
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.ForeColor = System.Drawing.Color.White;
+            this.lbl1.Location = new System.Drawing.Point(77, 267);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(33, 16);
+            this.lbl1.TabIndex = 71;
+            this.lbl1.Text = "cnpj";
             // 
             // label10
             // 
@@ -280,6 +280,7 @@
             this.txtjuridica.TabStop = true;
             this.txtjuridica.Text = "juridica";
             this.txtjuridica.UseVisualStyleBackColor = true;
+            this.txtjuridica.CheckedChanged += new System.EventHandler(this.txtjuridica_CheckedChanged);
             // 
             // txtfisica
             // 
@@ -293,15 +294,16 @@
             this.txtfisica.TabStop = true;
             this.txtfisica.Text = "fisica";
             this.txtfisica.UseVisualStyleBackColor = true;
+            this.txtfisica.CheckedChanged += new System.EventHandler(this.txtfisica_CheckedChanged_1);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtfisica);
             this.panel1.Controls.Add(this.txtjuridica);
-            this.panel1.Controls.Add(this.txtcnpj);
+            this.panel1.Controls.Add(this.lbl1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.txtcnpj);
             this.panel1.Controls.Add(this.txtnumcasa);
             this.panel1.Controls.Add(this.txtbairro);
             this.panel1.Controls.Add(this.txtcep);
@@ -371,12 +373,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtcpf;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtcnpj;
         private System.Windows.Forms.TextBox txtnumcasa;
         private System.Windows.Forms.TextBox txtbairro;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label txtcnpj;
+        private System.Windows.Forms.Label lbl1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtphoje;
         private System.Windows.Forms.RichTextBox rtvanotaçoes;

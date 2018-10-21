@@ -145,12 +145,22 @@ namespace RestauranteADM.TELAS
                 if (txtfisica.Checked == true)
                 {
                     dto.Tipopessoa = "PF";
+                    dto.Cpf = txtcpf.Text;
+
+
                 }
                 else if (txtjuridica.Checked == true)
                 {
                     dto.Tipopessoa = "PJ";
+                    dto.Cnpj = txtcnpj.Text;
+
 
                 }
+
+
+
+
+
 
                 dto.Cnpj = txtcnpj.Text;
                 dto.anotaçao_cliente = rtvanotaçoes.Text;
@@ -168,6 +178,38 @@ namespace RestauranteADM.TELAS
             {
                 MessageBox.Show("Por favor preencha todos os campos! Principalmente se o cliente é pessoa fisica ou juridica.");
             }
+        }
+
+  
+
+        private void txtfisica_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (txtfisica.Checked == true)
+            {
+                txtcnpj.Enabled = false;
+
+            }
+            else
+            {
+                txtcnpj.Enabled = true;
+
+            }
+
+        }
+
+        private void txtjuridica_CheckedChanged(object sender, EventArgs e)
+        {
+            if (txtjuridica.Checked == true)
+            {
+                txtcpf.Enabled = false;
+
+            }
+            else
+            {
+                txtcpf.Enabled = true;
+
+            }
+
         }
     }
 }

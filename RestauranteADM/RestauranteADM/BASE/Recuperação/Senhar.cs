@@ -43,7 +43,7 @@ namespace RestauranteADM.BASE
                 senha = reader["Senha"].ToString();
                 Login = reader["Login"].ToString();
                 enviaremail();
-                mensagem = "olá " +""+ Nome + "enviamos para seu Gmail" +""+ Gmail +""+ "a recuperaçao de login e senhar ";
+                mensagem = "olá " + Nome + "  enviamos para seu Gmail " +  Gmail +  " a recuperaçao de login e senhar ";
                 reader.Close();
             }
             else
@@ -62,7 +62,7 @@ namespace RestauranteADM.BASE
             gmail.From = new MailAddress("seitadoscarecas@gmail.com");
             gmail.To.Add(Gmail);
             gmail.Subject = "recuperaçao de login";
-            gmail.Body = "olá querido" +""+ Nome + " "+"seu usuario de login é" +"  "+ Login+"  " + "e sua senha é" +""+ senha;
+            gmail.Body = " olá querido " + Nome +  " seu usuario de login é " + Login+  " e sua senha é " +  senha;
             gmail.Priority = MailPriority.Normal;
 
             SmtpClient smpt = new SmtpClient();

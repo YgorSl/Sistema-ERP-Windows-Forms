@@ -55,6 +55,7 @@
     <Compile Include="BASE\Recuperação\RecuperaçaoDTO.cs" />
     <Compile Include="BASE\Recuperação\Senhar.cs" />
     <Compile Include="BASE\Recuperação\senharBunisess.cs" />
+    <Compile Include="BASE\vendas\VendasTotal.cs" />
     <Compile Include="BASE\vendas\VendasViewBunisess.cs" />
     <Compile Include="BASE\vendas\VendasViewDatabase.cs" />
     <Compile Include="BASE\vendas\VendasViewDto.cs" />

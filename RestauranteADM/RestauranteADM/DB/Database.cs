@@ -68,6 +68,7 @@ namespace RestauranteADM.DB
                 }
             }
 
+
             MySqlDataReader reader =
                  command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
             return reader;

@@ -202,13 +202,6 @@ namespace RestauranteADM
 
 
 
-             ///   int m = dgvvendas.Rows.Add();
-          ///  dgvvendas.Rows[m].Cells[0].Value = cbmprato.Text;
-          ///  dgvvendas.Rows[m].Cells[1].Value = lblpreço.Text;
-         ///   dgvvendas.Rows[m].Cells[2].Value = nupqnt.Text;
-          ///  dgvvendas.Rows[m].Cells[3].Value = lbltotal.Text;
-
-           /// dgvvendas.DataSource = m;
 
 
         }
@@ -234,6 +227,55 @@ namespace RestauranteADM
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
+
+        private void numericUpDown2_ValueChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbltotal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+
+
+
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+
+
+
+
+
+
+
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

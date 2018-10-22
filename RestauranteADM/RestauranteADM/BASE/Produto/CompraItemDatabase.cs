@@ -26,36 +26,33 @@ namespace RestauranteADM.BASE.Produto
 
         }
 
-        public List<Estoque_View> Filtro (int CompraId)
+        public List<VerView> Filtro(string forn)
         {
             {
-                string script = @"select *from estoquevw where id_compra= @id_compra ";
+                string script = @"select * from estoqueavw where nm_produto like @produto";
 
                 List<MySqlParameter> parms = new List<MySqlParameter>();
-                parms.Add(new MySqlParameter("id_compra", CompraId));
+                parms.Add(new MySqlParameter("produto", "%" + forn + "%"));
 
                 Database db = new Database();
                 MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-                List<Estoque_View> lista = new List<Estoque_View>();
+                List<VerView> lista = new List<VerView>();
                 while (reader.Read() == true)
                 {
-                    Estoque_View comp = new Estoque_View();
-                    comp.Id = reader.GetInt32("id_estoque");
+                    VerView comp = new VerView();
                     comp.IdCompra = reader.GetInt32("id_compra");
                     comp.IdCompraItem = reader.GetInt32("id_compra_item");
-                    comp.IdProduto = reader.GetInt32("id_compras");
-                    comp.Preço = reader.GetInt32("vl_valor");
                     comp.Produto = reader.GetString("nm_produto");
-                    comp.Fornecedor = reader.GetString("nm_fornecedor");
-    
+                    comp.Preço = reader.GetInt32("vl_valor");
+                    comp.Fornecedor = reader.GetString("nm_nome");
 
-                        lista.Add(comp);
+                    lista.Add(comp);
                 }
                 return lista;
             }
 
-        }
 
+        }
     }
 }

@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,6 +51,7 @@
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaBunisessView.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaDatabaseView.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaView.cs" />
+    <Compile Include="BASE\Produto\VerView.cs" />
     <Compile Include="BASE\Recuperação\RecuperaçaoDTO.cs" />
     <Compile Include="BASE\Recuperação\Senhar.cs" />
     <Compile Include="BASE\Recuperação\senharBunisess.cs" />
@@ -118,9 +119,9 @@
     <Compile Include="BASE\Funcionario\FuncionarioBusiness.cs" />
     <Compile Include="BASE\Funcionario\FuncionarioDatabse.cs" />
     <Compile Include="BASE\Funcionario\FuncionarioDTO.cs" />
-    <Compile Include="BASE\Login\LoginBusiness.cs" />
-    <Compile Include="BASE\Login\LoginDatabase.cs" />
-    <Compile Include="BASE\Login\LoginDTO.cs" />
+    <Compile Include="BASE\Produto\Login\LoginBusiness.cs" />
+    <Compile Include="BASE\Produto\Login\LoginDatabase.cs" />
+    <Compile Include="BASE\Produto\Login\LoginDTO.cs" />
     <Compile Include="BASE\Produto\CompraBusiness.cs" />
     <Compile Include="BASE\Produto\CompraDatabase.cs" />
     <Compile Include="BASE\Produto\CompraDTO.cs" />

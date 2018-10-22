@@ -30,15 +30,15 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtfuncio = new System.Windows.Forms.TextBox();
+            this.dgvest = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvest)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -65,41 +65,21 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // dataGridView1
+            // dgvest
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvest.AllowUserToDeleteRows = false;
+            this.dgvest.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvest.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(2, 177);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(734, 351);
-            this.dataGridView1.TabIndex = 38;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(36, 71);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 25);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Pedido:";
-            // 
-            // txtfuncio
-            // 
-            this.txtfuncio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfuncio.Location = new System.Drawing.Point(127, 71);
-            this.txtfuncio.Name = "txtfuncio";
-            this.txtfuncio.Size = new System.Drawing.Size(195, 25);
-            this.txtfuncio.TabIndex = 40;
+            this.dgvest.Location = new System.Drawing.Point(3, 177);
+            this.dgvest.Name = "dgvest";
+            this.dgvest.ReadOnly = true;
+            this.dgvest.Size = new System.Drawing.Size(734, 351);
+            this.dgvest.TabIndex = 38;
             // 
             // Column1
             // 
@@ -136,21 +116,40 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(36, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 25);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Pedido:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(127, 76);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(141, 20);
+            this.textBox1.TabIndex = 40;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // ReceberEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(739, 540);
-            this.Controls.Add(this.txtfuncio);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvest);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Name = "ReceberEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReceberEstoque";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvest)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,13 +159,13 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvest;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtfuncio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -3,6 +3,7 @@ using RestauranteADM.TELAS._1._0._1;
 using RestauranteADM.TELAS.Alterar;
 using RestauranteADM.TELAS.Cadastro;
 using RestauranteADM.TELAS.Consulta;
+using RestauranteADM.TELAS.Estoque;
 using RestauranteADM.TELAS.Financeiro;
 using RestauranteADM.TELAS.recuperaçao;
 using RestauranteADM.TELAS.RH;
@@ -25,7 +26,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new adicionar_o_codigo());
+            Application.Run(new ReceberEstoque());
         }
     }
 }

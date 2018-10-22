@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpdata = new System.Windows.Forms.DateTimePicker();
             this.cmbcliente = new System.Windows.Forms.ComboBox();
@@ -64,7 +64,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(66, 70);
+            this.label2.Location = new System.Drawing.Point(20, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 58;
@@ -72,7 +72,7 @@
             // 
             // dtpdata
             // 
-            this.dtpdata.Location = new System.Drawing.Point(525, 63);
+            this.dtpdata.Location = new System.Drawing.Point(479, 63);
             this.dtpdata.Name = "dtpdata";
             this.dtpdata.Size = new System.Drawing.Size(226, 20);
             this.dtpdata.TabIndex = 61;
@@ -81,7 +81,7 @@
             // cmbcliente
             // 
             this.cmbcliente.FormattingEnabled = true;
-            this.cmbcliente.Location = new System.Drawing.Point(126, 66);
+            this.cmbcliente.Location = new System.Drawing.Point(80, 66);
             this.cmbcliente.Name = "cmbcliente";
             this.cmbcliente.Size = new System.Drawing.Size(374, 21);
             this.cmbcliente.TabIndex = 62;
@@ -91,9 +91,9 @@
             // 
             this.btnnova.BackColor = System.Drawing.Color.SeaGreen;
             this.btnnova.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnnova.Location = new System.Drawing.Point(600, 97);
+            this.btnnova.Location = new System.Drawing.Point(594, 97);
             this.btnnova.Name = "btnnova";
-            this.btnnova.Size = new System.Drawing.Size(141, 23);
+            this.btnnova.Size = new System.Drawing.Size(139, 23);
             this.btnnova.TabIndex = 65;
             this.btnnova.Text = "Nova Venda";
             this.btnnova.UseVisualStyleBackColor = false;
@@ -117,9 +117,9 @@
             this.panel.Controls.Add(this.cbmprato);
             this.panel.Controls.Add(this.label4);
             this.panel.Controls.Add(this.dgvvendas);
-            this.panel.Location = new System.Drawing.Point(18, 126);
+            this.panel.Location = new System.Drawing.Point(-28, 126);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(777, 391);
+            this.panel.Size = new System.Drawing.Size(787, 391);
             this.panel.TabIndex = 66;
             this.panel.Visible = false;
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
@@ -280,14 +280,14 @@
             this.dgvvendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nome,
             this.valor_final});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvvendas.Location = new System.Drawing.Point(81, 217);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
@@ -314,9 +314,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(581, 523);
+            this.button2.Location = new System.Drawing.Point(537, 523);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(215, 23);
+            this.button2.Size = new System.Drawing.Size(213, 23);
             this.button2.TabIndex = 102;
             this.button2.Text = "Finalizar Compra";
             this.button2.UseVisualStyleBackColor = false;
@@ -339,7 +339,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(807, 563);
+            this.ClientSize = new System.Drawing.Size(752, 597);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.btnnova);

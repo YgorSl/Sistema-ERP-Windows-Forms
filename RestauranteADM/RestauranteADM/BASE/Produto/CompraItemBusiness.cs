@@ -14,10 +14,10 @@ namespace RestauranteADM.BASE.Produto
             CompraItemDatabase db = new CompraItemDatabase();
             db.Salvar(item);
         }
-        public List<Estoque_View> Filtro(int CompraId)
+        public List<VerView> Filtro(string forn)
         {
             CompraItemDatabase db = new CompraItemDatabase();
-            List<Estoque_View> items = db.Filtro(CompraId);
+            List<VerView> items = db.Filtro(forn);
             return items;
         }
     }

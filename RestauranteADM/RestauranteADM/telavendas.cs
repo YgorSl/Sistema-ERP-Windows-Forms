@@ -279,6 +279,33 @@ namespace RestauranteADM
         {
 
         }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+          
+           double totalentrada = 0;
+       
+
+            foreach (DataGridViewRow row in dgvvendas.Rows)
+            {
+                CardapioDTO dto = row.DataBoundItem as CardapioDTO;
+
+             
+                
+                   double entrada = dto.Valor;
+                   totalentrada = entrada + totalentrada;
+                }
+            txtfn.Text = totalentrada.ToString();
+            }
+       
+private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+
+
+    }
+
 

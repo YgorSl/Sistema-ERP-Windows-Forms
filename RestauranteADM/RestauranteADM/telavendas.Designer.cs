@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpdata = new System.Windows.Forms.DateTimePicker();
             this.cmbcliente = new System.Windows.Forms.ComboBox();
@@ -68,7 +68,8 @@
             this.txttroco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txttota = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtfn = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupqnt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).BeginInit();
@@ -120,7 +121,8 @@
             // panel
             // 
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel.Controls.Add(this.textBox1);
+            this.panel.Controls.Add(this.button4);
+            this.panel.Controls.Add(this.txtfn);
             this.panel.Controls.Add(this.txttota);
             this.panel.Controls.Add(this.button3);
             this.panel.Controls.Add(this.groupBox3);
@@ -251,14 +253,14 @@
             this.dgvvendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nome,
             this.valor_final});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvvendas.Location = new System.Drawing.Point(75, 329);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
@@ -515,12 +517,25 @@
             this.txttota.TabIndex = 129;
             this.txttota.Text = "Total de Produtos";
             // 
-            // textBox1
+            // txtfn
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 180);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(82, 20);
-            this.textBox1.TabIndex = 126;
+            this.txtfn.Location = new System.Drawing.Point(161, 180);
+            this.txtfn.Name = "txtfn";
+            this.txtfn.Size = new System.Drawing.Size(82, 20);
+            this.txtfn.TabIndex = 126;
+            this.txtfn.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SeaGreen;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(22, 228);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(89, 28);
+            this.button4.TabIndex = 130;
+            this.button4.Text = "Calcular Total";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // telavendas
             // 
@@ -594,8 +609,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txttaxa;
         private System.Windows.Forms.TextBox txttroco;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtfn;
         private System.Windows.Forms.Label txttota;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button4;
     }
 }

@@ -255,18 +255,28 @@ namespace RestauranteADM
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            double percentual = Convert.ToDouble(txtpor.Text);
-            double valorprodutos = Convert.ToDouble(lbltotal.Text);
            
 
-            VendasTotal efetuarvenda = new VendasTotal();
-            double desconto = efetuarvenda.CalcularDesconto(valorprodutos, percentual);
-            desconto = Math.Round(desconto, 2);
-            lblValorDesconto.Text = desconto.ToString();
+
+
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
 
 
 
 
+
+
+
+
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
 
         }
     }

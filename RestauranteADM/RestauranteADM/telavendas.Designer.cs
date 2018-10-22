@@ -36,7 +36,6 @@
             this.panel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.lblpreço = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.nupqnt = new System.Windows.Forms.NumericUpDown();
@@ -52,12 +51,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.nudcedula = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.nudtaxa = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lblValorDesconto = new System.Windows.Forms.Label();
@@ -66,14 +63,18 @@
             this.label17 = new System.Windows.Forms.Label();
             this.txtpor = new System.Windows.Forms.TextBox();
             this.lbltotal = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txttaxa = new System.Windows.Forms.TextBox();
+            this.txttroco = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txttota = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupqnt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudcedula)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudtaxa)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -119,6 +120,9 @@
             // panel
             // 
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel.Controls.Add(this.textBox1);
+            this.panel.Controls.Add(this.txttota);
+            this.panel.Controls.Add(this.button3);
             this.panel.Controls.Add(this.groupBox3);
             this.panel.Controls.Add(this.groupBox2);
             this.panel.Controls.Add(this.groupBox1);
@@ -147,9 +151,9 @@
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(353, 41);
+            this.button1.Location = new System.Drawing.Point(353, 18);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 44);
+            this.button1.Size = new System.Drawing.Size(90, 67);
             this.button1.TabIndex = 114;
             this.button1.Text = "Colocar no Carrinho";
             this.button1.UseVisualStyleBackColor = false;
@@ -165,18 +169,6 @@
             this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 113;
             this.label1.Text = "Percentual";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(32, 125);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 20);
-            this.label5.TabIndex = 109;
-            this.label5.Text = "Total de Produtos";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblpreço
             // 
@@ -244,7 +236,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label4.Location = new System.Drawing.Point(74, 287);
+            this.label4.Location = new System.Drawing.Point(71, 299);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 101;
@@ -267,7 +259,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvvendas.Location = new System.Drawing.Point(78, 317);
+            this.dgvvendas.Location = new System.Drawing.Point(75, 329);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
             this.dgvvendas.Size = new System.Drawing.Size(634, 167);
@@ -293,7 +285,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(580, 669);
+            this.button2.Location = new System.Drawing.Point(586, 693);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(216, 28);
             this.button2.TabIndex = 102;
@@ -318,7 +310,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(32, 499);
+            this.label10.Location = new System.Drawing.Point(32, 503);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 20);
             this.label10.TabIndex = 115;
@@ -329,11 +321,12 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(157, 499);
+            this.label9.Location = new System.Drawing.Point(157, 503);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 20);
             this.label9.TabIndex = 116;
             this.label9.Text = "0,00";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label12
             // 
@@ -346,21 +339,14 @@
             this.label12.TabIndex = 124;
             this.label12.Text = "Cédula paga pelo cliente";
             // 
-            // nudcedula
-            // 
-            this.nudcedula.Location = new System.Drawing.Point(181, 28);
-            this.nudcedula.Name = "nudcedula";
-            this.nudcedula.Size = new System.Drawing.Size(75, 20);
-            this.nudcedula.TabIndex = 123;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txttroco);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.nudcedula);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(489, 190);
+            this.groupBox1.Location = new System.Drawing.Point(492, 177);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(269, 94);
             this.groupBox1.TabIndex = 125;
@@ -374,7 +360,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(492, 18);
+            this.groupBox2.Location = new System.Drawing.Point(492, 5);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(269, 80);
             this.groupBox2.TabIndex = 126;
@@ -383,14 +369,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txttaxa);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.nudtaxa);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(492, 104);
+            this.groupBox3.Location = new System.Drawing.Point(492, 91);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(243, 80);
+            this.groupBox3.Size = new System.Drawing.Size(269, 80);
             this.groupBox3.TabIndex = 127;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Taxa de entrega";
@@ -405,14 +391,6 @@
             this.label11.Size = new System.Drawing.Size(93, 16);
             this.label11.TabIndex = 113;
             this.label11.Text = "Valor da Taxa";
-            // 
-            // nudtaxa
-            // 
-            this.nudtaxa.Location = new System.Drawing.Point(120, 28);
-            this.nudtaxa.Name = "nudtaxa";
-            this.nudtaxa.Size = new System.Drawing.Size(103, 20);
-            this.nudtaxa.TabIndex = 118;
-            this.nudtaxa.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged_1);
             // 
             // label3
             // 
@@ -488,6 +466,62 @@
             this.lbltotal.Text = "0,00";
             this.lbltotal.Click += new System.EventHandler(this.lbltotal_Click);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SeaGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(598, 277);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 28);
+            this.button3.TabIndex = 104;
+            this.button3.Text = "Calcular Total";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // txttaxa
+            // 
+            this.txttaxa.Location = new System.Drawing.Point(120, 28);
+            this.txttaxa.Name = "txttaxa";
+            this.txttaxa.Size = new System.Drawing.Size(100, 20);
+            this.txttaxa.TabIndex = 124;
+            // 
+            // txttroco
+            // 
+            this.txttroco.Location = new System.Drawing.Point(181, 28);
+            this.txttroco.Name = "txttroco";
+            this.txttroco.Size = new System.Drawing.Size(82, 20);
+            this.txttroco.TabIndex = 125;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(32, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 20);
+            this.label5.TabIndex = 109;
+            this.label5.Text = "Total de Produtos";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // txttota
+            // 
+            this.txttota.AutoSize = true;
+            this.txttota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttota.ForeColor = System.Drawing.Color.White;
+            this.txttota.Location = new System.Drawing.Point(21, 178);
+            this.txttota.Name = "txttota";
+            this.txttota.Size = new System.Drawing.Size(134, 20);
+            this.txttota.TabIndex = 129;
+            this.txttota.Text = "Total de Produtos";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(154, 180);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(82, 20);
+            this.textBox1.TabIndex = 126;
+            // 
             // telavendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -511,14 +545,12 @@
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupqnt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudcedula)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudtaxa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,7 +562,6 @@
         private System.Windows.Forms.ComboBox cmbcliente;
         private System.Windows.Forms.Button btnnova;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblpreço;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown nupqnt;
@@ -547,12 +578,10 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.NumericUpDown nudcedula;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.NumericUpDown nudtaxa;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label3;
@@ -562,5 +591,11 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtpor;
         private System.Windows.Forms.Label lbltotal;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txttaxa;
+        private System.Windows.Forms.TextBox txttroco;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label txttota;
+        private System.Windows.Forms.Label label5;
     }
 }

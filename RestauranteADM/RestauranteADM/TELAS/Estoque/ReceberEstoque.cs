@@ -22,8 +22,8 @@ namespace RestauranteADM.TELAS.Estoque
 
         private void button3_Click(object sender, EventArgs e)
         {            
-            CompraItemBusiness bus = new CompraItemBusiness();
-            List<VerView> item = bus.Filtro(textBox1.Text);
+            CompraItemBusiness buss = new CompraItemBusiness();
+            List<VerView> item = buss.Filtro(textBox1.Text);
 
             dgvest.DataSource = item;
         }

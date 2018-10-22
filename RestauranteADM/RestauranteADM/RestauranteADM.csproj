@@ -72,6 +72,12 @@
     <Compile Include="TELAS\Estoque\ReceberEstoque.Designer.cs">
       <DependentUpon>ReceberEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Estoque\RetirarEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Estoque\RetirarEstoque.Designer.cs">
+      <DependentUpon>RetirarEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\recuperaçao\adicionar o codigo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +337,9 @@
     <EmbeddedResource Include="TELAS\Estoque\ReceberEstoque.resx">
       <DependentUpon>ReceberEstoque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Estoque\RetirarEstoque.resx">
+      <DependentUpon>RetirarEstoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\recuperaçao\adicionar o codigo.resx">
       <DependentUpon>adicionar o codigo.cs</DependentUpon>
     </EmbeddedResource>
@@ -456,6 +465,7 @@
   <ItemGroup>
     <Content Include="DB\script.txt" />
     <Content Include="DB\ScriptEstranho.txt" />
+    <None Include="Resources\cx.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cccc.jpg" />

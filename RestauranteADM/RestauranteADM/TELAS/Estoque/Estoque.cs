@@ -17,6 +17,7 @@ namespace RestauranteADM.TELAS.Estoque
         {
             InitializeComponent();
             CarregarEstoque();
+            dataGridView1.AutoGenerateColumns = false;
 
         }
         void CarregarEstoque()

@@ -31,5 +31,10 @@ namespace RestauranteADM.BASE.Estoque
 
             return estoque;
         }
+        public void Excluir(int id)
+        {
+            EstoqueDatabase db = new EstoqueDatabase();
+            db.Excluir(id);
+        }
     }
 }

@@ -48,11 +48,11 @@
             // 
             this.a.AutoSize = true;
             this.a.BackColor = System.Drawing.Color.Transparent;
-            this.a.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.a.ForeColor = System.Drawing.Color.White;
             this.a.Location = new System.Drawing.Point(90, 95);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(85, 17);
+            this.a.Size = new System.Drawing.Size(81, 16);
             this.a.TabIndex = 35;
             this.a.Text = "Fornecedor:";
             this.a.Click += new System.EventHandler(this.a_Click);
@@ -155,11 +155,11 @@
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(263, 42);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(232, 24);
+            this.label36.Size = new System.Drawing.Size(220, 25);
             this.label36.TabIndex = 47;
             this.label36.Text = "Consultar Fornecedor";
             // 
@@ -174,11 +174,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(139, 124);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
+            this.label1.Size = new System.Drawing.Size(38, 16);
             this.label1.TabIndex = 49;
             this.label1.Text = "Cnpj:";
             // 

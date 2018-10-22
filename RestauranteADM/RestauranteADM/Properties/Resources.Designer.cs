@@ -113,6 +113,16 @@ namespace RestauranteADM.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cx {
+            get {
+                object obj = ResourceManager.GetObject("cx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ddd {
             get {
                 object obj = ResourceManager.GetObject("ddd", resourceCulture);

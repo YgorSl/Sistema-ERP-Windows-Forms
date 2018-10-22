@@ -103,31 +103,35 @@
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "Id";
+            this.Column1.DataPropertyName = "IdCompraItem";
             this.Column1.HeaderText = "Id_Item";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "IdCompra";
             this.Column2.HeaderText = "IdCompra";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
+            this.Column3.DataPropertyName = "Produto";
             this.Column3.HeaderText = "Prooduto";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
+            this.Column4.DataPropertyName = "Preço";
             this.Column4.HeaderText = "Preço";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
+            this.Column5.DataPropertyName = "Fornecedor";
             this.Column5.HeaderText = "Fornecedor";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
@@ -144,6 +148,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button1);
             this.Name = "ReceberEstoque";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReceberEstoque";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

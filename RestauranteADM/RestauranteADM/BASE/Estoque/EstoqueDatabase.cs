@@ -70,5 +70,18 @@ namespace RestauranteADM.BASE.Estoque
             }
             return lista;
         }
+        public void Excluir(int id)
+        {
+            string script = @" DELETE FROM  `mydb`.`tb_estoque` WHERE id_estoque = @id_estoque
+                            ";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_estoque", id));
+
+
+
+
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
+        }
     }
 }

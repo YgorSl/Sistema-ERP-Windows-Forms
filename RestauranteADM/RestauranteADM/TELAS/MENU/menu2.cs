@@ -71,9 +71,16 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void btn1_Click_1(object sender, EventArgs e)
         {
-            Menu_Cadastros form = new Menu_Cadastros();
-            form.Show();
-            this.Hide();
+          
+             if (SubMenuCadastro.Visible == false)
+            {
+                SubMenuCadastro.Visible = true;
+            }
+            else
+            {
+                SubMenuCadastro.Visible = false;
+            }
+
         }
 
         private void button2_Click_1(object sender, EventArgs e)
@@ -85,9 +92,14 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Menu_Consultar form = new Menu_Consultar();
-            form.Show();
-            this.Hide();
+            if (SubMenuConsultar.Visible == false)
+            {
+                SubMenuConsultar.Visible = true;
+            }
+            else
+            {
+                SubMenuConsultar.Visible = false;
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -97,16 +109,8 @@ namespace RestauranteADM.TELAS._1._0._1
             this.Hide();
         }
 
-        private void pictureBox2_Click_1(object sender, EventArgs e)
-        {
-            if (MenuVertical.Width == 200)
-            {
-                MenuVertical.Width = 70;
-            }
-            else
-                MenuVertical.Width = 200;
-        }
-
+      
+ 
         private void button3_Click_1(object sender, EventArgs e)
         {
             
@@ -162,6 +166,42 @@ namespace RestauranteADM.TELAS._1._0._1
         private void label6_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            SubMenuCadastro.Visible = false;
+            AbrirForminPanel(new Cadastrar_cliente());
+        }
+
+        private void SubMenuCadastro_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Cadastro_de_fornecedor());
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Cadastro_usuário_do_sistema());
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Cadastro_de_estoque());
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Cadastro___de_Cardapio());
+        }
+
+        private void SubMenuConsultar_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

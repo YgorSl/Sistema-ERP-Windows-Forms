@@ -17,23 +17,22 @@ namespace RestauranteADM.TELAS.Estoque
         public ReceberEstoque()
         {
             InitializeComponent();
-            dataGridView1.AutoGenerateColumns = false;
+            dgvest.AutoGenerateColumns = false;
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {
-            int compraId = Convert.ToInt32(txtfuncio.Text);
-            CompraItemBusiness bus = new CompraItemBusiness();
-            List<Estoque_View> item = bus.Filtro(compraId);
+        {            
+            CompraItemBusiness buss = new CompraItemBusiness();
+            List<VerView> item = buss.Filtro(textBox1.Text);
 
-            dataGridView1.DataSource = item;
+            dgvest.DataSource = item;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             List<EstoqueDTO> estoq = new List<EstoqueDTO>();
 
-            List<CompraItemDTO> items = dataGridView1.DataSource as List<CompraItemDTO>;
+            List<CompraItemDTO> items = dgvest.DataSource as List<CompraItemDTO>;
             foreach(CompraItemDTO item in items)
             {
                 EstoqueDTO estoque = new EstoqueDTO();
@@ -45,6 +44,11 @@ namespace RestauranteADM.TELAS.Estoque
 
             EstoqueBusiness bus = new EstoqueBusiness();
             bus.Salvar(estoq);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

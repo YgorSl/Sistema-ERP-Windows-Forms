@@ -9,11 +9,11 @@ namespace RestauranteADM.BASE
 {
     public class senharBunisess
     {
- 
-       public string recuperaçao(string Recuperacao)
+        Senhar senha = new Senhar();
+
+        public string recuperaçao(string Recuperacao)
         {
              string mensagem;
-             Senhar senha = new Senhar();
              mensagem = senha.recuperaçaosenhar(Recuperacao);
              return mensagem;
         }

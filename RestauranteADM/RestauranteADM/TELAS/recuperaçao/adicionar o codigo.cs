@@ -17,8 +17,8 @@ namespace RestauranteADM.TELAS.recuperaçao
         {
             InitializeComponent();
         }
+        senharBunisess senhar = new senharBunisess();
 
-       
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -30,8 +30,8 @@ namespace RestauranteADM.TELAS.recuperaçao
         private void button1_Click(object sender, EventArgs e)
         {
 
-            //senharBunisess senhar = new senharBunisess();
-            //txtRecuperacao.Text
+
+            txtmensagem.Text = senhar.recuperaçao(txtRecuperacao.Text);
 
 
         

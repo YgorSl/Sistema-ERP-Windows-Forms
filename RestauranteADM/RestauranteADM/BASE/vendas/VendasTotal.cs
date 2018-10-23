@@ -17,9 +17,7 @@ namespace RestauranteADM.BASE.vendas
         }
         public double CalcularTaxaEntrega(double valortaxa, double totalfinal)
         {
-            double taxa = valortaxa + totalfinal ;
-            taxa = Math.Round(taxa, 2);
-
+            double taxa =   valortaxa +totalfinal;
             return taxa;
         }
         public double CalcularTroco(double totalfinal, double valortroco)
@@ -30,17 +28,16 @@ namespace RestauranteADM.BASE.vendas
             return troco;
         }
 
-        public double Calcularvalorfinal(double totalfinal, double valortroco, double valortaxa, double percentual)
+        public double Calcularvalorfinal(double totalfinal, double valortaxa,double percentual)
         {
 
-           
-            double des = CalcularDesconto(totalfinal, percentual);
-            double taxaentrega = CalcularTaxaEntrega(valortaxa, totalfinal);
-            double calculartroco = CalcularTroco(totalfinal, valortroco);
+
+            double valor1 = (valortaxa + totalfinal);
+
+            double valordes = (percentual / 100.0) * valor1;
 
 
-            double valorfinal = totalfinal+( des %100)+ taxaentrega - calculartroco;
-            return valorfinal;
+            return valordes;
         }
 
     }

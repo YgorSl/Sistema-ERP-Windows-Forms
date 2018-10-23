@@ -28,14 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpdata = new System.Windows.Forms.DateTimePicker();
             this.cmbcliente = new System.Windows.Forms.ComboBox();
             this.btnnova = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.txtfn = new System.Windows.Forms.TextBox();
+            this.txttota = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txttaxa = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtpor = new System.Windows.Forms.TextBox();
+            this.lblValorDesconto = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txttroco = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbltotal = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.lblpreço = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.nupqnt = new System.Windows.Forms.NumericUpDown();
@@ -48,34 +70,13 @@
             this.valor_final = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblValorDesconto = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtpor = new System.Windows.Forms.TextBox();
-            this.lbltotal = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txttaxa = new System.Windows.Forms.TextBox();
-            this.txttroco = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txttota = new System.Windows.Forms.Label();
-            this.txtfn = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.txtvlfinal = new System.Windows.Forms.TextBox();
             this.panel.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nupqnt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -121,6 +122,7 @@
             // panel
             // 
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel.Controls.Add(this.txtvlfinal);
             this.panel.Controls.Add(this.button4);
             this.panel.Controls.Add(this.txtfn);
             this.panel.Controls.Add(this.txttota);
@@ -148,6 +150,224 @@
             this.panel.Visible = false;
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SeaGreen;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(25, 228);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(110, 28);
+            this.button4.TabIndex = 130;
+            this.button4.Text = "Calcular Produtos";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // txtfn
+            // 
+            this.txtfn.Location = new System.Drawing.Point(172, 261);
+            this.txtfn.Name = "txtfn";
+            this.txtfn.Size = new System.Drawing.Size(82, 20);
+            this.txtfn.TabIndex = 126;
+            this.txtfn.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // txttota
+            // 
+            this.txttota.AutoSize = true;
+            this.txttota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttota.ForeColor = System.Drawing.Color.White;
+            this.txttota.Location = new System.Drawing.Point(32, 259);
+            this.txttota.Name = "txttota";
+            this.txttota.Size = new System.Drawing.Size(134, 20);
+            this.txttota.TabIndex = 129;
+            this.txttota.Text = "Total de Produtos";
+            this.txttota.Click += new System.EventHandler(this.txttota_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SeaGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(598, 277);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(89, 28);
+            this.button3.TabIndex = 104;
+            this.button3.Text = "Calcular Total";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.txttaxa);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox3.Location = new System.Drawing.Point(492, 91);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(269, 80);
+            this.groupBox3.TabIndex = 127;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Taxa de entrega";
+            // 
+            // txttaxa
+            // 
+            this.txttaxa.Location = new System.Drawing.Point(120, 28);
+            this.txttaxa.Name = "txttaxa";
+            this.txttaxa.Size = new System.Drawing.Size(100, 20);
+            this.txttaxa.TabIndex = 124;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(49, 52);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(13, 13);
+            this.label13.TabIndex = 120;
+            this.label13.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 52);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(31, 13);
+            this.label3.TabIndex = 119;
+            this.label3.Text = "Valor";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(9, 32);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 16);
+            this.label11.TabIndex = 113;
+            this.label11.Text = "Valor da Taxa";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtpor);
+            this.groupBox2.Controls.Add(this.lblValorDesconto);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox2.Location = new System.Drawing.Point(492, 5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(269, 80);
+            this.groupBox2.TabIndex = 126;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Desconto";
+            // 
+            // txtpor
+            // 
+            this.txtpor.Location = new System.Drawing.Point(120, 27);
+            this.txtpor.Name = "txtpor";
+            this.txtpor.Size = new System.Drawing.Size(100, 20);
+            this.txtpor.TabIndex = 123;
+            this.txtpor.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // lblValorDesconto
+            // 
+            this.lblValorDesconto.AutoSize = true;
+            this.lblValorDesconto.Location = new System.Drawing.Point(49, 54);
+            this.lblValorDesconto.Name = "lblValorDesconto";
+            this.lblValorDesconto.Size = new System.Drawing.Size(13, 13);
+            this.lblValorDesconto.TabIndex = 122;
+            this.lblValorDesconto.Text = "0";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 16);
+            this.label1.TabIndex = 113;
+            this.label1.Text = "Percentual";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(12, 54);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(31, 13);
+            this.label15.TabIndex = 121;
+            this.label15.Text = "Valor";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txttroco);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(492, 177);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(269, 94);
+            this.groupBox1.TabIndex = 125;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Troco";
+            // 
+            // txttroco
+            // 
+            this.txttroco.Location = new System.Drawing.Point(181, 28);
+            this.txttroco.Name = "txttroco";
+            this.txttroco.Size = new System.Drawing.Size(82, 20);
+            this.txttroco.TabIndex = 125;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(54, 51);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(13, 13);
+            this.label16.TabIndex = 124;
+            this.label16.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(17, 28);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(158, 16);
+            this.label12.TabIndex = 124;
+            this.label12.Text = "Cédula paga pelo cliente";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(17, 51);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(35, 13);
+            this.label17.TabIndex = 123;
+            this.label17.Text = "Troco";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(157, 503);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 20);
+            this.label9.TabIndex = 116;
+            this.label9.Text = "0,00";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(32, 503);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(119, 20);
+            this.label10.TabIndex = 115;
+            this.label10.Text = "Total do Pedido";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
@@ -161,16 +381,29 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label1
+            // lbltotal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 16);
-            this.label1.TabIndex = 113;
-            this.label1.Text = "Percentual";
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotal.ForeColor = System.Drawing.Color.White;
+            this.lbltotal.Location = new System.Drawing.Point(172, 123);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(40, 20);
+            this.lbltotal.TabIndex = 110;
+            this.lbltotal.Text = "0,00";
+            this.lbltotal.Click += new System.EventHandler(this.lbltotal_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(32, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 20);
+            this.label5.TabIndex = 109;
+            this.label5.Text = "Total de Produtos";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblpreço
             // 
@@ -253,14 +486,14 @@
             this.dgvvendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nome,
             this.valor_final});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvvendas.Location = new System.Drawing.Point(75, 329);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
@@ -307,235 +540,12 @@
             this.label36.TabIndex = 103;
             this.label36.Text = " Vendas";
             // 
-            // label10
+            // txtvlfinal
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(32, 503);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 20);
-            this.label10.TabIndex = 115;
-            this.label10.Text = "Total do Pedido";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(157, 503);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 20);
-            this.label9.TabIndex = 116;
-            this.label9.Text = "0,00";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(17, 28);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(158, 16);
-            this.label12.TabIndex = 124;
-            this.label12.Text = "Cédula paga pelo cliente";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txttroco);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(492, 177);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 94);
-            this.groupBox1.TabIndex = 125;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Troco";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtpor);
-            this.groupBox2.Controls.Add(this.lblValorDesconto);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(492, 5);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(269, 80);
-            this.groupBox2.TabIndex = 126;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Desconto";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.txttaxa);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(492, 91);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(269, 80);
-            this.groupBox3.TabIndex = 127;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Taxa de entrega";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(9, 32);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 16);
-            this.label11.TabIndex = 113;
-            this.label11.Text = "Valor da Taxa";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 52);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 13);
-            this.label3.TabIndex = 119;
-            this.label3.Text = "Valor";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(49, 52);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
-            this.label13.TabIndex = 120;
-            this.label13.Text = "0";
-            // 
-            // lblValorDesconto
-            // 
-            this.lblValorDesconto.AutoSize = true;
-            this.lblValorDesconto.Location = new System.Drawing.Point(49, 54);
-            this.lblValorDesconto.Name = "lblValorDesconto";
-            this.lblValorDesconto.Size = new System.Drawing.Size(13, 13);
-            this.lblValorDesconto.TabIndex = 122;
-            this.lblValorDesconto.Text = "0";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 54);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 13);
-            this.label15.TabIndex = 121;
-            this.label15.Text = "Valor";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(54, 51);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 13);
-            this.label16.TabIndex = 124;
-            this.label16.Text = "0";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(17, 51);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 13);
-            this.label17.TabIndex = 123;
-            this.label17.Text = "Troco";
-            // 
-            // txtpor
-            // 
-            this.txtpor.Location = new System.Drawing.Point(120, 27);
-            this.txtpor.Name = "txtpor";
-            this.txtpor.Size = new System.Drawing.Size(100, 20);
-            this.txtpor.TabIndex = 123;
-            this.txtpor.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // lbltotal
-            // 
-            this.lbltotal.AutoSize = true;
-            this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltotal.ForeColor = System.Drawing.Color.White;
-            this.lbltotal.Location = new System.Drawing.Point(172, 123);
-            this.lbltotal.Name = "lbltotal";
-            this.lbltotal.Size = new System.Drawing.Size(40, 20);
-            this.lbltotal.TabIndex = 110;
-            this.lbltotal.Text = "0,00";
-            this.lbltotal.Click += new System.EventHandler(this.lbltotal_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SeaGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(598, 277);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(89, 28);
-            this.button3.TabIndex = 104;
-            this.button3.Text = "Calcular Total";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
-            // 
-            // txttaxa
-            // 
-            this.txttaxa.Location = new System.Drawing.Point(120, 28);
-            this.txttaxa.Name = "txttaxa";
-            this.txttaxa.Size = new System.Drawing.Size(100, 20);
-            this.txttaxa.TabIndex = 124;
-            // 
-            // txttroco
-            // 
-            this.txttroco.Location = new System.Drawing.Point(181, 28);
-            this.txttroco.Name = "txttroco";
-            this.txttroco.Size = new System.Drawing.Size(82, 20);
-            this.txttroco.TabIndex = 125;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(32, 123);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 20);
-            this.label5.TabIndex = 109;
-            this.label5.Text = "Total de Produtos";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // txttota
-            // 
-            this.txttota.AutoSize = true;
-            this.txttota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttota.ForeColor = System.Drawing.Color.White;
-            this.txttota.Location = new System.Drawing.Point(21, 178);
-            this.txttota.Name = "txttota";
-            this.txttota.Size = new System.Drawing.Size(134, 20);
-            this.txttota.TabIndex = 129;
-            this.txttota.Text = "Total de Produtos";
-            // 
-            // txtfn
-            // 
-            this.txtfn.Location = new System.Drawing.Point(161, 180);
-            this.txtfn.Name = "txtfn";
-            this.txtfn.Size = new System.Drawing.Size(82, 20);
-            this.txtfn.TabIndex = 126;
-            this.txtfn.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.SeaGreen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(22, 228);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(89, 28);
-            this.button4.TabIndex = 130;
-            this.button4.Text = "Calcular Total";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.txtvlfinal.Location = new System.Drawing.Point(350, 257);
+            this.txtvlfinal.Name = "txtvlfinal";
+            this.txtvlfinal.Size = new System.Drawing.Size(82, 20);
+            this.txtvlfinal.TabIndex = 131;
             // 
             // telavendas
             // 
@@ -558,14 +568,14 @@
             this.Load += new System.EventHandler(this.telavendas_Load);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nupqnt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupqnt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,5 +623,6 @@
         private System.Windows.Forms.Label txttota;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox txtvlfinal;
     }
 }

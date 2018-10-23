@@ -264,6 +264,18 @@ namespace RestauranteADM
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            double valortaxa = Convert.ToDouble(txttaxa.Text);
+            double totslprodutos = Convert.ToDouble(txtfn.Text);
+            double des = Convert.ToDouble(txtpor.Text);
+
+            VendasTotal tltl= new VendasTotal();
+            double total = tltl.Calcularvalorfinal(totslprodutos, valortaxa,des);
+            total = Math.Round(total, 2);
+
+
+            txtvlfinal.Text = total.ToString();
+
+
 
 
 
@@ -300,6 +312,26 @@ namespace RestauranteADM
             }
        
 private void button4_Click(object sender, EventArgs e)
+        {
+
+            double totalganho = 0;
+
+
+            foreach (DataGridViewRow row in dgvvendas.Rows)
+            {
+                CardapioDTO dto = row.DataBoundItem as CardapioDTO;
+
+                    double entrada = dto.Valor;
+                    totalganho = entrada + totalganho;
+                
+
+            }
+            totalganho = Math.Round(totalganho, 2);
+            txtfn.Text = totalganho.ToString();
+
+        }
+
+        private void txttota_Click(object sender, EventArgs e)
         {
 
         }

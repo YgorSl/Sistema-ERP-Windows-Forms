@@ -72,22 +72,41 @@ namespace RestauranteADM.TELAS._1._0._1
         private void btn1_Click_1(object sender, EventArgs e)
         {
           
-             if (SubMenuCadastro.Visible == false)
-            {
-                SubMenuCadastro.Visible = true;
-            }
-            else
-            {
-                SubMenuCadastro.Visible = false;
-            }
+
+
+
 
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Menu_Vendas form = new Menu_Vendas();
-            form.Show();
-            this.Hide();
+            if (SubMenuConsultar.Visible == true)
+            {
+                SubMenuConsultar.Visible = false;
+            }
+     
+
+            if (SubMenuCadastro.Visible == true)
+            {
+                SubMenuCadastro.Visible = false;
+            }
+
+
+
+
+
+
+            if (SubMenuRH.Visible == true)
+            {
+                SubMenuRH.Visible = false;
+            }
+            if (SubMenuEstoque.Visible == true)
+            {
+                SubMenuEstoque.Visible = false;
+            }
+
+
+            AbrirForminPanel(new telavendas());
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -100,20 +119,83 @@ namespace RestauranteADM.TELAS._1._0._1
             {
                 SubMenuConsultar.Visible = false;
             }
+
+            if (SubMenuCadastro.Visible == true)
+            {
+                SubMenuCadastro.Visible = false;
+            }
+          
+
+
+       
+
+
+            if (SubMenuRH.Visible == true)
+            {
+                SubMenuRH.Visible = false;
+            }
+            if (SubMenuEstoque.Visible == true)
+            {
+                SubMenuEstoque.Visible = false;
+            }
+
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Menu_RH form = new Menu_RH();
-            form.Show();
-            this.Hide();
+        
+
+            if (SubMenuConsultar.Visible == true)
+            {
+                SubMenuConsultar.Visible = false;
+            }
+
+
+            if (SubMenuRH.Visible == false)
+            {
+                SubMenuRH.Visible = true;
+            }
+            else
+            {
+                SubMenuRH.Visible = false;
+            }
+
+            if (SubMenuEstoque.Visible == true)
+            {
+                SubMenuEstoque.Visible = false;
+            }
         }
 
       
  
         private void button3_Click_1(object sender, EventArgs e)
         {
-            
+            if (SubMenuConsultar.Visible == true)
+            {
+                SubMenuConsultar.Visible = false;
+            }
+         
+
+            if (SubMenuCadastro.Visible == true)
+            {
+                SubMenuCadastro.Visible = false;
+            }
+
+
+
+
+
+
+            if (SubMenuRH.Visible == true)
+            {
+                SubMenuRH.Visible = false;
+            }
+            if (SubMenuEstoque.Visible == true)
+            {
+                SubMenuEstoque.Visible = false;
+            }
+
             AbrirForminPanel(new PedidoCompra());
         }
 
@@ -124,6 +206,35 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button4_Click(object sender, EventArgs e)
         {
+            if (SubMenuConsultar.Visible == true)
+            {
+                SubMenuConsultar.Visible = false;
+            }
+       
+
+            if (SubMenuCadastro.Visible == true)
+            {
+                SubMenuCadastro.Visible = false;
+            }
+
+
+
+
+
+
+            if (SubMenuRH.Visible == true)
+            {
+                SubMenuRH.Visible = false;
+            }
+            if (SubMenuEstoque.Visible == false)
+            {
+                SubMenuEstoque.Visible = true;
+            }
+
+            else
+            {
+                SubMenuEstoque.Visible = false;
+            }
         }
 
         private void panel2_Scroll(object sender, ScrollEventArgs e)
@@ -202,6 +313,40 @@ namespace RestauranteADM.TELAS._1._0._1
         private void SubMenuConsultar_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void SubMenuCadastro_Click(object sender, EventArgs e)
+        {
+            if (SubMenuCadastro.Visible == false)
+            {
+                SubMenuCadastro.Visible = true;
+            }
+            else
+            {
+                SubMenuCadastro.Visible = false;
+            }
+
+
+            if (SubMenuConsultar.Visible == true)
+            {
+                SubMenuConsultar.Visible = false;
+            }
+
+
+            if (SubMenuRH.Visible == true)
+            {
+                SubMenuRH.Visible = false;
+            }
+
+            if (SubMenuEstoque.Visible == true)
+            {
+                SubMenuEstoque.Visible = false;
+            }
         }
     }
 }

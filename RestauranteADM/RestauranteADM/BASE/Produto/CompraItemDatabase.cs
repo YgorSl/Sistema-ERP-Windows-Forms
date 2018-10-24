@@ -28,31 +28,58 @@ namespace RestauranteADM.BASE.Produto
 
         public List<VerView> Filtro(string forn)
         {
+
+            string script = @"select * from estoqueavw where nm_produto like @produto";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("produto", "%" + forn + "%"));
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            List<VerView> lista = new List<VerView>();
+            while (reader.Read() == true)
             {
-                string script = @"select * from estoqueavw where nm_produto like @produto";
+                VerView comp = new VerView();
+                comp.IdCompra = reader.GetInt32("id_compra");
+                comp.IdCompraItem = reader.GetInt32("id_compra_item");
+                comp.Produto = reader.GetString("nm_produto");
+                comp.Preço = reader.GetInt32("vl_valor");
+                comp.Fornecedor = reader.GetString("nm_nome");
+
+                lista.Add(comp);
+            }
+            return lista;
+        }
+            public List<CompraItemDTO> Filtro1(int compraid)
+            {
+
+                string script = @"select * from tb_compra_item where id_compra = @id_compra";
 
                 List<MySqlParameter> parms = new List<MySqlParameter>();
-                parms.Add(new MySqlParameter("produto", "%" + forn + "%"));
+                parms.Add(new MySqlParameter("id_compra", compraid));
 
                 Database db = new Database();
                 MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-                List<VerView> lista = new List<VerView>();
+                List<CompraItemDTO> lista = new List<CompraItemDTO>();
                 while (reader.Read() == true)
                 {
-                    VerView comp = new VerView();
-                    comp.IdCompra = reader.GetInt32("id_compra");
-                    comp.IdCompraItem = reader.GetInt32("id_compra_item");
-                    comp.Produto = reader.GetString("nm_produto");
-                    comp.Preço = reader.GetInt32("vl_valor");
-                    comp.Fornecedor = reader.GetString("nm_nome");
+                    CompraItemDTO comp = new CompraItemDTO();
+                    comp.Id = reader.GetInt32("id_compra_item");
+
+                    comp.Compra = new CompraDTO();
+                    comp.Compra.Id = reader.GetInt32("id_compra");
+
+                    comp.Produto = new ProdutoDTO();
+                    comp.Produto.Id = reader.GetString("nm_produto");
 
                     lista.Add(comp);
                 }
                 return lista;
+
+
             }
-
-
         }
     }
 }

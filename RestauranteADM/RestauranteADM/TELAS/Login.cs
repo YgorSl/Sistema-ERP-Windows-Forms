@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using RestauranteADM.Acesso;
 using RestauranteADM.TELAS._1._0._1;
 using RestauranteADM.TELAS.recuperaçao;
+using RestauranteADM.BASE.criptografia;
 
 namespace RestauranteADM
 {
@@ -21,6 +22,7 @@ namespace RestauranteADM
         {
             InitializeComponent();
         }
+        criptgrafia criptografia = new criptgrafia();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -59,8 +61,11 @@ namespace RestauranteADM
         private void btnentrar_Click(object sender, EventArgs e)
         {
             UsuarioBusiness bs = new UsuarioBusiness();
-            
-            UsuarioDTO usuario = bs.Logar(txtnome.Text, txtsenha.Text);
+
+            string Login =criptografia.Codificar(txtnome.Text);
+            string Senhar = criptografia.Codificar(txtsenha.Text);
+
+            UsuarioDTO usuario = bs.Logar(Login,Senhar);
         
             if (usuario != null)
             {

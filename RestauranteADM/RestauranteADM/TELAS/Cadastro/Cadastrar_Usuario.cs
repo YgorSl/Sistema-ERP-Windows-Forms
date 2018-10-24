@@ -10,12 +10,16 @@ using System.Windows.Forms;
 using RestauranteADM.BASE.Usuario;
 using RestauranteADM.BASE.Funcionario;
 using RestauranteADM.BASE.Login;
+using RestauranteADM.BASE.criptografia;
 
 namespace RestauranteADM.TELAS
 {
     public partial class Cadastro_usuário_do_sistema : Form
     {
         Validacao v = new Validacao();
+
+
+        criptgrafia criptografia = new criptgrafia();
 
         public Cadastro_usuário_do_sistema()
         {
@@ -62,8 +66,12 @@ namespace RestauranteADM.TELAS
 
 
                 UsuarioDTO usuario = new UsuarioDTO();
-                usuario.login = txtusuario.Text;
-                usuario.senha = txtsenha.Text;
+
+                string senha = criptografia.Codificar(txtsenha.Text);
+                string login = criptografia.Codificar(txtusuario.Text);
+
+                usuario.login = login;
+                usuario.senha = senha;
                 usuario.permissaototal = chbtotal.Checked;
                 usuario.permissaoRH = chbrh.Checked;
                 usuario.permissaofinanceiro = chbfinanceiro.Checked;

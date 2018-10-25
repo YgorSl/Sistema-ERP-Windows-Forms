@@ -70,6 +70,8 @@
             this.btnmenucad = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.SubMenuEstoque.SuspendLayout();
@@ -78,6 +80,7 @@
             this.SubMenuCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -123,8 +126,8 @@
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
             this.MenuVertical.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MenuVertical.Controls.Add(this.SubMenuEstoque);
-            this.MenuVertical.Controls.Add(this.SubMenuRH);
             this.MenuVertical.Controls.Add(this.SubMenuConsultar);
+            this.MenuVertical.Controls.Add(this.SubMenuRH);
             this.MenuVertical.Controls.Add(this.SubMenuCadastro);
             this.MenuVertical.Controls.Add(this.panel9);
             this.MenuVertical.Controls.Add(this.panel8);
@@ -145,7 +148,7 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(200, 631);
+            this.MenuVertical.Size = new System.Drawing.Size(200, 683);
             this.MenuVertical.TabIndex = 66;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint_1);
             // 
@@ -154,7 +157,7 @@
             this.SubMenuEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SubMenuEstoque.Controls.Add(this.button13);
             this.SubMenuEstoque.Controls.Add(this.button14);
-            this.SubMenuEstoque.Location = new System.Drawing.Point(68, 365);
+            this.SubMenuEstoque.Location = new System.Drawing.Point(67, 368);
             this.SubMenuEstoque.Name = "SubMenuEstoque";
             this.SubMenuEstoque.Size = new System.Drawing.Size(135, 80);
             this.SubMenuEstoque.TabIndex = 79;
@@ -200,9 +203,9 @@
             this.SubMenuRH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SubMenuRH.Controls.Add(this.button18);
             this.SubMenuRH.Controls.Add(this.button19);
-            this.SubMenuRH.Location = new System.Drawing.Point(65, 225);
+            this.SubMenuRH.Location = new System.Drawing.Point(65, 238);
             this.SubMenuRH.Name = "SubMenuRH";
-            this.SubMenuRH.Size = new System.Drawing.Size(144, 108);
+            this.SubMenuRH.Size = new System.Drawing.Size(133, 108);
             this.SubMenuRH.TabIndex = 78;
             this.SubMenuRH.Visible = false;
             // 
@@ -222,6 +225,7 @@
             this.button18.TabIndex = 2;
             this.button18.Text = "Controle de ponto";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -239,6 +243,7 @@
             this.button19.TabIndex = 1;
             this.button19.Text = "Folha de Pagamento";
             this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
             // 
             // SubMenuConsultar
             // 
@@ -250,7 +255,7 @@
             this.SubMenuConsultar.Controls.Add(this.button8);
             this.SubMenuConsultar.Controls.Add(this.button9);
             this.SubMenuConsultar.Controls.Add(this.button10);
-            this.SubMenuConsultar.Location = new System.Drawing.Point(66, 193);
+            this.SubMenuConsultar.Location = new System.Drawing.Point(63, 187);
             this.SubMenuConsultar.Name = "SubMenuConsultar";
             this.SubMenuConsultar.Size = new System.Drawing.Size(144, 209);
             this.SubMenuConsultar.TabIndex = 77;
@@ -273,6 +278,7 @@
             this.button11.TabIndex = 7;
             this.button11.Text = "Vendas";
             this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // button12
             // 
@@ -290,6 +296,7 @@
             this.button12.TabIndex = 6;
             this.button12.Text = "Pedidos";
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button6
             // 
@@ -307,6 +314,7 @@
             this.button6.TabIndex = 5;
             this.button6.Text = "Funcionários";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // button7
             // 
@@ -324,6 +332,7 @@
             this.button7.TabIndex = 4;
             this.button7.Text = "Cardápio";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -341,6 +350,7 @@
             this.button8.TabIndex = 3;
             this.button8.Text = "Produto";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -358,6 +368,7 @@
             this.button9.TabIndex = 2;
             this.button9.Text = "Fornecedores";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
@@ -375,6 +386,7 @@
             this.button10.TabIndex = 1;
             this.button10.Text = "Cliente";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // SubMenuCadastro
             // 
@@ -384,7 +396,7 @@
             this.SubMenuCadastro.Controls.Add(this.button4);
             this.SubMenuCadastro.Controls.Add(this.button2);
             this.SubMenuCadastro.Controls.Add(this.button1);
-            this.SubMenuCadastro.Location = new System.Drawing.Point(67, 150);
+            this.SubMenuCadastro.Location = new System.Drawing.Point(64, 150);
             this.SubMenuCadastro.Name = "SubMenuCadastro";
             this.SubMenuCadastro.Size = new System.Drawing.Size(137, 150);
             this.SubMenuCadastro.TabIndex = 76;
@@ -442,7 +454,7 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(131, 23);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Usuários";
+            this.button4.Text = "Funcionários";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
@@ -626,13 +638,13 @@
             this.btnmenurh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmenurh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenurh.ForeColor = System.Drawing.Color.White;
-            this.btnmenurh.Location = new System.Drawing.Point(6, 195);
+            this.btnmenurh.Location = new System.Drawing.Point(8, 197);
             this.btnmenurh.Name = "btnmenurh";
             this.btnmenurh.Size = new System.Drawing.Size(191, 35);
             this.btnmenurh.TabIndex = 65;
             this.btnmenurh.Text = "RH";
             this.btnmenurh.UseVisualStyleBackColor = true;
-            this.btnmenurh.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnmenurh.Click += new System.EventHandler(this.btnmenurh_Click);
             // 
             // label3
             // 
@@ -672,19 +684,18 @@
             this.btnmenucad.Text = "Cadastro";
             this.btnmenucad.UseVisualStyleBackColor = true;
             this.btnmenucad.Click += new System.EventHandler(this.btn1_Click_1);
-            this.btnmenucad.MouseCaptureChanged += new System.EventHandler(this.button1_Click_1);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(200, 34);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(752, 597);
-            this.panel2.TabIndex = 71;
-            this.panel2.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel2_Scroll);
+            this.panel2.Size = new System.Drawing.Size(752, 649);
+            this.panel2.TabIndex = 72;
             // 
             // label1
             // 
@@ -697,11 +708,33 @@
             this.label1.TabIndex = 63;
             this.label1.Text = "Olá!";
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.label2);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(750, 647);
+            this.panel10.TabIndex = 72;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(354, 223);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 42);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Olá!";
+            // 
             // menu2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(952, 631);
+            this.ClientSize = new System.Drawing.Size(952, 683);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.MenuVertical);
@@ -720,6 +753,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -738,8 +773,6 @@
         private System.Windows.Forms.Button btnmenucad;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel6;
@@ -768,5 +801,9 @@
         private System.Windows.Forms.Panel SubMenuEstoque;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

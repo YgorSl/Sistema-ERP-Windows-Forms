@@ -30,7 +30,7 @@
         {
             this.a = new System.Windows.Forms.Label();
             this.txtforn = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultarFornecedor = new System.Windows.Forms.Button();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,17 +64,17 @@
             this.txtforn.Size = new System.Drawing.Size(380, 20);
             this.txtforn.TabIndex = 34;
             // 
-            // button1
+            // btnConsultarFornecedor
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(587, 117);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultarFornecedor.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFornecedor.Location = new System.Drawing.Point(587, 117);
+            this.btnConsultarFornecedor.Name = "btnConsultarFornecedor";
+            this.btnConsultarFornecedor.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultarFornecedor.TabIndex = 33;
+            this.btnConsultarFornecedor.Text = "Consultar";
+            this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
+            this.btnConsultarFornecedor.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvcliente
             // 
@@ -195,7 +195,7 @@
             this.Controls.Add(this.label36);
             this.Controls.Add(this.a);
             this.Controls.Add(this.txtforn);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConsultarFornecedor);
             this.Controls.Add(this.dgvcliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultar_Fornecedor";
@@ -211,7 +211,7 @@
         #endregion
         private System.Windows.Forms.Label a;
         private System.Windows.Forms.TextBox txtforn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultarFornecedor;
         private System.Windows.Forms.DataGridView dgvcliente;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.TextBox txtc;

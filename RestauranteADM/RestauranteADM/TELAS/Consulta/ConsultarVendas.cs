@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RestauranteADM.Acesso;
 
 namespace RestauranteADM.TELAS.Consulta
 {
@@ -21,11 +22,25 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaoconsultarvenda == false)
+                {
+                    btnConsultarVenda.Enabled = false;
+                }
+            }
+            else
+            {
+                VendasViewBunisess bus = new VendasViewBunisess();
+                List<VendasViewDto> vendas = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
 
-            VendasViewBunisess bus = new VendasViewBunisess();
-            List<VendasViewDto> vendas = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+                dgvvendas.DataSource = vendas;
+            }
+        }
 
-            dgvvendas.DataSource = vendas;
+        private void dgvvendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

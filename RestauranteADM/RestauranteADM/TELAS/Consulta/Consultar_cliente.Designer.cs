@@ -32,11 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.a = new System.Windows.Forms.Label();
             this.txtcliente = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultarCliente = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +47,8 @@
             this.anotaçao_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,17 +73,17 @@
             this.txtcliente.TabIndex = 16;
             this.txtcliente.TextChanged += new System.EventHandler(this.txtcliente_TextChanged);
             // 
-            // button1
+            // btnConsultarCliente
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(538, 107);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultarCliente.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarCliente.Location = new System.Drawing.Point(538, 107);
+            this.btnConsultarCliente.Name = "btnConsultarCliente";
+            this.btnConsultarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultarCliente.TabIndex = 15;
+            this.btnConsultarCliente.Text = "Consultar";
+            this.btnConsultarCliente.UseVisualStyleBackColor = false;
+            this.btnConsultarCliente.Click += new System.EventHandler(this.button1_Click);
             // 
             // label36
             // 
@@ -133,27 +133,6 @@
             this.dgvcliente.Size = new System.Drawing.Size(752, 412);
             this.dgvcliente.TabIndex = 48;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(108, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "CPF:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(152, 110);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(380, 20);
-            this.txtcpf.TabIndex = 50;
-            this.txtcpf.TextChanged += new System.EventHandler(this.txtcpf_TextChanged);
             // 
             // Nome
             // 
@@ -255,6 +234,27 @@
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column1.Width = 25;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(108, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 17);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "CPF:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Location = new System.Drawing.Point(152, 110);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(380, 20);
+            this.txtcpf.TabIndex = 50;
+            this.txtcpf.TextChanged += new System.EventHandler(this.txtcpf_TextChanged);
+            // 
             // Consultar_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,7 +269,7 @@
             this.Controls.Add(this.label36);
             this.Controls.Add(this.a);
             this.Controls.Add(this.txtcliente);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConsultarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultar_cliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -284,7 +284,7 @@
         #endregion
         private System.Windows.Forms.Label a;
         private System.Windows.Forms.TextBox txtcliente;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultarCliente;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridView dgvcliente;
         private System.Windows.Forms.Label label1;

@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultarProduto = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
@@ -48,17 +48,17 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button1
+            // btnConsultarProduto
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(559, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultarProduto.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarProduto.Location = new System.Drawing.Point(559, 87);
+            this.btnConsultarProduto.Name = "btnConsultarProduto";
+            this.btnConsultarProduto.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultarProduto.TabIndex = 3;
+            this.btnConsultarProduto.Text = "Consultar";
+            this.btnConsultarProduto.UseVisualStyleBackColor = false;
+            this.btnConsultarProduto.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -166,7 +166,7 @@
             this.Controls.Add(this.dgvcliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConsultarProduto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consulta_produto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -180,7 +180,7 @@
         #endregion
 
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultarProduto;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvcliente;

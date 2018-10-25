@@ -264,6 +264,31 @@ namespace RestauranteADM.TELAS._1._0._1
                 {
                     btnmenufin.Enabled = false;
                 }
+                if (acesso.usuariologado.permissaoestoque == false)
+                {
+                    btnmenuest.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarcliente == false)
+                {
+                    btnCadastrarCliente.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarfornecedor == false)
+                {
+                    btnCadastrarFornecedor.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarfuncionario == false)
+                {
+                    btnCadastrarFuncionario.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarproduto == false)
+                {
+                    btnCadastrarProduto.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarcardapio == false)
+                {
+                    btnCadastrarCardapio.Enabled = false;
+                }
+           
 
             }
         }
@@ -429,6 +454,11 @@ namespace RestauranteADM.TELAS._1._0._1
         {
             AbrirForminPanel(new Bater_Ponto());
             SubMenuRH.Visible = false;
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

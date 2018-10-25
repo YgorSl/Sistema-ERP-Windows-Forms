@@ -31,17 +31,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultarCardapio = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcardapio = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txttamanho = new System.Windows.Forms.TextBox();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamanho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txttamanho = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcardapio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,17 +63,17 @@
             this.txtnome.Size = new System.Drawing.Size(380, 20);
             this.txtnome.TabIndex = 35;
             // 
-            // button1
+            // btnConsultarCardapio
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(546, 90);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultarCardapio.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarCardapio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarCardapio.Location = new System.Drawing.Point(546, 90);
+            this.btnConsultarCardapio.Name = "btnConsultarCardapio";
+            this.btnConsultarCardapio.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultarCardapio.TabIndex = 34;
+            this.btnConsultarCardapio.Text = "Consultar";
+            this.btnConsultarCardapio.UseVisualStyleBackColor = false;
+            this.btnConsultarCardapio.Click += new System.EventHandler(this.button1_Click);
             // 
             // label36
             // 
@@ -115,24 +115,6 @@
             this.dgvcardapio.Size = new System.Drawing.Size(752, 412);
             this.dgvcardapio.TabIndex = 49;
             this.dgvcardapio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcardapio_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(87, 120);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 17);
-            this.label1.TabIndex = 51;
-            this.label1.Text = "tamanho";
-            // 
-            // txttamanho
-            // 
-            this.txttamanho.Location = new System.Drawing.Point(160, 116);
-            this.txttamanho.Name = "txttamanho";
-            this.txttamanho.Size = new System.Drawing.Size(380, 20);
-            this.txttamanho.TabIndex = 50;
             // 
             // nome
             // 
@@ -181,6 +163,24 @@
             this.Column1.ReadOnly = true;
             this.Column1.Width = 40;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(87, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 17);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "tamanho";
+            // 
+            // txttamanho
+            // 
+            this.txttamanho.Location = new System.Drawing.Point(160, 116);
+            this.txttamanho.Name = "txttamanho";
+            this.txttamanho.Size = new System.Drawing.Size(380, 20);
+            this.txttamanho.TabIndex = 50;
+            // 
             // Consultar_Cardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,7 +194,7 @@
             this.Controls.Add(this.label36);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtnome);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConsultarCardapio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultar_Cardapio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -209,7 +209,7 @@
         #endregion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnome;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultarCardapio;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.DataGridView dgvcardapio;
         private System.Windows.Forms.Label label1;

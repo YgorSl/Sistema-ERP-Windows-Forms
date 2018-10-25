@@ -34,24 +34,24 @@
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.SubMenuEstoque = new System.Windows.Forms.Panel();
             this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.SubMenuRH = new System.Windows.Forms.Panel();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.btnControlePonto = new System.Windows.Forms.Button();
+            this.btnFolhaPagamento = new System.Windows.Forms.Button();
             this.SubMenuConsultar = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnConsultarVenda = new System.Windows.Forms.Button();
+            this.btnConsultarPedido = new System.Windows.Forms.Button();
+            this.btnConsultarFuncionario = new System.Windows.Forms.Button();
+            this.btnConsultarCardapio = new System.Windows.Forms.Button();
+            this.btnConsultarProduto = new System.Windows.Forms.Button();
+            this.btnConsultarFornecedor = new System.Windows.Forms.Button();
+            this.btnConsultarCliente = new System.Windows.Forms.Button();
             this.SubMenuCadastro = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastrarCardapio = new System.Windows.Forms.Button();
+            this.btnCadastrarProduto = new System.Windows.Forms.Button();
+            this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
+            this.btnCadastrarFornecedor = new System.Windows.Forms.Button();
+            this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -125,8 +125,8 @@
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
             this.MenuVertical.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MenuVertical.Controls.Add(this.SubMenuEstoque);
             this.MenuVertical.Controls.Add(this.SubMenuConsultar);
+            this.MenuVertical.Controls.Add(this.SubMenuEstoque);
             this.MenuVertical.Controls.Add(this.SubMenuRH);
             this.MenuVertical.Controls.Add(this.SubMenuCadastro);
             this.MenuVertical.Controls.Add(this.panel9);
@@ -156,7 +156,7 @@
             // 
             this.SubMenuEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SubMenuEstoque.Controls.Add(this.button13);
-            this.SubMenuEstoque.Controls.Add(this.button14);
+            this.SubMenuEstoque.Controls.Add(this.btnEstoque);
             this.SubMenuEstoque.Location = new System.Drawing.Point(67, 368);
             this.SubMenuEstoque.Name = "SubMenuEstoque";
             this.SubMenuEstoque.Size = new System.Drawing.Size(135, 80);
@@ -180,223 +180,223 @@
             this.button13.Text = "Receber Estoque";
             this.button13.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // btnEstoque
             // 
-            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button14.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(5, 3);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(131, 31);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "Estoque";
-            this.button14.UseVisualStyleBackColor = true;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.btnEstoque.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEstoque.FlatAppearance.BorderSize = 0;
+            this.btnEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstoque.Location = new System.Drawing.Point(5, 3);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(131, 31);
+            this.btnEstoque.TabIndex = 1;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.UseVisualStyleBackColor = true;
+            this.btnEstoque.Click += new System.EventHandler(this.button14_Click);
             // 
             // SubMenuRH
             // 
             this.SubMenuRH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SubMenuRH.Controls.Add(this.button18);
-            this.SubMenuRH.Controls.Add(this.button19);
+            this.SubMenuRH.Controls.Add(this.btnControlePonto);
+            this.SubMenuRH.Controls.Add(this.btnFolhaPagamento);
             this.SubMenuRH.Location = new System.Drawing.Point(65, 238);
             this.SubMenuRH.Name = "SubMenuRH";
             this.SubMenuRH.Size = new System.Drawing.Size(133, 108);
             this.SubMenuRH.TabIndex = 78;
             this.SubMenuRH.Visible = false;
             // 
-            // button18
+            // btnControlePonto
             // 
-            this.button18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button18.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button18.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button18.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button18.Location = new System.Drawing.Point(3, 58);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(131, 49);
-            this.button18.TabIndex = 2;
-            this.button18.Text = "Controle de ponto";
-            this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.btnControlePonto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnControlePonto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnControlePonto.FlatAppearance.BorderSize = 0;
+            this.btnControlePonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnControlePonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnControlePonto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnControlePonto.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnControlePonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnControlePonto.Location = new System.Drawing.Point(3, 58);
+            this.btnControlePonto.Name = "btnControlePonto";
+            this.btnControlePonto.Size = new System.Drawing.Size(131, 49);
+            this.btnControlePonto.TabIndex = 2;
+            this.btnControlePonto.Text = "Controle de ponto";
+            this.btnControlePonto.UseVisualStyleBackColor = true;
+            this.btnControlePonto.Click += new System.EventHandler(this.button18_Click);
             // 
-            // button19
+            // btnFolhaPagamento
             // 
-            this.button19.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button19.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button19.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button19.Location = new System.Drawing.Point(5, 3);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(131, 46);
-            this.button19.TabIndex = 1;
-            this.button19.Text = "Folha de Pagamento";
-            this.button19.UseVisualStyleBackColor = true;
-            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.btnFolhaPagamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFolhaPagamento.FlatAppearance.BorderSize = 0;
+            this.btnFolhaPagamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFolhaPagamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFolhaPagamento.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFolhaPagamento.Location = new System.Drawing.Point(5, 3);
+            this.btnFolhaPagamento.Name = "btnFolhaPagamento";
+            this.btnFolhaPagamento.Size = new System.Drawing.Size(131, 46);
+            this.btnFolhaPagamento.TabIndex = 1;
+            this.btnFolhaPagamento.Text = "Folha de Pagamento";
+            this.btnFolhaPagamento.UseVisualStyleBackColor = true;
+            this.btnFolhaPagamento.Click += new System.EventHandler(this.button19_Click);
             // 
             // SubMenuConsultar
             // 
             this.SubMenuConsultar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SubMenuConsultar.Controls.Add(this.button11);
-            this.SubMenuConsultar.Controls.Add(this.button12);
-            this.SubMenuConsultar.Controls.Add(this.button6);
-            this.SubMenuConsultar.Controls.Add(this.button7);
-            this.SubMenuConsultar.Controls.Add(this.button8);
-            this.SubMenuConsultar.Controls.Add(this.button9);
-            this.SubMenuConsultar.Controls.Add(this.button10);
-            this.SubMenuConsultar.Location = new System.Drawing.Point(63, 187);
+            this.SubMenuConsultar.Controls.Add(this.btnConsultarVenda);
+            this.SubMenuConsultar.Controls.Add(this.btnConsultarPedido);
+            this.SubMenuConsultar.Controls.Add(this.btnConsultarFuncionario);
+            this.SubMenuConsultar.Controls.Add(this.btnConsultarCardapio);
+            this.SubMenuConsultar.Controls.Add(this.btnConsultarProduto);
+            this.SubMenuConsultar.Controls.Add(this.btnConsultarFornecedor);
+            this.SubMenuConsultar.Controls.Add(this.btnConsultarCliente);
+            this.SubMenuConsultar.Location = new System.Drawing.Point(66, 190);
             this.SubMenuConsultar.Name = "SubMenuConsultar";
             this.SubMenuConsultar.Size = new System.Drawing.Size(144, 209);
             this.SubMenuConsultar.TabIndex = 77;
             this.SubMenuConsultar.Visible = false;
             this.SubMenuConsultar.Paint += new System.Windows.Forms.PaintEventHandler(this.SubMenuConsultar_Paint);
             // 
-            // button11
+            // btnConsultarVenda
             // 
-            this.button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(6, 174);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(131, 23);
-            this.button11.TabIndex = 7;
-            this.button11.Text = "Vendas";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.btnConsultarVenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarVenda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarVenda.FlatAppearance.BorderSize = 0;
+            this.btnConsultarVenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnConsultarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarVenda.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarVenda.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarVenda.Location = new System.Drawing.Point(6, 174);
+            this.btnConsultarVenda.Name = "btnConsultarVenda";
+            this.btnConsultarVenda.Size = new System.Drawing.Size(131, 23);
+            this.btnConsultarVenda.TabIndex = 7;
+            this.btnConsultarVenda.Text = "Vendas";
+            this.btnConsultarVenda.UseVisualStyleBackColor = true;
+            this.btnConsultarVenda.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button12
+            // btnConsultarPedido
             // 
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(6, 145);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(131, 23);
-            this.button12.TabIndex = 6;
-            this.button12.Text = "Pedidos";
-            this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.btnConsultarPedido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarPedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarPedido.FlatAppearance.BorderSize = 0;
+            this.btnConsultarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnConsultarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarPedido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarPedido.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarPedido.Location = new System.Drawing.Point(6, 145);
+            this.btnConsultarPedido.Name = "btnConsultarPedido";
+            this.btnConsultarPedido.Size = new System.Drawing.Size(131, 23);
+            this.btnConsultarPedido.TabIndex = 6;
+            this.btnConsultarPedido.Text = "Pedidos";
+            this.btnConsultarPedido.UseVisualStyleBackColor = true;
+            this.btnConsultarPedido.Click += new System.EventHandler(this.button12_Click);
             // 
-            // button6
+            // btnConsultarFuncionario
             // 
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(5, 119);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(131, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Funcionários";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.btnConsultarFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFuncionario.FlatAppearance.BorderSize = 0;
+            this.btnConsultarFuncionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnConsultarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFuncionario.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarFuncionario.Location = new System.Drawing.Point(5, 119);
+            this.btnConsultarFuncionario.Name = "btnConsultarFuncionario";
+            this.btnConsultarFuncionario.Size = new System.Drawing.Size(131, 23);
+            this.btnConsultarFuncionario.TabIndex = 5;
+            this.btnConsultarFuncionario.Text = "Funcionários";
+            this.btnConsultarFuncionario.UseVisualStyleBackColor = true;
+            this.btnConsultarFuncionario.Click += new System.EventHandler(this.button6_Click_1);
             // 
-            // button7
+            // btnConsultarCardapio
             // 
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(5, 90);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(131, 23);
-            this.button7.TabIndex = 4;
-            this.button7.Text = "Cardápio";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btnConsultarCardapio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarCardapio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarCardapio.FlatAppearance.BorderSize = 0;
+            this.btnConsultarCardapio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnConsultarCardapio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarCardapio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarCardapio.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarCardapio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarCardapio.Location = new System.Drawing.Point(5, 90);
+            this.btnConsultarCardapio.Name = "btnConsultarCardapio";
+            this.btnConsultarCardapio.Size = new System.Drawing.Size(131, 23);
+            this.btnConsultarCardapio.TabIndex = 4;
+            this.btnConsultarCardapio.Text = "Cardápio";
+            this.btnConsultarCardapio.UseVisualStyleBackColor = true;
+            this.btnConsultarCardapio.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // btnConsultarProduto
             // 
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(5, 61);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(131, 23);
-            this.button8.TabIndex = 3;
-            this.button8.Text = "Produto";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btnConsultarProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarProduto.FlatAppearance.BorderSize = 0;
+            this.btnConsultarProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnConsultarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarProduto.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarProduto.Location = new System.Drawing.Point(5, 61);
+            this.btnConsultarProduto.Name = "btnConsultarProduto";
+            this.btnConsultarProduto.Size = new System.Drawing.Size(131, 23);
+            this.btnConsultarProduto.TabIndex = 3;
+            this.btnConsultarProduto.Text = "Produto";
+            this.btnConsultarProduto.UseVisualStyleBackColor = true;
+            this.btnConsultarProduto.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button9
+            // btnConsultarFornecedor
             // 
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(5, 32);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(131, 23);
-            this.button9.TabIndex = 2;
-            this.button9.Text = "Fornecedores";
-            this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            this.btnConsultarFornecedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnConsultarFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnConsultarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFornecedor.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarFornecedor.Location = new System.Drawing.Point(5, 32);
+            this.btnConsultarFornecedor.Name = "btnConsultarFornecedor";
+            this.btnConsultarFornecedor.Size = new System.Drawing.Size(131, 23);
+            this.btnConsultarFornecedor.TabIndex = 2;
+            this.btnConsultarFornecedor.Text = "Fornecedores";
+            this.btnConsultarFornecedor.UseVisualStyleBackColor = true;
+            this.btnConsultarFornecedor.Click += new System.EventHandler(this.button9_Click);
             // 
-            // button10
+            // btnConsultarCliente
             // 
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(5, 3);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(131, 23);
-            this.button10.TabIndex = 1;
-            this.button10.Text = "Cliente";
-            this.button10.UseVisualStyleBackColor = true;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            this.btnConsultarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarCliente.FlatAppearance.BorderSize = 0;
+            this.btnConsultarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnConsultarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarCliente.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarCliente.Location = new System.Drawing.Point(5, 3);
+            this.btnConsultarCliente.Name = "btnConsultarCliente";
+            this.btnConsultarCliente.Size = new System.Drawing.Size(131, 23);
+            this.btnConsultarCliente.TabIndex = 1;
+            this.btnConsultarCliente.Text = "Cliente";
+            this.btnConsultarCliente.UseVisualStyleBackColor = true;
+            this.btnConsultarCliente.Click += new System.EventHandler(this.button10_Click);
             // 
             // SubMenuCadastro
             // 
             this.SubMenuCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SubMenuCadastro.Controls.Add(this.button5);
-            this.SubMenuCadastro.Controls.Add(this.button3);
-            this.SubMenuCadastro.Controls.Add(this.button4);
-            this.SubMenuCadastro.Controls.Add(this.button2);
-            this.SubMenuCadastro.Controls.Add(this.button1);
-            this.SubMenuCadastro.Location = new System.Drawing.Point(64, 150);
+            this.SubMenuCadastro.Controls.Add(this.btnCadastrarCardapio);
+            this.SubMenuCadastro.Controls.Add(this.btnCadastrarProduto);
+            this.SubMenuCadastro.Controls.Add(this.btnCadastrarFuncionario);
+            this.SubMenuCadastro.Controls.Add(this.btnCadastrarFornecedor);
+            this.SubMenuCadastro.Controls.Add(this.btnCadastrarCliente);
+            this.SubMenuCadastro.Location = new System.Drawing.Point(65, 141);
             this.SubMenuCadastro.Name = "SubMenuCadastro";
             this.SubMenuCadastro.Size = new System.Drawing.Size(137, 150);
             this.SubMenuCadastro.TabIndex = 76;
@@ -404,95 +404,95 @@
             this.SubMenuCadastro.Click += new System.EventHandler(this.SubMenuCadastro_Click);
             this.SubMenuCadastro.Paint += new System.Windows.Forms.PaintEventHandler(this.SubMenuCadastro_Paint);
             // 
-            // button5
+            // btnCadastrarCardapio
             // 
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(5, 119);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Cardápio";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            this.btnCadastrarCardapio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarCardapio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarCardapio.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarCardapio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnCadastrarCardapio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarCardapio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarCardapio.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrarCardapio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarCardapio.Location = new System.Drawing.Point(5, 119);
+            this.btnCadastrarCardapio.Name = "btnCadastrarCardapio";
+            this.btnCadastrarCardapio.Size = new System.Drawing.Size(131, 23);
+            this.btnCadastrarCardapio.TabIndex = 5;
+            this.btnCadastrarCardapio.Text = "Cardápio";
+            this.btnCadastrarCardapio.UseVisualStyleBackColor = true;
+            this.btnCadastrarCardapio.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // button3
+            // btnCadastrarProduto
             // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(5, 90);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Produtos";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_2);
+            this.btnCadastrarProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarProduto.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnCadastrarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarProduto.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrarProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarProduto.Location = new System.Drawing.Point(5, 90);
+            this.btnCadastrarProduto.Name = "btnCadastrarProduto";
+            this.btnCadastrarProduto.Size = new System.Drawing.Size(131, 23);
+            this.btnCadastrarProduto.TabIndex = 4;
+            this.btnCadastrarProduto.Text = "Produtos";
+            this.btnCadastrarProduto.UseVisualStyleBackColor = true;
+            this.btnCadastrarProduto.Click += new System.EventHandler(this.button3_Click_2);
             // 
-            // button4
+            // btnCadastrarFuncionario
             // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(5, 61);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Funcionários";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.btnCadastrarFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarFuncionario.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarFuncionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFuncionario.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(5, 61);
+            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(131, 23);
+            this.btnCadastrarFuncionario.TabIndex = 3;
+            this.btnCadastrarFuncionario.Text = "Funcionários";
+            this.btnCadastrarFuncionario.UseVisualStyleBackColor = true;
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // button2
+            // btnCadastrarFornecedor
             // 
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(5, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Fornecedores";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            this.btnCadastrarFornecedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnCadastrarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFornecedor.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarFornecedor.Location = new System.Drawing.Point(5, 32);
+            this.btnCadastrarFornecedor.Name = "btnCadastrarFornecedor";
+            this.btnCadastrarFornecedor.Size = new System.Drawing.Size(131, 23);
+            this.btnCadastrarFornecedor.TabIndex = 2;
+            this.btnCadastrarFornecedor.Text = "Fornecedores";
+            this.btnCadastrarFornecedor.UseVisualStyleBackColor = true;
+            this.btnCadastrarFornecedor.Click += new System.EventHandler(this.button2_Click_2);
             // 
-            // button1
+            // btnCadastrarCliente
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(6, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(131, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Cliente";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnCadastrarCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarCliente.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnCadastrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarCliente.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(6, 7);
+            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(131, 23);
+            this.btnCadastrarCliente.TabIndex = 1;
+            this.btnCadastrarCliente.Text = "Cliente";
+            this.btnCadastrarCliente.UseVisualStyleBackColor = true;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // panel9
             // 
@@ -718,6 +718,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(750, 647);
             this.panel10.TabIndex = 72;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
             // label2
             // 
@@ -781,26 +782,26 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel SubMenuCadastro;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnCadastrarCliente;
+        private System.Windows.Forms.Button btnCadastrarProduto;
+        private System.Windows.Forms.Button btnCadastrarFuncionario;
+        private System.Windows.Forms.Button btnCadastrarFornecedor;
+        private System.Windows.Forms.Button btnCadastrarCardapio;
         private System.Windows.Forms.Panel SubMenuConsultar;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button btnConsultarFuncionario;
+        private System.Windows.Forms.Button btnConsultarCardapio;
+        private System.Windows.Forms.Button btnConsultarProduto;
+        private System.Windows.Forms.Button btnConsultarFornecedor;
+        private System.Windows.Forms.Button btnConsultarCliente;
+        private System.Windows.Forms.Button btnConsultarVenda;
+        private System.Windows.Forms.Button btnConsultarPedido;
         private System.Windows.Forms.Button btnmenuest;
         private System.Windows.Forms.Panel SubMenuRH;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.Button btnControlePonto;
+        private System.Windows.Forms.Button btnFolhaPagamento;
         private System.Windows.Forms.Panel SubMenuEstoque;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label2;

@@ -48,7 +48,7 @@
             this.j = new System.Windows.Forms.DataGridViewImageColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultarFolha = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
@@ -227,17 +227,17 @@
             this.txtnome.Size = new System.Drawing.Size(380, 20);
             this.txtnome.TabIndex = 49;
             // 
-            // button1
+            // btnConsultarFolha
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(572, 111);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultarFolha.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarFolha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFolha.Location = new System.Drawing.Point(572, 111);
+            this.btnConsultarFolha.Name = "btnConsultarFolha";
+            this.btnConsultarFolha.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultarFolha.TabIndex = 48;
+            this.btnConsultarFolha.Text = "Consultar";
+            this.btnConsultarFolha.UseVisualStyleBackColor = false;
+            this.btnConsultarFolha.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -270,7 +270,7 @@
             this.Controls.Add(this.dgvcliente);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtnome);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConsultarFolha);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultar_Folha_de_Pagamento";
             this.Text = "Consultar_Folha_de_Pagamento";
@@ -287,7 +287,7 @@
         private System.Windows.Forms.DataGridView dgvcliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnome;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultarFolha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn vr;

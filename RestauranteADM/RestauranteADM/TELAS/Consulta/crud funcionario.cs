@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RestauranteADM.TELAS.Consulta;
 using RestauranteADM.BASE.Usuario;
+using RestauranteADM.Acesso;
+
 
 namespace RestauranteADM.TELAS.Consulta
 {
@@ -49,12 +51,21 @@ namespace RestauranteADM.TELAS.Consulta
             try
             {
 
+                if (acesso.usuariologado.permissaototal == false)
+                {
+                    if (acesso.usuariologado.permissaoconsultarfuncionario == false)
+                    {
+                        btnConsultarFuncionario.Enabled = false;
+                    }
+                }
+                else
+                {
+                    FuncionarioBusiness ii = new FuncionarioBusiness();
+                    List<FuncionarioDTO> opi = ii.filtro(txtfuncio.Text);
 
-                FuncionarioBusiness ii = new FuncionarioBusiness();
-                List<FuncionarioDTO> opi = ii.filtro(txtfuncio.Text);
 
-
-                dgvfuncio.DataSource = opi;
+                    dgvfuncio.DataSource = opi;
+                }
             }
             catch
             {
@@ -69,28 +80,44 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex==4)
+            if(e.ColumnIndex == 4)
             {
-              
+                if (acesso.usuariologado.permissaototal == false)
+                {
+                    if (acesso.usuariologado.permissaoalterarfuncionario == false)
+                        this.dgvfuncio.Columns["column2"].Visible = false;
+                }
+                else
+                {
 
-                FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
+                    FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
 
 
-                alterarfuncionario menu = new alterarfuncionario();
-                menu.Loadscreen(pr);
-                menu.ShowDialog();
-               
+                    alterarfuncionario menu = new alterarfuncionario();
+                    menu.Loadscreen(pr);
+                    menu.ShowDialog();
+                }
 
             }
             if (e.ColumnIndex == 5)
             {
-                DialogResult r = MessageBox.Show("vai excluir mesmo", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if(r==DialogResult.Yes)
+                if (acesso.usuariologado.permissaototal == false)
                 {
-                    FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
+                    if (acesso.usuariologado.permissaoexcluirfuncionario == false)
+                        this.dgvfuncio.Columns["column1"].Visible = false;
+                }
+                else
+                {
 
-                    FuncionarioBusiness funciobu = new FuncionarioBusiness();
-                    funciobu.Remover(pr.Id);
+                
+                DialogResult r = MessageBox.Show("vai excluir mesmo", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (r == DialogResult.Yes)
+                    {
+                        FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
+
+                        FuncionarioBusiness funciobu = new FuncionarioBusiness();
+                        funciobu.Remover(pr.Id);
+                    }
                 }
             }
         }

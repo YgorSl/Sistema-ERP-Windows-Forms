@@ -33,7 +33,7 @@
             this.dti = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultarVenda = new System.Windows.Forms.Button();
             this.dgvvendas = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,17 +92,17 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Fim Pedido";
             // 
-            // button1
+            // btnConsultarVenda
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(452, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsultarVenda.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarVenda.Location = new System.Drawing.Point(452, 112);
+            this.btnConsultarVenda.Name = "btnConsultarVenda";
+            this.btnConsultarVenda.Size = new System.Drawing.Size(75, 23);
+            this.btnConsultarVenda.TabIndex = 8;
+            this.btnConsultarVenda.Text = "Consultar";
+            this.btnConsultarVenda.UseVisualStyleBackColor = false;
+            this.btnConsultarVenda.Click += new System.EventHandler(this.button1_Click);
             // 
             // dgvvendas
             // 
@@ -121,6 +121,7 @@
             this.dgvvendas.ReadOnly = true;
             this.dgvvendas.Size = new System.Drawing.Size(752, 412);
             this.dgvvendas.TabIndex = 7;
+            this.dgvvendas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvendas_CellContentClick);
             // 
             // Column2
             // 
@@ -172,7 +173,7 @@
             this.Controls.Add(this.dti);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConsultarVenda);
             this.Controls.Add(this.dgvvendas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultarVendas";
@@ -190,7 +191,7 @@
         private System.Windows.Forms.DateTimePicker dti;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultarVenda;
         private System.Windows.Forms.DataGridView dgvvendas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

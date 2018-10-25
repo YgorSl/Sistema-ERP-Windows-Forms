@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RestauranteADM.Acesso;
+
 
 namespace RestauranteADM.TELAS
 {
@@ -40,12 +42,21 @@ namespace RestauranteADM.TELAS
         {
             try
             {
+                if (acesso.usuariologado.permissaototal == false)
+                {
+                    if (acesso.usuariologado.permissaoconsultarcliente == false)
+                    {
+                        btnConsultarCliente.Enabled = false;
+                    }
+                }
+                else
+                {
 
+                    ClienteBusiness bunisess = new ClienteBusiness();
+                    List<ClienteDTO> com = bunisess.filtro(txtcliente.Text, txtcpf.Text);
 
-                ClienteBusiness bunisess = new ClienteBusiness();
-                List<ClienteDTO> com = bunisess.filtro(txtcliente.Text, txtcpf.Text);
-
-                dgvcliente.DataSource = com;
+                    dgvcliente.DataSource = com;
+                }
             }
             catch
             {
@@ -57,25 +68,46 @@ namespace RestauranteADM.TELAS
         {
             if (e.ColumnIndex == 10)
             {
-                ClienteDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
-                alterarcliente frm = new alterarcliente();
-                frm.Loadscreen(comp);
-                frm.Show();
-               
+                if (acesso.usuariologado.permissaototal == false)
+                {
+                    if (acesso.usuariologado.permissaoalterarcliente == false)
+                        this.dgvcliente.Columns["Column2"].Visible = false;
+                }
+                else
+                {
+
+                    ClienteDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
+                    alterarcliente frm = new alterarcliente();
+                    frm.Loadscreen(comp);
+                    frm.Show();
+                }
 
             }
             if (e.ColumnIndex == 11)
             {
-                DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (r == DialogResult.Yes)
+                if (acesso.usuariologado.permissaototal == false)
                 {
-                    ClienteDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
+                    if (acesso.usuariologado.permissaoexcluircliente == false)
+                    {
 
-                    ClienteDatabase bus = new ClienteDatabase();
-                    bus.Remover(forn.Id);
-
-                    MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.dgvcliente.Columns["Column1"].Visible = false;
+                    }
                 }
+                else
+                {
+
+                
+                DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (r == DialogResult.Yes)
+                    {
+                        ClienteDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
+
+                        ClienteDatabase bus = new ClienteDatabase();
+                        bus.Remover(forn.Id);
+
+                        MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    }
             }
         }
             

@@ -12,7 +12,8 @@ using RestauranteADM.TELAS.MENU;
 using RestauranteADM.TELAS.Cadastro;
 using RestauranteADM.TELAS.Financeiro;
 using RestauranteADM.Acesso;
-using RestauranteADM.TELAS.Estoque;
+using RestauranteADM.TELAS.Consulta;
+using RestauranteADM.TELAS.RH;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
@@ -55,15 +56,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //AbrirForminPanel(new ());
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //  AbrirForminPanel(new MenuVendas());
-        }
+       
 
         private void MenuVertical_Paint_1(object sender, PaintEventArgs e)
         {
@@ -72,6 +65,14 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void btn1_Click_1(object sender, EventArgs e)
         {
+
+
+            if (SubMenuConsultar.Visible == true)
+            {
+                SubMenuConsultar.Visible = false;
+            }
+           
+
             if (SubMenuCadastro.Visible == false)
             {
                 SubMenuCadastro.Visible = true;
@@ -80,10 +81,11 @@ namespace RestauranteADM.TELAS._1._0._1
             {
                 SubMenuCadastro.Visible = false;
             }
-            if (SubMenuConsultar.Visible == true)
-            {
-                SubMenuConsultar.Visible = false;
-            }
+
+
+
+
+
             if (SubMenuRH.Visible == true)
             {
                 SubMenuRH.Visible = false;
@@ -161,30 +163,8 @@ namespace RestauranteADM.TELAS._1._0._1
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-        
-
-            if (SubMenuConsultar.Visible == true)
-            {
-                SubMenuConsultar.Visible = false;
-            }
-
-
-            if (SubMenuRH.Visible == false)
-            {
-                SubMenuRH.Visible = true;
-            }
-            else
-            {
-                SubMenuRH.Visible = false;
-            }
-
-            if (SubMenuEstoque.Visible == true)
-            {
-                SubMenuEstoque.Visible = false;
-            }
-        }
+   
+       
 
       
  
@@ -311,22 +291,26 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button2_Click_2(object sender, EventArgs e)
         {
+            SubMenuCadastro.Visible = false;
             AbrirForminPanel(new Cadastro_de_fornecedor());
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
             AbrirForminPanel(new Cadastro_usuário_do_sistema());
+            SubMenuCadastro.Visible = false;
         }
 
         private void button3_Click_2(object sender, EventArgs e)
         {
             AbrirForminPanel(new Cadastro_de_estoque());
+            SubMenuCadastro.Visible = false;
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
             AbrirForminPanel(new Cadastro___de_Cardapio());
+            SubMenuCadastro.Visible = false;
         }
 
         private void SubMenuConsultar_Paint(object sender, PaintEventArgs e)
@@ -336,7 +320,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            AbrirForminPanel(new Estoque_L());
+            
         }
 
         private void SubMenuCadastro_Click(object sender, EventArgs e)
@@ -368,9 +352,83 @@ namespace RestauranteADM.TELAS._1._0._1
             }
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void btnmenurh_Click(object sender, EventArgs e)
         {
-            AbrirForminPanel(new ReceberEstoque());
+            {
+
+                if (SubMenuRH.Visible == false)
+                {
+                    SubMenuRH.Visible = true;
+                }
+                else
+                {
+                    SubMenuRH.Visible = false;
+                }
+
+                if (SubMenuConsultar.Visible == true)
+                {
+                    SubMenuConsultar.Visible = false;
+                }
+             
+                if (SubMenuEstoque.Visible == true)
+                {
+                    SubMenuEstoque.Visible = false;
+                }
+            }
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Consultar_cliente());
+            SubMenuConsultar.Visible = false;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Consultar_Fornecedor());
+            SubMenuConsultar.Visible = false;
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Consulta_produto());
+            SubMenuConsultar.Visible = false;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Consultar_Cardapio());
+            SubMenuConsultar.Visible = false;
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new crud_funcionario());
+            SubMenuConsultar.Visible = false;
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new ConsultarPedido());
+            SubMenuConsultar.Visible = false;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new ConsultarVendas());
+            SubMenuConsultar.Visible = false;
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Folha_de_Pagamento());
+            SubMenuRH.Visible = false;
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Bater_Ponto());
+            SubMenuRH.Visible = false;
         }
     }
 }

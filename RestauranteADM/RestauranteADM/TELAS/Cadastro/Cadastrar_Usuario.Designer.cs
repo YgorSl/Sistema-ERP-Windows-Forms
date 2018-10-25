@@ -1392,9 +1392,9 @@
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(272, 5);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(187, 24);
+            this.label36.Size = new System.Drawing.Size(233, 24);
             this.label36.TabIndex = 84;
-            this.label36.Text = "Cadastrar Usuário";
+            this.label36.Text = "Cadastrar Funcionário";
             // 
             // btnCadastrarusuario
             // 

@@ -367,6 +367,27 @@ namespace RestauranteADM.BASE.Usuario
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
+
+        public void Alteraçao(UsuarioDTO dto)
+        {
+            string script = @"UPDATE tb_permissao SET nm_login =@nm_login,ds_senha=@ds_senha, id_funcionario = @id_funcionario ,perm_total=@perm_total,perm_cadastro=@perm_cadastro,perm_vendas=@perm_vendas,perm_compras=@perm_compras,perm_rh=@perm_rh,perm_financeiro=@perm_financeiro WHERE id_permissao = @id_permissao";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_permissao", dto.Id));
+            parms.Add(new MySqlParameter("id_funcionario", dto.usuario.Id));
+            parms.Add(new MySqlParameter("nm_login", dto.login));
+            parms.Add(new MySqlParameter("ds_senha", dto.senha));
+            parms.Add(new MySqlParameter("perm_total", dto.permissaototal));
+            parms.Add(new MySqlParameter("perm_cadastro", dto.permissaocadastro));
+            parms.Add(new MySqlParameter("perm_vendas", dto.permissaovendas));
+            parms.Add(new MySqlParameter("perm_compras", dto.permissaocompras));
+            parms.Add(new MySqlParameter("perm_rh", dto.permissaoRH));
+            parms.Add(new MySqlParameter("perm_financeiro", dto.permissaofinanceiro));
+
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
+
+        }
     }
 }
 

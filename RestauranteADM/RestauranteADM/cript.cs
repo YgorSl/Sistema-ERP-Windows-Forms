@@ -1,4 +1,6 @@
 ﻿using RestauranteADM.BASE.criptografia;
+using RestauranteADM.BASE.Recuperação;
+using RestauranteADM.BASE.Usuario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,17 +19,42 @@ namespace RestauranteADM
         {
             InitializeComponent();
         }
-        criptgrafia criptografia = new criptgrafia();
+
+        AlteracaoLogin alteraçao = new AlteracaoLogin();
+
+
+          AlteraçaoBunisess login = new AlteraçaoBunisess();
 
         private void button1_Click(object sender, EventArgs e)
         {
          
-            txt2.Text = criptografia.Codificar(txt1.Text);
+        
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txt3.Text = criptografia.Decodificar(txt2.Text);
+      
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            txtmensagem.Text = login.recuperaçao(txtRecuperacao.Text);
+        }
+
+        private void cript_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btncodigo_Click(object sender, EventArgs e)
+        {
+           string codigo = txtcodigo.Text;
+
+            alteraçao.Confirmaçao(codigo);
+
+
+
+
         }
     }
 }

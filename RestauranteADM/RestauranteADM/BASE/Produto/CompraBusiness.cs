@@ -31,5 +31,10 @@ namespace RestauranteADM.BASE.Produto
 
             return compras;
         }
+        public void Excluir(int id)
+        {
+            CompraItemDatabase db = new CompraItemDatabase();
+            db.Excluir(id);
+        }
     }
 }

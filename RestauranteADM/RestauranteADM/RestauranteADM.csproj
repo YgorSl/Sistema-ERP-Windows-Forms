@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -73,11 +73,11 @@
     <Compile Include="cript.Designer.cs">
       <DependentUpon>cript.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Estoque\Estoque.cs">
+    <Compile Include="TELAS\Estoque\Estoque_L.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Estoque\Estoque.Designer.cs">
-      <DependentUpon>Estoque.cs</DependentUpon>
+    <Compile Include="TELAS\Estoque\Estoque_L.Designer.cs">
+      <DependentUpon>Estoque_L.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Estoque\ReceberEstoque.cs">
       <SubType>Form</SubType>
@@ -347,8 +347,8 @@
     <EmbeddedResource Include="cript.resx">
       <DependentUpon>cript.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Estoque\Estoque.resx">
-      <DependentUpon>Estoque.cs</DependentUpon>
+    <EmbeddedResource Include="TELAS\Estoque\Estoque_L.resx">
+      <DependentUpon>Estoque_L.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Estoque\ReceberEstoque.resx">
       <DependentUpon>ReceberEstoque.cs</DependentUpon>

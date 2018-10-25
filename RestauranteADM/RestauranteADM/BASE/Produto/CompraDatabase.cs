@@ -51,6 +51,19 @@ namespace RestauranteADM.BASE.Produto
             }
             return lista;
         }
+        public void Excluir(int id)
+        {
+            string script = @" DELETE FROM  `mydb`.`tb_compra WHERE id_compra = @id_compra 
+                            ";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_compra", id));
+
+
+
+
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
+        }
 
 
     }

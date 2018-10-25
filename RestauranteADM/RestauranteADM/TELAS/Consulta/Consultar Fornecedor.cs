@@ -58,6 +58,7 @@ namespace RestauranteADM.TELAS.Consulta
             }
             if (e.ColumnIndex == 5)
             {
+
                 DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing",MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (r == DialogResult.Yes)
                 {
@@ -68,7 +69,6 @@ namespace RestauranteADM.TELAS.Consulta
 
                     MessageBox.Show("Registro Removido com sucesso","Amazing", MessageBoxButtons.OK , MessageBoxIcon.Information);
                 }
-
             }
         }
 

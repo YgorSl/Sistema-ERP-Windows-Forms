@@ -12,6 +12,7 @@ using RestauranteADM.TELAS.MENU;
 using RestauranteADM.TELAS.Cadastro;
 using RestauranteADM.TELAS.Financeiro;
 using RestauranteADM.Acesso;
+using RestauranteADM.TELAS.Estoque;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
@@ -71,8 +72,26 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void btn1_Click_1(object sender, EventArgs e)
         {
-          
-
+            if (SubMenuCadastro.Visible == false)
+            {
+                SubMenuCadastro.Visible = true;
+            }
+            else
+            {
+                SubMenuCadastro.Visible = false;
+            }
+            if (SubMenuConsultar.Visible == true)
+            {
+                SubMenuConsultar.Visible = false;
+            }
+            if (SubMenuRH.Visible == true)
+            {
+                SubMenuRH.Visible = false;
+            }
+            if (SubMenuEstoque.Visible == true)
+            {
+                SubMenuEstoque.Visible = false;
+            }
 
 
 
@@ -317,7 +336,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            
+            AbrirForminPanel(new Estoque_L());
         }
 
         private void SubMenuCadastro_Click(object sender, EventArgs e)
@@ -347,6 +366,11 @@ namespace RestauranteADM.TELAS._1._0._1
             {
                 SubMenuEstoque.Visible = false;
             }
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new ReceberEstoque());
         }
     }
 }

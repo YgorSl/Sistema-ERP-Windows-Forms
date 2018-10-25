@@ -23,7 +23,7 @@ namespace RestauranteADM.TELAS.Estoque
         private void button3_Click(object sender, EventArgs e)
         {            
             CompraItemBusiness buss = new CompraItemBusiness();
-            List<CompraItemDTO> item = buss.Filtro1(Convert.ToInt32(textBox1.Text));
+            List<VerView> item = buss.Filtro(Convert.ToInt32(textBox1.Text));
 
             dgvest.DataSource = item;
         }
@@ -32,12 +32,12 @@ namespace RestauranteADM.TELAS.Estoque
         {
             List<EstoqueDTO> estoq = new List<EstoqueDTO>();
 
-            List<CompraItemDTO> items = dgvest.DataSource as List<CompraItemDTO>;
-            foreach(CompraItemDTO item in items)
+            List<VerView> items = dgvest.DataSource as List<VerView>;
+            foreach(VerView item in items)
             {
                 EstoqueDTO estoque = new EstoqueDTO();
-                estoque.Produto = item.Produto;
-                estoque.CompraItem = item;
+                estoque.Produto = item.IdProduto;
+                estoque.CompraItem = item.IdCompraItem;
 
                 estoq.Add(estoque);
             }

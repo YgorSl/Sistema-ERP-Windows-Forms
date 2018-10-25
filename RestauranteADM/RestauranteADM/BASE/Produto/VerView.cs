@@ -9,7 +9,8 @@ namespace RestauranteADM.BASE.Produto
     public class VerView
     {
         public int IdCompra { get; set; }
-        public int IdCompraItem { get; set; }
+        public CompraItemDTO IdCompraItem { get; set; }
+        public ProdutoDTO IdProduto { get; set; }
         public int Preço { get; set; }
         public string Produto { get; set; }
         public string Fornecedor { get; set; }

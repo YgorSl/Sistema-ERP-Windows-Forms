@@ -1,6 +1,6 @@
 ﻿namespace RestauranteADM.TELAS.Estoque
 {
-    partial class Estoque
+    partial class Estoque_L
     {
         /// <summary>
         /// Required designer variable.
@@ -133,7 +133,7 @@
             this.Column8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column8.Width = 35;
             // 
-            // Estoque
+            // Estoque_L
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -141,7 +141,7 @@
             this.ClientSize = new System.Drawing.Size(736, 540);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Estoque";
+            this.Name = "Estoque_L";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estoque";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -154,6 +154,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -162,6 +163,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn Column8;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }

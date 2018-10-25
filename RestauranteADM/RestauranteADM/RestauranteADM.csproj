@@ -53,8 +53,13 @@
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaDatabaseView.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaView.cs" />
     <Compile Include="BASE\Produto\VerView.cs" />
+    <Compile Include="BASE\Recuperação\AlteracaoLogin.cs" />
+    <Compile Include="BASE\Recuperação\AlteraçaoBunisess.cs" />
     <Compile Include="BASE\Recuperação\Senhar.cs" />
     <Compile Include="BASE\Recuperação\senharBunisess.cs" />
+    <Compile Include="BASE\Usuario\LoginBunisess.cs" />
+    <Compile Include="BASE\Usuario\LoginDatabase.cs" />
+    <Compile Include="BASE\Usuario\LoginDTO.cs" />
     <Compile Include="BASE\vendas\VendasTotal.cs" />
     <Compile Include="BASE\vendas\VendasViewBunisess.cs" />
     <Compile Include="BASE\vendas\VendasViewDatabase.cs" />

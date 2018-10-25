@@ -53,6 +53,7 @@
             this.label5.Size = new System.Drawing.Size(203, 16);
             this.label5.TabIndex = 87;
             this.label5.Text = "adicionar senha de recuperaçao";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // txtmensagem
             // 
@@ -62,6 +63,7 @@
             this.txtmensagem.Size = new System.Drawing.Size(387, 141);
             this.txtmensagem.TabIndex = 89;
             this.txtmensagem.Text = "";
+            this.txtmensagem.TextChanged += new System.EventHandler(this.txtmensagem_TextChanged);
             // 
             // button1
             // 

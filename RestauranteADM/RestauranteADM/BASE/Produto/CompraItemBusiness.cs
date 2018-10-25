@@ -14,7 +14,7 @@ namespace RestauranteADM.BASE.Produto
             CompraItemDatabase db = new CompraItemDatabase();
             db.Salvar(item);
         }
-        public List<VerView> Filtro(string forn)
+        public List<VerView> Filtro(int forn)
         {
             CompraItemDatabase db = new CompraItemDatabase();
             List<VerView> items = db.Filtro(forn);
@@ -25,6 +25,11 @@ namespace RestauranteADM.BASE.Produto
             CompraItemDatabase db = new CompraItemDatabase();
             List<CompraItemDTO> items = db.Filtro1(compraid);
             return items;
+        }
+        public void Excluir(int id)
+        {
+            CompraItemDatabase db = new CompraItemDatabase();
+            db.Excluir(id);
         }
     }
 }

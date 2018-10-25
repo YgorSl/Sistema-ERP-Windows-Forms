@@ -26,13 +26,13 @@ namespace RestauranteADM.BASE.Produto
 
         }
 
-        public List<VerView> Filtro(string forn)
+        public List<VerView> Filtro(int forn)
         {
 
-            string script = @"select * from estoqueavw where nm_produto like @produto";
+            string script = @"select * from estoqueavw where id_compra = @id_compra";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("produto", "%" + forn + "%"));
+            parms.Add(new MySqlParameter("id_compra", forn));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -42,8 +42,14 @@ namespace RestauranteADM.BASE.Produto
             {
                 VerView comp = new VerView();
                 comp.IdCompra = reader.GetInt32("id_compra");
-                comp.IdCompraItem = reader.GetInt32("id_compra_item");
+
+                comp.IdCompraItem = new CompraItemDTO();
+                comp.IdCompraItem.Id = reader.GetInt32("id_compra_item");
                 comp.Produto = reader.GetString("nm_produto");
+
+                comp.IdProduto = new ProdutoDTO();
+                comp.IdProduto.Id = reader.GetInt32("id_compras");
+
                 comp.Preço = reader.GetInt32("vl_valor");
                 comp.Fornecedor = reader.GetString("nm_nome");
 
@@ -72,7 +78,7 @@ namespace RestauranteADM.BASE.Produto
                     comp.Compra.Id = reader.GetInt32("id_compra");
 
                     comp.Produto = new ProdutoDTO();
-                    comp.Produto.Id = reader.GetInt32("nm_produto");
+                    comp.Produto.Id = reader.GetInt32("id_compra_produto");
 
                     lista.Add(comp);
                 }
@@ -80,6 +86,19 @@ namespace RestauranteADM.BASE.Produto
 
 
             }
+        public void Excluir(int id)
+        {
+            string script = @" DELETE FROM  `mydb`.`tb_compra_item` WHERE id_compra_item = @id_compra_item
+                            ";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_compra_item", id));
+
+
+
+
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
         }
+    }
     }
 

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace RestauranteADM.TELAS.Estoque
 {
-    public partial class Estoque : Form
+    public partial class Estoque_L : Form
     {
-        public Estoque()
+        public Estoque_L()
         {
             InitializeComponent();
             CarregarEstoque();
@@ -30,7 +30,20 @@ namespace RestauranteADM.TELAS.Estoque
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.ColumnIndex == 7)
+            {
+                DialogResult r = MessageBox.Show("Deseja Retirar do Estoque?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (r == DialogResult.Yes)
+                {
+                    Estoque_View forn = dataGridView1.Rows[e.RowIndex].DataBoundItem as Estoque_View;
 
+                    EstoqueBusiness bus = new EstoqueBusiness();
+                    bus.Excluir(forn.Id);
+
+                    MessageBox.Show("Retirado Do estoque com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
         }
     }
 }

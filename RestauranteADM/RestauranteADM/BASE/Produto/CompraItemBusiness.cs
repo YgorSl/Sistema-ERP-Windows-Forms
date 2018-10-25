@@ -20,5 +20,11 @@ namespace RestauranteADM.BASE.Produto
             List<VerView> items = db.Filtro(forn);
             return items;
         }
+        public List<CompraItemDTO> Filtro1(int compraid)
+        {
+            CompraItemDatabase db = new CompraItemDatabase();
+            List<CompraItemDTO> items = db.Filtro1(compraid);
+            return items;
+        }
     }
 }

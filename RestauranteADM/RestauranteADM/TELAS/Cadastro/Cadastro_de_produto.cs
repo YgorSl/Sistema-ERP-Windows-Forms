@@ -14,6 +14,8 @@ namespace RestauranteADM.TELAS
 {
     public partial class Cadastro_de_estoque : Form
     {
+        Validacao v = new Validacao();
+
         public Cadastro_de_estoque()
         {
             InitializeComponent();
@@ -81,6 +83,16 @@ namespace RestauranteADM.TELAS
         private void Cadastro_de_estoque_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void txtProduto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
         }
     }
 }

@@ -30,14 +30,20 @@ namespace RestauranteADM.BASE.vendas
 
         public double Calcularvalorfinal(double totalfinal, double valortaxa,double percentual)
         {
+            double desconto = CalcularDesconto(totalfinal, percentual);
+            double taxa = CalcularTaxaEntrega(valortaxa, totalfinal);
+            double troco = CalcularTroco(totalfinal, valortaxa);
 
+            double subtotal = totalfinal - desconto;
+            double total = subtotal + taxa;
+            total = Math.Round(total, 2);
 
-            double valor1 = (valortaxa + totalfinal);
+            return total;
 
-            double valordes = (percentual / 100.0) * valor1;
+            //double valordes = (percentual / 100.0) * totalfinal;
+            //double total = valordes + valortaxa;
 
-
-            return valordes;
+            //return total;
         }
 
     }

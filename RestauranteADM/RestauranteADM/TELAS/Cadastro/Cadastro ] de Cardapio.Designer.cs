@@ -48,6 +48,7 @@
             this.txtvalor.Name = "txtvalor";
             this.txtvalor.Size = new System.Drawing.Size(292, 20);
             this.txtvalor.TabIndex = 54;
+            this.txtvalor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValor_KeyPress);
             // 
             // txttamanho
             // 
@@ -62,6 +63,7 @@
             this.txtnomeprato.Name = "txtnomeprato";
             this.txtnomeprato.Size = new System.Drawing.Size(292, 20);
             this.txtnomeprato.TabIndex = 51;
+            this.txtnomeprato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // label5
             // 

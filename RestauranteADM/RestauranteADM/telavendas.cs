@@ -16,6 +16,8 @@ namespace RestauranteADM
 {
     public partial class telavendas : Form
     {
+        Validacao v = new Validacao();
+
         public telavendas()
         {
             InitializeComponent();
@@ -255,7 +257,7 @@ namespace RestauranteADM
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-           
+            
 
 
 
@@ -267,22 +269,30 @@ namespace RestauranteADM
             double valortaxa = Convert.ToDouble(txttaxa.Text);
             double totslprodutos = Convert.ToDouble(txtfn.Text);
             double des = Convert.ToDouble(txtpor.Text);
+            double troco = Convert.ToDouble(txttroco.Text);
 
             VendasTotal tltl= new VendasTotal();
+            double resultaxa = tltl.CalcularTaxaEntrega(valortaxa, totslprodutos);
+            resultaxa = Math.Round(resultaxa, 2);
+            lblValorTaxa.Text = resultaxa.ToString();
+
+            
+            double resuldesconto = tltl.CalcularDesconto(totslprodutos, des);
+            resuldesconto = Math.Round(resuldesconto, 2);
+            lblValorDesconto.Text = resuldesconto.ToString();
+
+
             double total = tltl.Calcularvalorfinal(totslprodutos, valortaxa,des);
             total = Math.Round(total, 2);
-
-
             txtvlfinal.Text = total.ToString();
+            if (troco >= totslprodutos)
+            {
 
+                double trocofinal = troco - total;
+                trocofinal = Math.Round(trocofinal, 2);
+                lbltroco.Text = trocofinal.ToString();
 
-
-
-
-
-
-
-
+            }
 
 
         }
@@ -334,6 +344,26 @@ private void button4_Click(object sender, EventArgs e)
         private void txttota_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtpor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void txttaxa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTaxa_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void txtTroco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
         }
     }
 

@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpdata = new System.Windows.Forms.DateTimePicker();
             this.cmbcliente = new System.Windows.Forms.ComboBox();
             this.btnnova = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.txtvlfinal = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.txtfn = new System.Windows.Forms.TextBox();
             this.txttota = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txttaxa = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblValorTaxa = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -50,7 +51,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txttroco = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lbltroco = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -70,7 +71,6 @@
             this.valor_final = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button2 = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
-            this.txtvlfinal = new System.Windows.Forms.TextBox();
             this.panel.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -150,6 +150,13 @@
             this.panel.Visible = false;
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // txtvlfinal
+            // 
+            this.txtvlfinal.Location = new System.Drawing.Point(350, 257);
+            this.txtvlfinal.Name = "txtvlfinal";
+            this.txtvlfinal.Size = new System.Drawing.Size(82, 20);
+            this.txtvlfinal.TabIndex = 131;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.SeaGreen;
@@ -197,7 +204,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.txttaxa);
-            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.lblValorTaxa);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -214,15 +221,17 @@
             this.txttaxa.Name = "txttaxa";
             this.txttaxa.Size = new System.Drawing.Size(100, 20);
             this.txttaxa.TabIndex = 124;
+            this.txttaxa.TextChanged += new System.EventHandler(this.txttaxa_TextChanged);
+            this.txttaxa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaxa_KeyPress);
             // 
-            // label13
+            // lblValorTaxa
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(49, 52);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(13, 13);
-            this.label13.TabIndex = 120;
-            this.label13.Text = "0";
+            this.lblValorTaxa.AutoSize = true;
+            this.lblValorTaxa.Location = new System.Drawing.Point(49, 52);
+            this.lblValorTaxa.Name = "lblValorTaxa";
+            this.lblValorTaxa.Size = new System.Drawing.Size(13, 13);
+            this.lblValorTaxa.TabIndex = 120;
+            this.lblValorTaxa.Text = "0";
             // 
             // label3
             // 
@@ -265,6 +274,7 @@
             this.txtpor.Size = new System.Drawing.Size(100, 20);
             this.txtpor.TabIndex = 123;
             this.txtpor.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtpor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpor_KeyPress);
             // 
             // lblValorDesconto
             // 
@@ -298,7 +308,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txttroco);
-            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.lbltroco);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -315,15 +325,16 @@
             this.txttroco.Name = "txttroco";
             this.txttroco.Size = new System.Drawing.Size(82, 20);
             this.txttroco.TabIndex = 125;
+            this.txttroco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTroco_KeyPress);
             // 
-            // label16
+            // lbltroco
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(54, 51);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(13, 13);
-            this.label16.TabIndex = 124;
-            this.label16.Text = "0";
+            this.lbltroco.AutoSize = true;
+            this.lbltroco.Location = new System.Drawing.Point(54, 51);
+            this.lbltroco.Name = "lbltroco";
+            this.lbltroco.Size = new System.Drawing.Size(13, 13);
+            this.lbltroco.TabIndex = 124;
+            this.lbltroco.Text = "0";
             // 
             // label12
             // 
@@ -486,14 +497,14 @@
             this.dgvvendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nome,
             this.valor_final});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvvendas.Location = new System.Drawing.Point(75, 329);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
@@ -539,13 +550,6 @@
             this.label36.Size = new System.Drawing.Size(91, 25);
             this.label36.TabIndex = 103;
             this.label36.Text = " Vendas";
-            // 
-            // txtvlfinal
-            // 
-            this.txtvlfinal.Location = new System.Drawing.Point(350, 257);
-            this.txtvlfinal.Name = "txtvlfinal";
-            this.txtvlfinal.Size = new System.Drawing.Size(82, 20);
-            this.txtvlfinal.TabIndex = 131;
             // 
             // telavendas
             // 
@@ -608,11 +612,11 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblValorTaxa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblValorDesconto;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lbltroco;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtpor;
         private System.Windows.Forms.Label lbltotal;

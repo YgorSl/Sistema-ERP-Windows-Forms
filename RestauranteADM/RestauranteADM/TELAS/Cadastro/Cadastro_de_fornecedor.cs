@@ -13,6 +13,8 @@ namespace RestauranteADM.TELAS
 {
     public partial class Cadastro_de_fornecedor : Form
     {
+        Validacao v = new Validacao();
+
         public Cadastro_de_fornecedor()
         {
             InitializeComponent();
@@ -63,6 +65,31 @@ namespace RestauranteADM.TELAS
             Menuinicial oi = new Menuinicial();
             oi.Show();
             this.Hide();
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void txtCNPJ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void txtCidade_Keypress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void txtEstado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
         }
     }
 }

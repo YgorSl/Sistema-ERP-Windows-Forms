@@ -72,7 +72,7 @@ namespace RestauranteADM.BASE.Produto
                     comp.Compra.Id = reader.GetInt32("id_compra");
 
                     comp.Produto = new ProdutoDTO();
-                    comp.Produto.Id = reader.GetString("nm_produto");
+                    comp.Produto.Id = reader.GetInt32("nm_produto");
 
                     lista.Add(comp);
                 }
@@ -82,4 +82,4 @@ namespace RestauranteADM.BASE.Produto
             }
         }
     }
-}
+

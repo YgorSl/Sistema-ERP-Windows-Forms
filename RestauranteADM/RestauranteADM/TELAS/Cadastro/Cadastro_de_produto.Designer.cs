@@ -69,6 +69,7 @@
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(204, 20);
             this.txtnome.TabIndex = 11;
+            this.txtnome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProduto_KeyPress);
             // 
             // button1
             // 
@@ -100,6 +101,7 @@
             this.txtpre.Name = "txtpre";
             this.txtpre.Size = new System.Drawing.Size(204, 20);
             this.txtpre.TabIndex = 49;
+            this.txtpre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
             // 
             // label3
             // 

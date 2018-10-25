@@ -52,6 +52,7 @@
             this.txtcid.Name = "txtcid";
             this.txtcid.Size = new System.Drawing.Size(204, 20);
             this.txtcid.TabIndex = 14;
+            this.txtcid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCidade_Keypress);
             // 
             // label2
             // 
@@ -125,6 +126,7 @@
             this.txtcnpj.Name = "txtcnpj";
             this.txtcnpj.Size = new System.Drawing.Size(204, 20);
             this.txtcnpj.TabIndex = 33;
+            this.txtcnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCNPJ_KeyPress);
             // 
             // txttelefone
             // 
@@ -132,6 +134,7 @@
             this.txttelefone.Name = "txttelefone";
             this.txttelefone.Size = new System.Drawing.Size(204, 20);
             this.txttelefone.TabIndex = 34;
+            this.txttelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // txtnome
             // 
@@ -139,6 +142,7 @@
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(204, 20);
             this.txtnome.TabIndex = 35;
+            this.txtnome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNome_KeyPress);
             // 
             // txtest
             // 
@@ -146,6 +150,7 @@
             this.txtest.Name = "txtest";
             this.txtest.Size = new System.Drawing.Size(204, 20);
             this.txtest.TabIndex = 36;
+            this.txtest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstado_KeyPress);
             // 
             // txtend
             // 

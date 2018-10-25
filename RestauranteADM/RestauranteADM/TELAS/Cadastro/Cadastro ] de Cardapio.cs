@@ -13,6 +13,8 @@ namespace RestauranteADM.TELAS.Cadastro
 {
     public partial class Cadastro___de_Cardapio : Form
     {
+        Validacao v = new Validacao();
+
         public Cadastro___de_Cardapio()
         {
             InitializeComponent();
@@ -38,7 +40,6 @@ namespace RestauranteADM.TELAS.Cadastro
             try
             {
 
-
                 CardapioDTO dto = new CardapioDTO();
 
 
@@ -59,8 +60,17 @@ namespace RestauranteADM.TELAS.Cadastro
                 MessageBox.Show("Ocorreu um erro! Verifique se todos os campos estão preenchidos corretamente ou entre em contato com o administrador. :(");
             }
         }
-           
-}
+
+        private void txtValor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+    }
 
 
 

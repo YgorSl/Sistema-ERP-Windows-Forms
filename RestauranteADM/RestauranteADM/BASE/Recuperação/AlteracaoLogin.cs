@@ -16,9 +16,8 @@ namespace RestauranteADM.BASE.Recuperação
     {
        
 
-            private string Gmail, Nome;
+            private string Gmail, Nome,senharecu;
             private string mensagem;
-            private string senhar, Logi;
 
             private int numeroaleatorio;
        public string s;
@@ -41,11 +40,17 @@ namespace RestauranteADM.BASE.Recuperação
                 if (reader.Read() == true)
                 {
 
+               
+
+          
+
                     Gmail = reader["Gmail"].ToString();
                     Nome = reader["Nome"].ToString();
+                    senharecu = reader["Recupecao"].ToString();
                     enviaremailalteraçao();
                     mensagem = "olá " + Nome + "  enviamos para seu Gmail " + Gmail + " o codigo de alteraçao de login e senhar ";
-                    reader.Close();
+                Codigo(senharecu, s);
+                reader.Close();
                 }
                 else
                 {
@@ -59,9 +64,10 @@ namespace RestauranteADM.BASE.Recuperação
 
             public void enviaremailalteraçao()
             {
+
             Random aleatorio = new Random();
             numeroaleatorio = aleatorio.Next();
-            s = numeroaleatorio.ToString();
+           s = numeroaleatorio.ToString();
 
 
 
@@ -83,6 +89,14 @@ namespace RestauranteADM.BASE.Recuperação
                 try
                 {
                     smpt.Send(gmail);
+
+
+               
+
+             
+
+
+
                 }
                 catch (Exception ex)
                 {
@@ -91,31 +105,26 @@ namespace RestauranteADM.BASE.Recuperação
             }
 
 
-                  public void Confirmaçao(string codigo)
-            {
+        public void Codigo(string Recuperacao,string codigo)
+        {
 
-            
+            string script = @"UPDATE Recuperaçao_Login Senha=@ds_senha where Recupecao=@Recupecao";
 
-            if (s == codigo)
-                {
-                    Cadastrar_cliente form = new Cadastrar_cliente();
-                    form.Show();
+            List<MySqlParameter> parms = new List<MySqlParameter>();
 
-                }
-                else
-                {
-                    MessageBox.Show("erro confirme seu codigo:)");
-
-                }
-
-               
-
-            }
-
-         
+            parms.Add(new MySqlParameter("Recupecao", Recuperacao));
+            parms.Add(new MySqlParameter("Senha", codigo));
+        
 
 
 
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+
+
+
+        }
 
 
 

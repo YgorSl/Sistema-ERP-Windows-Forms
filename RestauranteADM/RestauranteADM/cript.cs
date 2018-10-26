@@ -48,9 +48,7 @@ namespace RestauranteADM
 
         private void btncodigo_Click(object sender, EventArgs e)
         {
-           string codigo = txtcodigo.Text;
-
-            alteraçao.Confirmaçao(codigo);
+          
 
 
 

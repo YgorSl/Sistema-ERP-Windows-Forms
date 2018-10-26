@@ -239,5 +239,10 @@ namespace RestauranteADM.TELAS
             oi.Show();
             this.Hide();
         }
+
+        private void btnCadastrarusuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

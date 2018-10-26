@@ -1,4 +1,5 @@
 ﻿using RestauranteADM.BASE.Estoque;
+using RestauranteADM.TELAS._1._0._1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,11 @@ namespace RestauranteADM.TELAS.Estoque
             dataGridView1.AutoGenerateColumns = false;
 
         }
+        public void AbrirForminPanel(object Formhijo)
+        {
+            
+          
+        }
         void CarregarEstoque()
         {
             EstoqueBusiness bus = new EstoqueBusiness();
@@ -30,7 +36,12 @@ namespace RestauranteADM.TELAS.Estoque
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7)
+           
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
             {
                 DialogResult r = MessageBox.Show("Deseja Retirar do Estoque?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (r == DialogResult.Yes)
@@ -41,6 +52,8 @@ namespace RestauranteADM.TELAS.Estoque
                     bus.Excluir(forn.Id);
 
                     MessageBox.Show("Retirado Do estoque com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
                 }
 
             }

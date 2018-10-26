@@ -14,6 +14,7 @@ using RestauranteADM.TELAS.Financeiro;
 using RestauranteADM.Acesso;
 using RestauranteADM.TELAS.Consulta;
 using RestauranteADM.TELAS.RH;
+using RestauranteADM.TELAS.Estoque;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
@@ -345,7 +346,9 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button14_Click(object sender, EventArgs e)
         {
-            
+
+            AbrirForminPanel(new Estoque_L());
+            SubMenuEstoque.Visible = false;
         }
 
         private void SubMenuCadastro_Click(object sender, EventArgs e)
@@ -459,6 +462,13 @@ namespace RestauranteADM.TELAS._1._0._1
         private void panel10_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+            AbrirForminPanel(new ReceberEstoque());
+            SubMenuEstoque.Visible = false;
         }
     }
 }

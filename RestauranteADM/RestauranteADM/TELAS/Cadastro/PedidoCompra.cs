@@ -1,4 +1,5 @@
-﻿using RestauranteADM.BASE.Fornecedor;
+﻿using RestauranteADM.BASE.Estoque;
+using RestauranteADM.BASE.Fornecedor;
 using RestauranteADM.BASE.Produto;
 using System;
 using System.Collections.Generic;
@@ -85,6 +86,8 @@ namespace RestauranteADM.TELAS.Cadastro
                 itemcomp.Produto = item;
                 compitem.Add(itemcomp);
             }
+
+           
             CompraBusiness bus = new CompraBusiness();
             bus.Salvar(compra, compitem);
 

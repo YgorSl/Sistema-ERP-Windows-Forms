@@ -59,11 +59,8 @@ namespace RestauranteADM.BASE.Estoque
             {
                 Estoque_View comp = new Estoque_View();
                 comp.Id = reader.GetInt32("id_estoque");
-                comp.IdCompra = new CompraDTO();
-                comp.IdCompra.Id = reader.GetInt32("id_compra");
-                comp.IdCompraItem = new CompraItemDTO();
-                comp.IdCompraItem.Id = reader.GetInt32("id_compra_item");
-                comp.IdProduto = reader.GetInt32("id_compras");
+           
+               
                 comp.Preço = reader.GetInt32("vl_valor");
                 comp.Produto = reader.GetString("nm_produto");
                 comp.Fornecedor = reader.GetString("nm_nome");

@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using RestauranteADM.DB;
 using RestauranteADM.TELAS;
+using RestauranteADM.TELAS.Cadastro;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,18 +17,25 @@ namespace RestauranteADM.BASE.Recuperação
     {
        
 
-            private string Gmail, Nome;
+            private string Gmail, Nome,id;
             private string mensagem;
-            private string senhar, Logi;
 
             private int numeroaleatorio;
        public string s;
 
 
+        public string aleatorio()
+        {
+            Random aleatorio = new Random();
+            numeroaleatorio = aleatorio.Next();
+            s = numeroaleatorio.ToString();
+            return s;
+        }
+
         public string recuperaçaosenhar(string Recuperacao)
             {
 
-                string script = @"select *from Recuperaçao_Login where Recupecao=@Recupecao";
+                string script = @"select *from Recuperaçao where Recupecao=@Recupecao";
 
                 List<MySqlParameter> parms = new List<MySqlParameter>();
                 parms.Add(new MySqlParameter("Recupecao", Recuperacao));
@@ -41,11 +49,19 @@ namespace RestauranteADM.BASE.Recuperação
                 if (reader.Read() == true)
                 {
 
-                    Gmail = reader["Gmail"].ToString();
+                string s = aleatorio();
+
+
+
+
+                Gmail = reader["Gmail"].ToString();
                     Nome = reader["Nome"].ToString();
+                    id = reader["idfuncio"].ToString();
                     enviaremailalteraçao();
-                    mensagem = "olá " + Nome + "  enviamos para seu Gmail " + Gmail + " o codigo de alteraçao de login e senhar ";
-                    reader.Close();
+                    Codigo(id,s);
+                    mensagem = "olá " + Nome + "  enviamos para seu Gmail " + Gmail + " o codigo de alteraçao de login e senhar "+s;
+
+                reader.Close();
                 }
                 else
                 {
@@ -59,10 +75,10 @@ namespace RestauranteADM.BASE.Recuperação
 
             public void enviaremailalteraçao()
             {
-            Random aleatorio = new Random();
-            numeroaleatorio = aleatorio.Next();
-            s = numeroaleatorio.ToString();
 
+
+
+            string s = aleatorio();
 
 
             MailMessage gmail = new MailMessage();
@@ -83,6 +99,11 @@ namespace RestauranteADM.BASE.Recuperação
                 try
                 {
                     smpt.Send(gmail);
+
+
+             
+
+
                 }
                 catch (Exception ex)
                 {
@@ -91,35 +112,58 @@ namespace RestauranteADM.BASE.Recuperação
             }
 
 
-                  public void Confirmaçao(string codigo)
-            {
+        public void Codigo(string id,string codigo)
+        {
 
-            
+            string script = @"UPDATE Recuperaçao set Senha=@ds_senha where idfuncio=@idfuncio";
 
-            if (s == codigo)
-                {
-                    Cadastrar_cliente form = new Cadastrar_cliente();
-                    form.Show();
+            List<MySqlParameter> parms = new List<MySqlParameter>();
 
-                }
-                else
-                {
-                    MessageBox.Show("erro confirme seu codigo:)");
-
-                }
-
-               
-
-            }
-
-         
+            parms.Add(new MySqlParameter("idfuncio", id));
+            parms.Add(new MySqlParameter("ds_senha", codigo));
+        
 
 
-
-
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
 
 
 
         }
+
+        public void verificaçao( string codigo)
+        {
+
+            string script = @"select * from Recuperaçao where Senha=@ds_senha ";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+
+            parms.Add(new MySqlParameter("ds_senha", codigo));
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            if(reader.Read() ==true)
+            {
+                Comprar oi = new Comprar();
+                oi.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("errou");
+
+            }
+
+
+
+
+        }
+
+
+
+
+    }
     }

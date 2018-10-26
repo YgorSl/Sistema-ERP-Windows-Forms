@@ -10,6 +10,10 @@ namespace RestauranteADM.BASE.Usuario
 {
     public class UsuarioDatabase
     {
+
+        UsuarioDTO dt = new UsuarioDTO();
+
+
         public int Salvar(UsuarioDTO dto)
         {
             string script = @"INSERT INTO tb_permissao ( nm_login, ds_senha , perm_total , perm_cadastro , perm_consulta, perm_vendas, perm_compras, perm_rh, perm_financeiro, perm_estoque, perm_cadastrarcliente, perm_cadastarproduto, perm_cadastarcardapio, perm_cadastarfuncionario, perm_cadastarpedido, perm_cadastarvenda, perm_cadastrarfolha, perm_consultarcliente, perm_consultarfornecedor, perm_consultarproduto, perm_consultarcardapio, perm_consultarfuncionario, perm_consultarpedido, perm_consultarvenda, perm_consultarfolha, perm_alterarcliente, perm_alterarfornecedor, perm_alterarfuncionario, perm_alterarproduto, perm_alterarcardapio, perm_alterarpedido, perm_alterarvenda, perm_excluircliente, perm_excluirfornecedor, perm_excluirfuncionario, perm_excluirproduto, perm_excluircardapio, perm_excluirpedido, perm_excluirvenda, perm_excluirfolha) 
@@ -268,12 +272,12 @@ namespace RestauranteADM.BASE.Usuario
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parametros);
 
-            UsuarioDTO dt = null;
+        
 
             if (reader.Read() == true)
             {
 
-                dt = new UsuarioDTO();
+               
                 dt.login = reader.GetString("nm_login");
                 dt.senha = reader.GetString("ds_senha");
                 dt.permissaototal = reader.GetBoolean("perm_total");

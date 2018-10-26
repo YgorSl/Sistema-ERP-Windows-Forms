@@ -1406,6 +1406,7 @@
             this.btnCadastrarusuario.TabIndex = 82;
             this.btnCadastrarusuario.Text = "Cadastrar";
             this.btnCadastrarusuario.UseVisualStyleBackColor = false;
+            this.btnCadastrarusuario.Click += new System.EventHandler(this.btnCadastrarusuario_Click);
             // 
             // Cadastro_usuário_do_sistema
             // 

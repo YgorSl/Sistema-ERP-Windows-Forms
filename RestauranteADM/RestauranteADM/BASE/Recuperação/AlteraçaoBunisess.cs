@@ -18,8 +18,16 @@ namespace RestauranteADM.BASE.Recuperação
                 return mensagem;
             }
 
+        public void verificacao(string senha)
+        {
+            AlteracaoLogin verir = new AlteracaoLogin();
+            verir.verificaçao(senha);
 
 
         }
+
     }
+
+        }
+    
 

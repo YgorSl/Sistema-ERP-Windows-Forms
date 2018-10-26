@@ -32,6 +32,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.SubMenuEstoque = new System.Windows.Forms.Panel();
+            this.button13 = new System.Windows.Forms.Button();
+            this.btnEstoque = new System.Windows.Forms.Button();
+            this.SubMenuRH = new System.Windows.Forms.Panel();
+            this.btnControlePonto = new System.Windows.Forms.Button();
+            this.btnFolhaPagamento = new System.Windows.Forms.Button();
             this.SubMenuConsultar = new System.Windows.Forms.Panel();
             this.btnConsultarVenda = new System.Windows.Forms.Button();
             this.btnConsultarPedido = new System.Windows.Forms.Button();
@@ -40,12 +46,6 @@
             this.btnConsultarProduto = new System.Windows.Forms.Button();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
             this.btnConsultarCliente = new System.Windows.Forms.Button();
-            this.SubMenuEstoque = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.btnEstoque = new System.Windows.Forms.Button();
-            this.SubMenuRH = new System.Windows.Forms.Panel();
-            this.btnControlePonto = new System.Windows.Forms.Button();
-            this.btnFolhaPagamento = new System.Windows.Forms.Button();
             this.SubMenuCadastro = new System.Windows.Forms.Panel();
             this.btnCadastrarCardapio = new System.Windows.Forms.Button();
             this.btnCadastrarProduto = new System.Windows.Forms.Button();
@@ -70,14 +70,17 @@
             this.btnmenucad = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.MenuVertical.SuspendLayout();
-            this.SubMenuConsultar.SuspendLayout();
             this.SubMenuEstoque.SuspendLayout();
             this.SubMenuRH.SuspendLayout();
+            this.SubMenuConsultar.SuspendLayout();
             this.SubMenuCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -122,8 +125,8 @@
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
             this.MenuVertical.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.MenuVertical.Controls.Add(this.SubMenuEstoque);
             this.MenuVertical.Controls.Add(this.SubMenuConsultar);
+            this.MenuVertical.Controls.Add(this.SubMenuEstoque);
             this.MenuVertical.Controls.Add(this.SubMenuRH);
             this.MenuVertical.Controls.Add(this.SubMenuCadastro);
             this.MenuVertical.Controls.Add(this.panel9);
@@ -148,6 +151,99 @@
             this.MenuVertical.Size = new System.Drawing.Size(200, 683);
             this.MenuVertical.TabIndex = 66;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint_1);
+            // 
+            // SubMenuEstoque
+            // 
+            this.SubMenuEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SubMenuEstoque.Controls.Add(this.button13);
+            this.SubMenuEstoque.Controls.Add(this.btnEstoque);
+            this.SubMenuEstoque.Location = new System.Drawing.Point(67, 368);
+            this.SubMenuEstoque.Name = "SubMenuEstoque";
+            this.SubMenuEstoque.Size = new System.Drawing.Size(135, 80);
+            this.SubMenuEstoque.TabIndex = 79;
+            this.SubMenuEstoque.Visible = false;
+            // 
+            // button13
+            // 
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button13.Location = new System.Drawing.Point(5, 40);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(131, 30);
+            this.button13.TabIndex = 2;
+            this.button13.Text = "Receber Estoque";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEstoque.FlatAppearance.BorderSize = 0;
+            this.btnEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEstoque.Location = new System.Drawing.Point(5, 3);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(131, 31);
+            this.btnEstoque.TabIndex = 1;
+            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.UseVisualStyleBackColor = true;
+            this.btnEstoque.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // SubMenuRH
+            // 
+            this.SubMenuRH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SubMenuRH.Controls.Add(this.btnControlePonto);
+            this.SubMenuRH.Controls.Add(this.btnFolhaPagamento);
+            this.SubMenuRH.Location = new System.Drawing.Point(65, 238);
+            this.SubMenuRH.Name = "SubMenuRH";
+            this.SubMenuRH.Size = new System.Drawing.Size(133, 108);
+            this.SubMenuRH.TabIndex = 78;
+            this.SubMenuRH.Visible = false;
+            // 
+            // btnControlePonto
+            // 
+            this.btnControlePonto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnControlePonto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnControlePonto.FlatAppearance.BorderSize = 0;
+            this.btnControlePonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnControlePonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnControlePonto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnControlePonto.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnControlePonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnControlePonto.Location = new System.Drawing.Point(3, 58);
+            this.btnControlePonto.Name = "btnControlePonto";
+            this.btnControlePonto.Size = new System.Drawing.Size(131, 49);
+            this.btnControlePonto.TabIndex = 2;
+            this.btnControlePonto.Text = "Controle de ponto";
+            this.btnControlePonto.UseVisualStyleBackColor = true;
+            this.btnControlePonto.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // btnFolhaPagamento
+            // 
+            this.btnFolhaPagamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFolhaPagamento.FlatAppearance.BorderSize = 0;
+            this.btnFolhaPagamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFolhaPagamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFolhaPagamento.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFolhaPagamento.Location = new System.Drawing.Point(5, 3);
+            this.btnFolhaPagamento.Name = "btnFolhaPagamento";
+            this.btnFolhaPagamento.Size = new System.Drawing.Size(131, 46);
+            this.btnFolhaPagamento.TabIndex = 1;
+            this.btnFolhaPagamento.Text = "Folha de Pagamento";
+            this.btnFolhaPagamento.UseVisualStyleBackColor = true;
+            this.btnFolhaPagamento.Click += new System.EventHandler(this.button19_Click);
             // 
             // SubMenuConsultar
             // 
@@ -291,100 +387,6 @@
             this.btnConsultarCliente.Text = "Cliente";
             this.btnConsultarCliente.UseVisualStyleBackColor = true;
             this.btnConsultarCliente.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // SubMenuEstoque
-            // 
-            this.SubMenuEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SubMenuEstoque.Controls.Add(this.button13);
-            this.SubMenuEstoque.Controls.Add(this.btnEstoque);
-            this.SubMenuEstoque.Location = new System.Drawing.Point(67, 368);
-            this.SubMenuEstoque.Name = "SubMenuEstoque";
-            this.SubMenuEstoque.Size = new System.Drawing.Size(135, 80);
-            this.SubMenuEstoque.TabIndex = 79;
-            this.SubMenuEstoque.Visible = false;
-            // 
-            // button13
-            // 
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.Color.SeaGreen;
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(5, 40);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(131, 30);
-            this.button13.TabIndex = 2;
-            this.button13.Text = "Receber Estoque";
-            this.button13.UseVisualStyleBackColor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
-            // 
-            // btnEstoque
-            // 
-            this.btnEstoque.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEstoque.FlatAppearance.BorderSize = 0;
-            this.btnEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstoque.Location = new System.Drawing.Point(5, 3);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(131, 31);
-            this.btnEstoque.TabIndex = 1;
-            this.btnEstoque.Text = "Estoque";
-            this.btnEstoque.UseVisualStyleBackColor = true;
-            this.btnEstoque.Click += new System.EventHandler(this.button14_Click);
-            // 
-            // SubMenuRH
-            // 
-            this.SubMenuRH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SubMenuRH.Controls.Add(this.btnControlePonto);
-            this.SubMenuRH.Controls.Add(this.btnFolhaPagamento);
-            this.SubMenuRH.Location = new System.Drawing.Point(65, 238);
-            this.SubMenuRH.Name = "SubMenuRH";
-            this.SubMenuRH.Size = new System.Drawing.Size(133, 108);
-            this.SubMenuRH.TabIndex = 78;
-            this.SubMenuRH.Visible = false;
-            // 
-            // btnControlePonto
-            // 
-            this.btnControlePonto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnControlePonto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnControlePonto.FlatAppearance.BorderSize = 0;
-            this.btnControlePonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.btnControlePonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnControlePonto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControlePonto.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnControlePonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnControlePonto.Location = new System.Drawing.Point(3, 58);
-            this.btnControlePonto.Name = "btnControlePonto";
-            this.btnControlePonto.Size = new System.Drawing.Size(131, 49);
-            this.btnControlePonto.TabIndex = 2;
-            this.btnControlePonto.Text = "Controle de ponto";
-            this.btnControlePonto.UseVisualStyleBackColor = true;
-            this.btnControlePonto.Click += new System.EventHandler(this.button18_Click);
-            // 
-            // btnFolhaPagamento
-            // 
-            this.btnFolhaPagamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFolhaPagamento.FlatAppearance.BorderSize = 0;
-            this.btnFolhaPagamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.btnFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFolhaPagamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFolhaPagamento.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFolhaPagamento.Location = new System.Drawing.Point(5, 3);
-            this.btnFolhaPagamento.Name = "btnFolhaPagamento";
-            this.btnFolhaPagamento.Size = new System.Drawing.Size(131, 46);
-            this.btnFolhaPagamento.TabIndex = 1;
-            this.btnFolhaPagamento.Text = "Folha de Pagamento";
-            this.btnFolhaPagamento.UseVisualStyleBackColor = true;
-            this.btnFolhaPagamento.Click += new System.EventHandler(this.button19_Click);
             // 
             // SubMenuCadastro
             // 
@@ -687,6 +689,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(200, 34);
@@ -705,6 +708,29 @@
             this.label1.TabIndex = 63;
             this.label1.Text = "Olá!";
             // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.White;
+            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel10.Controls.Add(this.label2);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(750, 647);
+            this.panel10.TabIndex = 72;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(354, 223);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(86, 42);
+            this.label2.TabIndex = 63;
+            this.label2.Text = "Olá!";
+            // 
             // menu2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -721,13 +747,15 @@
             this.panel3.PerformLayout();
             this.MenuVertical.ResumeLayout(false);
             this.MenuVertical.PerformLayout();
-            this.SubMenuConsultar.ResumeLayout(false);
             this.SubMenuEstoque.ResumeLayout(false);
             this.SubMenuRH.ResumeLayout(false);
+            this.SubMenuConsultar.ResumeLayout(false);
             this.SubMenuCadastro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -775,6 +803,8 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }
 }

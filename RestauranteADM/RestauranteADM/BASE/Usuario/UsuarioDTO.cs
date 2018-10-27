@@ -13,7 +13,6 @@ namespace RestauranteADM.BASE.Usuario
         public string login { get; set; }
         public string senha { get; set; }
         public string Observacao { get; set; }
-        public int IdFuncionario { get; set; }
         public bool permissaototal { get; set; }
         public bool permissaoRH { get; set; }
         public bool permissaofinanceiro { get; set; }

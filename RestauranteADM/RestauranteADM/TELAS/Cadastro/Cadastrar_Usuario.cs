@@ -254,6 +254,8 @@ namespace RestauranteADM.TELAS
             dto.Rg = txtrg.Text;
             dto.Endereço = txtendereço.Text;
             dto.Salario = Convert.ToDouble(txtsalario.Text);
+            dto.senha_recuperaçao = txtrecuperacao.Text;
+            dto.Gmail = txtgmail.Text;
 
 
             UsuarioDTO usuario = new UsuarioDTO();
@@ -311,6 +313,11 @@ namespace RestauranteADM.TELAS
             //   MessageBoxButtons.OK,
             //   MessageBoxIcon.Error);
             // }
+        }
+
+        private void chbConsultarCardapio_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

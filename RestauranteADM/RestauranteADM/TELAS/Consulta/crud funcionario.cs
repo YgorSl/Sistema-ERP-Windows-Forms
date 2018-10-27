@@ -48,29 +48,13 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoconsultarfuncionario == false)
-                    {
-                        btnConsultarFuncionario.Enabled = false;
-                    }
-                }
-                else
-                {
+           
                     FuncionarioBusiness ii = new FuncionarioBusiness();
                     List<FuncionarioDTO> opi = ii.filtro(txtfuncio.Text,txtcpf.Text);
 
 
                     dgvfuncio.DataSource = opi;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
-            }
+            
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -80,15 +64,10 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 4)
+            if(e.ColumnIndex == 6)
             {
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoalterarfuncionario == false)
-                        this.dgvfuncio.Columns["column2"].Visible = false;
-                }
-                else
-                {
+              
+                
 
                     FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
 
@@ -96,18 +75,12 @@ namespace RestauranteADM.TELAS.Consulta
                     alterarfuncionario menu = new alterarfuncionario();
                     menu.Loadscreen(pr);
                     menu.ShowDialog();
-                }
+                
 
             }
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 7)
             {
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoexcluirfuncionario == false)
-                        this.dgvfuncio.Columns["column1"].Visible = false;
-                }
-                else
-                {
+   
 
                 
                 DialogResult r = MessageBox.Show("vai excluir mesmo", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -117,8 +90,10 @@ namespace RestauranteADM.TELAS.Consulta
 
                         FuncionarioBusiness funciobu = new FuncionarioBusiness();
                         funciobu.Remover(pr.Id);
+
+                    MessageBox.Show("foi");
                     }
-                }
+                
             }
         }
 

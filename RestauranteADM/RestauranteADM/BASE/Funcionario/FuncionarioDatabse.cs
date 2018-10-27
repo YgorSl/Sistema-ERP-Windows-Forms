@@ -52,7 +52,7 @@ namespace RestauranteADM.BASE.Funcionario
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nome", "%" + Nome + "%"));
-            parms.Add(new MySqlParameter("nome", "%" + cpf + "%"));
+            parms.Add(new MySqlParameter("cpf", "%" + cpf + "%"));
 
 
 
@@ -82,11 +82,41 @@ namespace RestauranteADM.BASE.Funcionario
                 funcio.eui.senha = reader.GetString("ds_senha");
                 funcio.eui.permissaototal = reader.GetBoolean("perm_total");
                 funcio.eui.permissaocadastro = reader.GetBoolean("perm_cadastro");
+                funcio.eui.permissaoconsultar = reader.GetBoolean("perm_consulta");
                 funcio.eui.permissaovendas = reader.GetBoolean("perm_vendas");
                 funcio.eui.permissaocompras = reader.GetBoolean("perm_compras");
                 funcio.eui.permissaoRH = reader.GetBoolean("perm_rh");
                 funcio.eui.permissaofinanceiro = reader.GetBoolean("perm_financeiro");
-
+                funcio.eui.permissaoestoque = reader.GetBoolean("perm_estoque");
+                funcio.eui.permissaocadastrarcliente = reader.GetBoolean("perm_cadastrarcliente");
+                funcio.eui.permissaocadastrarfornecedor = reader.GetBoolean("perm_cadastrarfornecedor");
+                funcio.eui.permissaocadastrarfuncionario = reader.GetBoolean("perm_cadastrarfuncionario");
+                funcio.eui.permissaocadastrarproduto = reader.GetBoolean("perm_cadastrarproduto");
+                funcio.eui.permissaocadastrarcardapio = reader.GetBoolean("perm_cadastrarcardapio");
+                funcio.eui.permissaocadastrarpedido = reader.GetBoolean("perm_cadastrarpedido");
+                funcio.eui.permissaoconsultarcliente = reader.GetBoolean("perm_consultarcliente");
+                funcio.eui.permissaoconsultarfornecedor = reader.GetBoolean("perm_consultarfornecedor");
+                funcio.eui.permissaoconsultarfuncionario = reader.GetBoolean("perm_consultarfuncionario");
+                funcio.eui.permissaoconsultarproduto = reader.GetBoolean("perm_consultarproduto");
+                funcio.eui.permissaoconsultarcardapio = reader.GetBoolean("perm_consultarcardapio");
+                funcio.eui.permissaoconsultarpedido = reader.GetBoolean("perm_consultarpedido");
+                funcio.eui.permissaoconsultarvenda = reader.GetBoolean("perm_consultarvenda");
+                funcio.eui.permissaoconsultarfolha = reader.GetBoolean("perm_consultarfolha");
+                funcio.eui.permissaoalterarcliente = reader.GetBoolean("perm_alterarcliente");
+                funcio.eui.permissaoalterarfornecedor = reader.GetBoolean("perm_alterarfornecedor");
+                funcio.eui.permissaoalterarfuncionario = reader.GetBoolean("perm_alterarfuncionario");
+                funcio.eui.permissaoalterarproduto = reader.GetBoolean("perm_alterarproduto");
+                funcio.eui.permissaoalterarcardapio = reader.GetBoolean("perm_alterarcardapio");
+                funcio.eui.permissaoalterarpedido = reader.GetBoolean("perm_alterarpedido");
+                funcio.eui.permissaoalterarvenda = reader.GetBoolean("perm_alterarvenda");
+                funcio.eui.permissaoexcluircliente = reader.GetBoolean("perm_excluircliente");
+                funcio.eui.permissaoexcluirfornecedor = reader.GetBoolean("perm_excluirfornecedor");
+                funcio.eui.permissaoexcluirfuncionario = reader.GetBoolean("perm_excluirfuncionario");
+                funcio.eui.permissaoexcluirproduto = reader.GetBoolean("perm_excluirproduto");
+                funcio.eui.permissaoexcluircardapio = reader.GetBoolean("perm_excluircardapio");
+                funcio.eui.permissaoexcluirpedido = reader.GetBoolean("perm_excluirpedido");
+                funcio.eui.permissaoexcluircliente = reader.GetBoolean("perm_excluirvenda");
+                funcio.eui.permissaoexcluircliente = reader.GetBoolean("perm_excluirfolha");
 
 
 

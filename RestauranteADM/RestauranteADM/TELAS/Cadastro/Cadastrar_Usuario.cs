@@ -258,9 +258,19 @@ namespace RestauranteADM.TELAS
             dto.Gmail = txtgmail.Text;
 
 
+
+
             UsuarioDTO usuario = new UsuarioDTO();
-            usuario.login = txtusuario.Text;
-            usuario.senha = txtsenha.Text;
+
+            string Login = criptografia.Codificar(txtusuario.Text);
+            string Senhar = criptografia.Codificar(txtsenha.Text);
+
+            usuario.login = Login;
+            usuario.senha = Senhar;
+
+
+
+
             usuario.permissaototal = chbtotal.Checked;
             usuario.permissaoRH = chbrh.Checked;
             usuario.permissaofinanceiro = chbfinanceiro.Checked;

@@ -26,7 +26,7 @@ namespace RestauranteADM.BASE.Usuario
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_login", dto.login));
             parms.Add(new MySqlParameter("ds_senha", dto.senha));
-            parms.Add(new MySqlParameter("id_funcionario", dto.usuario));
+            parms.Add(new MySqlParameter("id_funcionario", dto.usuario.Id));
             parms.Add(new MySqlParameter("perm_total", dto.permissaototal));
             parms.Add(new MySqlParameter("perm_cadastro", dto.permissaocadastro));
             parms.Add(new MySqlParameter("perm_consulta", dto.permissaoconsultar));

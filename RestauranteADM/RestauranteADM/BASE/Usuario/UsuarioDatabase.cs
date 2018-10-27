@@ -16,8 +16,8 @@ namespace RestauranteADM.BASE.Usuario
 
         public int Salvar(UsuarioDTO dto)
         {
-            string script = @"INSERT INTO tb_permissao ( nm_login, ds_senha , perm_total , perm_cadastro , perm_consulta, perm_vendas, perm_compras, perm_rh, perm_financeiro, perm_estoque, perm_cadastrarcliente, perm_cadastarproduto, perm_cadastarcardapio, perm_cadastarfuncionario, perm_cadastarpedido, perm_cadastarvenda, perm_cadastrarfolha, perm_consultarcliente, perm_consultarfornecedor, perm_consultarproduto, perm_consultarcardapio, perm_consultarfuncionario, perm_consultarpedido, perm_consultarvenda, perm_consultarfolha, perm_alterarcliente, perm_alterarfornecedor, perm_alterarfuncionario, perm_alterarproduto, perm_alterarcardapio, perm_alterarpedido, perm_alterarvenda, perm_excluircliente, perm_excluirfornecedor, perm_excluirfuncionario, perm_excluirproduto, perm_excluircardapio, perm_excluirpedido, perm_excluirvenda, perm_excluirfolha) 
-                                  VALUES ( @nm_login, @ds_senha , @perm_total , @perm_cadastro ,@perm_consulta ,@perm_vendas, @perm_compras, @perm_rh, @perm_financeiro,@perm_estoque, @perm_cadastrarcliente, @perm_cadastarproduto, @perm_cadastarcardapio, @perm_cadastarfuncionario, @perm_cadastarpedido, @perm_cadastarvenda, @perm_cadastrarfolha, @perm_consultarcliente, @perm_consultarfornecedor, @perm_consultarproduto, @perm_consultarcardapio, @perm_consultarfuncionario, @perm_consultarpedido, @perm_consultarvenda, @perm_consultarfolha, @perm_alterarcliente, @perm_alterarfornecedor, @perm_alterarfuncionario, @perm_alterarproduto, @perm_alterarcardapio, @perm_alterarpedido, @perm_alterarvenda, @perm_excluircliente, @perm_excluirfornecedor, @perm_excluirfuncionario, @perm_excluirproduto, @perm_excluircardapio, @perm_excluirpedido, @perm_excluirvenda, @perm_excluirfolha)";
+            string script = @"INSERT INTO tb_permissao ( nm_login, ds_senha , perm_total , perm_cadastro , perm_consulta, perm_vendas, perm_compras, perm_rh, perm_financeiro, perm_estoque, perm_cadastrarcliente, perm_cadastrarproduto, perm_cadastrarcardapio, perm_cadastrarfuncionario, perm_cadastrarpedido,perm_cadastrarvenda,perm_cadastrarfolha, perm_consultarcliente, perm_consultarfornecedor, perm_consultarproduto, perm_consultarcardapio, perm_consultarfuncionario, perm_consultarpedido, perm_consultarvenda, perm_consultarfolha, perm_alterarcliente, perm_alterarfornecedor, perm_alterarfuncionario, perm_alterarproduto, perm_alterarcardapio, perm_alterarpedido, perm_alterarvenda, perm_excluircliente, perm_excluirfornecedor, perm_excluirfuncionario, perm_excluirproduto, perm_excluircardapio, perm_excluirpedido, perm_excluirvenda, perm_excluirfolha) 
+                                  VALUES ( @nm_login, @ds_senha , @perm_total , @perm_cadastro ,@perm_consulta ,@perm_vendas, @perm_compras, @perm_rh, @perm_financeiro,@perm_estoque, @perm_cadastrarcliente, @perm_cadastrarproduto,@perm_cadastrarcardapio,@perm_cadastrarfuncionario,@perm_cadastrarpedido,@perm_cadastrarvenda,@perm_cadastrarfolha, @perm_consultarcliente, @perm_consultarfornecedor, @perm_consultarproduto, @perm_consultarcardapio, @perm_consultarfuncionario, @perm_consultarpedido, @perm_consultarvenda, @perm_consultarfolha, @perm_alterarcliente, @perm_alterarfornecedor, @perm_alterarfuncionario, @perm_alterarproduto, @perm_alterarcardapio, @perm_alterarpedido, @perm_alterarvenda, @perm_excluircliente, @perm_excluirfornecedor, @perm_excluirfuncionario, @perm_excluirproduto, @perm_excluircardapio, @perm_excluirpedido, @perm_excluirvenda, @perm_excluirfolha)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_login", dto.login));
@@ -34,6 +34,7 @@ namespace RestauranteADM.BASE.Usuario
             parms.Add(new MySqlParameter("perm_cadastrarfornecedor", dto.permissaocadastrarfornecedor));
             parms.Add(new MySqlParameter("perm_cadastrarproduto", dto.permissaocadastrarproduto));
             parms.Add(new MySqlParameter("perm_cadastrarcardapio", dto.permissaocadastrarcardapio));
+            parms.Add(new MySqlParameter("perm_cadastrarfuncionario", dto.permissaocadastrarfuncionario));
             parms.Add(new MySqlParameter("perm_cadastrarpedido", dto.permissaocadastrarpedido));
             parms.Add(new MySqlParameter("perm_cadastrarvenda", dto.permissaocadastrarvenda));
             parms.Add(new MySqlParameter("perm_cadastrarfolha", dto.permissaocadastrarfolha));
@@ -48,6 +49,8 @@ namespace RestauranteADM.BASE.Usuario
             parms.Add(new MySqlParameter("perm_alterarcliente", dto.permissaoalterarcliente));
             parms.Add(new MySqlParameter("perm_alterarfornecedor", dto.permissaoalterarfornecedor));
             parms.Add(new MySqlParameter("perm_alterarfuncionario", dto.permissaoalterarfuncionario));
+            parms.Add(new MySqlParameter("perm_alterarproduto", dto.permissaoalterarproduto));
+            parms.Add(new MySqlParameter("perm_alterarcardapio", dto.permissaoalterarcardapio));
             parms.Add(new MySqlParameter("perm_alterarpedido", dto.permissaoalterarpedido));
             parms.Add(new MySqlParameter("perm_alterarvenda", dto.permissaoalterarvenda));
             parms.Add(new MySqlParameter("perm_excluircliente", dto.permissaoexcluircliente));
@@ -58,6 +61,7 @@ namespace RestauranteADM.BASE.Usuario
             parms.Add(new MySqlParameter("perm_excluirpedido", dto.permissaoexcluirpedido));
             parms.Add(new MySqlParameter("perm_excluirvenda", dto.permissaoexcluirvenda));
             parms.Add(new MySqlParameter("perm_excluirfolha", dto.permissaoexcluirfolha));
+
 
 
             Database db = new Database();
@@ -89,6 +93,7 @@ namespace RestauranteADM.BASE.Usuario
             parms.Add(new MySqlParameter("perm_cadastrarfornecedor", dto.permissaocadastrarfornecedor));
             parms.Add(new MySqlParameter("perm_cadastrarproduto", dto.permissaocadastrarproduto));
             parms.Add(new MySqlParameter("perm_cadastrarcardapio", dto.permissaocadastrarcardapio));
+            parms.Add(new MySqlParameter("perm_cadastrarfuncionario", dto.permissaocadastrarfuncionario));
             parms.Add(new MySqlParameter("perm_cadastrarpedido", dto.permissaocadastrarpedido));
             parms.Add(new MySqlParameter("perm_cadastrarvenda", dto.permissaocadastrarvenda));
             parms.Add(new MySqlParameter("perm_cadastrarfolha", dto.permissaocadastrarfolha));
@@ -103,6 +108,8 @@ namespace RestauranteADM.BASE.Usuario
             parms.Add(new MySqlParameter("perm_alterarcliente", dto.permissaoalterarcliente));
             parms.Add(new MySqlParameter("perm_alterarfornecedor", dto.permissaoalterarfornecedor));
             parms.Add(new MySqlParameter("perm_alterarfuncionario", dto.permissaoalterarfuncionario));
+            parms.Add(new MySqlParameter("perm_alterarproduto", dto.permissaoalterarproduto));
+            parms.Add(new MySqlParameter("perm_alterarcardapio", dto.permissaoalterarcardapio ));
             parms.Add(new MySqlParameter("perm_alterarpedido", dto.permissaoalterarpedido));
             parms.Add(new MySqlParameter("perm_alterarvenda", dto.permissaoalterarvenda));
             parms.Add(new MySqlParameter("perm_excluircliente", dto.permissaoexcluircliente));
@@ -244,17 +251,11 @@ namespace RestauranteADM.BASE.Usuario
                 dto.permissaoexcluircliente = reader.GetBoolean("perm_excluirvenda");
                 dto.permissaoexcluircliente = reader.GetBoolean("perm_excluirfolha");
 
-
-
-
             }
             reader.Close();
 
             return lista;
         }
-
-
-
 
 
         public UsuarioDTO Logar(string login, string senha)
@@ -272,12 +273,12 @@ namespace RestauranteADM.BASE.Usuario
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parametros);
 
-        
+            UsuarioDTO dt = new UsuarioDTO();
 
             if (reader.Read() == true)
             {
 
-               
+                dt = new UsuarioDTO();
                 dt.login = reader.GetString("nm_login");
                 dt.senha = reader.GetString("ds_senha");
                 dt.permissaototal = reader.GetBoolean("perm_total");
@@ -324,8 +325,8 @@ namespace RestauranteADM.BASE.Usuario
 
         public void Salvor(UsuarioDTO dto)
         {
-            string script = @"INSERT INTO tb_permissao ( nm_login, ds_senha , perm_total , perm_cadastro , perm_consulta, perm_vendas, perm_compras, perm_rh, perm_financeiro, perm_estoque, perm_cadastrarcliente, perm_cadastarproduto, perm_cadastarcardapio, perm_cadastarfuncionario, perm_cadastarpedido, perm_cadastarvenda, perm_cadastrarfolha, perm_consultarcliente, perm_consultarfornecedor, perm_consultarproduto, perm_consultarcardapio, perm_consultarfuncionario, perm_consultarpedido, perm_consultarvenda, perm_consultarfolha, perm_alterarcliente, perm_alterarfornecedor, perm_alterarfuncionario, perm_alterarproduto, perm_alterarcardapio, perm_alterarpedido, perm_alterarvenda, perm_excluircliente, perm_excluirfornecedor, perm_excluirfuncionario, perm_excluirproduto, perm_excluircardapio, perm_excluirpedido, perm_excluirvenda, perm_excluirfolha) 
-                                  VALUES ( @nm_login, @ds_senha , @perm_total , @perm_cadastro , @perm_consulta, @perm_vendas, @perm_compras, @perm_rh, @perm_financeiro, @perm_estoque, @perm_cadastrarcliente, @perm_cadastarproduto, @perm_cadastarcardapio, @perm_cadastarfuncionario, @perm_cadastarpedido, @perm_cadastarvenda, @perm_cadastrarfolha, @perm_consultarcliente, @perm_consultarfornecedor, @perm_consultarproduto, @perm_consultarcardapio, @perm_consultarfuncionario, @perm_consultarpedido, @perm_consultarvenda, @perm_consultarfolha, @perm_alterarcliente, @perm_alterarfornecedor, @perm_alterarfuncionario, @perm_alterarproduto, @perm_alterarcardapio, @perm_alterarpedido, @perm_alterarvenda, @perm_excluircliente, @perm_excluirfornecedor, @perm_excluirfuncionario, @perm_excluirproduto, @perm_excluircardapio, @perm_excluirpedido, @perm_excluirvenda, @perm_excluirfolha)";
+            string script = @"INSERT INTO tb_permissao ( nm_login, ds_senha , perm_total , perm_cadastro , perm_consulta, perm_vendas, perm_compras, perm_rh, perm_financeiro, perm_estoque, perm_cadastrarcliente, perm_cadastrarproduto, perm_cadastrarcardapio, perm_cadastrarfuncionario, perm_cadastrarpedido,perm_cadastrarvenda,perm_cadastrarfolha, perm_consultarcliente, perm_consultarfornecedor, perm_consultarproduto, perm_consultarcardapio, perm_consultarfuncionario, perm_consultarpedido, perm_consultarvenda, perm_consultarfolha, perm_alterarcliente, perm_alterarfornecedor, perm_alterarfuncionario, perm_alterarproduto, perm_alterarcardapio, perm_alterarpedido, perm_alterarvenda, perm_excluircliente, perm_excluirfornecedor, perm_excluirfuncionario, perm_excluirproduto, perm_excluircardapio, perm_excluirpedido, perm_excluirvenda, perm_excluirfolha) 
+                                  VALUES ( @nm_login, @ds_senha , @perm_total , @perm_cadastro ,@perm_consulta ,@perm_vendas, @perm_compras, @perm_rh, @perm_financeiro,@perm_estoque, @perm_cadastrarcliente, @perm_cadastrarproduto,@perm_cadastrarcardapio,@perm_cadastrarfuncionario,@perm_cadastrarpedido,@perm_cadastrarvenda,@perm_cadastrarfolha, @perm_consultarcliente, @perm_consultarfornecedor, @perm_consultarproduto, @perm_consultarcardapio, @perm_consultarfuncionario, @perm_consultarpedido, @perm_consultarvenda, @perm_consultarfolha, @perm_alterarcliente, @perm_alterarfornecedor, @perm_alterarfuncionario, @perm_alterarproduto, @perm_alterarcardapio, @perm_alterarpedido, @perm_alterarvenda, @perm_excluircliente, @perm_excluirfornecedor, @perm_excluirfuncionario, @perm_excluirproduto, @perm_excluircardapio, @perm_excluirpedido, @perm_excluirvenda, @perm_excluirfolha)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_login", dto.login));
@@ -342,6 +343,7 @@ namespace RestauranteADM.BASE.Usuario
             parms.Add(new MySqlParameter("perm_cadastrarfornecedor", dto.permissaocadastrarfornecedor));
             parms.Add(new MySqlParameter("perm_cadastrarproduto", dto.permissaocadastrarproduto));
             parms.Add(new MySqlParameter("perm_cadastrarcardapio", dto.permissaocadastrarcardapio));
+            parms.Add(new MySqlParameter("perm_cadastrarfuncionario", dto.permissaocadastrarfuncionario));
             parms.Add(new MySqlParameter("perm_cadastrarpedido", dto.permissaocadastrarpedido));
             parms.Add(new MySqlParameter("perm_cadastrarvenda", dto.permissaocadastrarvenda));
             parms.Add(new MySqlParameter("perm_cadastrarfolha", dto.permissaocadastrarfolha));
@@ -356,6 +358,8 @@ namespace RestauranteADM.BASE.Usuario
             parms.Add(new MySqlParameter("perm_alterarcliente", dto.permissaoalterarcliente));
             parms.Add(new MySqlParameter("perm_alterarfornecedor", dto.permissaoalterarfornecedor));
             parms.Add(new MySqlParameter("perm_alterarfuncionario", dto.permissaoalterarfuncionario));
+            parms.Add(new MySqlParameter("perm_alterarproduto",dto.permissaoalterarproduto));
+            parms.Add(new MySqlParameter("perm_alterarcardapio", dto.permissaoalterarcardapio));
             parms.Add(new MySqlParameter("perm_alterarpedido", dto.permissaoalterarpedido));
             parms.Add(new MySqlParameter("perm_alterarvenda", dto.permissaoalterarvenda));
             parms.Add(new MySqlParameter("perm_excluircliente", dto.permissaoexcluircliente));
@@ -383,10 +387,42 @@ namespace RestauranteADM.BASE.Usuario
             parms.Add(new MySqlParameter("ds_senha", dto.senha));
             parms.Add(new MySqlParameter("perm_total", dto.permissaototal));
             parms.Add(new MySqlParameter("perm_cadastro", dto.permissaocadastro));
+            parms.Add(new MySqlParameter("perm_consulta", dto.permissaoconsultar));
             parms.Add(new MySqlParameter("perm_vendas", dto.permissaovendas));
             parms.Add(new MySqlParameter("perm_compras", dto.permissaocompras));
             parms.Add(new MySqlParameter("perm_rh", dto.permissaoRH));
             parms.Add(new MySqlParameter("perm_financeiro", dto.permissaofinanceiro));
+            parms.Add(new MySqlParameter("perm_estoque", dto.permissaoestoque));
+            parms.Add(new MySqlParameter("perm_cadastrarcliente", dto.permissaocadastrarcliente));
+            parms.Add(new MySqlParameter("perm_cadastrarfornecedor", dto.permissaocadastrarfornecedor));
+            parms.Add(new MySqlParameter("perm_cadastrarproduto", dto.permissaocadastrarproduto));
+            parms.Add(new MySqlParameter("perm_cadastrarcardapio", dto.permissaocadastrarcardapio));
+            parms.Add(new MySqlParameter("perm_cadastrarfuncionario", dto.permissaocadastrarfuncionario));
+            parms.Add(new MySqlParameter("perm_cadastrarpedido", dto.permissaocadastrarpedido));
+            parms.Add(new MySqlParameter("perm_cadastrarvenda", dto.permissaocadastrarvenda));
+            parms.Add(new MySqlParameter("perm_cadastrarfolha", dto.permissaocadastrarfolha));
+            parms.Add(new MySqlParameter("perm_consultarcliente", dto.permissaoconsultarcliente));
+            parms.Add(new MySqlParameter("perm_consultarfornecedor", dto.permissaoconsultarfornecedor));
+            parms.Add(new MySqlParameter("perm_consultarfuncionario", dto.permissaoconsultarfuncionario));
+            parms.Add(new MySqlParameter("perm_consultarproduto", dto.permissaoconsultarproduto));
+            parms.Add(new MySqlParameter("perm_consultarcardapio", dto.permissaoconsultarcardapio));
+            parms.Add(new MySqlParameter("perm_consultarpedido", dto.permissaoconsultarpedido));
+            parms.Add(new MySqlParameter("perm_consultarvenda", dto.permissaoconsultarvenda));
+            parms.Add(new MySqlParameter("perm_consultarfolha", dto.permissaoconsultarfolha));
+            parms.Add(new MySqlParameter("perm_alterarcliente", dto.permissaoalterarcliente));
+            parms.Add(new MySqlParameter("perm_alterarfornecedor", dto.permissaoalterarfornecedor));
+            parms.Add(new MySqlParameter("perm_alterarfuncionario", dto.permissaoalterarfuncionario));
+            parms.Add(new MySqlParameter("perm_alterarproduto", dto.permissaoalterarproduto));
+            parms.Add(new MySqlParameter("perm_alterarpedido", dto.permissaoalterarpedido));
+            parms.Add(new MySqlParameter("perm_alterarvenda", dto.permissaoalterarvenda));
+            parms.Add(new MySqlParameter("perm_excluircliente", dto.permissaoexcluircliente));
+            parms.Add(new MySqlParameter("perm_excluirfornecedor", dto.permissaoexcluirfornecedor));
+            parms.Add(new MySqlParameter("perm_excluirfuncionario", dto.permissaoexcluirfuncionario));
+            parms.Add(new MySqlParameter("perm_excluirproduto", dto.permissaoexcluirproduto));
+            parms.Add(new MySqlParameter("perm_excluircardapio", dto.permissaoexcluircardapio));
+            parms.Add(new MySqlParameter("perm_excluirpedido", dto.permissaoexcluirpedido));
+            parms.Add(new MySqlParameter("perm_excluirvenda", dto.permissaoexcluirvenda));
+            parms.Add(new MySqlParameter("perm_excluirfolha", dto.permissaoexcluirfolha));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);

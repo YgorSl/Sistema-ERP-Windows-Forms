@@ -104,7 +104,7 @@
             this.chbCardapio = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.chbCadastroProduto = new System.Windows.Forms.CheckBox();
-            this.chbCadastroFuncionário = new System.Windows.Forms.CheckBox();
+            this.chbCadastroFuncionario = new System.Windows.Forms.CheckBox();
             this.chbCadastroCliente = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -895,7 +895,7 @@
             this.groupBox6.Controls.Add(this.chbCardapio);
             this.groupBox6.Controls.Add(this.label1);
             this.groupBox6.Controls.Add(this.chbCadastroProduto);
-            this.groupBox6.Controls.Add(this.chbCadastroFuncionário);
+            this.groupBox6.Controls.Add(this.chbCadastroFuncionario);
             this.groupBox6.Controls.Add(this.chbCadastroCliente);
             this.groupBox6.Controls.Add(this.label7);
             this.groupBox6.Controls.Add(this.label18);
@@ -969,14 +969,14 @@
             this.chbCadastroProduto.TabIndex = 48;
             this.chbCadastroProduto.UseVisualStyleBackColor = true;
             // 
-            // chbCadastroFuncionário
+            // chbCadastroFuncionario
             // 
-            this.chbCadastroFuncionário.AutoSize = true;
-            this.chbCadastroFuncionário.Location = new System.Drawing.Point(17, 45);
-            this.chbCadastroFuncionário.Name = "chbCadastroFuncionário";
-            this.chbCadastroFuncionário.Size = new System.Drawing.Size(15, 14);
-            this.chbCadastroFuncionário.TabIndex = 51;
-            this.chbCadastroFuncionário.UseVisualStyleBackColor = true;
+            this.chbCadastroFuncionario.AutoSize = true;
+            this.chbCadastroFuncionario.Location = new System.Drawing.Point(17, 45);
+            this.chbCadastroFuncionario.Name = "chbCadastroFuncionario";
+            this.chbCadastroFuncionario.Size = new System.Drawing.Size(15, 14);
+            this.chbCadastroFuncionario.TabIndex = 51;
+            this.chbCadastroFuncionario.UseVisualStyleBackColor = true;
             // 
             // chbCadastroCliente
             // 
@@ -1531,7 +1531,7 @@
         private System.Windows.Forms.CheckBox chbCardapio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chbCadastroProduto;
-        private System.Windows.Forms.CheckBox chbCadastroFuncionário;
+        private System.Windows.Forms.CheckBox chbCadastroFuncionario;
         private System.Windows.Forms.CheckBox chbCadastroCliente;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label18;

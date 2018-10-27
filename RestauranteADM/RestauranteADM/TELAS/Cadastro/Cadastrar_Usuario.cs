@@ -242,7 +242,77 @@ namespace RestauranteADM.TELAS
 
         private void btnCadastrarusuario_Click(object sender, EventArgs e)
         {
+            //  try
+            //{
 
+
+            FuncionarioDTO dto = new FuncionarioDTO();
+
+
+            dto.Nome = txtnome.Text;
+            dto.Cpf = txtcpf.Text;
+            dto.Rg = txtrg.Text;
+            dto.Endereço = txtendereço.Text;
+            dto.Salario = Convert.ToDouble(txtsalario.Text);
+
+
+            UsuarioDTO usuario = new UsuarioDTO();
+            usuario.login = txtusuario.Text;
+            usuario.senha = txtsenha.Text;
+            usuario.permissaototal = chbtotal.Checked;
+            usuario.permissaoRH = chbrh.Checked;
+            usuario.permissaofinanceiro = chbfinanceiro.Checked;
+            usuario.permissaocadastro = chbcadastro.Checked;
+            usuario.permissaovendas = chbvendas.Checked;
+            usuario.permissaocompras = chbcompras.Checked;
+            usuario.permissaoestoque = chbMenuEstoque.Checked;
+            usuario.permissaoconsultar = chbConsultar.Checked;
+            usuario.permissaocadastrarcliente = chbCadastroCliente.Checked;
+            usuario.permissaocadastrarproduto = chbCadastroProduto.Checked;
+            usuario.permissaocadastrarfuncionario = chbCadastroFuncionario.Checked;
+            usuario.permissaocadastrarfornecedor = chbCadastroFornecedor.Checked;
+            usuario.permissaocadastrarcardapio = chbCardapio.Checked;
+            usuario.permissaocadastrarfolha = chbCadastrarFolha.Checked;
+            usuario.permissaoconsultarcliente = chbConsultarCliente.Checked;
+            usuario.permissaoconsultarfornecedor = chbConsultarFornecedor.Checked;
+            usuario.permissaoconsultarproduto = chbConsultarProduto.Checked;
+            usuario.permissaoconsultarcardapio = chbExcluirCardapio.Checked;
+            usuario.permissaoconsultarfuncionario = chbConsultarFuncionario.Checked;
+            usuario.permissaoconsultarpedido = chbConsultarFuncionario.Checked;
+            usuario.permissaoconsultarvenda = chbConsultarVendas.Checked;
+            usuario.permissaoconsultarfolha = chbConsultarFolha.Checked;
+            usuario.permissaoalterarcliente = chbAlterarCliente.Checked;
+            usuario.permissaoalterarfornecedor = chbAlterarFornecedor.Checked;
+            usuario.permissaoalterarproduto = chbAlterarProduto.Checked;
+            usuario.permissaoalterarcardapio = chbAlterarCardapio.Checked;
+            usuario.permissaoalterarfuncionario = chbAlterarFuncionario.Checked;
+            usuario.permissaoalterarpedido = chbAlterarPedido.Checked;
+            usuario.permissaoalterarvenda = chbAlterarVendas.Checked;
+            usuario.permissaoexcluircliente = chbExcluirCliente.Checked;
+            usuario.permissaoexcluirfornecedor = chbExcluirFornecedor.Checked;
+            usuario.permissaoexcluirproduto = chbExcluirProduto.Checked;
+            usuario.permissaoexcluircardapio = chbExcluirCardapio.Checked;
+            usuario.permissaoexcluirfuncionario = chbExcluirFuncionario.Checked;
+            usuario.permissaoexcluirpedido = chbExcluirPedido.Checked;
+            usuario.permissaoexcluirvenda = chbExcluirVendas.Checked;
+            usuario.permissaoexcluirfolha = chbExcluirFolha.Checked;
+
+
+
+            FuncionarioBusiness ft = new FuncionarioBusiness();
+            ft.Salvar(dto, usuario);
+
+            MessageBox.Show("Usuário Salvo com sucesso! :)");
+            //}
+            //catch (Exception ex)
+            //{
+            // MessageBox.Show("Ocorreu um erro. Entre em contato com o administrador. " + ex.Message,
+            //    "Toc Toc Brasil",
+            //   MessageBoxButtons.OK,
+            //   MessageBoxIcon.Error);
+            // }
         }
     }
 }
+    
+

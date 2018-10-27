@@ -31,7 +31,7 @@ namespace RestauranteADM.BASE.Usuario
         public void save(UsuarioDTO i)
         {
         UsuarioDatabase bd = new UsuarioDatabase();
-        bd.Salvor(i);
+        bd.Salvar(i);
         }
 
     public List<UsuarioDTO> Listar()

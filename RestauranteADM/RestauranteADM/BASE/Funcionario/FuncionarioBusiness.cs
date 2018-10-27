@@ -10,10 +10,10 @@ namespace RestauranteADM.BASE.Funcionario
 {
     public class FuncionarioBusiness
     {
-        public List<FuncionarioDTO> filtro(string Nome)
+        public List<FuncionarioDTO> filtro(string Nome,string cpf)
         {
             FuncionarioDatabse db = new FuncionarioDatabse();
-            List<FuncionarioDTO> tb = db.filtro(Nome);
+            List<FuncionarioDTO> tb = db.filtro(Nome,cpf);
 
             return tb;
         }

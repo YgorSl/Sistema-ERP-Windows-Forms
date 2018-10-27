@@ -43,16 +43,16 @@ namespace RestauranteADM.BASE.Funcionario
 
 
 
-        public List<FuncionarioDTO> filtro(string Nome)
+        public List<FuncionarioDTO> filtro(string Nome,string cpf)
         {
             string script = @"select * " +
                 " from tb_funcionarios" +
                 " inner join tb_permissao on tb_permissao.id_funcionario=tb_funcionarios.id_funcionarios" +
-                " where nm_nome like @nome ";
+                " where nm_nome like @nome and ds_cpf like @cpf";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nome", "%" + Nome + "%"));
-
+            parms.Add(new MySqlParameter("nome", "%" + cpf + "%"));
 
 
 

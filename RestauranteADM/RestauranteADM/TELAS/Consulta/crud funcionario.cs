@@ -61,7 +61,7 @@ namespace RestauranteADM.TELAS.Consulta
                 else
                 {
                     FuncionarioBusiness ii = new FuncionarioBusiness();
-                    List<FuncionarioDTO> opi = ii.filtro(txtfuncio.Text);
+                    List<FuncionarioDTO> opi = ii.filtro(txtfuncio.Text,txtcpf.Text);
 
 
                     dgvfuncio.DataSource = opi;

@@ -42,6 +42,8 @@
             this.txtfuncio = new System.Windows.Forms.TextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfuncio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,11 +136,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(289, 42);
+            this.label1.Location = new System.Drawing.Point(309, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 24);
+            this.label1.Size = new System.Drawing.Size(86, 25);
             this.label1.TabIndex = 32;
             this.label1.Text = "Usuário";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -147,9 +149,9 @@
             // 
             this.btnConsultarFuncionario.BackColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFuncionario.Location = new System.Drawing.Point(644, 106);
+            this.btnConsultarFuncionario.Location = new System.Drawing.Point(635, 79);
             this.btnConsultarFuncionario.Name = "btnConsultarFuncionario";
-            this.btnConsultarFuncionario.Size = new System.Drawing.Size(69, 23);
+            this.btnConsultarFuncionario.Size = new System.Drawing.Size(81, 30);
             this.btnConsultarFuncionario.TabIndex = 31;
             this.btnConsultarFuncionario.Text = "Consultar";
             this.btnConsultarFuncionario.UseVisualStyleBackColor = false;
@@ -158,18 +160,18 @@
             // a
             // 
             this.a.AutoSize = true;
-            this.a.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.a.ForeColor = System.Drawing.Color.White;
-            this.a.Location = new System.Drawing.Point(59, 108);
+            this.a.Location = new System.Drawing.Point(52, 91);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(87, 17);
+            this.a.Size = new System.Drawing.Size(81, 16);
             this.a.TabIndex = 28;
             this.a.Text = "Funcionario:";
             // 
             // txtfuncio
             // 
             this.txtfuncio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfuncio.Location = new System.Drawing.Point(161, 99);
+            this.txtfuncio.Location = new System.Drawing.Point(154, 82);
             this.txtfuncio.Name = "txtfuncio";
             this.txtfuncio.Size = new System.Drawing.Size(465, 25);
             this.txtfuncio.TabIndex = 27;
@@ -194,12 +196,33 @@
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(52, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 16);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "CPF";
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcpf.Location = new System.Drawing.Point(154, 124);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(465, 25);
+            this.txtcpf.TabIndex = 34;
+            // 
             // crud_funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(752, 597);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.btnConsultarFuncionario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvfuncio);
@@ -229,5 +252,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtcpf;
     }
 }

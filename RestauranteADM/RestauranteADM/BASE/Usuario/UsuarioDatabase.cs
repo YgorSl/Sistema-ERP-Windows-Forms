@@ -266,8 +266,7 @@ namespace RestauranteADM.BASE.Usuario
         public UsuarioDTO Logar(string login, string senha)
         {
 
-            string script =
-                @"select * from tb_permissao where nm_login = @nm_login and ds_senha = @ds_senha";
+            string script = @"select * from tb_permissao where nm_login = @nm_login and ds_senha = @ds_senha";
 
 
 
@@ -278,7 +277,7 @@ namespace RestauranteADM.BASE.Usuario
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parametros);
 
-            UsuarioDTO dt = new UsuarioDTO();
+            UsuarioDTO dt = null;
 
             if (reader.Read() == true)
             {
@@ -329,6 +328,23 @@ namespace RestauranteADM.BASE.Usuario
         }
 
      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public void Alteraçao(UsuarioDTO dto)
         {

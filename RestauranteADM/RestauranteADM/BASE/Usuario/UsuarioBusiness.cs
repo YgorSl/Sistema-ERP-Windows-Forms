@@ -55,16 +55,20 @@ namespace RestauranteADM.BASE.Usuario
 
         public UsuarioDTO Logar(string login, string senha)
         {
-            if (login == string.Empty)
-            {
-                throw new ArgumentException("Usuário é obrigatório");
+            
+                if (login == string.Empty)
+                {
+                    throw new ArgumentException("Usuário é obrigatório");
 
-            }
-            if (senha == string.Empty)
-            {
-                throw new ArgumentException("Senha é obrigatória");
+                }
+                if (senha == string.Empty)
+                {
+                    throw new ArgumentException("Senha é obrigatória");
 
-            }
+                }
+
+     
+          
             UsuarioDatabase db = new UsuarioDatabase();
             return db.Logar(login, senha);
 

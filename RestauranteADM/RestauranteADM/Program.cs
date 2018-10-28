@@ -25,7 +25,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new crud_funcionario());
+            Application.Run(new Login());
         }
     }
 }

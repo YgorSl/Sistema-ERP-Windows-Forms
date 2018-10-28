@@ -26,6 +26,14 @@ namespace RestauranteADM.BASE.Recuperação
 
         }
 
+        public void alteraçao(int id,string senha,string login)
+        {
+            AlteracaoLogin verir = new AlteracaoLogin();
+            verir.mundançadesenha(id,senha,login);
+
+
+        }
+
     }
 
         }

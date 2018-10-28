@@ -15,13 +15,13 @@ namespace RestauranteADM.BASE.Recuperação
 {
    public class AlteracaoLogin
     {
-       
 
-            private string Gmail, Nome,id;
+    
+        private string Gmail, Nome,id,idt;
             private string mensagem;
 
-            private int numeroaleatorio;
-       public string s;
+            private int numeroaleatorio,ift;
+            public string s;
 
 
         public string aleatorio()
@@ -147,8 +147,14 @@ namespace RestauranteADM.BASE.Recuperação
 
             if(reader.Read() ==true)
             {
-                Comprar oi = new Comprar();
+                idt = reader["idfuncio"].ToString();
+
+                alteraçaodesenha oi = new alteraçaodesenha();
                 oi.Show();
+                oi.LoadScreen(idt);
+
+
+
 
             }
             else
@@ -157,6 +163,25 @@ namespace RestauranteADM.BASE.Recuperação
 
             }
 
+
+
+
+        }
+
+        public void mundançadesenha(int id,string login,string senha)
+        {
+
+            string script = @"UPDATE Recuperaçao set Senha=@ds_senha ,Login=@nm_login where idfuncio=@idfuncio";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+
+            parms.Add(new MySqlParameter("idfuncio", id));
+            parms.Add(new MySqlParameter("ds_senha", senha));
+            parms.Add(new MySqlParameter("nm_login", login));
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
 
 

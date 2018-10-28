@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acesso\acesso.cs" />
+    <Compile Include="alteraçaodesenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alteraçaodesenha.Designer.cs">
+      <DependentUpon>alteraçaodesenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="BASE\criptografia\criptgrafia.cs" />
     <Compile Include="BASE\Estoque\Estoque View.cs" />
     <Compile Include="BASE\FluxoDeCaixa\FluxodecaixaBunisessView.cs" />
@@ -344,6 +350,9 @@
       <DependentUpon>telavendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Validacao.cs" />
+    <EmbeddedResource Include="alteraçaodesenha.resx">
+      <DependentUpon>alteraçaodesenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="cript.resx">
       <DependentUpon>cript.cs</DependentUpon>
     </EmbeddedResource>

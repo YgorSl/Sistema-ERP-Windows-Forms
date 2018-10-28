@@ -53,13 +53,6 @@ namespace RestauranteADM
 
               oi.verificacao(txtcodigo.Text);
 
-
-
-  
-
-
-
-
         }
     }
 }

@@ -35,15 +35,16 @@ namespace RestauranteADM.TELAS
                     {
                         btnConsultarProduto.Enabled = false;
                     }
-                }
-                else
-                {
+                    else
+                    {
 
-                    ProdutoBusiness bus = new ProdutoBusiness();
-                    List<ProdutoDTO> prod = bus.filtro(textBox1.Text);
+                        ProdutoBusiness bus = new ProdutoBusiness();
+                        List<ProdutoDTO> prod = bus.filtro(textBox1.Text);
 
-                    dgvcliente.DataSource = prod;
+                        dgvcliente.DataSource = prod;
+                    }
                 }
+               
             }
             catch
             {
@@ -73,14 +74,15 @@ namespace RestauranteADM.TELAS
 
                         this.dgvcliente.Columns["Column2"].Visible = false;
                     }
+                    else
+                    {
+                        ProdutoDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProdutoDTO;
+                        AlterarProduto frm = new AlterarProduto();
+                        frm.LoadScren(comp);
+                        frm.ShowDialog();
+                    }
                 }
-                else
-                {
-                    ProdutoDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProdutoDTO;
-                    AlterarProduto frm = new AlterarProduto();
-                    frm.LoadScren(comp);
-                    frm.ShowDialog();
-                }
+                
             }
             if (e.ColumnIndex == 4)
             {
@@ -91,20 +93,21 @@ namespace RestauranteADM.TELAS
 
                         this.dgvcliente.Columns["Column3"].Visible = false;
                     }
-                }
-                else
-                {
-                    DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (r == DialogResult.Yes)
+                    else
                     {
-                        ProdutoDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProdutoDTO;
+                        DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (r == DialogResult.Yes)
+                        {
+                            ProdutoDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProdutoDTO;
 
-                        ProdutoBusiness bus = new ProdutoBusiness();
-                        bus.Excluir(forn.Id);
+                            ProdutoBusiness bus = new ProdutoBusiness();
+                            bus.Excluir(forn.Id);
 
-                        MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
+               
 
             }
         }

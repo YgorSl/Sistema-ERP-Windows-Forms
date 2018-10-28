@@ -39,16 +39,17 @@ namespace RestauranteADM.TELAS.Consulta
                     if (acesso.usuariologado.permissaoalterarcardapio == false)
                     {
 
-                        this.dgvcardapio.Columns["Column2"].Visible = false;
+                        this.dgvcardapio.Columns["Column1"].Visible = false;
+                    }
+                    else
+                    {
+                        CardapioDTO comp = dgvcardapio.Rows[e.RowIndex].DataBoundItem as CardapioDTO;
+                        alterarcardapio oi = new alterarcardapio();
+                        oi.Loadscreen(comp);
+                        oi.Show();
                     }
                 }
-                else
-                {
-                    CardapioDTO comp = dgvcardapio.Rows[e.RowIndex].DataBoundItem as CardapioDTO;
-                    alterarcardapio oi = new alterarcardapio();
-                    oi.Loadscreen(comp);
-                    oi.Show();
-                }
+               
 
             }
             if (e.ColumnIndex == 5)
@@ -60,20 +61,21 @@ namespace RestauranteADM.TELAS.Consulta
 
                         this.dgvcardapio.Columns["Column2"].Visible = false;
                     }
-                }
-                else
-                {
-                    DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (r == DialogResult.Yes)
+                    else
                     {
-                        CardapioDTO forn = dgvcardapio.Rows[e.RowIndex].DataBoundItem as CardapioDTO;
+                        DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (r == DialogResult.Yes)
+                        {
+                            CardapioDTO forn = dgvcardapio.Rows[e.RowIndex].DataBoundItem as CardapioDTO;
 
-                        CardapioDatabase bus = new CardapioDatabase();
-                        bus.Remover(forn.Id);
+                            CardapioDatabase bus = new CardapioDatabase();
+                            bus.Remover(forn.Id);
 
-                        MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
+                
             }
         }
 
@@ -88,14 +90,15 @@ namespace RestauranteADM.TELAS.Consulta
                     {
                         btnConsultarCardapio.Enabled = false;
                     }
-                }
-                else
-                {
-                    CardapioBusiness bunisess = new CardapioBusiness();
-                    List<CardapioDTO> com = bunisess.lista(txtnome.Text, txttamanho.Text);
+                    else
+                    {
+                        CardapioBusiness bunisess = new CardapioBusiness();
+                        List<CardapioDTO> com = bunisess.lista(txtnome.Text, txttamanho.Text);
 
-                    dgvcardapio.DataSource = com;
+                        dgvcardapio.DataSource = com;
+                    }
                 }
+               
             }
             catch
             {

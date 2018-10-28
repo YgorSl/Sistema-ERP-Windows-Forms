@@ -32,22 +32,23 @@ namespace RestauranteADM.TELAS.Consulta
 
                         this.dgvcliente.Columns["j"].Visible = false;
                     }
-                }
-                else
-                {
-                    DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (r == DialogResult.Yes)
+                    else
                     {
-                        FolhaPagamentoDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as FolhaPagamentoDTO;
+                        DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (r == DialogResult.Yes)
+                        {
+                            FolhaPagamentoDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as FolhaPagamentoDTO;
 
-                        FolhaPagamentoDatabase bus = new FolhaPagamentoDatabase();
-                        bus.Remover(forn.Id);
+                            FolhaPagamentoDatabase bus = new FolhaPagamentoDatabase();
+                            bus.Remover(forn.Id);
 
-                        MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
+
             }
-             }
+        }
                  
 
         private void Consultar_Folha_de_Pagamento_Load(object sender, EventArgs e)
@@ -65,15 +66,16 @@ namespace RestauranteADM.TELAS.Consulta
                     {
                         btnConsultarFolha.Enabled = false;
                     }
-                }
-                else
-                {
+                    else
+                    {
 
-                    FolhaPagamentoBusiness bus = new FolhaPagamentoBusiness();
-                    List<FolhaPagamentoDTO> prod = bus.Consultar(txtnome.Text, txtcpf.Text);
+                        FolhaPagamentoBusiness bus = new FolhaPagamentoBusiness();
+                        List<FolhaPagamentoDTO> prod = bus.Consultar(txtnome.Text, txtcpf.Text);
 
-                    dgvcliente.DataSource = prod;
+                        dgvcliente.DataSource = prod;
+                    }
                 }
+               
             }
             catch
             {

@@ -21,8 +21,6 @@ namespace RestauranteADM.BASE.Usuario
 
 
 
-
-
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_login", dto.login));
             parms.Add(new MySqlParameter("ds_senha", dto.senha));
@@ -268,8 +266,6 @@ namespace RestauranteADM.BASE.Usuario
 
             string script = @"select * from tb_permissao where nm_login = @nm_login and ds_senha = @ds_senha";
 
-
-
             List<MySqlParameter> parametros = new List<MySqlParameter>();
             parametros.Add(new MySqlParameter("nm_login", login));
             parametros.Add(new MySqlParameter("ds_senha", senha));
@@ -328,24 +324,6 @@ namespace RestauranteADM.BASE.Usuario
         }
 
      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public void Alteraçao(UsuarioDTO dto)
         {
             string script = @"UPDATE tb_permissao SET nm_login =@nm_login,ds_senha=@ds_senha, id_funcionario = @id_funcionario ,perm_total=@perm_total,perm_cadastro=@perm_cadastro,perm_vendas=@perm_vendas,perm_compras=@perm_compras,perm_rh=@perm_rh,perm_financeiro=@perm_financeiro WHERE id_permissao = @id_permissao";

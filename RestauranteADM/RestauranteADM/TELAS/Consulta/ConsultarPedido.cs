@@ -22,14 +22,23 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaoconsultarpedido == false)
+                {
+                    btnConsultarPedido.Enabled = false;
+                }
+                else
+                {
+                    ComprasViewBusiness bus = new ComprasViewBusiness();
+                    List<ComprasView> compra = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
 
-                ComprasViewBusiness bus = new ComprasViewBusiness();
-                List<ComprasView> compra = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+                    gvprod.DataSource = compra;
+                }
 
-                gvprod.DataSource = compra;
-            
+
             }
+        }
 
         private void dtpdate_ValueChanged(object sender, EventArgs e)
         {

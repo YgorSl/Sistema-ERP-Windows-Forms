@@ -23,8 +23,60 @@ namespace RestauranteADM.TELAS._1._0._1
         public menu2()
         {
             InitializeComponent();
+            VerificarPermissoes();
         }
+        void VerificarPermissoes()
+        {
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaocadastro == false)
+                {
+                    btnmenucad.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaovendas == false)
+                {
+                    btnmenuven.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocompras == false)
+                {
+                    btnmenucom.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaoRH == false)
+                {
+                    btnmenurh.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaofinanceiro == false)
+                {
+                    btnmenufin.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaoestoque == false)
+                {
+                    btnmenuest.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarcliente == false)
+                {
+                    btnCadastrarCliente.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarfornecedor == false)
+                {
+                    btnCadastrarFornecedor.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarfuncionario == false)
+                {
+                    btnCadastrarFuncionario.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarproduto == false)
+                {
+                    btnCadastrarProduto.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaocadastrarcardapio == false)
+                {
+                    btnCadastrarCardapio.Enabled = false;
+                }
 
+
+            }
+        }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -57,13 +109,14 @@ namespace RestauranteADM.TELAS._1._0._1
 
 
 
-       
+
 
         private void MenuVertical_Paint_1(object sender, PaintEventArgs e)
         {
+            
+            
 
         }
-
         private void btn1_Click_1(object sender, EventArgs e)
         {
 
@@ -239,59 +292,9 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void panel2_Scroll(object sender, ScrollEventArgs e)
         {
-
-        }
-        void VerificarPermissoes()
-        {
-            if (acesso.usuariologado.permissaototal == false)
-            {
-                if (acesso.usuariologado.permissaocadastro == false)
-                {
-                    btnmenucad.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaovendas == false)
-                {
-                    btnmenuven.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaocompras == false)
-                {
-                    btnmenucom.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaoRH == false)
-                {
-                    btnmenurh.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaofinanceiro == false)
-                {
-                    btnmenufin.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaoestoque == false)
-                {
-                    btnmenuest.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaocadastrarcliente == false)
-                {
-                    btnCadastrarCliente.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaocadastrarfornecedor == false)
-                {
-                    btnCadastrarFornecedor.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaocadastrarfuncionario == false)
-                {
-                    btnCadastrarFuncionario.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaocadastrarproduto == false)
-                {
-                    btnCadastrarProduto.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaocadastrarcardapio == false)
-                {
-                    btnCadastrarCardapio.Enabled = false;
-                }
            
-
-            }
+            
+       
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -463,7 +466,9 @@ namespace RestauranteADM.TELAS._1._0._1
         {
 
         }
-
+           
+            
+        
         private void button13_Click(object sender, EventArgs e)
         {
 

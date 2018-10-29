@@ -31,8 +31,6 @@ namespace RestauranteADM.TELAS.recuperaçao
         {
 
 
-            txtmensagem.Text = senhar.recuperaçao(txtRecuperacao.Text);
-
 
         
         }

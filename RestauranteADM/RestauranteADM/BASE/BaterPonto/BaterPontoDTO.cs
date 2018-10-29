@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestauranteADM.BASE.BaterPonto
 {
-    class BaterPontoDTO
+    public class BaterPontoDTO
     {
         public int Id { get; set; }
         public int IdFuncionario { get; set; }
@@ -15,6 +15,5 @@ namespace RestauranteADM.BASE.BaterPonto
         public DateTime IdaAlmoço { get; set; }
         public DateTime VoltaAlmoço { get; set; }
         public DateTime Saida { get; set; }
-        public DateTime HorasExtras { get; set; }
     }
 }

@@ -141,6 +141,8 @@ namespace RestauranteADM.TELAS
                 dto.Cep = txtcep.Text;
                 dto.Bairro = txtbairro.Text;
                 dto.NumeroCasa = txtnumcasa.Text;
+                dto.Rua = txtrua.Text;
+                dto.Cidade = txtcidade.Text;
 
                 if (txtfisica.Checked == true)
                 {
@@ -162,7 +164,7 @@ namespace RestauranteADM.TELAS
 
 
 
-                dto.Cnpj = txtcnpj.Text;
+            
                 dto.anotaçao_cliente = rtvanotaçoes.Text;
 
 

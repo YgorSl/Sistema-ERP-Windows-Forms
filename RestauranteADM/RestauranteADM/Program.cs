@@ -25,7 +25,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new bater_ponto());
+            Application.Run(new Cadastrar_cliente());
         }
     }
 }

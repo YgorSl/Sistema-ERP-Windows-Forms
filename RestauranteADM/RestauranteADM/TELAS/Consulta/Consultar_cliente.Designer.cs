@@ -35,20 +35,22 @@
             this.btnConsultarCliente = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero_da_casa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo_Pessoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Data_Cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.anotaçao_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Data_Cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,11 +58,11 @@
             // 
             this.a.AutoSize = true;
             this.a.BackColor = System.Drawing.Color.Transparent;
-            this.a.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.a.ForeColor = System.Drawing.Color.White;
             this.a.Location = new System.Drawing.Point(90, 83);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(58, 17);
+            this.a.Size = new System.Drawing.Size(52, 16);
             this.a.TabIndex = 17;
             this.a.Text = "Cliente:";
             this.a.Click += new System.EventHandler(this.a_Click);
@@ -89,11 +91,11 @@
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(263, 42);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(183, 24);
+            this.label36.Size = new System.Drawing.Size(173, 25);
             this.label36.TabIndex = 47;
             this.label36.Text = "Consultar cliente";
             // 
@@ -101,7 +103,7 @@
             // 
             this.dgvcliente.AllowUserToAddRows = false;
             this.dgvcliente.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvcliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvcliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -110,17 +112,19 @@
             this.CPF,
             this.Telefone,
             this.CEP,
+            this.Cidade,
             this.Bairro,
+            this.Rua,
             this.Numero_da_casa,
             this.Tipo_Pessoa,
             this.Cnpj,
-            this.Data_Cadastro,
             this.anotaçao_cliente,
+            this.Data_Cadastro,
             this.Column2,
             this.Column1});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -133,6 +137,27 @@
             this.dgvcliente.Size = new System.Drawing.Size(752, 412);
             this.dgvcliente.TabIndex = 48;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(108, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 16);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "CPF:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Location = new System.Drawing.Point(152, 110);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(380, 20);
+            this.txtcpf.TabIndex = 50;
+            this.txtcpf.TextChanged += new System.EventHandler(this.txtcpf_TextChanged);
             // 
             // Nome
             // 
@@ -167,12 +192,26 @@
             this.CEP.Name = "CEP";
             this.CEP.ReadOnly = true;
             // 
+            // Cidade
+            // 
+            this.Cidade.DataPropertyName = "Cidade";
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            this.Cidade.ReadOnly = true;
+            // 
             // Bairro
             // 
             this.Bairro.DataPropertyName = "Bairro";
             this.Bairro.HeaderText = "Bairro";
             this.Bairro.Name = "Bairro";
             this.Bairro.ReadOnly = true;
+            // 
+            // Rua
+            // 
+            this.Rua.DataPropertyName = "Rua";
+            this.Rua.HeaderText = "Rua";
+            this.Rua.Name = "Rua";
+            this.Rua.ReadOnly = true;
             // 
             // Numero_da_casa
             // 
@@ -197,19 +236,19 @@
             this.Cnpj.Name = "Cnpj";
             this.Cnpj.ReadOnly = true;
             // 
-            // Data_Cadastro
-            // 
-            this.Data_Cadastro.DataPropertyName = "data_hoje";
-            this.Data_Cadastro.HeaderText = "Data_Cadastro";
-            this.Data_Cadastro.Name = "Data_Cadastro";
-            this.Data_Cadastro.ReadOnly = true;
-            // 
             // anotaçao_cliente
             // 
             this.anotaçao_cliente.DataPropertyName = "anotaçao_cliente";
             this.anotaçao_cliente.HeaderText = "anotaçao_cliente";
             this.anotaçao_cliente.Name = "anotaçao_cliente";
             this.anotaçao_cliente.ReadOnly = true;
+            // 
+            // Data_Cadastro
+            // 
+            this.Data_Cadastro.DataPropertyName = "data_hoje";
+            this.Data_Cadastro.HeaderText = "Data_Cadastro";
+            this.Data_Cadastro.Name = "Data_Cadastro";
+            this.Data_Cadastro.ReadOnly = true;
             // 
             // Column2
             // 
@@ -233,27 +272,6 @@
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column1.Width = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(108, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 17);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "CPF:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(152, 110);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(380, 20);
-            this.txtcpf.TabIndex = 50;
-            this.txtcpf.TextChanged += new System.EventHandler(this.txtcpf_TextChanged);
             // 
             // Consultar_cliente
             // 
@@ -293,12 +311,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
         private System.Windows.Forms.DataGridViewTextBoxColumn Bairro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rua;
         private System.Windows.Forms.DataGridViewTextBoxColumn Numero_da_casa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_Pessoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cnpj;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Data_Cadastro;
         private System.Windows.Forms.DataGridViewTextBoxColumn anotaçao_cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Data_Cadastro;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
     }

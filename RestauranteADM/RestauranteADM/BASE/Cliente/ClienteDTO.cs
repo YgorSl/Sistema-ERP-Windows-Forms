@@ -13,6 +13,8 @@ namespace RestauranteADM.BASE.Cliente
         public string Cpf { get; set; }
         public string Telefone { get; set; }
         public string Cep { get; set; }
+        public string Cidade { get; set; }
+        public string Rua { get; set; }
         public string Bairro { get; set; }
         public string NumeroCasa { get; set; }
         public string Tipopessoa { get; set; }

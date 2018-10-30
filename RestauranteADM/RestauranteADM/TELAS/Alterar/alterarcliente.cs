@@ -41,6 +41,8 @@ namespace RestauranteADM.TELAS.Alterar
             txtcnpj.Text = this.cliente.Cnpj;
             rtvanotaçoes.Text = this.cliente.anotaçao_cliente;
             dtphoje.Value = this.cliente.data_hoje;
+            txtrua.Text = this.cliente.Rua;
+            txtcidade.Text = this.cliente.Cidade;
 
 
 
@@ -57,6 +59,8 @@ namespace RestauranteADM.TELAS.Alterar
             cliente.Bairro = txtbairro.Text;
             cliente.NumeroCasa = txtnumcasa.Text;
             cliente.Cpf = txtcpf.Text;
+            cliente.Cidade = txtcidade.Text;
+            cliente.Rua = txtrua.Text;
 
             if (txtfisica.Checked == true)
             {

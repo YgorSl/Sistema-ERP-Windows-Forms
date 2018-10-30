@@ -12,15 +12,21 @@ namespace RestauranteADM.BASE.Cliente
     {
         public int Salvar(ClienteDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_cliente` (nm_nome,ds_cpf, ds_telefone, ds_cep, ds_bairro,ds_numero_casa, ds_tipo_pessoa, ds_cnpj, ds_anotaçao_cliente, ds_data_hoje) 
-                                                       VALUES (@nm_nome,@ds_cpf,@ds_telefone,@ds_cep,@ds_bairro,@ds_numero_casa,@ds_tipo_pessoa,@ds_cnpj,@ds_anotaçao_cliente,@ds_data_hoje);";
+            string script = @"INSERT INTO `mydb`.`tb_cliente` (nm_nome,ds_cpf, ds_telefone,ds_cep,ds_cidade, ds_bairro,ds_rua,ds_numero_casa, ds_tipo_pessoa, ds_cnpj, ds_anotaçao_cliente, ds_data_hoje) 
+                                                       VALUES (@nm_nome,@ds_cpf,@ds_telefone,@ds_cep,@ds_cidade,@ds_bairro,@ds_rua,@ds_numero_casa,@ds_tipo_pessoa,@ds_cnpj,@ds_anotaçao_cliente,@ds_data_hoje);";
+
+
+
+
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_nome", dto.Nome));
             parms.Add(new MySqlParameter("ds_cpf", dto.Cpf));
             parms.Add(new MySqlParameter("ds_telefone", dto.Telefone));
             parms.Add(new MySqlParameter("ds_cep", dto.Cep));
+            parms.Add(new MySqlParameter("ds_cidade", dto.Cidade));
             parms.Add(new MySqlParameter("ds_bairro", dto.Bairro));
+            parms.Add(new MySqlParameter("ds_rua", dto.Rua));
             parms.Add(new MySqlParameter("ds_numero_casa", dto.NumeroCasa));
             parms.Add(new MySqlParameter("ds_tipo_pessoa", dto.Tipopessoa));
             parms.Add(new MySqlParameter("ds_cnpj", dto.Cnpj));
@@ -37,7 +43,7 @@ namespace RestauranteADM.BASE.Cliente
 
         public void Update(ClienteDTO dto)
         {
-            string script = @"UPDATE tb_cliente SET nm_nome=@nm_nome ,ds_cpf=@ds_cpf, ds_telefone=@ds_telefone, ds_cep=@ds_cep, ds_bairro=@ds_bairro,ds_numero_casa=@ds_numero_casa, ds_tipo_pessoa=@ds_tipo_pessoa, ds_cnpj=@ds_cnpj, ds_anotaçao_cliente=@ds_anotaçao_cliente, ds_data_hoje=@ds_data_hoje   where id_cliente=@id_cliente";
+            string script = @"UPDATE tb_cliente SET nm_nome=@nm_nome ,ds_cpf=@ds_cpf, ds_telefone=@ds_telefone, ds_cep=@ds_cep, ds_cidade=@ds_cidade,ds_bairro=@ds_bairro,ds_rua=@ds_rua,ds_numero_casa=@ds_numero_casa, ds_tipo_pessoa=@ds_tipo_pessoa, ds_cnpj=@ds_cnpj, ds_anotaçao_cliente=@ds_anotaçao_cliente, ds_data_hoje=@ds_data_hoje   where id_cliente=@id_cliente";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_cliente", dto.Id));
@@ -45,7 +51,9 @@ namespace RestauranteADM.BASE.Cliente
             parms.Add(new MySqlParameter("ds_cpf", dto.Cpf));
             parms.Add(new MySqlParameter("ds_telefone", dto.Telefone));
             parms.Add(new MySqlParameter("ds_cep", dto.Cep));
+            parms.Add(new MySqlParameter("ds_cidade", dto.Cidade));
             parms.Add(new MySqlParameter("ds_bairro", dto.Bairro));
+            parms.Add(new MySqlParameter("ds_rua", dto.Rua));
             parms.Add(new MySqlParameter("ds_numero_casa", dto.NumeroCasa));
             parms.Add(new MySqlParameter("ds_tipo_pessoa", dto.Tipopessoa));
             parms.Add(new MySqlParameter("ds_cnpj", dto.Cnpj));
@@ -91,7 +99,9 @@ namespace RestauranteADM.BASE.Cliente
                 dto.Cpf = reader.GetString("ds_cpf");
                 dto.Telefone = reader.GetString("ds_telefone");
                 dto.Cep = reader.GetString("ds_cep");
+                dto.Cidade = reader.GetString("ds_cidade");
                 dto.Bairro = reader.GetString("ds_bairro");
+                dto.Rua = reader.GetString("ds_rua");
                 dto.NumeroCasa = reader.GetString("ds_numero_casa");
                 dto.Tipopessoa = reader.GetString("ds_tipo_pessoa");
                 dto.Cnpj = reader.GetString("ds_cnpj");
@@ -126,7 +136,9 @@ namespace RestauranteADM.BASE.Cliente
                 dto.Cpf = reader.GetString("ds_cpf");
                 dto.Telefone = reader.GetString("ds_telefone");
                 dto.Cep = reader.GetString("ds_cep");
+                dto.Cidade = reader.GetString("ds_cidade");
                 dto.Bairro = reader.GetString("ds_bairro");
+                dto.Rua = reader.GetString("ds_rua");
                 dto.NumeroCasa = reader.GetString("ds_numero_casa");
                 dto.Tipopessoa = reader.GetString("ds_tipo_pessoa");
                 dto.Cnpj = reader.GetString("ds_cnpj");

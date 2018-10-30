@@ -67,7 +67,7 @@ namespace RestauranteADM.TELAS
 
         private void dgvcliente_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 10)
+            if (e.ColumnIndex == 12)
             {
                 if (acesso.usuariologado.permissaototal == false)
                 {
@@ -85,7 +85,7 @@ namespace RestauranteADM.TELAS
                
 
             }
-            if (e.ColumnIndex == 11)
+            if (e.ColumnIndex == 13)
             {
                 if (acesso.usuariologado.permissaototal == false)
                 {

@@ -18,6 +18,22 @@ namespace RestauranteADM.TELAS.Consulta
         {
             InitializeComponent();
             dgvcliente.AutoGenerateColumns = false;
+            VerificarPermissoes();
+        }
+        void VerificarPermissoes()
+        {
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaoexcluirfolha == false)
+                {
+
+                    this.dgvcliente.Columns["j"].Visible = false;
+                }
+                if (acesso.usuariologado.permissaoconsultarfolha == false)
+                {
+                    btnConsultarFolha.Enabled = false;
+                }
+            }
         }
 
         private void dgvcliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -25,26 +41,16 @@ namespace RestauranteADM.TELAS.Consulta
 
             if (e.ColumnIndex == 15)
             {
-                if (acesso.usuariologado.permissaototal == false)
+                
+                DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (r == DialogResult.Yes)
                 {
-                    if (acesso.usuariologado.permissaoexcluirfolha == false)
-                    {
+                    FolhaPagamentoDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as FolhaPagamentoDTO;
 
-                        this.dgvcliente.Columns["j"].Visible = false;
-                    }
-                    else
-                    {
-                        DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        if (r == DialogResult.Yes)
-                        {
-                            FolhaPagamentoDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as FolhaPagamentoDTO;
+                    FolhaPagamentoDatabase bus = new FolhaPagamentoDatabase();
+                    bus.Remover(forn.Id);
 
-                            FolhaPagamentoDatabase bus = new FolhaPagamentoDatabase();
-                            bus.Remover(forn.Id);
-
-                            MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
+                    MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
             }
@@ -60,22 +66,13 @@ namespace RestauranteADM.TELAS.Consulta
         {
             try
             {
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoconsultarfolha == false)
-                    {
-                        btnConsultarFolha.Enabled = false;
-                    }
-                    else
-                    {
+                
+                FolhaPagamentoBusiness bus = new FolhaPagamentoBusiness();
+                List<FolhaPagamentoDTO> prod = bus.Consultar(txtnome.Text, txtcpf.Text);
 
-                        FolhaPagamentoBusiness bus = new FolhaPagamentoBusiness();
-                        List<FolhaPagamentoDTO> prod = bus.Consultar(txtnome.Text, txtcpf.Text);
+                dgvcliente.DataSource = prod;
 
-                        dgvcliente.DataSource = prod;
-                    }
-                }
-               
+
             }
             catch
             {

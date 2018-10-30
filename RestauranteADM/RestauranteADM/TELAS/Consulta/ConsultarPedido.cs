@@ -18,9 +18,9 @@ namespace RestauranteADM.TELAS.Consulta
         {
             InitializeComponent();
             gvprod.AutoGenerateColumns = false;
+            VerificarPermissoes();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        void VerificarPermissoes()
         {
             if (acesso.usuariologado.permissaototal == false)
             {
@@ -28,16 +28,17 @@ namespace RestauranteADM.TELAS.Consulta
                 {
                     btnConsultarPedido.Enabled = false;
                 }
-                else
-                {
-                    ComprasViewBusiness bus = new ComprasViewBusiness();
-                    List<ComprasView> compra = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
-
-                    gvprod.DataSource = compra;
-                }
-
-
             }
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+            ComprasViewBusiness bus = new ComprasViewBusiness();
+            List<ComprasView> compra = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+
+            gvprod.DataSource = compra;
         }
 
         private void dtpdate_ValueChanged(object sender, EventArgs e)

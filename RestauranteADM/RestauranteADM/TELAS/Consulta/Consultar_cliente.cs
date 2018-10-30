@@ -21,7 +21,29 @@ namespace RestauranteADM.TELAS
             InitializeComponent();
 
             dgvcliente.AutoGenerateColumns = false;
+            VerificarPermissoes();
         }
+        void VerificarPermissoes()
+        {
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaoconsultarcliente == false)
+                {
+                    btnConsultarCliente.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaoalterarcliente == false)
+                {
+                    this.dgvcliente.Columns["Column2"].Visible = false;
+                }
+                if (acesso.usuariologado.permissaoexcluircliente == false)
+                {
+
+                    this.dgvcliente.Columns["Column1"].Visible = false;
+                }
+
+            }
+        }
+
 
         private void dgvcliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -42,22 +64,13 @@ namespace RestauranteADM.TELAS
         {
             try
             {
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoconsultarcliente == false)
-                    {
-                        btnConsultarCliente.Enabled = false;
-                    }
-                    else
-                    {
+                
 
-                        ClienteBusiness bunisess = new ClienteBusiness();
-                        List<ClienteDTO> com = bunisess.filtro(txtcliente.Text, txtcpf.Text);
+                ClienteBusiness bunisess = new ClienteBusiness();
+                List<ClienteDTO> com = bunisess.filtro(txtcliente.Text, txtcpf.Text);
 
-                        dgvcliente.DataSource = com;
-                    }
-                }
-             
+                dgvcliente.DataSource = com;
+
             }
             catch
             {
@@ -69,48 +82,27 @@ namespace RestauranteADM.TELAS
         {
             if (e.ColumnIndex == 12)
             {
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoalterarcliente == false)
-                        this.dgvcliente.Columns["Column1"].Visible = false;
-                    else
-                    {
-
-                        ClienteDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
-                        alterarcliente frm = new alterarcliente();
-                        frm.Loadscreen(comp);
-                        frm.Show();
-                    }
-                }
                
+                ClienteDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
+                alterarcliente frm = new alterarcliente();
+                frm.Loadscreen(comp);
+                frm.Show();
+
 
             }
             if (e.ColumnIndex == 13)
             {
-                if (acesso.usuariologado.permissaototal == false)
+                
+                DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (r == DialogResult.Yes)
                 {
-                    if (acesso.usuariologado.permissaoexcluircliente == false)
-                    {
+                    ClienteDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
 
-                        this.dgvcliente.Columns["Column2"].Visible = false;
-                    }
-                    else
-                    {
+                    ClienteDatabase bus = new ClienteDatabase();
+                    bus.Remover(forn.Id);
 
-
-                        DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        if (r == DialogResult.Yes)
-                        {
-                            ClienteDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ClienteDTO;
-
-                            ClienteDatabase bus = new ClienteDatabase();
-                            bus.Remover(forn.Id);
-
-                            MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-               
-                    }
+                    MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
             

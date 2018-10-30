@@ -18,9 +18,9 @@ namespace RestauranteADM.TELAS.Consulta
         {
             InitializeComponent();
             dgvvendas.AutoGenerateColumns = false;
+            VerificarPermissoes();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        void VerificarPermissoes()
         {
             if (acesso.usuariologado.permissaototal == false)
             {
@@ -28,15 +28,18 @@ namespace RestauranteADM.TELAS.Consulta
                 {
                     btnConsultarVenda.Enabled = false;
                 }
-                else
-                {
-                    VendasViewBunisess bus = new VendasViewBunisess();
-                    List<VendasViewDto> vendas = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
 
-                    dgvvendas.DataSource = vendas;
-                }
             }
-           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            VendasViewBunisess bus = new VendasViewBunisess();
+            List<VendasViewDto> vendas = bus.Filtro(dti.Value.Date, dtpdate.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+
+            dgvvendas.DataSource = vendas;
+
         }
 
         private void dgvvendas_CellContentClick(object sender, DataGridViewCellEventArgs e)

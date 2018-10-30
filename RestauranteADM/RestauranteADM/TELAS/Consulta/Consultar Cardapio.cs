@@ -18,6 +18,28 @@ namespace RestauranteADM.TELAS.Consulta
         {
             InitializeComponent();
             dgvcardapio.AutoGenerateColumns = false;
+            VerificarPermissoes();
+        }
+        void VerificarPermissoes()
+        {
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaoalterarcardapio == false)
+                {
+
+                    this.dgvcardapio.Columns["Column2"].Visible = false;
+                }
+                if (acesso.usuariologado.permissaoexcluircardapio == false)
+                {
+
+                    this.dgvcardapio.Columns["Column3"].Visible = false;
+                }
+                if (acesso.usuariologado.permissaoconsultarcardapio == false)
+                {
+                    btnConsultarCardapio.Enabled = false;
+                }
+
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -34,71 +56,44 @@ namespace RestauranteADM.TELAS.Consulta
         {
             if (e.ColumnIndex == 4)
             {
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoalterarcardapio == false)
-                    {
-
-                        this.dgvcardapio.Columns["Column1"].Visible = false;
-                    }
-                    else
-                    {
-                        CardapioDTO comp = dgvcardapio.Rows[e.RowIndex].DataBoundItem as CardapioDTO;
-                        alterarcardapio oi = new alterarcardapio();
-                        oi.Loadscreen(comp);
-                        oi.Show();
-                    }
-                }
-               
+                CardapioDTO comp = dgvcardapio.Rows[e.RowIndex].DataBoundItem as CardapioDTO;
+                alterarcardapio oi = new alterarcardapio();
+                oi.Loadscreen(comp);
+                oi.Show();
 
             }
+
+
             if (e.ColumnIndex == 5)
             {
-                if (acesso.usuariologado.permissaototal == false)
+
+
+                DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (r == DialogResult.Yes)
                 {
-                    if (acesso.usuariologado.permissaoexcluircardapio == false)
-                    {
+                    CardapioDTO forn = dgvcardapio.Rows[e.RowIndex].DataBoundItem as CardapioDTO;
 
-                        this.dgvcardapio.Columns["Column2"].Visible = false;
-                    }
-                    else
-                    {
-                        DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        if (r == DialogResult.Yes)
-                        {
-                            CardapioDTO forn = dgvcardapio.Rows[e.RowIndex].DataBoundItem as CardapioDTO;
+                    CardapioDatabase bus = new CardapioDatabase();
+                    bus.Remover(forn.Id);
 
-                            CardapioDatabase bus = new CardapioDatabase();
-                            bus.Remover(forn.Id);
-
-                            MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
+                    MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                
+
             }
+
         }
+    
 
         private void button1_Click(object sender, EventArgs e)
         {
             try
             {
 
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoconsultarcardapio == false)
-                    {
-                        btnConsultarCardapio.Enabled = false;
-                    }
-                    else
-                    {
-                        CardapioBusiness bunisess = new CardapioBusiness();
-                        List<CardapioDTO> com = bunisess.lista(txtnome.Text, txttamanho.Text);
+                CardapioBusiness bunisess = new CardapioBusiness();
+                List<CardapioDTO> com = bunisess.lista(txtnome.Text, txttamanho.Text);
 
-                        dgvcardapio.DataSource = com;
-                    }
-                }
-               
+                dgvcardapio.DataSource = com;
+
             }
             catch
             {

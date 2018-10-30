@@ -23,6 +23,27 @@ namespace RestauranteADM.TELAS.Consulta
             InitializeComponent();
 
             dgvfuncio.AutoGenerateColumns = false;
+            VerificarPermissoes();
+        }
+        void VerificarPermissoes()
+        {
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaoconsultarfuncionario == false)
+                {
+                    btnConsultarFuncionario.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaoalterarfuncionario == false)
+                {
+
+                    this.dgvfuncio.Columns["Colunm2"].Visible = false;
+                }
+                if (acesso.usuariologado.permissaoexcluirfuncionario == false)
+                {
+
+                    this.dgvfuncio.Columns["Colunm1"].Visible = false;
+                }
+            }
         }
 
 
@@ -48,23 +69,13 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (acesso.usuariologado.permissaototal == false)
-            {
-                if (acesso.usuariologado.permissaoconsultarfuncionario == false)
-                {
-                    btnConsultarFuncionario.Enabled = false;
-                }
-                else
-                {
-                    FuncionarioBusiness ii = new FuncionarioBusiness();
-                    List<FuncionarioDTO> opi = ii.filtro(txtfuncio.Text, txtcpf.Text);
+            
+            FuncionarioBusiness ii = new FuncionarioBusiness();
+            List<FuncionarioDTO> opi = ii.filtro(txtfuncio.Text, txtcpf.Text);
 
 
-                    dgvfuncio.DataSource = opi;
-                }
+            dgvfuncio.DataSource = opi;
 
-            }
-           
 
         }
     
@@ -79,52 +90,29 @@ namespace RestauranteADM.TELAS.Consulta
             if(e.ColumnIndex == 6)
             {
 
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoalterarfuncionario == false)
-                    {
-
-                        this.dgvfuncio.Columns["Colunm2"].Visible = false;
-                    }
-                    else
-                    {
-                        FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
+               
+                FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
 
 
-                        alterarfuncionario menu = new alterarfuncionario();
-                        menu.Loadscreen(pr);
-                        menu.ShowDialog();
-
-                    }
-
-                }
+                alterarfuncionario menu = new alterarfuncionario();
+                menu.Loadscreen(pr);
+                menu.ShowDialog();
 
             }
             if (e.ColumnIndex == 7)
             {
-                if (acesso.usuariologado.permissaototal == false)
+               
+                DialogResult r = MessageBox.Show("vai excluir mesmo", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
                 {
-                    if (acesso.usuariologado.permissaoexcluirfuncionario == false)
-                    {
+                    FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
 
-                        this.dgvfuncio.Columns["Colunm1"].Visible = false;
-                    }
-                    else
-                    {
-                        DialogResult r = MessageBox.Show("vai excluir mesmo", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (r == DialogResult.Yes)
-                        {
-                            FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
+                    FuncionarioBusiness funciobu = new FuncionarioBusiness();
+                    funciobu.Remover(pr.Id);
 
-                            FuncionarioBusiness funciobu = new FuncionarioBusiness();
-                            funciobu.Remover(pr.Id);
-
-                            MessageBox.Show("foi");
-                        }
-                    }
-
+                    MessageBox.Show("foi");
                 }
-                
+
             }
         }
 

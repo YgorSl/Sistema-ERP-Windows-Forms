@@ -18,6 +18,27 @@ namespace RestauranteADM.TELAS
         {
             InitializeComponent();
             dgvcliente.AutoGenerateColumns = false;
+            VerificarPermissoes();
+        }
+        void VerificarPermissoes()
+        {
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaoconsultarproduto == false)
+                {
+                    btnConsultarProduto.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaoalterarproduto == false)
+                {
+
+                    this.dgvcliente.Columns["Column2"].Visible = false;
+                }
+                if (acesso.usuariologado.permissaoexcluirproduto == false)
+                {
+
+                    this.dgvcliente.Columns["Column3"].Visible = false;
+                }
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -29,22 +50,12 @@ namespace RestauranteADM.TELAS
         {
             try
             {
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoconsultarproduto == false)
-                    {
-                        btnConsultarProduto.Enabled = false;
-                    }
-                    else
-                    {
+                
+                ProdutoBusiness bus = new ProdutoBusiness();
+                List<ProdutoDTO> prod = bus.filtro(textBox1.Text);
 
-                        ProdutoBusiness bus = new ProdutoBusiness();
-                        List<ProdutoDTO> prod = bus.filtro(textBox1.Text);
+                dgvcliente.DataSource = prod;
 
-                        dgvcliente.DataSource = prod;
-                    }
-                }
-               
             }
             catch
             {
@@ -67,47 +78,27 @@ namespace RestauranteADM.TELAS
         {
             if (e.ColumnIndex == 3)
             {
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoalterarproduto == false)
-                    {
-
-                        this.dgvcliente.Columns["Column2"].Visible = false;
-                    }
-                    else
-                    {
-                        ProdutoDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProdutoDTO;
-                        AlterarProduto frm = new AlterarProduto();
-                        frm.LoadScren(comp);
-                        frm.ShowDialog();
-                    }
-                }
                 
+                ProdutoDTO comp = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProdutoDTO;
+                AlterarProduto frm = new AlterarProduto();
+                frm.LoadScren(comp);
+                frm.ShowDialog();
+
             }
             if (e.ColumnIndex == 4)
             {
-                if (acesso.usuariologado.permissaototal == false)
-                {
-                    if (acesso.usuariologado.permissaoexcluirproduto == false)
-                    {
-
-                        this.dgvcliente.Columns["Column3"].Visible = false;
-                    }
-                    else
-                    {
-                        DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        if (r == DialogResult.Yes)
-                        {
-                            ProdutoDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProdutoDTO;
-
-                            ProdutoBusiness bus = new ProdutoBusiness();
-                            bus.Excluir(forn.Id);
-
-                            MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
                
+                DialogResult r = MessageBox.Show("Deseja excluir o  registro?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (r == DialogResult.Yes)
+                {
+                    ProdutoDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProdutoDTO;
+
+                    ProdutoBusiness bus = new ProdutoBusiness();
+                    bus.Excluir(forn.Id);
+
+                    MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
 
             }
         }

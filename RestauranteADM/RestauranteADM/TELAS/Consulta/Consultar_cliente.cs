@@ -21,28 +21,9 @@ namespace RestauranteADM.TELAS
             InitializeComponent();
 
             dgvcliente.AutoGenerateColumns = false;
-            VerificarPermissoes();
+          
         }
-        void VerificarPermissoes()
-        {
-            if (acesso.usuariologado.permissaototal == false)
-            {
-                if (acesso.usuariologado.permissaoconsultarcliente == false)
-                {
-                    btnConsultarCliente.Enabled = false;
-                }
-                if (acesso.usuariologado.permissaoalterarcliente == false)
-                {
-                    this.dgvcliente.Columns["Column2"].Visible = false;
-                }
-                if (acesso.usuariologado.permissaoexcluircliente == false)
-                {
-
-                    this.dgvcliente.Columns["Column1"].Visible = false;
-                }
-
-            }
-        }
+       
 
 
         private void dgvcliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -62,8 +43,7 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+           
                 
 
                 ClienteBusiness bunisess = new ClienteBusiness();
@@ -71,11 +51,8 @@ namespace RestauranteADM.TELAS
 
                 dgvcliente.DataSource = com;
 
-            }
-            catch
-            {
-                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
-            }
+       
+       
         }
 
         private void dgvcliente_CellContentClick_1(object sender, DataGridViewCellEventArgs e)

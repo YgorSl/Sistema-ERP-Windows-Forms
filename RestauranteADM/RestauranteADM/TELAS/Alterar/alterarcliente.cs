@@ -33,12 +33,12 @@ namespace RestauranteADM.TELAS.Alterar
             this.cliente = cliente;
 
             txtnome.Text = this.cliente.Nome;
-            txtcpf.Text = this.cliente.Cpf;
+            mtbcpf.Text = this.cliente.Cpf;
             txttelefone.Text = this.cliente.Telefone;
-            txtcep.Text = this.cliente.Cep;
+            mbtcep.Text = this.cliente.Cep;
             txtbairro.Text = this.cliente.Bairro;
             txtnumcasa.Text = this.cliente.NumeroCasa;
-            txtcnpj.Text = this.cliente.Cnpj;
+            mtbcnpj.Text = this.cliente.Cnpj;
             rtvanotaçoes.Text = this.cliente.anotaçao_cliente;
             dtphoje.Value = this.cliente.data_hoje;
             txtrua.Text = this.cliente.Rua;
@@ -55,10 +55,10 @@ namespace RestauranteADM.TELAS.Alterar
             cliente.Nome = txtnome.Text;
           
             cliente.Telefone = txttelefone.Text;
-            cliente.Cep = txtcep.Text;
+            cliente.Cep = mbtcep.Text;
             cliente.Bairro = txtbairro.Text;
             cliente.NumeroCasa = txtnumcasa.Text;
-            cliente.Cpf = txtcpf.Text;
+            cliente.Cpf = mtbcpf.Text;
             cliente.Cidade = txtcidade.Text;
             cliente.Rua = txtrua.Text;
 
@@ -76,7 +76,7 @@ namespace RestauranteADM.TELAS.Alterar
 
             }
 
-            cliente.Cnpj = txtcnpj.Text;
+            cliente.Cnpj = mtbcnpj.Text;
             cliente.anotaçao_cliente = rtvanotaçoes.Text;
 
 
@@ -104,14 +104,16 @@ namespace RestauranteADM.TELAS.Alterar
         {
             if (txtfisica.Checked == true)
             {
-                txtcnpj.Enabled = false;
+                mtbcnpj.Enabled = false;
+                mtbcnpj.Text = "-";
 
             }
             else
             {
-                txtcnpj.Enabled = true;
-
+                mtbcnpj.Enabled = true;
+                mtbcnpj.Text = string.Empty;
             }
+
 
         }
 
@@ -119,16 +121,18 @@ namespace RestauranteADM.TELAS.Alterar
         {
             if (txtjuridica.Checked == true)
             {
-                txtcpf.Enabled = false;
+                mtbcpf.Enabled = false;
+                mtbcpf.Text = "-";
 
             }
             else
             {
-                txtcpf.Enabled = true;
+                mtbcpf.Enabled = true;
+                mtbcpf.Text = string.Empty;
 
             }
 
-        
+
 
         }
 

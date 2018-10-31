@@ -34,13 +34,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txttelefone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtcep = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.TextBox();
-            this.txtcnpj = new System.Windows.Forms.TextBox();
             this.txtnumcasa = new System.Windows.Forms.TextBox();
             this.txtbairro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,11 +49,14 @@
             this.txtjuridica = new System.Windows.Forms.RadioButton();
             this.txtfisica = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtrua = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.txtcidade = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.txtrua = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
+            this.mbtcep = new System.Windows.Forms.MaskedTextBox();
+            this.mtbcnpj = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -130,14 +130,6 @@
             this.label2.Text = "CEP";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtcep
-            // 
-            this.txtcep.Location = new System.Drawing.Point(138, 152);
-            this.txtcep.Name = "txtcep";
-            this.txtcep.Size = new System.Drawing.Size(262, 20);
-            this.txtcep.TabIndex = 23;
-            this.txtcep.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -181,22 +173,6 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Bairro";
             this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(138, 78);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(262, 20);
-            this.txtcpf.TabIndex = 21;
-            this.txtcpf.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
-            // txtcnpj
-            // 
-            this.txtcnpj.Location = new System.Drawing.Point(138, 320);
-            this.txtcnpj.Name = "txtcnpj";
-            this.txtcnpj.Size = new System.Drawing.Size(262, 20);
-            this.txtcnpj.TabIndex = 26;
-            this.txtcnpj.TextChanged += new System.EventHandler(this.textBox7_TextChanged);
             // 
             // txtnumcasa
             // 
@@ -303,6 +279,9 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.mtbcnpj);
+            this.panel1.Controls.Add(this.mbtcep);
+            this.panel1.Controls.Add(this.mtbcpf);
             this.panel1.Controls.Add(this.txtcidade);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.txtrua);
@@ -311,12 +290,9 @@
             this.panel1.Controls.Add(this.txtjuridica);
             this.panel1.Controls.Add(this.lbl1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtcnpj);
             this.panel1.Controls.Add(this.txtnumcasa);
             this.panel1.Controls.Add(this.txtbairro);
-            this.panel1.Controls.Add(this.txtcep);
             this.panel1.Controls.Add(this.txttelefone);
-            this.panel1.Controls.Add(this.txtcpf);
             this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label6);
@@ -329,17 +305,23 @@
             this.panel1.Size = new System.Drawing.Size(422, 439);
             this.panel1.TabIndex = 82;
             // 
-            // panel2
+            // txtcidade
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.rtvanotaçoes);
-            this.panel2.Controls.Add(this.dtphoje);
-            this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(479, 129);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(247, 241);
-            this.panel2.TabIndex = 83;
+            this.txtcidade.Location = new System.Drawing.Point(138, 190);
+            this.txtcidade.Name = "txtcidade";
+            this.txtcidade.Size = new System.Drawing.Size(262, 20);
+            this.txtcidade.TabIndex = 85;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(65, 194);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(52, 16);
+            this.label11.TabIndex = 84;
+            this.label11.Text = "Cidade";
             // 
             // txtrua
             // 
@@ -359,23 +341,41 @@
             this.label8.TabIndex = 82;
             this.label8.Text = "Rua";
             // 
-            // txtcidade
+            // panel2
             // 
-            this.txtcidade.Location = new System.Drawing.Point(138, 190);
-            this.txtcidade.Name = "txtcidade";
-            this.txtcidade.Size = new System.Drawing.Size(262, 20);
-            this.txtcidade.TabIndex = 85;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.rtvanotaçoes);
+            this.panel2.Controls.Add(this.dtphoje);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(479, 129);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(247, 241);
+            this.panel2.TabIndex = 83;
             // 
-            // label11
+            // mtbcpf
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(65, 194);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 16);
-            this.label11.TabIndex = 84;
-            this.label11.Text = "Cidade";
+            this.mtbcpf.Location = new System.Drawing.Point(138, 77);
+            this.mtbcpf.Mask = "999.999.999-00";
+            this.mtbcpf.Name = "mtbcpf";
+            this.mtbcpf.Size = new System.Drawing.Size(262, 20);
+            this.mtbcpf.TabIndex = 86;
+            // 
+            // mbtcep
+            // 
+            this.mbtcep.Location = new System.Drawing.Point(138, 149);
+            this.mbtcep.Mask = "99999-999";
+            this.mbtcep.Name = "mbtcep";
+            this.mbtcep.Size = new System.Drawing.Size(262, 20);
+            this.mbtcep.TabIndex = 87;
+            // 
+            // mtbcnpj
+            // 
+            this.mtbcnpj.Location = new System.Drawing.Point(138, 317);
+            this.mtbcnpj.Mask = "99.999.999/9999-99";
+            this.mtbcnpj.Name = "mtbcnpj";
+            this.mtbcnpj.Size = new System.Drawing.Size(262, 20);
+            this.mtbcnpj.TabIndex = 88;
             // 
             // Cadastrar_cliente
             // 
@@ -411,13 +411,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txttelefone;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtcep;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtcpf;
-        private System.Windows.Forms.TextBox txtcnpj;
         private System.Windows.Forms.TextBox txtnumcasa;
         private System.Windows.Forms.TextBox txtbairro;
         private System.Windows.Forms.Label label1;
@@ -434,5 +431,8 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtrua;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.MaskedTextBox mbtcep;
+        private System.Windows.Forms.MaskedTextBox mtbcpf;
+        private System.Windows.Forms.MaskedTextBox mtbcnpj;
     }
 }

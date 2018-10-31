@@ -130,15 +130,15 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtnome.Text != string.Empty || txtcpf.Text != string.Empty || txttelefone.Text != string.Empty || txtcep.Text != string.Empty || txtbairro.Text != string.Empty || txtnumcasa.Text != string.Empty || txtfisica.Checked == false & txtjuridica.Checked == false)
+            if (txtnome.Text != string.Empty || mtbcpf.Text != string.Empty || txttelefone.Text != string.Empty || mbtcep.Text != string.Empty || txtbairro.Text != string.Empty || txtnumcasa.Text != string.Empty || txtfisica.Checked == false & txtjuridica.Checked == false)
             {
 
                 ClienteDTO dto = new ClienteDTO();
 
                 dto.Nome = txtnome.Text;
-                dto.Cpf = txtcpf.Text;
+                dto.Cpf = mtbcpf.Text;
                 dto.Telefone = txttelefone.Text;
-                dto.Cep = txtcep.Text;
+                dto.Cep = mbtcep.Text;
                 dto.Bairro = txtbairro.Text;
                 dto.NumeroCasa = txtnumcasa.Text;
                 dto.Rua = txtrua.Text;
@@ -147,24 +147,25 @@ namespace RestauranteADM.TELAS
                 if (txtfisica.Checked == true)
                 {
                     dto.Tipopessoa = "PF";
-                    dto.Cpf = txtcpf.Text;
+                    dto.Cpf = mtbcpf.Text;
 
 
                 }
-                else if (txtjuridica.Checked == true)
+                 if (txtjuridica.Checked == true)
                 {
                     dto.Tipopessoa = "PJ";
-                    dto.Cnpj = txtcnpj.Text;
+                   
 
 
                 }
 
+                dto.Cnpj = mtbcnpj.Text;
 
 
 
 
 
-            
+
                 dto.anotaçao_cliente = rtvanotaçoes.Text;
 
 
@@ -188,13 +189,14 @@ namespace RestauranteADM.TELAS
         {
             if (txtfisica.Checked == true)
             {
-                txtcnpj.Enabled = false;
+                mtbcnpj.Enabled = false;
+                mtbcnpj.Text = "-";
 
             }
             else
             {
-                txtcnpj.Enabled = true;
-
+                mtbcnpj.Enabled = true;
+                mtbcnpj.Text = string.Empty;
             }
 
         }
@@ -203,12 +205,14 @@ namespace RestauranteADM.TELAS
         {
             if (txtjuridica.Checked == true)
             {
-                txtcpf.Enabled = false;
+                mtbcpf.Enabled = false;
+                mtbcpf.Text = "-";
 
             }
             else
             {
-                txtcpf.Enabled = true;
+                mtbcpf.Enabled = true;
+              mtbcpf.Text = string.Empty;
 
             }
 

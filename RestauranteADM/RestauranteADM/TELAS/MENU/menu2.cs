@@ -96,14 +96,14 @@ namespace RestauranteADM.TELAS._1._0._1
 
         public void AbrirForminPanel(object Formhijo)
         {
-            if (this.panel10.Controls.Count > 0)
-                this.panel10.Controls.RemoveAt(0);
+            if (this.panel2.Controls.Count > 0)
+                this.panel2.Controls.RemoveAt(0);
             Form fh = Formhijo as Form;
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
             fh.Dock = DockStyle.Fill;
-            this.panel10.Controls.Add(fh);
-            this.panel10.Tag = fh;
+            this.panel2.Controls.Add(fh);
+            this.panel2.Tag = fh;
             fh.Show();
         }
 

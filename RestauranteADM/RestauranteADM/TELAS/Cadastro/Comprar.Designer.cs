@@ -54,7 +54,7 @@
             this.cboforn.Location = new System.Drawing.Point(48, 54);
             this.cboforn.Name = "cboforn";
             this.cboforn.Size = new System.Drawing.Size(204, 21);
-            this.cboforn.TabIndex = 54;
+            this.cboforn.TabIndex = 1;
             this.cboforn.SelectedIndexChanged += new System.EventHandler(this.cboforn_SelectedIndexChanged);
             // 
             // label1
@@ -73,7 +73,7 @@
             this.nupt.Location = new System.Drawing.Point(48, 174);
             this.nupt.Name = "nupt";
             this.nupt.Size = new System.Drawing.Size(204, 20);
-            this.nupt.TabIndex = 55;
+            this.nupt.TabIndex = 2;
             this.nupt.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label2
@@ -106,7 +106,7 @@
             this.button1.Location = new System.Drawing.Point(201, 307);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 47);
-            this.button1.TabIndex = 85;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Colocar no Carrinho";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -216,7 +216,7 @@
             this.button2.Location = new System.Drawing.Point(22, 331);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 95;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);

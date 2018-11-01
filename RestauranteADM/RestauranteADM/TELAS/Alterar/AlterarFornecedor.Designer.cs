@@ -60,7 +60,7 @@
             this.txtcid.Location = new System.Drawing.Point(110, 195);
             this.txtcid.Name = "txtcid";
             this.txtcid.Size = new System.Drawing.Size(203, 20);
-            this.txtcid.TabIndex = 14;
+            this.txtcid.TabIndex = 5;
             // 
             // label2
             // 
@@ -133,21 +133,21 @@
             this.txtnome.Location = new System.Drawing.Point(110, 75);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(203, 20);
-            this.txtnome.TabIndex = 35;
+            this.txtnome.TabIndex = 1;
             // 
             // txtest
             // 
             this.txtest.Location = new System.Drawing.Point(110, 225);
             this.txtest.Name = "txtest";
             this.txtest.Size = new System.Drawing.Size(203, 20);
-            this.txtest.TabIndex = 36;
+            this.txtest.TabIndex = 6;
             // 
             // txtend
             // 
             this.txtend.Location = new System.Drawing.Point(110, 255);
             this.txtend.Name = "txtend";
             this.txtend.Size = new System.Drawing.Size(203, 20);
-            this.txtend.TabIndex = 37;
+            this.txtend.TabIndex = 7;
             // 
             // button1
             // 
@@ -156,7 +156,7 @@
             this.button1.Location = new System.Drawing.Point(238, 328);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 40;
+            this.button1.TabIndex = 9;
             this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -180,7 +180,7 @@
             this.button2.Location = new System.Drawing.Point(151, 328);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 48;
+            this.button2.TabIndex = 10;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -237,7 +237,7 @@
             this.txtcep.Mask = "99999-999";
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(203, 20);
-            this.txtcep.TabIndex = 92;
+            this.txtcep.TabIndex = 3;
             // 
             // label7
             // 
@@ -255,7 +255,7 @@
             this.txtbairro.Location = new System.Drawing.Point(110, 285);
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(203, 20);
-            this.txtbairro.TabIndex = 97;
+            this.txtbairro.TabIndex = 8;
             // 
             // label9
             // 
@@ -274,7 +274,7 @@
             this.txtcnpj.Mask = "99.999.999/9999-99";
             this.txtcnpj.Name = "txtcnpj";
             this.txtcnpj.Size = new System.Drawing.Size(204, 20);
-            this.txtcnpj.TabIndex = 98;
+            this.txtcnpj.TabIndex = 2;
             // 
             // txttelefone
             // 
@@ -282,7 +282,7 @@
             this.txttelefone.Mask = "+99(99)9999-9999";
             this.txttelefone.Name = "txttelefone";
             this.txttelefone.Size = new System.Drawing.Size(204, 20);
-            this.txttelefone.TabIndex = 99;
+            this.txttelefone.TabIndex = 4;
             this.txttelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
             // 
             // AlterarFornecedor

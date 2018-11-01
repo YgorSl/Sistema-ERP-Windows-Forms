@@ -53,10 +53,10 @@
             this.Column4,
             this.Column1});
             this.gvprod.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gvprod.Location = new System.Drawing.Point(0, 185);
+            this.gvprod.Location = new System.Drawing.Point(0, 188);
             this.gvprod.Name = "gvprod";
             this.gvprod.ReadOnly = true;
-            this.gvprod.Size = new System.Drawing.Size(752, 412);
+            this.gvprod.Size = new System.Drawing.Size(752, 461);
             this.gvprod.TabIndex = 0;
             this.gvprod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvprod_CellContentClick);
             // 
@@ -163,7 +163,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(752, 597);
+            this.ClientSize = new System.Drawing.Size(752, 649);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpdate);
             this.Controls.Add(this.dti);

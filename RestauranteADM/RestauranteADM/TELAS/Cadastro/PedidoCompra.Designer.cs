@@ -35,13 +35,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.gvprod = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label36 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gvprod)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +52,7 @@
             this.cboforn.Location = new System.Drawing.Point(34, 39);
             this.cboforn.Name = "cboforn";
             this.cboforn.Size = new System.Drawing.Size(204, 21);
-            this.cboforn.TabIndex = 52;
+            this.cboforn.TabIndex = 1;
             // 
             // label1
             // 
@@ -81,7 +81,7 @@
             this.dtpdate.Location = new System.Drawing.Point(24, 97);
             this.dtpdate.Name = "dtpdate";
             this.dtpdate.Size = new System.Drawing.Size(212, 20);
-            this.dtpdate.TabIndex = 54;
+            this.dtpdate.TabIndex = 2;
             // 
             // label3
             // 
@@ -101,7 +101,7 @@
             this.button1.Location = new System.Drawing.Point(163, 143);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 85;
+            this.button1.TabIndex = 3;
             this.button1.Text = "Adicionar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -122,6 +122,29 @@
             this.gvprod.TabIndex = 86;
             this.gvprod.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvprod_CellContentClick);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id";
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Nome
+            // 
+            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Nome.DataPropertyName = "Nome";
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "Preço";
+            this.Column2.HeaderText = "Preço";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -141,7 +164,7 @@
             this.button2.Location = new System.Drawing.Point(477, 509);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(157, 36);
-            this.button2.TabIndex = 88;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Finalizar Compra";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -172,29 +195,6 @@
             this.label36.Size = new System.Drawing.Size(81, 24);
             this.label36.TabIndex = 90;
             this.label36.Text = "Pedido";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Nome
-            // 
-            this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nome.DataPropertyName = "Nome";
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            this.Nome.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.DataPropertyName = "Preço";
-            this.Column2.HeaderText = "Preço";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // PedidoCompra
             // 

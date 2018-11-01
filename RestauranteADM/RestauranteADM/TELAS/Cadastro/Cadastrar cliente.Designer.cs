@@ -69,7 +69,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(274, 61);
+            this.label36.Location = new System.Drawing.Point(260, 61);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(189, 24);
             this.label36.TabIndex = 47;
@@ -80,10 +80,10 @@
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(569, 529);
+            this.button1.Location = new System.Drawing.Point(555, 529);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(157, 36);
-            this.button1.TabIndex = 66;
+            this.button1.TabIndex = 14;
             this.button1.Text = "Cadastrar ";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -116,7 +116,7 @@
             this.dtphoje.Location = new System.Drawing.Point(27, 54);
             this.dtphoje.Name = "dtphoje";
             this.dtphoje.Size = new System.Drawing.Size(200, 20);
-            this.dtphoje.TabIndex = 74;
+            this.dtphoje.TabIndex = 12;
             this.dtphoje.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // rtvanotaçoes
@@ -124,7 +124,7 @@
             this.rtvanotaçoes.Location = new System.Drawing.Point(27, 112);
             this.rtvanotaçoes.Name = "rtvanotaçoes";
             this.rtvanotaçoes.Size = new System.Drawing.Size(193, 224);
-            this.rtvanotaçoes.TabIndex = 76;
+            this.rtvanotaçoes.TabIndex = 13;
             this.rtvanotaçoes.Text = "";
             // 
             // label2
@@ -205,7 +205,7 @@
             this.txtnome.Location = new System.Drawing.Point(123, 34);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(245, 20);
-            this.txtnome.TabIndex = 20;
+            this.txtnome.TabIndex = 1;
             this.txtnome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtbairro
@@ -213,7 +213,7 @@
             this.txtbairro.Location = new System.Drawing.Point(123, 209);
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(245, 20);
-            this.txtbairro.TabIndex = 24;
+            this.txtbairro.TabIndex = 6;
             this.txtbairro.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // txtnumcasa
@@ -221,7 +221,7 @@
             this.txtnumcasa.Location = new System.Drawing.Point(123, 279);
             this.txtnumcasa.Name = "txtnumcasa";
             this.txtnumcasa.Size = new System.Drawing.Size(245, 20);
-            this.txtnumcasa.TabIndex = 25;
+            this.txtnumcasa.TabIndex = 8;
             this.txtnumcasa.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label1
@@ -252,7 +252,7 @@
             this.txtjuridica.Location = new System.Drawing.Point(123, 349);
             this.txtjuridica.Name = "txtjuridica";
             this.txtjuridica.Size = new System.Drawing.Size(77, 22);
-            this.txtjuridica.TabIndex = 80;
+            this.txtjuridica.TabIndex = 10;
             this.txtjuridica.TabStop = true;
             this.txtjuridica.Text = "Jurídica";
             this.txtjuridica.UseVisualStyleBackColor = true;
@@ -266,7 +266,7 @@
             this.txtfisica.Location = new System.Drawing.Point(202, 349);
             this.txtfisica.Name = "txtfisica";
             this.txtfisica.Size = new System.Drawing.Size(65, 22);
-            this.txtfisica.TabIndex = 81;
+            this.txtfisica.TabIndex = 11;
             this.txtfisica.TabStop = true;
             this.txtfisica.Text = "Física";
             this.txtfisica.UseVisualStyleBackColor = true;
@@ -288,7 +288,7 @@
             this.txtrua.Location = new System.Drawing.Point(123, 244);
             this.txtrua.Name = "txtrua";
             this.txtrua.Size = new System.Drawing.Size(245, 20);
-            this.txtrua.TabIndex = 83;
+            this.txtrua.TabIndex = 7;
             // 
             // label11
             // 
@@ -306,7 +306,7 @@
             this.txtcidade.Location = new System.Drawing.Point(123, 174);
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(245, 20);
-            this.txtcidade.TabIndex = 85;
+            this.txtcidade.TabIndex = 5;
             // 
             // mtbcpf
             // 
@@ -314,7 +314,7 @@
             this.mtbcpf.Mask = "999.999.999-00";
             this.mtbcpf.Name = "mtbcpf";
             this.mtbcpf.Size = new System.Drawing.Size(245, 20);
-            this.mtbcpf.TabIndex = 86;
+            this.mtbcpf.TabIndex = 2;
             this.mtbcpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbcpf_MaskInputRejected);
             // 
             // mbtcep
@@ -323,7 +323,7 @@
             this.mbtcep.Mask = "99999-999";
             this.mbtcep.Name = "mbtcep";
             this.mbtcep.Size = new System.Drawing.Size(245, 20);
-            this.mbtcep.TabIndex = 87;
+            this.mbtcep.TabIndex = 4;
             this.mbtcep.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mbtcep_MaskInputRejected);
             // 
             // mtbcnpj
@@ -332,7 +332,7 @@
             this.mtbcnpj.Mask = "99.999.999/9999-99";
             this.mtbcnpj.Name = "mtbcnpj";
             this.mtbcnpj.Size = new System.Drawing.Size(245, 20);
-            this.mtbcnpj.TabIndex = 88;
+            this.mtbcnpj.TabIndex = 9;
             // 
             // mtbtelefone
             // 
@@ -340,7 +340,7 @@
             this.mtbtelefone.Mask = "+99(99)9999-9999";
             this.mtbtelefone.Name = "mtbtelefone";
             this.mtbtelefone.Size = new System.Drawing.Size(245, 20);
-            this.mtbtelefone.TabIndex = 89;
+            this.mtbtelefone.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -377,7 +377,7 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtrua);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(57, 129);
+            this.groupBox1.Location = new System.Drawing.Point(43, 129);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(406, 436);
             this.groupBox1.TabIndex = 91;
@@ -389,7 +389,7 @@
             this.groupBox2.Controls.Add(this.rtvanotaçoes);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.dtphoje);
-            this.groupBox2.Location = new System.Drawing.Point(484, 129);
+            this.groupBox2.Location = new System.Drawing.Point(470, 129);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(242, 359);
             this.groupBox2.TabIndex = 92;

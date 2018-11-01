@@ -46,18 +46,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(248, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 25);
+            this.label3.Size = new System.Drawing.Size(191, 24);
             this.label3.TabIndex = 13;
             this.label3.Text = "Consultar Vendas";
             // 
             // dtpdate
             // 
             this.dtpdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpdate.Location = new System.Drawing.Point(275, 115);
+            this.dtpdate.Location = new System.Drawing.Point(284, 130);
             this.dtpdate.Name = "dtpdate";
             this.dtpdate.Size = new System.Drawing.Size(151, 20);
             this.dtpdate.TabIndex = 12;
@@ -65,7 +65,7 @@
             // dti
             // 
             this.dti.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dti.Location = new System.Drawing.Point(275, 89);
+            this.dti.Location = new System.Drawing.Point(284, 104);
             this.dti.Name = "dti";
             this.dti.Size = new System.Drawing.Size(151, 20);
             this.dti.TabIndex = 11;
@@ -75,7 +75,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(172, 93);
+            this.label2.Location = new System.Drawing.Point(181, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 16);
             this.label2.TabIndex = 10;
@@ -86,7 +86,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(181, 119);
+            this.label1.Location = new System.Drawing.Point(190, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 16);
             this.label1.TabIndex = 9;
@@ -96,7 +96,7 @@
             // 
             this.btnConsultarVenda.BackColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarVenda.Location = new System.Drawing.Point(452, 112);
+            this.btnConsultarVenda.Location = new System.Drawing.Point(461, 127);
             this.btnConsultarVenda.Name = "btnConsultarVenda";
             this.btnConsultarVenda.Size = new System.Drawing.Size(75, 23);
             this.btnConsultarVenda.TabIndex = 8;
@@ -116,10 +116,10 @@
             this.Nome_prato,
             this.Column1});
             this.dgvvendas.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvvendas.Location = new System.Drawing.Point(0, 185);
+            this.dgvvendas.Location = new System.Drawing.Point(0, 193);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
-            this.dgvvendas.Size = new System.Drawing.Size(752, 412);
+            this.dgvvendas.Size = new System.Drawing.Size(752, 456);
             this.dgvvendas.TabIndex = 7;
             this.dgvvendas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvendas_CellContentClick);
             // 
@@ -167,7 +167,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(752, 597);
+            this.ClientSize = new System.Drawing.Size(752, 649);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpdate);
             this.Controls.Add(this.dti);

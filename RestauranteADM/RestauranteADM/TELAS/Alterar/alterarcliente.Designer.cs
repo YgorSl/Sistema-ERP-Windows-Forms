@@ -54,13 +54,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.mtbcnpj = new System.Windows.Forms.MaskedTextBox();
+            this.mbtcep = new System.Windows.Forms.MaskedTextBox();
+            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
             this.txtrua = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtcidade = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
-            this.mbtcep = new System.Windows.Forms.MaskedTextBox();
-            this.mtbcnpj = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@
             this.rtvanotaçoes.Location = new System.Drawing.Point(114, 348);
             this.rtvanotaçoes.Name = "rtvanotaçoes";
             this.rtvanotaçoes.Size = new System.Drawing.Size(204, 77);
-            this.rtvanotaçoes.TabIndex = 102;
+            this.rtvanotaçoes.TabIndex = 13;
             this.rtvanotaçoes.Text = "";
             // 
             // dtphoje
@@ -78,7 +78,7 @@
             this.dtphoje.Location = new System.Drawing.Point(114, 287);
             this.dtphoje.Name = "dtphoje";
             this.dtphoje.Size = new System.Drawing.Size(204, 20);
-            this.dtphoje.TabIndex = 101;
+            this.dtphoje.TabIndex = 12;
             // 
             // label10
             // 
@@ -130,7 +130,7 @@
             this.button1.Location = new System.Drawing.Point(309, 506);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 94;
+            this.button1.TabIndex = 14;
             this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -152,28 +152,28 @@
             this.txtnumcasa.Location = new System.Drawing.Point(114, 208);
             this.txtnumcasa.Name = "txtnumcasa";
             this.txtnumcasa.Size = new System.Drawing.Size(204, 20);
-            this.txtnumcasa.TabIndex = 91;
+            this.txtnumcasa.TabIndex = 8;
             // 
             // txtbairro
             // 
             this.txtbairro.Location = new System.Drawing.Point(114, 155);
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(204, 20);
-            this.txtbairro.TabIndex = 90;
+            this.txtbairro.TabIndex = 6;
             // 
             // txttelefone
             // 
             this.txttelefone.Location = new System.Drawing.Point(114, 78);
             this.txttelefone.Name = "txttelefone";
             this.txttelefone.Size = new System.Drawing.Size(204, 20);
-            this.txttelefone.TabIndex = 88;
+            this.txttelefone.TabIndex = 3;
             // 
             // txtnome
             // 
             this.txtnome.Location = new System.Drawing.Point(114, 26);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(204, 20);
-            this.txtnome.TabIndex = 86;
+            this.txtnome.TabIndex = 1;
             // 
             // label9
             // 
@@ -255,7 +255,7 @@
             this.txtfisica.Location = new System.Drawing.Point(188, 260);
             this.txtfisica.Name = "txtfisica";
             this.txtfisica.Size = new System.Drawing.Size(57, 20);
-            this.txtfisica.TabIndex = 105;
+            this.txtfisica.TabIndex = 11;
             this.txtfisica.TabStop = true;
             this.txtfisica.Text = "fisica";
             this.txtfisica.UseVisualStyleBackColor = true;
@@ -269,7 +269,7 @@
             this.txtjuridica.Location = new System.Drawing.Point(114, 260);
             this.txtjuridica.Name = "txtjuridica";
             this.txtjuridica.Size = new System.Drawing.Size(69, 20);
-            this.txtjuridica.TabIndex = 104;
+            this.txtjuridica.TabIndex = 10;
             this.txtjuridica.TabStop = true;
             this.txtjuridica.Text = "juridica";
             this.txtjuridica.UseVisualStyleBackColor = true;
@@ -282,7 +282,7 @@
             this.button2.Location = new System.Drawing.Point(228, 506);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 106;
+            this.button2.TabIndex = 15;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -356,12 +356,36 @@
             this.groupBox1.TabIndex = 111;
             this.groupBox1.TabStop = false;
             // 
+            // mtbcnpj
+            // 
+            this.mtbcnpj.Location = new System.Drawing.Point(114, 234);
+            this.mtbcnpj.Mask = "99.999.999/9999-99";
+            this.mtbcnpj.Name = "mtbcnpj";
+            this.mtbcnpj.Size = new System.Drawing.Size(204, 20);
+            this.mtbcnpj.TabIndex = 9;
+            // 
+            // mbtcep
+            // 
+            this.mbtcep.Location = new System.Drawing.Point(114, 101);
+            this.mbtcep.Mask = "99999-999";
+            this.mbtcep.Name = "mbtcep";
+            this.mbtcep.Size = new System.Drawing.Size(204, 20);
+            this.mbtcep.TabIndex = 4;
+            // 
+            // mtbcpf
+            // 
+            this.mtbcpf.Location = new System.Drawing.Point(114, 51);
+            this.mtbcpf.Mask = "999.999.999-00";
+            this.mtbcpf.Name = "mtbcpf";
+            this.mtbcpf.Size = new System.Drawing.Size(204, 20);
+            this.mtbcpf.TabIndex = 2;
+            // 
             // txtrua
             // 
             this.txtrua.Location = new System.Drawing.Point(114, 182);
             this.txtrua.Name = "txtrua";
             this.txtrua.Size = new System.Drawing.Size(204, 20);
-            this.txtrua.TabIndex = 109;
+            this.txtrua.TabIndex = 7;
             // 
             // label8
             // 
@@ -379,7 +403,7 @@
             this.txtcidade.Location = new System.Drawing.Point(114, 129);
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(204, 20);
-            this.txtcidade.TabIndex = 107;
+            this.txtcidade.TabIndex = 5;
             // 
             // label11
             // 
@@ -391,30 +415,6 @@
             this.label11.Size = new System.Drawing.Size(52, 16);
             this.label11.TabIndex = 106;
             this.label11.Text = "Cidade";
-            // 
-            // mtbcpf
-            // 
-            this.mtbcpf.Location = new System.Drawing.Point(114, 51);
-            this.mtbcpf.Mask = "999.999.999-00";
-            this.mtbcpf.Name = "mtbcpf";
-            this.mtbcpf.Size = new System.Drawing.Size(204, 20);
-            this.mtbcpf.TabIndex = 110;
-            // 
-            // mbtcep
-            // 
-            this.mbtcep.Location = new System.Drawing.Point(114, 101);
-            this.mbtcep.Mask = "99999-999";
-            this.mbtcep.Name = "mbtcep";
-            this.mbtcep.Size = new System.Drawing.Size(204, 20);
-            this.mbtcep.TabIndex = 111;
-            // 
-            // mtbcnpj
-            // 
-            this.mtbcnpj.Location = new System.Drawing.Point(114, 234);
-            this.mtbcnpj.Mask = "99.999.999/9999-99";
-            this.mtbcnpj.Name = "mtbcnpj";
-            this.mtbcnpj.Size = new System.Drawing.Size(204, 20);
-            this.mtbcnpj.TabIndex = 112;
             // 
             // alterarcliente
             // 

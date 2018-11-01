@@ -186,14 +186,14 @@
             this.txtcpf.Location = new System.Drawing.Point(98, 44);
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(219, 20);
-            this.txtcpf.TabIndex = 64;
+            this.txtcpf.TabIndex = 2;
             // 
             // txtnome
             // 
             this.txtnome.Location = new System.Drawing.Point(98, 18);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(219, 20);
-            this.txtnome.TabIndex = 63;
+            this.txtnome.TabIndex = 1;
             // 
             // label12
             // 

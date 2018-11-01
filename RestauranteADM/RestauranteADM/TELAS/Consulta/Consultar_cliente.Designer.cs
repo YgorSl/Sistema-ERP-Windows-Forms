@@ -35,8 +35,6 @@
             this.btnConsultarCliente = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.dgvcliente = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +49,8 @@
             this.Data_Cadastro = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,33 +131,12 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvcliente.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvcliente.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvcliente.Location = new System.Drawing.Point(0, 185);
+            this.dgvcliente.Location = new System.Drawing.Point(0, 164);
             this.dgvcliente.Name = "dgvcliente";
             this.dgvcliente.ReadOnly = true;
-            this.dgvcliente.Size = new System.Drawing.Size(752, 412);
+            this.dgvcliente.Size = new System.Drawing.Size(752, 485);
             this.dgvcliente.TabIndex = 48;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick_1);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(108, 111);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 16);
-            this.label1.TabIndex = 53;
-            this.label1.Text = "CPF:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(152, 110);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(380, 20);
-            this.txtcpf.TabIndex = 50;
-            this.txtcpf.TextChanged += new System.EventHandler(this.txtcpf_TextChanged);
             // 
             // Nome
             // 
@@ -273,13 +252,34 @@
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column1.Width = 25;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(108, 111);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 16);
+            this.label1.TabIndex = 53;
+            this.label1.Text = "CPF:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Location = new System.Drawing.Point(152, 110);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(380, 20);
+            this.txtcpf.TabIndex = 50;
+            this.txtcpf.TextChanged += new System.EventHandler(this.txtcpf_TextChanged);
+            // 
             // Consultar_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(752, 597);
+            this.ClientSize = new System.Drawing.Size(752, 649);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtcpf);

@@ -33,6 +33,9 @@ namespace RestauranteADM.TELAS
             txtend.Text = forn.Endereço;
             txtcid.Text = forn.Cidade;
             txtest.Text = forn.Estado;
+            txtbairro.Text = forn.Bairro;
+            txtcep.Text = forn.CEP;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -44,6 +47,8 @@ namespace RestauranteADM.TELAS
             forn.Endereço = txtend.Text;
             forn.Cidade = txtcid.Text;
             forn.Estado = txtest.Text;
+            forn.Bairro = txtbairro.Text;
+            forn.CEP = txtcep.Text;
 
             FornecedorBusiness bus = new FornecedorBusiness();
             bus.Alterar(forn);
@@ -61,6 +66,11 @@ namespace RestauranteADM.TELAS
         {
 
             Close();
+        }
+
+        private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

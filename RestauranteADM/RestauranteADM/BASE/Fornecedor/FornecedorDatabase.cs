@@ -12,8 +12,8 @@ namespace RestauranteADM.BASE.Fornecedor
     {
         public int Salvar(FornecedorDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_fornecedor` (nm_nome, ds_cnpj, ds_telefone, ds_endereço, ds_cidade, ds_estado) 
-                                                         VALUES (@nm_nome, @ds_cnpj, @ds_telefone, @ds_endereço, @ds_cidade, @ds_estado)";
+            string script = @"INSERT INTO `mydb`.`tb_fornecedor` (nm_nome, ds_cnpj, ds_telefone, ds_endereço, ds_cidade, ds_estado, ds_bairro, ds_cep) 
+                                                         VALUES (@nm_nome, @ds_cnpj, @ds_telefone, @ds_endereço, @ds_cidade, @ds_estado, @ds_bairro, @ds_cep)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_nome", dto.Nome));
@@ -22,7 +22,8 @@ namespace RestauranteADM.BASE.Fornecedor
             parms.Add(new MySqlParameter("ds_endereço", dto.Endereço));
             parms.Add(new MySqlParameter("ds_cidade", dto.Cidade));
             parms.Add(new MySqlParameter("ds_estado", dto.Estado));
-
+            parms.Add(new MySqlParameter("ds_bairro", dto.Bairro));
+            parms.Add(new MySqlParameter("ds_cep", dto.CEP));
 
 
             Database db = new Database();
@@ -58,6 +59,8 @@ namespace RestauranteADM.BASE.Fornecedor
                 funcio.Endereço = reader.GetString("ds_endereço");
                 funcio.Cidade = reader.GetString("ds_cidade");
                 funcio.Estado = reader.GetString("ds_estado");
+                funcio.Bairro = reader.GetString("ds_bairro");
+                funcio.CEP = reader.GetString("ds_cep");
 
 
                 lista.Add(funcio);
@@ -95,6 +98,8 @@ namespace RestauranteADM.BASE.Fornecedor
             parms.Add(new MySqlParameter("ds_endereço", dto.Endereço));
             parms.Add(new MySqlParameter("ds_cidade", dto.Cidade));
             parms.Add(new MySqlParameter("ds_estado", dto.Estado));
+            parms.Add(new MySqlParameter("ds_bairro", dto.Bairro));
+            parms.Add(new MySqlParameter("ds_cep", dto.CEP));
 
 
 
@@ -124,7 +129,8 @@ namespace RestauranteADM.BASE.Fornecedor
                 funcio.Endereço = reader.GetString("ds_endereço");
                 funcio.Cidade = reader.GetString("ds_cidade");
                 funcio.Estado = reader.GetString("ds_estado");
-
+                funcio.Bairro = reader.GetString("ds_bairro");
+                funcio.CEP = reader.GetString("ds_cep");
 
                 lista.Add(funcio);
 

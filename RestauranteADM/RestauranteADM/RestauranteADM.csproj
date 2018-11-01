@@ -33,7 +33,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
-    <Reference Include="MySql.Web, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -649,6 +648,7 @@
     </None>
     <Content Include="DB\script.txt" />
     <Content Include="DB\ScriptEstranho.txt" />
+    <None Include="Resources\lupa.png" />
     <Content Include="Script Usuario Antigo.txt" />
     <None Include="Resources\cx.png" />
   </ItemGroup>

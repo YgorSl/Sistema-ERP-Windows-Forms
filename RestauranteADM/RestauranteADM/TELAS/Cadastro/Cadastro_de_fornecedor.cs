@@ -22,8 +22,7 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
 
 
                 FornecedorDTO forn = new FornecedorDTO();
@@ -33,16 +32,16 @@ namespace RestauranteADM.TELAS
                 forn.Endereço = txtend.Text;
                 forn.Cidade = txtcid.Text;
                 forn.Estado = txtest.Text;
+                forn.Bairro = txtbairro.Text;
+                forn.CEP = txtcep.Text;
+
+
 
                 FornecedorBusiness bus = new FornecedorBusiness();
                 bus.Salvar(forn);
 
                 MessageBox.Show("Fornecedor Cadastrado com Sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch
-            {
-                MessageBox.Show("Ocorreu um erro! Verifique se todos os campos estão preenchidos corretamente ou entre em contato com o administrador. :(");
-            }
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -90,6 +89,24 @@ namespace RestauranteADM.TELAS
         private void txtEstado_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.soletras(e);
+        }
+
+        private void mbtcep_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            using (var ws = new WSCorreios.AtendeClienteClient())
+            {
+                var result = ws.consultaCEP(txtcep.Text);
+                txtbairro.Text = result.bairro;
+                txtcid.Text = result.cidade;
+                txtend.Text = result.end;
+                txtest.Text = result.uf;
+
+            }
         }
     }
 }

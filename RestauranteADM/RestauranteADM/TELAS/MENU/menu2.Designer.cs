@@ -66,8 +66,8 @@
             this.btnmenuven = new System.Windows.Forms.Button();
             this.btnmenurh = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnmenucad = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
@@ -159,7 +159,7 @@
             this.SubMenuConsultar.Controls.Add(this.btnConsultarProduto);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarFornecedor);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarCliente);
-            this.SubMenuConsultar.Location = new System.Drawing.Point(66, 190);
+            this.SubMenuConsultar.Location = new System.Drawing.Point(66, 241);
             this.SubMenuConsultar.Name = "SubMenuConsultar";
             this.SubMenuConsultar.Size = new System.Drawing.Size(144, 209);
             this.SubMenuConsultar.TabIndex = 77;
@@ -297,7 +297,7 @@
             this.SubMenuEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SubMenuEstoque.Controls.Add(this.button13);
             this.SubMenuEstoque.Controls.Add(this.btnEstoque);
-            this.SubMenuEstoque.Location = new System.Drawing.Point(67, 368);
+            this.SubMenuEstoque.Location = new System.Drawing.Point(67, 419);
             this.SubMenuEstoque.Name = "SubMenuEstoque";
             this.SubMenuEstoque.Size = new System.Drawing.Size(135, 80);
             this.SubMenuEstoque.TabIndex = 79;
@@ -343,7 +343,7 @@
             this.SubMenuRH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SubMenuRH.Controls.Add(this.btnControlePonto);
             this.SubMenuRH.Controls.Add(this.btnFolhaPagamento);
-            this.SubMenuRH.Location = new System.Drawing.Point(65, 238);
+            this.SubMenuRH.Location = new System.Drawing.Point(65, 289);
             this.SubMenuRH.Name = "SubMenuRH";
             this.SubMenuRH.Size = new System.Drawing.Size(133, 108);
             this.SubMenuRH.TabIndex = 78;
@@ -393,7 +393,7 @@
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarFuncionario);
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarFornecedor);
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarCliente);
-            this.SubMenuCadastro.Location = new System.Drawing.Point(65, 141);
+            this.SubMenuCadastro.Location = new System.Drawing.Point(65, 192);
             this.SubMenuCadastro.Name = "SubMenuCadastro";
             this.SubMenuCadastro.Size = new System.Drawing.Size(137, 150);
             this.SubMenuCadastro.TabIndex = 76;
@@ -494,7 +494,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.panel9.Location = new System.Drawing.Point(0, 367);
+            this.panel9.Location = new System.Drawing.Point(0, 418);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(5, 37);
             this.panel9.TabIndex = 75;
@@ -502,7 +502,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.panel8.Location = new System.Drawing.Point(0, 324);
+            this.panel8.Location = new System.Drawing.Point(0, 375);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(5, 37);
             this.panel8.TabIndex = 74;
@@ -510,7 +510,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.panel6.Location = new System.Drawing.Point(0, 238);
+            this.panel6.Location = new System.Drawing.Point(0, 289);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(5, 37);
             this.panel6.TabIndex = 72;
@@ -518,7 +518,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.panel7.Location = new System.Drawing.Point(0, 195);
+            this.panel7.Location = new System.Drawing.Point(0, 246);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(5, 37);
             this.panel7.TabIndex = 72;
@@ -526,7 +526,7 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.panel5.Location = new System.Drawing.Point(0, 281);
+            this.panel5.Location = new System.Drawing.Point(0, 332);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(5, 37);
             this.panel5.TabIndex = 73;
@@ -534,7 +534,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.panel4.Location = new System.Drawing.Point(0, 152);
+            this.panel4.Location = new System.Drawing.Point(0, 203);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(5, 37);
             this.panel4.TabIndex = 72;
@@ -542,7 +542,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(200)))));
-            this.panel1.Location = new System.Drawing.Point(0, 109);
+            this.panel1.Location = new System.Drawing.Point(0, 160);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(5, 37);
             this.panel1.TabIndex = 71;
@@ -555,7 +555,7 @@
             this.btnmenucon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmenucon.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenucon.ForeColor = System.Drawing.Color.White;
-            this.btnmenucon.Location = new System.Drawing.Point(6, 152);
+            this.btnmenucon.Location = new System.Drawing.Point(6, 203);
             this.btnmenucon.Name = "btnmenucon";
             this.btnmenucon.Size = new System.Drawing.Size(191, 35);
             this.btnmenucon.TabIndex = 70;
@@ -571,7 +571,7 @@
             this.btnmenufin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmenufin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenufin.ForeColor = System.Drawing.Color.White;
-            this.btnmenufin.Location = new System.Drawing.Point(6, 367);
+            this.btnmenufin.Location = new System.Drawing.Point(6, 418);
             this.btnmenufin.Name = "btnmenufin";
             this.btnmenufin.Size = new System.Drawing.Size(191, 35);
             this.btnmenufin.TabIndex = 69;
@@ -587,7 +587,7 @@
             this.btnmenuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmenuest.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuest.ForeColor = System.Drawing.Color.White;
-            this.btnmenuest.Location = new System.Drawing.Point(6, 324);
+            this.btnmenuest.Location = new System.Drawing.Point(6, 375);
             this.btnmenuest.Name = "btnmenuest";
             this.btnmenuest.Size = new System.Drawing.Size(191, 35);
             this.btnmenuest.TabIndex = 68;
@@ -603,7 +603,7 @@
             this.btnmenucom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmenucom.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenucom.ForeColor = System.Drawing.Color.White;
-            this.btnmenucom.Location = new System.Drawing.Point(6, 281);
+            this.btnmenucom.Location = new System.Drawing.Point(6, 332);
             this.btnmenucom.Name = "btnmenucom";
             this.btnmenucom.Size = new System.Drawing.Size(191, 35);
             this.btnmenucom.TabIndex = 67;
@@ -619,7 +619,7 @@
             this.btnmenuven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmenuven.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuven.ForeColor = System.Drawing.Color.White;
-            this.btnmenuven.Location = new System.Drawing.Point(6, 238);
+            this.btnmenuven.Location = new System.Drawing.Point(6, 289);
             this.btnmenuven.Name = "btnmenuven";
             this.btnmenuven.Size = new System.Drawing.Size(191, 35);
             this.btnmenuven.TabIndex = 66;
@@ -635,7 +635,7 @@
             this.btnmenurh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnmenurh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenurh.ForeColor = System.Drawing.Color.White;
-            this.btnmenurh.Location = new System.Drawing.Point(8, 197);
+            this.btnmenurh.Location = new System.Drawing.Point(8, 248);
             this.btnmenurh.Name = "btnmenurh";
             this.btnmenurh.Size = new System.Drawing.Size(191, 35);
             this.btnmenurh.TabIndex = 65;
@@ -654,16 +654,6 @@
             this.label3.TabIndex = 64;
             this.label3.Text = "Toc Toc Brasil";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RestauranteADM.Properties.Resources.WhatsApp_Image_2018_09_19_at_9_12_01_PM;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 63;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnmenucad
             // 
             this.btnmenucad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -674,13 +664,23 @@
             this.btnmenucad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenucad.ForeColor = System.Drawing.Color.White;
             this.btnmenucad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmenucad.Location = new System.Drawing.Point(6, 109);
+            this.btnmenucad.Location = new System.Drawing.Point(6, 160);
             this.btnmenucad.Name = "btnmenucad";
             this.btnmenucad.Size = new System.Drawing.Size(191, 35);
             this.btnmenucad.TabIndex = 0;
             this.btnmenucad.Text = "Cadastro";
             this.btnmenucad.UseVisualStyleBackColor = true;
             this.btnmenucad.Click += new System.EventHandler(this.btn1_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RestauranteADM.Properties.Resources.WhatsApp_Image_2018_09_19_at_9_12_01_PM;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(199, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 63;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -691,14 +691,14 @@
             this.panel2.Location = new System.Drawing.Point(200, 34);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(752, 649);
-            this.panel2.TabIndex = 73;
+            this.panel2.TabIndex = 74;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(354, 223);
+            this.label2.Location = new System.Drawing.Point(343, 278);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 42);
             this.label2.TabIndex = 63;

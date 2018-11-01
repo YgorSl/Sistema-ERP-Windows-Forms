@@ -1,4 +1,5 @@
 ﻿using RestauranteADM.BASE;
+using RestauranteADM.BASE.Fluxo_de_Caixa;
 using RestauranteADM.BASE.FluxoDeCaixa;
 using System;
 using System.Collections.Generic;
@@ -109,15 +110,33 @@ namespace RestauranteADM.TELAS.Financeiro
             lblentrada.Text = totalentrada.ToString();
             lblsaida.Text = totalsaida.ToString();
             saldo = totalentrada - totalsaida;
-            lblsituaçao.Text = saldo.ToString();
-
-
+            lblsituaca.Text = saldo.ToString();
 
 
 
         }
 
+        private void btnfluxo_Click(object sender, EventArgs e)
+        {
+           FluxoCaixaDTO  dto = new FluxoCaixaDTO();
 
+            dto.ganhor = Convert.ToDouble(lblentrada.Text);
+            dto.perdar = Convert.ToDouble(lblsaida.Text);
+            dto.saldo = Convert.ToSByte(lblsituaca.Text);
+            dto.Perido_inicial = dtpinicio.Value;
+            dto.Perido_final = dtpfim.Value;
+
+            
+
+            FluxoCaixaDatabase ft = new FluxoCaixaDatabase();
+            ft.Salvar(dto);
+            MessageBox.Show("foi");
+        }
+
+        private void lblsaida_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }  
 

@@ -372,6 +372,7 @@
             this.lblVT.Size = new System.Drawing.Size(12, 16);
             this.lblVT.TabIndex = 78;
             this.lblVT.Text = "-";
+            this.lblVT.Click += new System.EventHandler(this.lblVT_Click);
             // 
             // label10
             // 

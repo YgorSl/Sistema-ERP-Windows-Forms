@@ -183,9 +183,7 @@ namespace RestauranteADM.TELAS
 
         private void btnCadastrarusuario_Click(object sender, EventArgs e)
         {
-             try
-           {
-
+          
 
             FuncionarioDTO dto = new FuncionarioDTO();
 
@@ -260,14 +258,8 @@ namespace RestauranteADM.TELAS
             ft.Salvar(dto, usuario);
 
             MessageBox.Show("Usuário Salvo com sucesso! :)");
-           }
-            catch (Exception ex)
-            {
-             MessageBox.Show("Ocorreu um erro. Entre em contato com o administrador. " + ex.Message,
-               "Toc Toc Brasil",
-              MessageBoxButtons.OK,
-              MessageBoxIcon.Error);
-            }
+           
+         
         }
 
         private void chbConsultarCardapio_CheckedChanged(object sender, EventArgs e)

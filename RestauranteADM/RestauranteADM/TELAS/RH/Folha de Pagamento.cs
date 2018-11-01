@@ -362,6 +362,11 @@ namespace RestauranteADM.TELAS.RH
         {
 
         }
+
+        private void lblVT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

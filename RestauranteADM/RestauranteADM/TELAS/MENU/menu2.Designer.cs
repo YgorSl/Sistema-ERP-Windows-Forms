@@ -68,7 +68,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnmenucad = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.MenuVertical.SuspendLayout();
@@ -77,7 +77,7 @@
             this.SubMenuRH.SuspendLayout();
             this.SubMenuCadastro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel10.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -682,16 +682,16 @@
             this.btnmenucad.UseVisualStyleBackColor = true;
             this.btnmenucad.Click += new System.EventHandler(this.btn1_Click_1);
             // 
-            // panel10
+            // panel2
             // 
-            this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel10.Controls.Add(this.label2);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(200, 34);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(752, 649);
-            this.panel10.TabIndex = 73;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(200, 34);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(752, 649);
+            this.panel2.TabIndex = 73;
             // 
             // label2
             // 
@@ -709,7 +709,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(952, 683);
-            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.MenuVertical);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -725,8 +725,8 @@
             this.SubMenuRH.ResumeLayout(false);
             this.SubMenuCadastro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -773,7 +773,7 @@
         private System.Windows.Forms.Panel SubMenuEstoque;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnEstoque;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
     }
 }

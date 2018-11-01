@@ -39,7 +39,7 @@
             this.Movimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label36 = new System.Windows.Forms.Label();
             this.lblsituaçao = new System.Windows.Forms.Label();
-            this.lblsituacao = new System.Windows.Forms.Label();
+            this.lblsituaca = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lblsaida = new System.Windows.Forms.Label();
             this.lblcompra = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.lblentrada = new System.Windows.Forms.Label();
+            this.btnfluxo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfluxo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,22 +155,22 @@
             this.lblsituaçao.AutoSize = true;
             this.lblsituaçao.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsituaçao.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblsituaçao.Location = new System.Drawing.Point(513, 503);
+            this.lblsituaçao.Location = new System.Drawing.Point(542, 481);
             this.lblsituaçao.Name = "lblsituaçao";
             this.lblsituaçao.Size = new System.Drawing.Size(91, 22);
             this.lblsituaçao.TabIndex = 65;
             this.lblsituaçao.Text = "Situação";
             // 
-            // lblsituacao
+            // lblsituaca
             // 
-            this.lblsituacao.AutoSize = true;
-            this.lblsituacao.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsituacao.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblsituacao.Location = new System.Drawing.Point(609, 503);
-            this.lblsituacao.Name = "lblsituacao";
-            this.lblsituacao.Size = new System.Drawing.Size(52, 22);
-            this.lblsituacao.TabIndex = 66;
-            this.lblsituacao.Text = "-------";
+            this.lblsituaca.AutoSize = true;
+            this.lblsituaca.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsituaca.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblsituaca.Location = new System.Drawing.Point(638, 481);
+            this.lblsituaca.Name = "lblsituaca";
+            this.lblsituaca.Size = new System.Drawing.Size(52, 22);
+            this.lblsituaca.TabIndex = 66;
+            this.lblsituaca.Text = "-------";
             // 
             // button1
             // 
@@ -188,18 +189,19 @@
             this.lblsaida.AutoSize = true;
             this.lblsaida.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsaida.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblsaida.Location = new System.Drawing.Point(223, 503);
+            this.lblsaida.Location = new System.Drawing.Point(224, 476);
             this.lblsaida.Name = "lblsaida";
             this.lblsaida.Size = new System.Drawing.Size(52, 22);
             this.lblsaida.TabIndex = 69;
             this.lblsaida.Text = "-------";
+            this.lblsaida.Click += new System.EventHandler(this.lblsaida_Click);
             // 
             // lblcompra
             // 
             this.lblcompra.AutoSize = true;
             this.lblcompra.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcompra.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblcompra.Location = new System.Drawing.Point(127, 503);
+            this.lblcompra.Location = new System.Drawing.Point(128, 476);
             this.lblcompra.Name = "lblcompra";
             this.lblcompra.Size = new System.Drawing.Size(61, 22);
             this.lblcompra.TabIndex = 68;
@@ -210,7 +212,7 @@
             this.lblvenda.AutoSize = true;
             this.lblvenda.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvenda.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblvenda.Location = new System.Drawing.Point(223, 525);
+            this.lblvenda.Location = new System.Drawing.Point(224, 498);
             this.lblvenda.Name = "lblvenda";
             this.lblvenda.Size = new System.Drawing.Size(0, 22);
             this.lblvenda.TabIndex = 71;
@@ -220,7 +222,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(127, 525);
+            this.label7.Location = new System.Drawing.Point(128, 498);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 22);
             this.label7.TabIndex = 70;
@@ -230,9 +232,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(403, 476);
+            this.button2.Location = new System.Drawing.Point(12, 476);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(84, 37);
             this.button2.TabIndex = 72;
             this.button2.Text = "Calcular";
             this.button2.UseVisualStyleBackColor = false;
@@ -243,11 +245,23 @@
             this.lblentrada.AutoSize = true;
             this.lblentrada.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblentrada.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblentrada.Location = new System.Drawing.Point(223, 525);
+            this.lblentrada.Location = new System.Drawing.Point(224, 498);
             this.lblentrada.Name = "lblentrada";
             this.lblentrada.Size = new System.Drawing.Size(52, 22);
             this.lblentrada.TabIndex = 73;
             this.lblentrada.Text = "-------";
+            // 
+            // btnfluxo
+            // 
+            this.btnfluxo.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnfluxo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnfluxo.Location = new System.Drawing.Point(452, 476);
+            this.btnfluxo.Name = "btnfluxo";
+            this.btnfluxo.Size = new System.Drawing.Size(84, 37);
+            this.btnfluxo.TabIndex = 74;
+            this.btnfluxo.Text = "Salvar Fluxo";
+            this.btnfluxo.UseVisualStyleBackColor = false;
+            this.btnfluxo.Click += new System.EventHandler(this.btnfluxo_Click);
             // 
             // Fluxo_de_Caixa
             // 
@@ -256,6 +270,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(752, 597);
+            this.Controls.Add(this.btnfluxo);
             this.Controls.Add(this.lblentrada);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lblvenda);
@@ -263,7 +278,7 @@
             this.Controls.Add(this.lblsaida);
             this.Controls.Add(this.lblcompra);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblsituacao);
+            this.Controls.Add(this.lblsituaca);
             this.Controls.Add(this.lblsituaçao);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.dgvfluxo);
@@ -291,7 +306,7 @@
         private System.Windows.Forms.DataGridView dgvfluxo;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label lblsituaçao;
-        private System.Windows.Forms.Label lblsituacao;
+        private System.Windows.Forms.Label lblsituaca;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Operação;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipo_de_operaca;
@@ -303,5 +318,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblentrada;
+        private System.Windows.Forms.Button btnfluxo;
     }
 }

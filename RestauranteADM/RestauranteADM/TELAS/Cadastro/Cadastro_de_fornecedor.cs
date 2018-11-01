@@ -108,5 +108,10 @@ namespace RestauranteADM.TELAS
 
             }
         }
+
+        private void white(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

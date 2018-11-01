@@ -51,10 +51,11 @@
             this.btnentrar.Location = new System.Drawing.Point(80, 286);
             this.btnentrar.Name = "btnentrar";
             this.btnentrar.Size = new System.Drawing.Size(251, 33);
-            this.btnentrar.TabIndex = 44;
+            this.btnentrar.TabIndex = 3;
             this.btnentrar.Text = "Entrar";
             this.btnentrar.UseVisualStyleBackColor = false;
             this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
+            this.btnentrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btnentrar_KeyPress_1);
             // 
             // txtsenha
             // 
@@ -63,7 +64,7 @@
             this.txtsenha.Location = new System.Drawing.Point(69, 155);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.Size = new System.Drawing.Size(200, 21);
-            this.txtsenha.TabIndex = 46;
+            this.txtsenha.TabIndex = 2;
             // 
             // panel1
             // 
@@ -87,7 +88,7 @@
             this.label7.Location = new System.Drawing.Point(97, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(140, 16);
-            this.label7.TabIndex = 51;
+            this.label7.TabIndex = 4;
             this.label7.Text = "Esqueceu sua senha !";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
@@ -131,7 +132,7 @@
             this.txtnome.Location = new System.Drawing.Point(69, 75);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(200, 21);
-            this.txtnome.TabIndex = 48;
+            this.txtnome.TabIndex = 1;
             // 
             // label4
             // 

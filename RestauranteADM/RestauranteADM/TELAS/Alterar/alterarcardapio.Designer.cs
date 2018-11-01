@@ -50,7 +50,7 @@
             this.rtvanotaçoes.Location = new System.Drawing.Point(92, 148);
             this.rtvanotaçoes.Name = "rtvanotaçoes";
             this.rtvanotaçoes.Size = new System.Drawing.Size(187, 40);
-            this.rtvanotaçoes.TabIndex = 86;
+            this.rtvanotaçoes.TabIndex = 4;
             this.rtvanotaçoes.Text = "";
             this.rtvanotaçoes.TextChanged += new System.EventHandler(this.rtvanotaçoes_TextChanged);
             // 
@@ -61,7 +61,7 @@
             this.button1.Location = new System.Drawing.Point(204, 213);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 85;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -71,7 +71,7 @@
             this.txtvalor.Location = new System.Drawing.Point(92, 115);
             this.txtvalor.Name = "txtvalor";
             this.txtvalor.Size = new System.Drawing.Size(187, 20);
-            this.txtvalor.TabIndex = 84;
+            this.txtvalor.TabIndex = 3;
             this.txtvalor.TextChanged += new System.EventHandler(this.txtvalor_TextChanged);
             // 
             // txttamanho
@@ -79,7 +79,7 @@
             this.txttamanho.Location = new System.Drawing.Point(92, 89);
             this.txttamanho.Name = "txttamanho";
             this.txttamanho.Size = new System.Drawing.Size(187, 20);
-            this.txttamanho.TabIndex = 83;
+            this.txttamanho.TabIndex = 2;
             this.txttamanho.TextChanged += new System.EventHandler(this.txttamanho_TextChanged);
             // 
             // txtnomeprato
@@ -87,7 +87,7 @@
             this.txtnomeprato.Location = new System.Drawing.Point(92, 63);
             this.txtnomeprato.Name = "txtnomeprato";
             this.txtnomeprato.Size = new System.Drawing.Size(187, 20);
-            this.txtnomeprato.TabIndex = 82;
+            this.txtnomeprato.TabIndex = 1;
             this.txtnomeprato.TextChanged += new System.EventHandler(this.txtnomeprato_TextChanged);
             // 
             // label5
@@ -193,7 +193,7 @@
             this.button2.Location = new System.Drawing.Point(123, 213);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 92;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);

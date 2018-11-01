@@ -102,5 +102,15 @@ namespace RestauranteADM
 
             
         }
+
+        private void btnentrar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void btnentrar_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
     }
 }

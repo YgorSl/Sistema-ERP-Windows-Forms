@@ -73,7 +73,7 @@
             this.txtnome.Location = new System.Drawing.Point(39, 35);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(204, 20);
-            this.txtnome.TabIndex = 11;
+            this.txtnome.TabIndex = 1;
             // 
             // button1
             // 
@@ -82,7 +82,7 @@
             this.button1.Location = new System.Drawing.Point(226, 227);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
+            this.button1.TabIndex = 4;
             this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -104,7 +104,7 @@
             this.txtpre.Location = new System.Drawing.Point(39, 137);
             this.txtpre.Name = "txtpre";
             this.txtpre.Size = new System.Drawing.Size(204, 20);
-            this.txtpre.TabIndex = 49;
+            this.txtpre.TabIndex = 3;
             // 
             // label3
             // 
@@ -123,7 +123,7 @@
             this.cboforn.Location = new System.Drawing.Point(39, 83);
             this.cboforn.Name = "cboforn";
             this.cboforn.Size = new System.Drawing.Size(204, 21);
-            this.cboforn.TabIndex = 50;
+            this.cboforn.TabIndex = 2;
             // 
             // button2
             // 
@@ -132,7 +132,7 @@
             this.button2.Location = new System.Drawing.Point(146, 227);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 85;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);

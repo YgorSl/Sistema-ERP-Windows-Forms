@@ -89,11 +89,11 @@
             this.bonus,
             this.j});
             this.dgvcliente.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvcliente.Location = new System.Drawing.Point(0, 185);
+            this.dgvcliente.Location = new System.Drawing.Point(0, 169);
             this.dgvcliente.Name = "dgvcliente";
             this.dgvcliente.ReadOnly = true;
             this.dgvcliente.RowHeadersVisible = false;
-            this.dgvcliente.Size = new System.Drawing.Size(752, 412);
+            this.dgvcliente.Size = new System.Drawing.Size(752, 480);
             this.dgvcliente.TabIndex = 51;
             this.dgvcliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcliente_CellContentClick);
             // 
@@ -263,7 +263,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(752, 597);
+            this.ClientSize = new System.Drawing.Size(752, 649);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.label36);

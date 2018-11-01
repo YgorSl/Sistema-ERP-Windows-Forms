@@ -216,6 +216,7 @@
             this.btn1.Text = "Clientes";
             this.btn1.UseVisualStyleBackColor = true;
             this.btn1.Click += new System.EventHandler(this.btn1_Click_2);
+      
             // 
             // panelmenu
             // 

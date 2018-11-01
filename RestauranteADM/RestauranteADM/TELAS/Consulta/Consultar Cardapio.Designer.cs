@@ -67,7 +67,7 @@
             // 
             this.btnConsultarCardapio.BackColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarCardapio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarCardapio.Location = new System.Drawing.Point(546, 90);
+            this.btnConsultarCardapio.Location = new System.Drawing.Point(546, 113);
             this.btnConsultarCardapio.Name = "btnConsultarCardapio";
             this.btnConsultarCardapio.Size = new System.Drawing.Size(75, 23);
             this.btnConsultarCardapio.TabIndex = 34;
@@ -109,10 +109,10 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvcardapio.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvcardapio.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvcardapio.Location = new System.Drawing.Point(0, 185);
+            this.dgvcardapio.Location = new System.Drawing.Point(0, 175);
             this.dgvcardapio.Name = "dgvcardapio";
             this.dgvcardapio.ReadOnly = true;
-            this.dgvcardapio.Size = new System.Drawing.Size(752, 412);
+            this.dgvcardapio.Size = new System.Drawing.Size(752, 474);
             this.dgvcardapio.TabIndex = 49;
             this.dgvcardapio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcardapio_CellContentClick);
             // 
@@ -187,7 +187,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(752, 597);
+            this.ClientSize = new System.Drawing.Size(752, 649);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txttamanho);
             this.Controls.Add(this.dgvcardapio);

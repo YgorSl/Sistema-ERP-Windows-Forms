@@ -176,7 +176,7 @@
             this.txtrecuperacao.Location = new System.Drawing.Point(347, 600);
             this.txtrecuperacao.Name = "txtrecuperacao";
             this.txtrecuperacao.Size = new System.Drawing.Size(134, 20);
-            this.txtrecuperacao.TabIndex = 87;
+            this.txtrecuperacao.TabIndex = 56;
             // 
             // label53
             // 
@@ -194,7 +194,7 @@
             this.txtsenha.Location = new System.Drawing.Point(82, 603);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.Size = new System.Drawing.Size(134, 20);
-            this.txtsenha.TabIndex = 81;
+            this.txtsenha.TabIndex = 55;
             // 
             // label5
             // 
@@ -212,7 +212,7 @@
             this.txtusuario.Location = new System.Drawing.Point(82, 577);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(134, 20);
-            this.txtusuario.TabIndex = 80;
+            this.txtusuario.TabIndex = 54;
             // 
             // groupBox4
             // 
@@ -255,7 +255,7 @@
             this.groupBox9.Location = new System.Drawing.Point(375, 141);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(343, 102);
-            this.groupBox9.TabIndex = 63;
+            this.groupBox9.TabIndex = 52;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Excluir";
             // 
@@ -276,7 +276,7 @@
             this.chbExcluirFolha.Location = new System.Drawing.Point(17, 84);
             this.chbExcluirFolha.Name = "chbExcluirFolha";
             this.chbExcluirFolha.Size = new System.Drawing.Size(15, 14);
-            this.chbExcluirFolha.TabIndex = 62;
+            this.chbExcluirFolha.TabIndex = 47;
             this.chbExcluirFolha.UseVisualStyleBackColor = true;
             // 
             // label37
@@ -296,7 +296,7 @@
             this.chbExcluirEstoque.Location = new System.Drawing.Point(245, 24);
             this.chbExcluirEstoque.Name = "chbExcluirEstoque";
             this.chbExcluirEstoque.Size = new System.Drawing.Size(15, 14);
-            this.chbExcluirEstoque.TabIndex = 60;
+            this.chbExcluirEstoque.TabIndex = 51;
             this.chbExcluirEstoque.UseVisualStyleBackColor = true;
             // 
             // label38
@@ -316,7 +316,7 @@
             this.chbExcluirVendas.Location = new System.Drawing.Point(245, 43);
             this.chbExcluirVendas.Name = "chbExcluirVendas";
             this.chbExcluirVendas.Size = new System.Drawing.Size(15, 14);
-            this.chbExcluirVendas.TabIndex = 58;
+            this.chbExcluirVendas.TabIndex = 52;
             this.chbExcluirVendas.UseVisualStyleBackColor = true;
             // 
             // label39
@@ -336,7 +336,7 @@
             this.chbExcluirPedido.Location = new System.Drawing.Point(245, 66);
             this.chbExcluirPedido.Name = "chbExcluirPedido";
             this.chbExcluirPedido.Size = new System.Drawing.Size(15, 14);
-            this.chbExcluirPedido.TabIndex = 56;
+            this.chbExcluirPedido.TabIndex = 53;
             this.chbExcluirPedido.UseVisualStyleBackColor = true;
             // 
             // label40
@@ -356,7 +356,7 @@
             this.chbExcluirFuncionario.Location = new System.Drawing.Point(132, 64);
             this.chbExcluirFuncionario.Name = "chbExcluirFuncionario";
             this.chbExcluirFuncionario.Size = new System.Drawing.Size(15, 14);
-            this.chbExcluirFuncionario.TabIndex = 54;
+            this.chbExcluirFuncionario.TabIndex = 50;
             this.chbExcluirFuncionario.UseVisualStyleBackColor = true;
             // 
             // label41
@@ -376,7 +376,7 @@
             this.chbExcluirCardapio.Location = new System.Drawing.Point(132, 44);
             this.chbExcluirCardapio.Name = "chbExcluirCardapio";
             this.chbExcluirCardapio.Size = new System.Drawing.Size(15, 14);
-            this.chbExcluirCardapio.TabIndex = 52;
+            this.chbExcluirCardapio.TabIndex = 49;
             this.chbExcluirCardapio.UseVisualStyleBackColor = true;
             // 
             // label42
@@ -405,7 +405,7 @@
             this.chbExcluirFornecedor.Location = new System.Drawing.Point(17, 45);
             this.chbExcluirFornecedor.Name = "chbExcluirFornecedor";
             this.chbExcluirFornecedor.Size = new System.Drawing.Size(15, 14);
-            this.chbExcluirFornecedor.TabIndex = 51;
+            this.chbExcluirFornecedor.TabIndex = 45;
             this.chbExcluirFornecedor.UseVisualStyleBackColor = true;
             // 
             // chbExcluirCliente
@@ -414,7 +414,7 @@
             this.chbExcluirCliente.Location = new System.Drawing.Point(17, 25);
             this.chbExcluirCliente.Name = "chbExcluirCliente";
             this.chbExcluirCliente.Size = new System.Drawing.Size(15, 14);
-            this.chbExcluirCliente.TabIndex = 18;
+            this.chbExcluirCliente.TabIndex = 44;
             this.chbExcluirCliente.UseVisualStyleBackColor = true;
             // 
             // label43
@@ -445,7 +445,7 @@
             this.chbExcluirUsuario.Location = new System.Drawing.Point(17, 65);
             this.chbExcluirUsuario.Name = "chbExcluirUsuario";
             this.chbExcluirUsuario.Size = new System.Drawing.Size(15, 14);
-            this.chbExcluirUsuario.TabIndex = 19;
+            this.chbExcluirUsuario.TabIndex = 46;
             this.chbExcluirUsuario.UseVisualStyleBackColor = true;
             // 
             // label45
@@ -504,7 +504,7 @@
             this.chbAlterarEstoque.Location = new System.Drawing.Point(245, 24);
             this.chbAlterarEstoque.Name = "chbAlterarEstoque";
             this.chbAlterarEstoque.Size = new System.Drawing.Size(15, 14);
-            this.chbAlterarEstoque.TabIndex = 60;
+            this.chbAlterarEstoque.TabIndex = 41;
             this.chbAlterarEstoque.UseVisualStyleBackColor = true;
             // 
             // label28
@@ -524,7 +524,7 @@
             this.chbAlterarVendas.Location = new System.Drawing.Point(245, 43);
             this.chbAlterarVendas.Name = "chbAlterarVendas";
             this.chbAlterarVendas.Size = new System.Drawing.Size(15, 14);
-            this.chbAlterarVendas.TabIndex = 58;
+            this.chbAlterarVendas.TabIndex = 42;
             this.chbAlterarVendas.UseVisualStyleBackColor = true;
             // 
             // label29
@@ -544,7 +544,7 @@
             this.chbAlterarPedido.Location = new System.Drawing.Point(245, 66);
             this.chbAlterarPedido.Name = "chbAlterarPedido";
             this.chbAlterarPedido.Size = new System.Drawing.Size(15, 14);
-            this.chbAlterarPedido.TabIndex = 56;
+            this.chbAlterarPedido.TabIndex = 43;
             this.chbAlterarPedido.UseVisualStyleBackColor = true;
             // 
             // label30
@@ -564,7 +564,7 @@
             this.chbAlterarFuncionario.Location = new System.Drawing.Point(132, 64);
             this.chbAlterarFuncionario.Name = "chbAlterarFuncionario";
             this.chbAlterarFuncionario.Size = new System.Drawing.Size(15, 14);
-            this.chbAlterarFuncionario.TabIndex = 54;
+            this.chbAlterarFuncionario.TabIndex = 40;
             this.chbAlterarFuncionario.UseVisualStyleBackColor = true;
             // 
             // label31
@@ -584,7 +584,7 @@
             this.chbAlterarCardapio.Location = new System.Drawing.Point(132, 44);
             this.chbAlterarCardapio.Name = "chbAlterarCardapio";
             this.chbAlterarCardapio.Size = new System.Drawing.Size(15, 14);
-            this.chbAlterarCardapio.TabIndex = 52;
+            this.chbAlterarCardapio.TabIndex = 39;
             this.chbAlterarCardapio.UseVisualStyleBackColor = true;
             // 
             // label32
@@ -604,7 +604,7 @@
             this.chbAlterarProduto.Location = new System.Drawing.Point(132, 25);
             this.chbAlterarProduto.Name = "chbAlterarProduto";
             this.chbAlterarProduto.Size = new System.Drawing.Size(15, 14);
-            this.chbAlterarProduto.TabIndex = 48;
+            this.chbAlterarProduto.TabIndex = 38;
             this.chbAlterarProduto.UseVisualStyleBackColor = true;
             // 
             // chbAlterarFornecedor
@@ -613,7 +613,7 @@
             this.chbAlterarFornecedor.Location = new System.Drawing.Point(17, 45);
             this.chbAlterarFornecedor.Name = "chbAlterarFornecedor";
             this.chbAlterarFornecedor.Size = new System.Drawing.Size(15, 14);
-            this.chbAlterarFornecedor.TabIndex = 51;
+            this.chbAlterarFornecedor.TabIndex = 36;
             this.chbAlterarFornecedor.UseVisualStyleBackColor = true;
             // 
             // chbAlterarCliente
@@ -622,7 +622,7 @@
             this.chbAlterarCliente.Location = new System.Drawing.Point(17, 25);
             this.chbAlterarCliente.Name = "chbAlterarCliente";
             this.chbAlterarCliente.Size = new System.Drawing.Size(15, 14);
-            this.chbAlterarCliente.TabIndex = 18;
+            this.chbAlterarCliente.TabIndex = 35;
             this.chbAlterarCliente.UseVisualStyleBackColor = true;
             // 
             // label33
@@ -653,7 +653,7 @@
             this.chbAlterarUsuario.Location = new System.Drawing.Point(17, 65);
             this.chbAlterarUsuario.Name = "chbAlterarUsuario";
             this.chbAlterarUsuario.Size = new System.Drawing.Size(15, 14);
-            this.chbAlterarUsuario.TabIndex = 19;
+            this.chbAlterarUsuario.TabIndex = 37;
             this.chbAlterarUsuario.UseVisualStyleBackColor = true;
             // 
             // label35
@@ -714,7 +714,7 @@
             this.chbConsultarFolha.Location = new System.Drawing.Point(132, 101);
             this.chbConsultarFolha.Name = "chbConsultarFolha";
             this.chbConsultarFolha.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarFolha.TabIndex = 56;
+            this.chbConsultarFolha.TabIndex = 34;
             this.chbConsultarFolha.UseVisualStyleBackColor = true;
             // 
             // label26
@@ -734,7 +734,7 @@
             this.chbConsultarEstoque.Location = new System.Drawing.Point(17, 102);
             this.chbConsultarEstoque.Name = "chbConsultarEstoque";
             this.chbConsultarEstoque.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarEstoque.TabIndex = 60;
+            this.chbConsultarEstoque.TabIndex = 29;
             this.chbConsultarEstoque.UseVisualStyleBackColor = true;
             // 
             // label25
@@ -754,7 +754,7 @@
             this.chbConsultarVendas.Location = new System.Drawing.Point(132, 84);
             this.chbConsultarVendas.Name = "chbConsultarVendas";
             this.chbConsultarVendas.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarVendas.TabIndex = 58;
+            this.chbConsultarVendas.TabIndex = 33;
             this.chbConsultarVendas.UseVisualStyleBackColor = true;
             // 
             // label24
@@ -774,7 +774,7 @@
             this.chbConsultarPedido.Location = new System.Drawing.Point(17, 85);
             this.chbConsultarPedido.Name = "chbConsultarPedido";
             this.chbConsultarPedido.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarPedido.TabIndex = 56;
+            this.chbConsultarPedido.TabIndex = 28;
             this.chbConsultarPedido.UseVisualStyleBackColor = true;
             // 
             // label23
@@ -794,7 +794,7 @@
             this.chbConsultarFuncionario.Location = new System.Drawing.Point(132, 64);
             this.chbConsultarFuncionario.Name = "chbConsultarFuncionario";
             this.chbConsultarFuncionario.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarFuncionario.TabIndex = 54;
+            this.chbConsultarFuncionario.TabIndex = 32;
             this.chbConsultarFuncionario.UseVisualStyleBackColor = true;
             // 
             // label22
@@ -814,7 +814,7 @@
             this.chbConsultarCardapio.Location = new System.Drawing.Point(132, 44);
             this.chbConsultarCardapio.Name = "chbConsultarCardapio";
             this.chbConsultarCardapio.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarCardapio.TabIndex = 52;
+            this.chbConsultarCardapio.TabIndex = 31;
             this.chbConsultarCardapio.UseVisualStyleBackColor = true;
             this.chbConsultarCardapio.CheckedChanged += new System.EventHandler(this.chbConsultarCardapio_CheckedChanged);
             // 
@@ -835,7 +835,7 @@
             this.chbConsultarProduto.Location = new System.Drawing.Point(132, 25);
             this.chbConsultarProduto.Name = "chbConsultarProduto";
             this.chbConsultarProduto.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarProduto.TabIndex = 48;
+            this.chbConsultarProduto.TabIndex = 30;
             this.chbConsultarProduto.UseVisualStyleBackColor = true;
             // 
             // chbConsultarFornecedor
@@ -844,7 +844,7 @@
             this.chbConsultarFornecedor.Location = new System.Drawing.Point(17, 45);
             this.chbConsultarFornecedor.Name = "chbConsultarFornecedor";
             this.chbConsultarFornecedor.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarFornecedor.TabIndex = 51;
+            this.chbConsultarFornecedor.TabIndex = 26;
             this.chbConsultarFornecedor.UseVisualStyleBackColor = true;
             // 
             // chbConsultarCliente
@@ -853,7 +853,7 @@
             this.chbConsultarCliente.Location = new System.Drawing.Point(17, 25);
             this.chbConsultarCliente.Name = "chbConsultarCliente";
             this.chbConsultarCliente.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarCliente.TabIndex = 18;
+            this.chbConsultarCliente.TabIndex = 25;
             this.chbConsultarCliente.UseVisualStyleBackColor = true;
             // 
             // label17
@@ -884,7 +884,7 @@
             this.chbConsultarUsuario.Location = new System.Drawing.Point(17, 65);
             this.chbConsultarUsuario.Name = "chbConsultarUsuario";
             this.chbConsultarUsuario.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultarUsuario.TabIndex = 19;
+            this.chbConsultarUsuario.TabIndex = 27;
             this.chbConsultarUsuario.UseVisualStyleBackColor = true;
             // 
             // label21
@@ -937,7 +937,7 @@
             this.chbCadastrarFolha.Location = new System.Drawing.Point(17, 23);
             this.chbCadastrarFolha.Name = "chbCadastrarFolha";
             this.chbCadastrarFolha.Size = new System.Drawing.Size(15, 14);
-            this.chbCadastrarFolha.TabIndex = 54;
+            this.chbCadastrarFolha.TabIndex = 19;
             this.chbCadastrarFolha.UseVisualStyleBackColor = true;
             // 
             // label46
@@ -957,7 +957,7 @@
             this.chbCardapio.Location = new System.Drawing.Point(17, 86);
             this.chbCardapio.Name = "chbCardapio";
             this.chbCardapio.Size = new System.Drawing.Size(15, 14);
-            this.chbCardapio.TabIndex = 52;
+            this.chbCardapio.TabIndex = 22;
             this.chbCardapio.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -977,7 +977,7 @@
             this.chbCadastroProduto.Location = new System.Drawing.Point(132, 25);
             this.chbCadastroProduto.Name = "chbCadastroProduto";
             this.chbCadastroProduto.Size = new System.Drawing.Size(15, 14);
-            this.chbCadastroProduto.TabIndex = 48;
+            this.chbCadastroProduto.TabIndex = 23;
             this.chbCadastroProduto.UseVisualStyleBackColor = true;
             // 
             // chbCadastroFuncionario
@@ -986,7 +986,7 @@
             this.chbCadastroFuncionario.Location = new System.Drawing.Point(17, 45);
             this.chbCadastroFuncionario.Name = "chbCadastroFuncionario";
             this.chbCadastroFuncionario.Size = new System.Drawing.Size(15, 14);
-            this.chbCadastroFuncionario.TabIndex = 51;
+            this.chbCadastroFuncionario.TabIndex = 20;
             this.chbCadastroFuncionario.UseVisualStyleBackColor = true;
             // 
             // chbCadastroCliente
@@ -995,7 +995,7 @@
             this.chbCadastroCliente.Location = new System.Drawing.Point(132, 45);
             this.chbCadastroCliente.Name = "chbCadastroCliente";
             this.chbCadastroCliente.Size = new System.Drawing.Size(15, 14);
-            this.chbCadastroCliente.TabIndex = 18;
+            this.chbCadastroCliente.TabIndex = 24;
             this.chbCadastroCliente.UseVisualStyleBackColor = true;
             // 
             // label7
@@ -1026,7 +1026,7 @@
             this.chbCadastroFornecedor.Location = new System.Drawing.Point(17, 65);
             this.chbCadastroFornecedor.Name = "chbCadastroFornecedor";
             this.chbCadastroFornecedor.Size = new System.Drawing.Size(15, 14);
-            this.chbCadastroFornecedor.TabIndex = 19;
+            this.chbCadastroFornecedor.TabIndex = 21;
             this.chbCadastroFornecedor.UseVisualStyleBackColor = true;
             // 
             // label19
@@ -1072,7 +1072,7 @@
             this.chbConsultar.Location = new System.Drawing.Point(122, 86);
             this.chbConsultar.Name = "chbConsultar";
             this.chbConsultar.Size = new System.Drawing.Size(15, 14);
-            this.chbConsultar.TabIndex = 65;
+            this.chbConsultar.TabIndex = 18;
             this.chbConsultar.UseVisualStyleBackColor = true;
             // 
             // label51
@@ -1103,7 +1103,7 @@
             this.chbMenuEstoque.Location = new System.Drawing.Point(17, 88);
             this.chbMenuEstoque.Name = "chbMenuEstoque";
             this.chbMenuEstoque.Size = new System.Drawing.Size(15, 14);
-            this.chbMenuEstoque.TabIndex = 62;
+            this.chbMenuEstoque.TabIndex = 14;
             this.chbMenuEstoque.UseVisualStyleBackColor = true;
             // 
             // chbrh
@@ -1112,7 +1112,7 @@
             this.chbrh.Location = new System.Drawing.Point(122, 68);
             this.chbrh.Name = "chbrh";
             this.chbrh.Size = new System.Drawing.Size(15, 14);
-            this.chbrh.TabIndex = 21;
+            this.chbrh.TabIndex = 17;
             this.chbrh.UseVisualStyleBackColor = true;
             // 
             // chbfinanceiro
@@ -1121,7 +1121,7 @@
             this.chbfinanceiro.Location = new System.Drawing.Point(122, 48);
             this.chbfinanceiro.Name = "chbfinanceiro";
             this.chbfinanceiro.Size = new System.Drawing.Size(15, 14);
-            this.chbfinanceiro.TabIndex = 22;
+            this.chbfinanceiro.TabIndex = 16;
             this.chbfinanceiro.UseVisualStyleBackColor = true;
             // 
             // label6
@@ -1152,7 +1152,7 @@
             this.chbcompras.Location = new System.Drawing.Point(122, 25);
             this.chbcompras.Name = "chbcompras";
             this.chbcompras.Size = new System.Drawing.Size(15, 14);
-            this.chbcompras.TabIndex = 48;
+            this.chbcompras.TabIndex = 15;
             this.chbcompras.UseVisualStyleBackColor = true;
             // 
             // chbcadastro
@@ -1161,7 +1161,7 @@
             this.chbcadastro.Location = new System.Drawing.Point(17, 45);
             this.chbcadastro.Name = "chbcadastro";
             this.chbcadastro.Size = new System.Drawing.Size(15, 14);
-            this.chbcadastro.TabIndex = 51;
+            this.chbcadastro.TabIndex = 12;
             this.chbcadastro.UseVisualStyleBackColor = true;
             // 
             // chbtotal
@@ -1170,7 +1170,7 @@
             this.chbtotal.Location = new System.Drawing.Point(17, 25);
             this.chbtotal.Name = "chbtotal";
             this.chbtotal.Size = new System.Drawing.Size(15, 14);
-            this.chbtotal.TabIndex = 18;
+            this.chbtotal.TabIndex = 11;
             this.chbtotal.UseVisualStyleBackColor = true;
             // 
             // label9
@@ -1212,7 +1212,7 @@
             this.chbvendas.Location = new System.Drawing.Point(17, 65);
             this.chbvendas.Name = "chbvendas";
             this.chbvendas.Size = new System.Drawing.Size(15, 14);
-            this.chbvendas.TabIndex = 19;
+            this.chbvendas.TabIndex = 13;
             this.chbvendas.UseVisualStyleBackColor = true;
             // 
             // label10
@@ -1264,7 +1264,7 @@
             this.maskedTextBox1.Mask = "999.999.999-00";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(103, 20);
-            this.maskedTextBox1.TabIndex = 88;
+            this.maskedTextBox1.TabIndex = 2;
             // 
             // mtbcpf
             // 
@@ -1272,14 +1272,14 @@
             this.mtbcpf.Mask = "999.999.999-00";
             this.mtbcpf.Name = "mtbcpf";
             this.mtbcpf.Size = new System.Drawing.Size(86, 20);
-            this.mtbcpf.TabIndex = 87;
+            this.mtbcpf.TabIndex = 4;
             // 
             // txtgmail
             // 
             this.txtgmail.Location = new System.Drawing.Point(95, 90);
             this.txtgmail.Name = "txtgmail";
             this.txtgmail.Size = new System.Drawing.Size(248, 20);
-            this.txtgmail.TabIndex = 71;
+            this.txtgmail.TabIndex = 3;
             // 
             // label52
             // 
@@ -1298,7 +1298,7 @@
             this.txtnome.Location = new System.Drawing.Point(95, 19);
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(248, 20);
-            this.txtnome.TabIndex = 68;
+            this.txtnome.TabIndex = 1;
             // 
             // label16
             // 
@@ -1317,7 +1317,7 @@
             this.txtsalario.Location = new System.Drawing.Point(538, 54);
             this.txtsalario.Name = "txtsalario";
             this.txtsalario.Size = new System.Drawing.Size(82, 20);
-            this.txtsalario.TabIndex = 75;
+            this.txtsalario.TabIndex = 5;
             // 
             // label15
             // 
@@ -1392,7 +1392,7 @@
             this.txtnumerocasa.Location = new System.Drawing.Point(129, 97);
             this.txtnumerocasa.Name = "txtnumerocasa";
             this.txtnumerocasa.Size = new System.Drawing.Size(176, 20);
-            this.txtnumerocasa.TabIndex = 97;
+            this.txtnumerocasa.TabIndex = 8;
             // 
             // label13
             // 
@@ -1411,14 +1411,14 @@
             this.mbtcep.Mask = "99999-999";
             this.mbtcep.Name = "mbtcep";
             this.mbtcep.Size = new System.Drawing.Size(242, 20);
-            this.mbtcep.TabIndex = 95;
+            this.mbtcep.TabIndex = 6;
             // 
             // txtcidade
             // 
             this.txtcidade.Location = new System.Drawing.Point(64, 64);
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(242, 20);
-            this.txtcidade.TabIndex = 94;
+            this.txtcidade.TabIndex = 7;
             // 
             // label54
             // 
@@ -1436,7 +1436,7 @@
             this.txtrua.Location = new System.Drawing.Point(405, 63);
             this.txtrua.Name = "txtrua";
             this.txtrua.Size = new System.Drawing.Size(262, 20);
-            this.txtrua.TabIndex = 92;
+            this.txtrua.TabIndex = 10;
             // 
             // label55
             // 
@@ -1454,7 +1454,7 @@
             this.txtbairro.Location = new System.Drawing.Point(406, 28);
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(262, 20);
-            this.txtbairro.TabIndex = 90;
+            this.txtbairro.TabIndex = 9;
             // 
             // label56
             // 
@@ -1508,7 +1508,7 @@
             this.btnCadastrarusuario.Location = new System.Drawing.Point(583, 587);
             this.btnCadastrarusuario.Name = "btnCadastrarusuario";
             this.btnCadastrarusuario.Size = new System.Drawing.Size(157, 36);
-            this.btnCadastrarusuario.TabIndex = 82;
+            this.btnCadastrarusuario.TabIndex = 57;
             this.btnCadastrarusuario.Text = "Cadastrar";
             this.btnCadastrarusuario.UseVisualStyleBackColor = false;
             this.btnCadastrarusuario.Click += new System.EventHandler(this.btnCadastrarusuario_Click);

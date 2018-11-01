@@ -129,6 +129,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
             this.txtgmail = new System.Windows.Forms.TextBox();
             this.label52 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
@@ -138,9 +140,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.btnCadastrarusuario = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtnumerocasa = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.mbtcep = new System.Windows.Forms.MaskedTextBox();
             this.txtcidade = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
@@ -149,11 +151,9 @@
             this.txtbairro = new System.Windows.Forms.TextBox();
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtnumerocasa = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.btnCadastrarusuario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -164,6 +164,7 @@
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // errorProvider1
@@ -1257,6 +1258,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Informações Gerais";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(95, 53);
+            this.maskedTextBox1.Mask = "999.999.999-00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(103, 20);
+            this.maskedTextBox1.TabIndex = 88;
+            // 
+            // mtbcpf
+            // 
+            this.mtbcpf.Location = new System.Drawing.Point(534, 22);
+            this.mtbcpf.Mask = "999.999.999-00";
+            this.mtbcpf.Name = "mtbcpf";
+            this.mtbcpf.Size = new System.Drawing.Size(86, 20);
+            this.mtbcpf.TabIndex = 87;
+            // 
             // txtgmail
             // 
             this.txtgmail.Location = new System.Drawing.Point(95, 90);
@@ -1340,9 +1357,9 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.txtnumerocasa);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.mbtcep);
             this.groupBox2.Controls.Add(this.txtcidade);
             this.groupBox2.Controls.Add(this.label54);
@@ -1359,54 +1376,48 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
             // 
-            // label4
+            // pictureBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(17, 580);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
-            this.label4.TabIndex = 78;
-            this.label4.Text = "Usuário";
+            this.pictureBox1.Image = global::RestauranteADM.Properties.Resources.lupa;
+            this.pictureBox1.Location = new System.Drawing.Point(313, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 100;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
             // 
-            // label36
+            // txtnumerocasa
             // 
-            this.label36.AutoSize = true;
-            this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(272, 5);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(225, 25);
-            this.label36.TabIndex = 84;
-            this.label36.Text = "Cadastrar Funcionário";
+            this.txtnumerocasa.Location = new System.Drawing.Point(129, 97);
+            this.txtnumerocasa.Name = "txtnumerocasa";
+            this.txtnumerocasa.Size = new System.Drawing.Size(176, 20);
+            this.txtnumerocasa.TabIndex = 97;
             // 
-            // btnCadastrarusuario
+            // label13
             // 
-            this.btnCadastrarusuario.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnCadastrarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarusuario.Location = new System.Drawing.Point(583, 587);
-            this.btnCadastrarusuario.Name = "btnCadastrarusuario";
-            this.btnCadastrarusuario.Size = new System.Drawing.Size(157, 36);
-            this.btnCadastrarusuario.TabIndex = 82;
-            this.btnCadastrarusuario.Text = "Cadastrar";
-            this.btnCadastrarusuario.UseVisualStyleBackColor = false;
-            this.btnCadastrarusuario.Click += new System.EventHandler(this.btnCadastrarusuario_Click);
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(15, 98);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(88, 16);
+            this.label13.TabIndex = 96;
+            this.label13.Text = "Numero local";
             // 
             // mbtcep
             // 
             this.mbtcep.Location = new System.Drawing.Point(64, 26);
             this.mbtcep.Mask = "99999-999";
             this.mbtcep.Name = "mbtcep";
-            this.mbtcep.Size = new System.Drawing.Size(262, 20);
+            this.mbtcep.Size = new System.Drawing.Size(242, 20);
             this.mbtcep.TabIndex = 95;
             // 
             // txtcidade
             // 
             this.txtcidade.Location = new System.Drawing.Point(64, 64);
             this.txtcidade.Name = "txtcidade";
-            this.txtcidade.Size = new System.Drawing.Size(262, 20);
+            this.txtcidade.Size = new System.Drawing.Size(242, 20);
             this.txtcidade.TabIndex = 94;
             // 
             // label54
@@ -1467,51 +1478,40 @@
             this.label57.TabIndex = 88;
             this.label57.Text = "CEP";
             // 
-            // button1
+            // label4
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(511, 89);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(157, 36);
-            this.button1.TabIndex = 88;
-            this.button1.Text = "Procura";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(17, 580);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "Usuário";
             // 
-            // txtnumerocasa
+            // label36
             // 
-            this.txtnumerocasa.Location = new System.Drawing.Point(129, 97);
-            this.txtnumerocasa.Name = "txtnumerocasa";
-            this.txtnumerocasa.Size = new System.Drawing.Size(196, 20);
-            this.txtnumerocasa.TabIndex = 97;
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(272, 5);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(225, 25);
+            this.label36.TabIndex = 84;
+            this.label36.Text = "Cadastrar Funcionário";
             // 
-            // label13
+            // btnCadastrarusuario
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(15, 98);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 16);
-            this.label13.TabIndex = 96;
-            this.label13.Text = "Numero local";
-            // 
-            // mtbcpf
-            // 
-            this.mtbcpf.Location = new System.Drawing.Point(534, 22);
-            this.mtbcpf.Mask = "999.999.999-00";
-            this.mtbcpf.Name = "mtbcpf";
-            this.mtbcpf.Size = new System.Drawing.Size(86, 20);
-            this.mtbcpf.TabIndex = 87;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(95, 53);
-            this.maskedTextBox1.Mask = "999.999.999-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(103, 20);
-            this.maskedTextBox1.TabIndex = 88;
+            this.btnCadastrarusuario.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrarusuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarusuario.Location = new System.Drawing.Point(583, 587);
+            this.btnCadastrarusuario.Name = "btnCadastrarusuario";
+            this.btnCadastrarusuario.Size = new System.Drawing.Size(157, 36);
+            this.btnCadastrarusuario.TabIndex = 82;
+            this.btnCadastrarusuario.Text = "Cadastrar";
+            this.btnCadastrarusuario.UseVisualStyleBackColor = false;
+            this.btnCadastrarusuario.Click += new System.EventHandler(this.btnCadastrarusuario_Click);
             // 
             // Cadastro_usuário_do_sistema
             // 
@@ -1555,6 +1555,7 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1673,7 +1674,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Button btnCadastrarusuario;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.MaskedTextBox mbtcep;
         private System.Windows.Forms.TextBox txtcidade;
         private System.Windows.Forms.Label label54;
@@ -1686,5 +1686,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox mtbcpf;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

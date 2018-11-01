@@ -275,7 +275,8 @@ namespace RestauranteADM.TELAS
 
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             using (var ws = new WSCorreios.AtendeClienteClient())
             {
@@ -285,6 +286,8 @@ namespace RestauranteADM.TELAS
                 txtrua.Text = result.end;
             }
         }
+
+       
     }
 }
     

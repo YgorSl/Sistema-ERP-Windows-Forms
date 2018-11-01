@@ -218,15 +218,27 @@ namespace RestauranteADM.TELAS
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+       
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             using (var ws = new WSCorreios.AtendeClienteClient())
             {
                 var result = ws.consultaCEP(mbtcep.Text);
                 txtbairro.Text = result.bairro;
                 txtcidade.Text = result.cidade;
-               txtrua.Text = result.end;
+                txtrua.Text = result.end;
             }
+        }
+
+        private void mbtcep_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void mtbcpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

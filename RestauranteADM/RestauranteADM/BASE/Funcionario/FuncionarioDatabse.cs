@@ -29,6 +29,13 @@ namespace RestauranteADM.BASE.Funcionario
             parms.Add(new MySqlParameter("ds_Salario", dto.Salario));
             parms.Add(new MySqlParameter("ds_gmail", dto.Gmail));
             parms.Add(new MySqlParameter("ds_senha_recupecao", dto.senha_recuperaçao));
+            parms.Add(new MySqlParameter("ds_Cep", dto.Cep));
+            parms.Add(new MySqlParameter("nm_Cidade", dto.Rua));
+            parms.Add(new MySqlParameter("nm_Bairro", dto.Bairro));
+            parms.Add(new MySqlParameter("nm_Rua", dto.Rua));
+           
+
+
 
 
 
@@ -72,6 +79,13 @@ namespace RestauranteADM.BASE.Funcionario
                 funcio.Salario = reader.GetDouble("ds_Salario");
                 funcio.Gmail = reader.GetString("ds_gmail");
                 funcio.senha_recuperaçao = reader.GetString("ds_senha_recupecao");
+                funcio.Cep = reader.GetString("ds_Salario");
+                funcio.Cidade = reader.GetString("nm_Cidade");
+                funcio.Bairro = reader.GetString("nm_bairro");
+                funcio.Rua = reader.GetString("nm_Rua");
+                funcio.N_casa = reader.GetString("nu_casa");
+
+
 
                 funcio.eui = new UsuarioDTO();
                 funcio.eui.usuario = new FuncionarioDTO();

@@ -49,14 +49,15 @@
             this.txtjuridica = new System.Windows.Forms.RadioButton();
             this.txtfisica = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.mtbcnpj = new System.Windows.Forms.MaskedTextBox();
+            this.mbtcep = new System.Windows.Forms.MaskedTextBox();
+            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
             this.txtcidade = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtrua = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
-            this.mbtcep = new System.Windows.Forms.MaskedTextBox();
-            this.mtbcnpj = new System.Windows.Forms.MaskedTextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -279,6 +280,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.mtbcnpj);
             this.panel1.Controls.Add(this.mbtcep);
             this.panel1.Controls.Add(this.mtbcpf);
@@ -304,6 +306,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(422, 439);
             this.panel1.TabIndex = 82;
+            // 
+            // mtbcnpj
+            // 
+            this.mtbcnpj.Location = new System.Drawing.Point(138, 317);
+            this.mtbcnpj.Mask = "99.999.999/9999-99";
+            this.mtbcnpj.Name = "mtbcnpj";
+            this.mtbcnpj.Size = new System.Drawing.Size(262, 20);
+            this.mtbcnpj.TabIndex = 88;
+            // 
+            // mbtcep
+            // 
+            this.mbtcep.Location = new System.Drawing.Point(138, 149);
+            this.mbtcep.Mask = "99999-999";
+            this.mbtcep.Name = "mbtcep";
+            this.mbtcep.Size = new System.Drawing.Size(262, 20);
+            this.mbtcep.TabIndex = 87;
+            // 
+            // mtbcpf
+            // 
+            this.mtbcpf.Location = new System.Drawing.Point(138, 77);
+            this.mtbcpf.Mask = "999.999.999-00";
+            this.mtbcpf.Name = "mtbcpf";
+            this.mtbcpf.Size = new System.Drawing.Size(262, 20);
+            this.mtbcpf.TabIndex = 86;
             // 
             // txtcidade
             // 
@@ -353,29 +379,17 @@
             this.panel2.Size = new System.Drawing.Size(247, 241);
             this.panel2.TabIndex = 83;
             // 
-            // mtbcpf
+            // button2
             // 
-            this.mtbcpf.Location = new System.Drawing.Point(138, 77);
-            this.mtbcpf.Mask = "999.999.999-00";
-            this.mtbcpf.Name = "mtbcpf";
-            this.mtbcpf.Size = new System.Drawing.Size(262, 20);
-            this.mtbcpf.TabIndex = 86;
-            // 
-            // mbtcep
-            // 
-            this.mbtcep.Location = new System.Drawing.Point(138, 149);
-            this.mbtcep.Mask = "99999-999";
-            this.mbtcep.Name = "mbtcep";
-            this.mbtcep.Size = new System.Drawing.Size(262, 20);
-            this.mbtcep.TabIndex = 87;
-            // 
-            // mtbcnpj
-            // 
-            this.mtbcnpj.Location = new System.Drawing.Point(138, 317);
-            this.mtbcnpj.Mask = "99.999.999/9999-99";
-            this.mtbcnpj.Name = "mtbcnpj";
-            this.mtbcnpj.Size = new System.Drawing.Size(262, 20);
-            this.mtbcnpj.TabIndex = 88;
+            this.button2.BackColor = System.Drawing.Color.SeaGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(243, 374);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(157, 36);
+            this.button2.TabIndex = 84;
+            this.button2.Text = "Pesquisa";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Cadastrar_cliente
             // 
@@ -434,5 +448,6 @@
         private System.Windows.Forms.MaskedTextBox mbtcep;
         private System.Windows.Forms.MaskedTextBox mtbcpf;
         private System.Windows.Forms.MaskedTextBox mtbcnpj;
+        private System.Windows.Forms.Button button2;
     }
 }

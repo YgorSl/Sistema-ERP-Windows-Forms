@@ -31,11 +31,6 @@ namespace RestauranteADM.TELAS
 
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -54,7 +49,7 @@ namespace RestauranteADM.TELAS
                 dto.Cpf = txtcpf.Text;
 
                 dto.Rg = txtrg.Text;
-                dto.Endereço = txtendereço.Text;
+               
 
                 dto.Gmail = txtgmail.Text;
                 dto.senha_recuperaçao = txtrecuperacao.Text;
@@ -188,11 +183,6 @@ namespace RestauranteADM.TELAS
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -242,8 +232,8 @@ namespace RestauranteADM.TELAS
 
         private void btnCadastrarusuario_Click(object sender, EventArgs e)
         {
-            //  try
-            //{
+             try
+           {
 
 
             FuncionarioDTO dto = new FuncionarioDTO();
@@ -252,7 +242,6 @@ namespace RestauranteADM.TELAS
             dto.Nome = txtnome.Text;
             dto.Cpf = txtcpf.Text;
             dto.Rg = txtrg.Text;
-            dto.Endereço = txtendereço.Text;
             dto.Salario = Convert.ToDouble(txtsalario.Text);
             dto.senha_recuperaçao = txtrecuperacao.Text;
             dto.Gmail = txtgmail.Text;
@@ -315,17 +304,22 @@ namespace RestauranteADM.TELAS
             ft.Salvar(dto, usuario);
 
             MessageBox.Show("Usuário Salvo com sucesso! :)");
-            //}
-            //catch (Exception ex)
-            //{
-            // MessageBox.Show("Ocorreu um erro. Entre em contato com o administrador. " + ex.Message,
-            //    "Toc Toc Brasil",
-            //   MessageBoxButtons.OK,
-            //   MessageBoxIcon.Error);
-            // }
+           }
+            catch (Exception ex)
+            {
+             MessageBox.Show("Ocorreu um erro. Entre em contato com o administrador. " + ex.Message,
+               "Toc Toc Brasil",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Error);
+            }
         }
 
         private void chbConsultarCardapio_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
         {
 
         }

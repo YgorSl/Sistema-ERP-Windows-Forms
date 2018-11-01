@@ -151,10 +151,10 @@ namespace RestauranteADM.TELAS
 
 
                 }
-                 if (txtjuridica.Checked == true)
+                if (txtjuridica.Checked == true)
                 {
                     dto.Tipopessoa = "PJ";
-                   
+
 
 
                 }
@@ -183,7 +183,7 @@ namespace RestauranteADM.TELAS
             }
         }
 
-  
+
 
         private void txtfisica_CheckedChanged_1(object sender, EventArgs e)
         {
@@ -212,10 +212,21 @@ namespace RestauranteADM.TELAS
             else
             {
                 mtbcpf.Enabled = true;
-              mtbcpf.Text = string.Empty;
+                mtbcpf.Text = string.Empty;
 
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (var ws = new WSCorreios.AtendeClienteClient())
+            {
+                var result = ws.consultaCEP(mbtcep.Text);
+                txtbairro.Text = result.bairro;
+                txtcidade.Text = result.cidade;
+               txtrua.Text = result.end;
+            }
         }
     }
 }

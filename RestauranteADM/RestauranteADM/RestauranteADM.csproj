@@ -60,6 +60,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Consulta\Consultar_fluxo_caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Consulta\Consultar_fluxo_caixa.Designer.cs">
+      <DependentUpon>Consultar_fluxo_caixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\recuperaçao\alteraçaodesenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +371,9 @@
     <Compile Include="Validacao.cs" />
     <EmbeddedResource Include="bater_ponto.resx">
       <DependentUpon>bater_ponto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Consulta\Consultar_fluxo_caixa.resx">
+      <DependentUpon>Consultar_fluxo_caixa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\recuperaçao\alteraçaodesenha.resx">
       <DependentUpon>alteraçaodesenha.cs</DependentUpon>

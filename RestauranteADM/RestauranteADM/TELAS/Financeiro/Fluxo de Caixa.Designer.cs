@@ -33,14 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvfluxo = new System.Windows.Forms.DataGridView();
-            this.Operação = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_de_operaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Movimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label36 = new System.Windows.Forms.Label();
             this.lblsituaçao = new System.Windows.Forms.Label();
             this.lblsituaca = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtbuscarfluxo = new System.Windows.Forms.Button();
             this.lblsaida = new System.Windows.Forms.Label();
             this.lblcompra = new System.Windows.Forms.Label();
             this.lblvenda = new System.Windows.Forms.Label();
@@ -48,6 +44,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.lblentrada = new System.Windows.Forms.Label();
             this.btnfluxo = new System.Windows.Forms.Button();
+            this.Operação = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_de_operaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Movimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfluxo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,39 +106,15 @@
             this.Operação,
             this.tipo_de_operaca,
             this.Total,
-            this.Movimento});
+            this.Movimento,
+            this.perda,
+            this.saldo});
             this.dgvfluxo.Location = new System.Drawing.Point(0, 226);
             this.dgvfluxo.Name = "dgvfluxo";
             this.dgvfluxo.Size = new System.Drawing.Size(752, 244);
             this.dgvfluxo.TabIndex = 61;
             this.dgvfluxo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfluxo_CellContentClick);
             this.dgvfluxo.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvfluxo_DataBindingComplete);
-            // 
-            // Operação
-            // 
-            this.Operação.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Operação.DataPropertyName = "Data";
-            this.Operação.HeaderText = "data";
-            this.Operação.Name = "Operação";
-            // 
-            // tipo_de_operaca
-            // 
-            this.tipo_de_operaca.DataPropertyName = "tipo_de_operacao";
-            this.tipo_de_operaca.HeaderText = "Operaçao";
-            this.tipo_de_operaca.Name = "tipo_de_operaca";
-            // 
-            // Total
-            // 
-            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Total.DataPropertyName = "valortotal";
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            // 
-            // Movimento
-            // 
-            this.Movimento.DataPropertyName = "movimento";
-            this.Movimento.HeaderText = "Movimento";
-            this.Movimento.Name = "Movimento";
             // 
             // label36
             // 
@@ -172,17 +150,17 @@
             this.lblsituaca.TabIndex = 66;
             this.lblsituaca.Text = "-------";
             // 
-            // button1
+            // txtbuscarfluxo
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(521, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 29);
-            this.button1.TabIndex = 67;
-            this.button1.Text = "buscar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txtbuscarfluxo.BackColor = System.Drawing.Color.SeaGreen;
+            this.txtbuscarfluxo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.txtbuscarfluxo.Location = new System.Drawing.Point(521, 154);
+            this.txtbuscarfluxo.Name = "txtbuscarfluxo";
+            this.txtbuscarfluxo.Size = new System.Drawing.Size(80, 29);
+            this.txtbuscarfluxo.TabIndex = 67;
+            this.txtbuscarfluxo.Text = "Buscar";
+            this.txtbuscarfluxo.UseVisualStyleBackColor = false;
+            this.txtbuscarfluxo.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblsaida
             // 
@@ -263,6 +241,42 @@
             this.btnfluxo.UseVisualStyleBackColor = false;
             this.btnfluxo.Click += new System.EventHandler(this.btnfluxo_Click);
             // 
+            // Operação
+            // 
+            this.Operação.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Operação.DataPropertyName = "id";
+            this.Operação.HeaderText = "ID";
+            this.Operação.Name = "Operação";
+            // 
+            // tipo_de_operaca
+            // 
+            this.tipo_de_operaca.DataPropertyName = "data_inicial";
+            this.tipo_de_operaca.HeaderText = "Data Inicial";
+            this.tipo_de_operaca.Name = "tipo_de_operaca";
+            // 
+            // Total
+            // 
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Total.DataPropertyName = "data_final";
+            this.Total.HeaderText = "Data Final";
+            this.Total.Name = "Total";
+            // 
+            // Movimento
+            // 
+            this.Movimento.DataPropertyName = "ganho";
+            this.Movimento.HeaderText = "Ganho";
+            this.Movimento.Name = "Movimento";
+            // 
+            // perda
+            // 
+            this.perda.HeaderText = "Perda";
+            this.perda.Name = "perda";
+            // 
+            // saldo
+            // 
+            this.saldo.HeaderText = "Capital de Giro";
+            this.saldo.Name = "saldo";
+            // 
             // Fluxo_de_Caixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,7 +291,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.lblsaida);
             this.Controls.Add(this.lblcompra);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtbuscarfluxo);
             this.Controls.Add(this.lblsituaca);
             this.Controls.Add(this.lblsituaçao);
             this.Controls.Add(this.label36);
@@ -307,11 +321,7 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label lblsituaçao;
         private System.Windows.Forms.Label lblsituaca;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Operação;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_de_operaca;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Movimento;
+        private System.Windows.Forms.Button txtbuscarfluxo;
         private System.Windows.Forms.Label lblsaida;
         private System.Windows.Forms.Label lblcompra;
         private System.Windows.Forms.Label lblvenda;
@@ -319,5 +329,11 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblentrada;
         private System.Windows.Forms.Button btnfluxo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Operação;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_de_operaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Movimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn saldo;
     }
 }

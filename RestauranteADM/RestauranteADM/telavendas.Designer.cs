@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpdata = new System.Windows.Forms.DateTimePicker();
             this.cmbcliente = new System.Windows.Forms.ComboBox();
@@ -54,7 +54,6 @@
             this.lbltroco = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.lbltotal = new System.Windows.Forms.Label();
@@ -130,7 +129,6 @@
             this.panel.Controls.Add(this.groupBox3);
             this.panel.Controls.Add(this.groupBox2);
             this.panel.Controls.Add(this.groupBox1);
-            this.panel.Controls.Add(this.label9);
             this.panel.Controls.Add(this.label10);
             this.panel.Controls.Add(this.button1);
             this.panel.Controls.Add(this.lbltotal);
@@ -152,7 +150,7 @@
             // 
             // txtvlfinal
             // 
-            this.txtvlfinal.Location = new System.Drawing.Point(350, 257);
+            this.txtvlfinal.Location = new System.Drawing.Point(154, 503);
             this.txtvlfinal.Name = "txtvlfinal";
             this.txtvlfinal.Size = new System.Drawing.Size(82, 20);
             this.txtvlfinal.TabIndex = 131;
@@ -356,18 +354,6 @@
             this.label17.TabIndex = 123;
             this.label17.Text = "Troco";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(157, 503);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 20);
-            this.label9.TabIndex = 116;
-            this.label9.Text = "0,00";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -497,14 +483,14 @@
             this.dgvvendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nome,
             this.valor_final});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvvendas.Location = new System.Drawing.Point(75, 329);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
@@ -531,7 +517,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(586, 693);
+            this.button2.Location = new System.Drawing.Point(586, 678);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(216, 28);
             this.button2.TabIndex = 102;
@@ -556,7 +542,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(814, 797);
+            this.ClientSize = new System.Drawing.Size(814, 742);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.btnnova);
@@ -607,7 +593,6 @@
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label11;

@@ -37,5 +37,38 @@ namespace RestauranteADM.BASE.Fluxo_de_Caixa
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
             return pk;
         }
+        public List<FluxoCaixaDTO> Filtro(DateTime start, DateTime end)
+        {
+
+            string script = @"select* from tb_fluxo_de_caixa where dt_periodo_inicio>= @start and @end <= dt_periodo_final";
+
+
+
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("start", start));
+            parms.Add(new MySqlParameter("end", end));
+
+
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+
+            List<FluxoCaixaDTO> lista = new List<FluxoCaixaDTO>();
+            while (reader.Read() == true)
+            {
+                FluxoCaixaDTO vw = new FluxoCaixaDTO();
+                vw.ganhor = reader.GetDouble("vl_ganhar");
+                vw.perdar = reader.GetDouble("vl_valor");
+                vw.saldo = reader.GetFloat("vl_saldo");
+                vw.Perido_inicial = reader.GetDateTime("dt_periodo_inicio");
+                vw.Perido_final = reader.GetDateTime("dt_periodo_final");
+
+                lista.Add(vw);
+            }
+            return lista;
+        }
     }
 }
+

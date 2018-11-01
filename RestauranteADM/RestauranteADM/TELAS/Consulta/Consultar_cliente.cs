@@ -21,8 +21,30 @@ namespace RestauranteADM.TELAS
             InitializeComponent();
 
             dgvcliente.AutoGenerateColumns = false;
-          
+
+            VerificarPermissoes();
         }
+        void VerificarPermissoes()
+        {
+            if (acesso.usuariologado.permissaototal == false)
+            {
+                if (acesso.usuariologado.permissaoconsultarcliente == false)
+                {
+                    btnConsultarCliente.Enabled = false;
+                }
+                if (acesso.usuariologado.permissaoalterarcliente == false)
+                {
+                    this.dgvcliente.Columns["Column2"].Visible = false;
+                }
+                if (acesso.usuariologado.permissaoexcluircliente == false)
+                {
+
+                    this.dgvcliente.Columns["Column1"].Visible = false;
+                }
+
+            }
+        }
+    
        
 
 

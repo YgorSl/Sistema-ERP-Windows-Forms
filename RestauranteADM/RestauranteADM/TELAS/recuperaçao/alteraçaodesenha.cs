@@ -52,7 +52,7 @@ namespace RestauranteADM
             AlteraçaoBunisess bunisess = new AlteraçaoBunisess();
             bunisess.alteraçao(oi, Login, Senhar);
 
-            MessageBox.Show("senha e login alterandos por favor nao esqueça seu corno");
+            MessageBox.Show("senha e login alterandos por favor ");
 
             Login login = new Login();
             login.Show();

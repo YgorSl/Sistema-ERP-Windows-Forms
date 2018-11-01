@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace RestauranteADM.BASE.Fluxo_de_Caixa
 {
-    class FluxoCaixaDTO
+   public class FluxoCaixaDTO
     {
         public int Id { get; set; }
-        public int IdVendaPrato { get; set; }
-        public int ContaPagar { get; set; }
+
+        public DateTime Perido_inicial { get; set; }
+        public DateTime Perido_final { get; set; }
+        public double ganhor { get; set; }
+        public double perdar { get; set; }
+        public float saldo { get; set; }
+   
     }
 }

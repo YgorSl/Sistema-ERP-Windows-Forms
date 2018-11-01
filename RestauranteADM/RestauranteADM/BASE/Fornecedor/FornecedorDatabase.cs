@@ -13,7 +13,7 @@ namespace RestauranteADM.BASE.Fornecedor
         public int Salvar(FornecedorDTO dto)
         {
             string script = @"INSERT INTO `mydb`.`tb_fornecedor` (nm_nome, ds_cnpj, ds_telefone, ds_endereço, ds_cidade, ds_estado) 
-                            VALUES (@nm_nome, @ds_cnpj, @ds_telefone, @ds_endereço, @ds_cidade, @ds_estado)";
+                                                         VALUES (@nm_nome, @ds_cnpj, @ds_telefone, @ds_endereço, @ds_cidade, @ds_estado)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_nome", dto.Nome));

@@ -34,58 +34,9 @@ namespace RestauranteADM.TELAS
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
 
-        }
+        
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-
-
-                FuncionarioDTO dto = new FuncionarioDTO();
-
-
-                dto.Nome = txtnome.Text;
-                dto.Cpf = txtcpf.Text;
-
-                dto.Rg = txtrg.Text;
-               
-
-                dto.Gmail = txtgmail.Text;
-                dto.senha_recuperaçao = txtrecuperacao.Text;
-
-
-
-
-                dto.Salario = Convert.ToDouble(txtsalario.Text);
-
-
-                UsuarioDTO usuario = new UsuarioDTO();
-
-                string senha = criptografia.Codificar(txtsenha.Text);
-                string login = criptografia.Codificar(txtusuario.Text);
-
-                usuario.login = login;
-                usuario.senha = senha;
-                usuario.permissaototal = chbtotal.Checked;
-                usuario.permissaoRH = chbrh.Checked;
-                usuario.permissaofinanceiro = chbfinanceiro.Checked;
-                usuario.permissaocadastro = chbcadastro.Checked;
-                usuario.permissaovendas = chbvendas.Checked;
-                usuario.permissaocompras = chbcompras.Checked;
-
-                FuncionarioBusiness ft = new FuncionarioBusiness();
-                ft.Salvar(dto, usuario);
-
-                MessageBox.Show("Usuário Salvo com sucesso! :)");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu um erro. Entre em contato com o administrador. " + ex.Message,
-                    "Toc Toc Brasil",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-            }
+       
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -240,16 +191,21 @@ namespace RestauranteADM.TELAS
 
 
             dto.Nome = txtnome.Text;
-            dto.Cpf = txtcpf.Text;
-            dto.Rg = txtrg.Text;
+            dto.Cpf = mtbcpf.Text;
+            dto.Rg = maskedTextBox1.Text;
             dto.Salario = Convert.ToDouble(txtsalario.Text);
             dto.senha_recuperaçao = txtrecuperacao.Text;
             dto.Gmail = txtgmail.Text;
+            dto.Cep = mbtcep.Text;
+            dto.Bairro = txtbairro.Text;
+            dto.N_local = txtnumerocasa.Text;
+            dto.Rua = txtrua.Text;
+            dto.Cidade = txtcidade.Text;
 
 
 
 
-            UsuarioDTO usuario = new UsuarioDTO();
+                UsuarioDTO usuario = new UsuarioDTO();
 
             string Login = criptografia.Codificar(txtusuario.Text);
             string Senhar = criptografia.Codificar(txtsenha.Text);
@@ -321,7 +277,13 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click_2(object sender, EventArgs e)
         {
-
+            using (var ws = new WSCorreios.AtendeClienteClient())
+            {
+                var result = ws.consultaCEP(mbtcep.Text);
+                txtbairro.Text = result.bairro;
+                txtcidade.Text = result.cidade;
+                txtrua.Text = result.end;
+            }
         }
     }
 }

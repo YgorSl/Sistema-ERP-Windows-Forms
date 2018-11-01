@@ -130,14 +130,14 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtnome.Text != string.Empty || mtbcpf.Text != string.Empty || txttelefone.Text != string.Empty || mbtcep.Text != string.Empty || txtbairro.Text != string.Empty || txtnumcasa.Text != string.Empty || txtfisica.Checked == false & txtjuridica.Checked == false)
+            if (txtnome.Text != string.Empty || mtbcpf.Text != string.Empty || mtbtelefone.Text != string.Empty || mbtcep.Text != string.Empty || txtbairro.Text != string.Empty || txtnumcasa.Text != string.Empty || txtfisica.Checked == false & txtjuridica.Checked == false)
             {
 
                 ClienteDTO dto = new ClienteDTO();
 
                 dto.Nome = txtnome.Text;
                 dto.Cpf = mtbcpf.Text;
-                dto.Telefone = txttelefone.Text;
+                dto.Telefone = mtbtelefone.Text;
                 dto.Cep = mbtcep.Text;
                 dto.Bairro = txtbairro.Text;
                 dto.NumeroCasa = txtnumcasa.Text;

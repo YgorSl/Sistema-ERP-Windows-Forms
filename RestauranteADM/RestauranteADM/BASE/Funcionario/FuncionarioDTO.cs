@@ -23,7 +23,7 @@ namespace RestauranteADM.BASE.Funcionario
         public string Cidade { get; set; }
         public string Rua { get; set; }
         public string Bairro { get; set; }
-        public string N_casa { get; set; }
+        public string N_local { get; set; }
 
         public UsuarioDTO eui { get; set; }
 

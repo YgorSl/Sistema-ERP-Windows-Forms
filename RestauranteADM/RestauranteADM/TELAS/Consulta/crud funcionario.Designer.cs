@@ -39,9 +39,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtcpf = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CEP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cpr = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rua = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.N_local = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Salario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -57,9 +61,13 @@
             this.dgvfuncio.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvfuncio.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nome,
-            this.Rg,
             this.CPF,
-            this.CEP,
+            this.Rg,
+            this.cpr,
+            this.Cidade,
+            this.Bairro,
+            this.Rua,
+            this.N_local,
             this.Salario,
             this.Gmail,
             this.Column2,
@@ -172,13 +180,6 @@
             this.Nome.ReadOnly = true;
             this.Nome.Width = 200;
             // 
-            // Rg
-            // 
-            this.Rg.DataPropertyName = "Rg";
-            this.Rg.HeaderText = "Rg";
-            this.Rg.Name = "Rg";
-            this.Rg.ReadOnly = true;
-            // 
             // CPF
             // 
             this.CPF.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -188,13 +189,47 @@
             this.CPF.Name = "CPF";
             this.CPF.ReadOnly = true;
             // 
-            // CEP
+            // Rg
             // 
-            this.CEP.DataPropertyName = "Endereço";
-            this.CEP.HeaderText = "endereço";
-            this.CEP.MinimumWidth = 20;
-            this.CEP.Name = "CEP";
-            this.CEP.ReadOnly = true;
+            this.Rg.DataPropertyName = "Rg";
+            this.Rg.HeaderText = "Rg";
+            this.Rg.Name = "Rg";
+            this.Rg.ReadOnly = true;
+            // 
+            // cpr
+            // 
+            this.cpr.DataPropertyName = "Cep";
+            this.cpr.HeaderText = "CEP";
+            this.cpr.Name = "cpr";
+            this.cpr.ReadOnly = true;
+            // 
+            // Cidade
+            // 
+            this.Cidade.DataPropertyName = "Cidade";
+            this.Cidade.HeaderText = "Cidade";
+            this.Cidade.Name = "Cidade";
+            this.Cidade.ReadOnly = true;
+            // 
+            // Bairro
+            // 
+            this.Bairro.DataPropertyName = "Bairro";
+            this.Bairro.HeaderText = "Bairro";
+            this.Bairro.Name = "Bairro";
+            this.Bairro.ReadOnly = true;
+            // 
+            // Rua
+            // 
+            this.Rua.DataPropertyName = "Rua";
+            this.Rua.HeaderText = "Rua";
+            this.Rua.Name = "Rua";
+            this.Rua.ReadOnly = true;
+            // 
+            // N_local
+            // 
+            this.N_local.DataPropertyName = "N_local";
+            this.N_local.HeaderText = "N_local";
+            this.N_local.Name = "N_local";
+            this.N_local.ReadOnly = true;
             // 
             // Salario
             // 
@@ -267,9 +302,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtcpf;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Rg;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CEP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rg;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cpr;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bairro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rua;
+        private System.Windows.Forms.DataGridViewTextBoxColumn N_local;
         private System.Windows.Forms.DataGridViewTextBoxColumn Salario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gmail;
         private System.Windows.Forms.DataGridViewImageColumn Column2;

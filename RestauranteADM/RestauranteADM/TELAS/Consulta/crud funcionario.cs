@@ -87,7 +87,7 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 6)
+            if(e.ColumnIndex == 10)
             {
 
                
@@ -99,7 +99,7 @@ namespace RestauranteADM.TELAS.Consulta
                 menu.ShowDialog();
 
             }
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 11)
             {
                
                 DialogResult r = MessageBox.Show("vai excluir mesmo", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

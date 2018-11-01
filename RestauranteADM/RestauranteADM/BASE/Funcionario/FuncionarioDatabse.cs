@@ -14,8 +14,8 @@ namespace RestauranteADM.BASE.Funcionario
 
         public int Salvar(FuncionarioDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_funcionarios` (nm_nome, ds_cpf, ds_RG, ds_endereco, ds_salario,ds_gmail,ds_senha_recupecao) 
-                                                            VALUES (@nm_nome, @ds_cpf, @ds_RG, @ds_endereco, @ds_salario,@ds_gmail,@ds_senha_recupecao)";
+            string script = @"INSERT INTO `mydb`.`tb_funcionarios` (nm_nome, ds_cpf, ds_RG, ds_salario,ds_gmail,ds_senha_recupecao,ds_Cep,nm_Cidade,nm_Bairro,nm_Rua,nm_local) 
+                                                            VALUES (@nm_nome, @ds_cpf, @ds_RG, @ds_salario,@ds_gmail,@ds_senha_recupecao,@ds_Cep,@nm_Cidade,@nm_Bairro,@nm_Rua,@nm_local)";
 
 
 
@@ -25,7 +25,6 @@ namespace RestauranteADM.BASE.Funcionario
             parms.Add(new MySqlParameter("nm_nome", dto.Nome));
             parms.Add(new MySqlParameter("ds_cpf", dto.Cpf));
             parms.Add(new MySqlParameter("ds_RG", dto.Rg));
-            parms.Add(new MySqlParameter("ds_endereco", dto.Endereço));
             parms.Add(new MySqlParameter("ds_Salario", dto.Salario));
             parms.Add(new MySqlParameter("ds_gmail", dto.Gmail));
             parms.Add(new MySqlParameter("ds_senha_recupecao", dto.senha_recuperaçao));
@@ -33,7 +32,8 @@ namespace RestauranteADM.BASE.Funcionario
             parms.Add(new MySqlParameter("nm_Cidade", dto.Rua));
             parms.Add(new MySqlParameter("nm_Bairro", dto.Bairro));
             parms.Add(new MySqlParameter("nm_Rua", dto.Rua));
-           
+            parms.Add(new MySqlParameter("nm_local", dto.N_local));
+
 
 
 
@@ -75,7 +75,6 @@ namespace RestauranteADM.BASE.Funcionario
                 funcio.Nome = reader.GetString("nm_nome");
                 funcio.Cpf = reader.GetString("ds_cpf");
                 funcio.Rg = reader.GetString("ds_RG");
-                funcio.Endereço = reader.GetString("ds_endereco");
                 funcio.Salario = reader.GetDouble("ds_Salario");
                 funcio.Gmail = reader.GetString("ds_gmail");
                 funcio.senha_recuperaçao = reader.GetString("ds_senha_recupecao");
@@ -83,7 +82,7 @@ namespace RestauranteADM.BASE.Funcionario
                 funcio.Cidade = reader.GetString("nm_Cidade");
                 funcio.Bairro = reader.GetString("nm_bairro");
                 funcio.Rua = reader.GetString("nm_Rua");
-                funcio.N_casa = reader.GetString("nu_casa");
+                funcio.N_local= reader.GetString("nm_local");
 
 
 

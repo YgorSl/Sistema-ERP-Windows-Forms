@@ -32,7 +32,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txttelefone = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.mtbtelefone = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -111,14 +111,6 @@
             this.label5.Text = "Nome";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // txttelefone
-            // 
-            this.txttelefone.Location = new System.Drawing.Point(138, 115);
-            this.txttelefone.Name = "txttelefone";
-            this.txttelefone.Size = new System.Drawing.Size(262, 20);
-            this.txttelefone.TabIndex = 22;
-            this.txttelefone.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -158,9 +150,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(18, 287);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(89, 16);
+            this.label6.Size = new System.Drawing.Size(92, 16);
             this.label6.TabIndex = 16;
-            this.label6.Text = "Numero casa";
+            this.label6.Text = "Numero Local";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label9
@@ -280,6 +272,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.mtbtelefone);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.mtbcnpj);
             this.panel1.Controls.Add(this.mbtcep);
@@ -294,7 +287,6 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtnumcasa);
             this.panel1.Controls.Add(this.txtbairro);
-            this.panel1.Controls.Add(this.txttelefone);
             this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label6);
@@ -391,6 +383,14 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // mtbtelefone
+            // 
+            this.mtbtelefone.Location = new System.Drawing.Point(138, 111);
+            this.mtbtelefone.Mask = "+99(99)9999-9999";
+            this.mtbtelefone.Name = "mtbtelefone";
+            this.mtbtelefone.Size = new System.Drawing.Size(262, 20);
+            this.mtbtelefone.TabIndex = 89;
+            // 
             // Cadastrar_cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -423,7 +423,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txttelefone;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtnome;
@@ -449,5 +448,6 @@
         private System.Windows.Forms.MaskedTextBox mtbcpf;
         private System.Windows.Forms.MaskedTextBox mtbcnpj;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MaskedTextBox mtbtelefone;
     }
 }

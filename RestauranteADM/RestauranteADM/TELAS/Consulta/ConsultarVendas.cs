@@ -46,5 +46,10 @@ namespace RestauranteADM.TELAS.Consulta
         {
 
         }
+
+        private void ConsultarVendas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

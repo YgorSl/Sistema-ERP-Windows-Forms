@@ -135,8 +135,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtsalario = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtrg = new System.Windows.Forms.TextBox();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -152,6 +150,10 @@
             this.label56 = new System.Windows.Forms.Label();
             this.label57 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.txtnumerocasa = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox9.SuspendLayout();
@@ -1237,14 +1239,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.maskedTextBox1);
+            this.groupBox3.Controls.Add(this.mtbcpf);
             this.groupBox3.Controls.Add(this.txtgmail);
             this.groupBox3.Controls.Add(this.label52);
             this.groupBox3.Controls.Add(this.txtnome);
             this.groupBox3.Controls.Add(this.label16);
             this.groupBox3.Controls.Add(this.txtsalario);
             this.groupBox3.Controls.Add(this.label15);
-            this.groupBox3.Controls.Add(this.txtrg);
-            this.groupBox3.Controls.Add(this.txtcpf);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label14);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -1312,20 +1314,6 @@
             this.label15.TabIndex = 67;
             this.label15.Text = "CPF";
             // 
-            // txtrg
-            // 
-            this.txtrg.Location = new System.Drawing.Point(95, 54);
-            this.txtrg.Name = "txtrg";
-            this.txtrg.Size = new System.Drawing.Size(248, 20);
-            this.txtrg.TabIndex = 73;
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Location = new System.Drawing.Point(538, 19);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(120, 20);
-            this.txtcpf.TabIndex = 69;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -1352,6 +1340,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtnumerocasa);
+            this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.mbtcep);
             this.groupBox2.Controls.Add(this.txtcidade);
@@ -1488,6 +1478,40 @@
             this.button1.Text = "Procura";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            // 
+            // txtnumerocasa
+            // 
+            this.txtnumerocasa.Location = new System.Drawing.Point(129, 97);
+            this.txtnumerocasa.Name = "txtnumerocasa";
+            this.txtnumerocasa.Size = new System.Drawing.Size(196, 20);
+            this.txtnumerocasa.TabIndex = 97;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(15, 98);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(88, 16);
+            this.label13.TabIndex = 96;
+            this.label13.Text = "Numero local";
+            // 
+            // mtbcpf
+            // 
+            this.mtbcpf.Location = new System.Drawing.Point(534, 22);
+            this.mtbcpf.Mask = "999.999.999-00";
+            this.mtbcpf.Name = "mtbcpf";
+            this.mtbcpf.Size = new System.Drawing.Size(86, 20);
+            this.mtbcpf.TabIndex = 87;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(95, 53);
+            this.maskedTextBox1.Mask = "999.999.999-00";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(103, 20);
+            this.maskedTextBox1.TabIndex = 88;
             // 
             // Cadastro_usuário_do_sistema
             // 
@@ -1643,8 +1667,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtsalario;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtrg;
-        private System.Windows.Forms.TextBox txtcpf;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1660,5 +1682,9 @@
         private System.Windows.Forms.TextBox txtbairro;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox txtnumerocasa;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtbcpf;
     }
 }

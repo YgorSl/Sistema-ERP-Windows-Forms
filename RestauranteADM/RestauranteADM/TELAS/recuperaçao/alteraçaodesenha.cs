@@ -1,4 +1,5 @@
-﻿using RestauranteADM.BASE.Recuperação;
+﻿using RestauranteADM.BASE.criptografia;
+using RestauranteADM.BASE.Recuperação;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,15 +40,24 @@ namespace RestauranteADM
 
         private void btnentrar_Click(object sender, EventArgs e)
         {
-            nome = txtnome.Text;
-            senha = txtsenha.Text;
+
+
+            criptgrafia criptografia = new criptgrafia();
+            string Login = criptografia.Codificar(txtnome.Text);
+            string Senhar = criptografia.Codificar(txtsenha.Text);
+
 
            int oi = Convert.ToInt32(id);
 
             AlteraçaoBunisess bunisess = new AlteraçaoBunisess();
-            bunisess.alteraçao(oi, senha, nome);
+            bunisess.alteraçao(oi, Login, Senhar);
 
             MessageBox.Show("senha e login alterandos por favor nao esqueça seu corno");
+
+            Login login = new Login();
+            login.Show();
+
+            Close();
 
 
 

@@ -35,7 +35,6 @@
             this.txtnome = new System.Windows.Forms.TextBox();
             this.txtsenha = new System.Windows.Forms.TextBox();
             this.btnentrar = new System.Windows.Forms.Button();
-            this.lbl1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +49,7 @@
             this.panel1.Controls.Add(this.txtsenha);
             this.panel1.Location = new System.Drawing.Point(44, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(330, 218);
+            this.panel1.Size = new System.Drawing.Size(361, 255);
             this.panel1.TabIndex = 49;
             // 
             // label3
@@ -110,7 +109,7 @@
             this.btnentrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnentrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnentrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnentrar.Location = new System.Drawing.Point(86, 263);
+            this.btnentrar.Location = new System.Drawing.Point(114, 303);
             this.btnentrar.Name = "btnentrar";
             this.btnentrar.Size = new System.Drawing.Size(251, 33);
             this.btnentrar.TabIndex = 48;
@@ -118,22 +117,13 @@
             this.btnentrar.UseVisualStyleBackColor = false;
             this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
             // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(278, 9);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(35, 13);
-            this.lbl1.TabIndex = 50;
-            this.lbl1.Text = "label4";
-            // 
             // alteraçaodesenha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(419, 325);
-            this.Controls.Add(this.lbl1);
+            this.ClientSize = new System.Drawing.Size(486, 370);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnentrar);
             this.Name = "alteraçaodesenha";
@@ -142,7 +132,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -155,6 +144,5 @@
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.TextBox txtsenha;
         private System.Windows.Forms.Button btnentrar;
-        private System.Windows.Forms.Label lbl1;
     }
 }

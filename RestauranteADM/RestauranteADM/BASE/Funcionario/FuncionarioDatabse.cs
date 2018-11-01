@@ -156,17 +156,21 @@ namespace RestauranteADM.BASE.Funcionario
 
         public void Update(FuncionarioDTO dto)
         {
-            string script = @"UPDATE tb_funcionarios SET nm_nome = @nm_nome , ds_cpf = @ds_cpf, ds_RG =@ds_RG , ds_endereco = @ds_endereco , ds_salario=@ds_salario WHERE id_funcionarios = @id_funcionarios";
+            string script = @"UPDATE tb_funcionarios SET nm_nome = @nm_nome , ds_cpf = @ds_cpf, ds_RG =@ds_RG , ds_endereco = @ds_endereco , ds_salario=@ds_salario,   ds_Cep=@ds_Cep, nm_Cidade=@nm_Cidade,nm_Bairro=@nm_Bairro,nm_Rua=@nm_Rua,nm_local=@nm_local  WHERE id_funcionarios = @id_funcionarios";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_funcionarios", dto.Id));
             parms.Add(new MySqlParameter("nm_nome", dto.Nome));
             parms.Add(new MySqlParameter("ds_cpf", dto.Cpf));
             parms.Add(new MySqlParameter("ds_RG", dto.Rg));
-            parms.Add(new MySqlParameter("ds_endereco", dto.Endereço));
-            parms.Add(new MySqlParameter("ds_salario", dto.Salario));
+            parms.Add(new MySqlParameter("ds_Salario", dto.Salario));
             parms.Add(new MySqlParameter("ds_gmail", dto.Gmail));
             parms.Add(new MySqlParameter("ds_senha_recupecao", dto.senha_recuperaçao));
+            parms.Add(new MySqlParameter("ds_Cep", dto.Cep));
+            parms.Add(new MySqlParameter("nm_Cidade", dto.Rua));
+            parms.Add(new MySqlParameter("nm_Bairro", dto.Bairro));
+            parms.Add(new MySqlParameter("nm_Rua", dto.Rua));
+            parms.Add(new MySqlParameter("nm_local", dto.N_local));
+
 
 
 
@@ -196,10 +200,13 @@ namespace RestauranteADM.BASE.Funcionario
                 dto.Nome = reader.GetString("nm_nome");
                 dto.Cpf = reader.GetString("ds_cpf");
                 dto.Rg = reader.GetString("ds_RG");
-                dto.Endereço = reader.GetString("ds_endereco");
                 dto.Salario = reader.GetDouble("ds_salario");
                 dto.Gmail = reader.GetString("ds_gmail");
                 dto.senha_recuperaçao = reader.GetString("ds_senha_recupecao");
+                dto.Cidade = reader.GetString("nm_Cidade");
+                dto.Bairro = reader.GetString("nm_bairro");
+                dto.Rua = reader.GetString("nm_Rua");
+                dto.N_local = reader.GetString("nm_local");
 
 
 

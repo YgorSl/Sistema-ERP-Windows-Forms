@@ -62,6 +62,7 @@ namespace RestauranteADM
         {
             UsuarioBusiness bs = new UsuarioBusiness();
 
+
             string Login =criptografia.Codificar(txtnome.Text);
             string Senhar = criptografia.Codificar(txtsenha.Text);
 
@@ -96,8 +97,10 @@ namespace RestauranteADM
 
         private void label7_Click(object sender, EventArgs e)
         {
-            adicionar_o_codigo sho = new adicionar_o_codigo();
+            cript sho = new cript();
             sho.ShowDialog();
+
+            
         }
     }
 }

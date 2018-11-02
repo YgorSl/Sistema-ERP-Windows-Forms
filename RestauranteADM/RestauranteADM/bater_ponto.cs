@@ -1,4 +1,5 @@
-﻿using RestauranteADM.BASE.BaterPonto;
+﻿using RestauranteADM.Acesso;
+using RestauranteADM.BASE.BaterPonto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,15 +18,10 @@ namespace RestauranteADM
         {
             InitializeComponent();
         }
-        private string cpf ,id;
+        private string cpf;
   
 
-        public void LoadScreen(string idt)
-        {
-            
-            id = idt;
-
-        }
+   
 
         private void tmr_Tick(object sender, EventArgs e)
         {
@@ -50,12 +46,13 @@ namespace RestauranteADM
 
         private void btnebtrada_Click(object sender, EventArgs e)
         {
+            int id = acesso.funcionariologado.Id;
 
             BaterPontoDTO dto = new BaterPontoDTO();
+             dto.IdFuncionario = Convert.ToInt32(id);
             dto.Data =Convert.ToDateTime( lbldata.Text);
             dto.Entrada = Convert.ToDateTime(lblhora.Text);
-
-           dto.IdFuncionario = Convert.ToInt32(id);
+           
 
 
             BaterPontoBusiness bunisess = new BaterPontoBusiness();

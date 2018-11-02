@@ -13,6 +13,7 @@ using RestauranteADM.Acesso;
 using RestauranteADM.TELAS._1._0._1;
 using RestauranteADM.TELAS.recuperaçao;
 using RestauranteADM.BASE.criptografia;
+using RestauranteADM.BASE.Funcionario;
 
 namespace RestauranteADM
 {
@@ -61,16 +62,18 @@ namespace RestauranteADM
         private void btnentrar_Click(object sender, EventArgs e)
         {
             UsuarioBusiness bs = new UsuarioBusiness();
-
+            FuncionarioDatabse db = new FuncionarioDatabse();
 
             string Login =criptografia.Codificar(txtnome.Text);
             string Senhar = criptografia.Codificar(txtsenha.Text);
 
             UsuarioDTO usuario = bs.Logar(Login,Senhar);
-        
+            FuncionarioDTO logar = db.Ganhar();
+
             if (usuario != null)
             {
                 acesso.usuariologado = usuario;
+                acesso.funcionariologado = logar;
                 menu2 menu = new menu2();
                 menu.Show();
                 this.Hide();

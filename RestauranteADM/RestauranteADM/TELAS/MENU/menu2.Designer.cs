@@ -66,8 +66,8 @@
             this.btnmenuven = new System.Windows.Forms.Button();
             this.btnmenurh = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnmenucad = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnmenucad = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
@@ -173,7 +173,7 @@
             this.btnConsultarVenda.FlatAppearance.BorderSize = 0;
             this.btnConsultarVenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnConsultarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarVenda.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarVenda.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarVenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarVenda.Location = new System.Drawing.Point(6, 174);
@@ -191,7 +191,7 @@
             this.btnConsultarPedido.FlatAppearance.BorderSize = 0;
             this.btnConsultarPedido.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnConsultarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarPedido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarPedido.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarPedido.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarPedido.Location = new System.Drawing.Point(6, 145);
@@ -209,7 +209,7 @@
             this.btnConsultarFuncionario.FlatAppearance.BorderSize = 0;
             this.btnConsultarFuncionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnConsultarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarFuncionario.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarFuncionario.Location = new System.Drawing.Point(5, 119);
@@ -227,7 +227,7 @@
             this.btnConsultarCardapio.FlatAppearance.BorderSize = 0;
             this.btnConsultarCardapio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnConsultarCardapio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarCardapio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarCardapio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCardapio.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarCardapio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarCardapio.Location = new System.Drawing.Point(5, 90);
@@ -245,7 +245,7 @@
             this.btnConsultarProduto.FlatAppearance.BorderSize = 0;
             this.btnConsultarProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnConsultarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarProduto.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarProduto.Location = new System.Drawing.Point(5, 61);
@@ -263,7 +263,7 @@
             this.btnConsultarFornecedor.FlatAppearance.BorderSize = 0;
             this.btnConsultarFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnConsultarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarFornecedor.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarFornecedor.Location = new System.Drawing.Point(5, 32);
@@ -281,7 +281,7 @@
             this.btnConsultarCliente.FlatAppearance.BorderSize = 0;
             this.btnConsultarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnConsultarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarCliente.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarCliente.Location = new System.Drawing.Point(5, 3);
@@ -310,7 +310,7 @@
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.SeaGreen;
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.Location = new System.Drawing.Point(5, 40);
@@ -327,7 +327,7 @@
             this.btnEstoque.FlatAppearance.BorderSize = 0;
             this.btnEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstoque.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEstoque.Location = new System.Drawing.Point(5, 3);
@@ -356,7 +356,7 @@
             this.btnControlePonto.FlatAppearance.BorderSize = 0;
             this.btnControlePonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnControlePonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnControlePonto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnControlePonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnControlePonto.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnControlePonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnControlePonto.Location = new System.Drawing.Point(3, 58);
@@ -374,7 +374,7 @@
             this.btnFolhaPagamento.FlatAppearance.BorderSize = 0;
             this.btnFolhaPagamento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFolhaPagamento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFolhaPagamento.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnFolhaPagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFolhaPagamento.Location = new System.Drawing.Point(5, 3);
@@ -408,7 +408,7 @@
             this.btnCadastrarCardapio.FlatAppearance.BorderSize = 0;
             this.btnCadastrarCardapio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnCadastrarCardapio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarCardapio.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarCardapio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarCardapio.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarCardapio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarCardapio.Location = new System.Drawing.Point(5, 119);
@@ -426,7 +426,7 @@
             this.btnCadastrarProduto.FlatAppearance.BorderSize = 0;
             this.btnCadastrarProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnCadastrarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarProduto.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarProduto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarProduto.Location = new System.Drawing.Point(5, 90);
@@ -444,7 +444,7 @@
             this.btnCadastrarFuncionario.FlatAppearance.BorderSize = 0;
             this.btnCadastrarFuncionario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFuncionario.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarFuncionario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarFuncionario.Location = new System.Drawing.Point(5, 61);
@@ -462,7 +462,7 @@
             this.btnCadastrarFornecedor.FlatAppearance.BorderSize = 0;
             this.btnCadastrarFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnCadastrarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFornecedor.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarFornecedor.Location = new System.Drawing.Point(5, 32);
@@ -480,7 +480,7 @@
             this.btnCadastrarCliente.FlatAppearance.BorderSize = 0;
             this.btnCadastrarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnCadastrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarCliente.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarCliente.Location = new System.Drawing.Point(6, 7);
@@ -553,7 +553,7 @@
             this.btnmenucon.FlatAppearance.BorderSize = 0;
             this.btnmenucon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenucon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmenucon.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenucon.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenucon.ForeColor = System.Drawing.Color.White;
             this.btnmenucon.Location = new System.Drawing.Point(6, 203);
             this.btnmenucon.Name = "btnmenucon";
@@ -569,7 +569,7 @@
             this.btnmenufin.FlatAppearance.BorderSize = 0;
             this.btnmenufin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenufin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmenufin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenufin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenufin.ForeColor = System.Drawing.Color.White;
             this.btnmenufin.Location = new System.Drawing.Point(6, 418);
             this.btnmenufin.Name = "btnmenufin";
@@ -585,7 +585,7 @@
             this.btnmenuest.FlatAppearance.BorderSize = 0;
             this.btnmenuest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenuest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmenuest.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuest.ForeColor = System.Drawing.Color.White;
             this.btnmenuest.Location = new System.Drawing.Point(6, 375);
             this.btnmenuest.Name = "btnmenuest";
@@ -601,7 +601,7 @@
             this.btnmenucom.FlatAppearance.BorderSize = 0;
             this.btnmenucom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenucom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmenucom.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenucom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenucom.ForeColor = System.Drawing.Color.White;
             this.btnmenucom.Location = new System.Drawing.Point(6, 332);
             this.btnmenucom.Name = "btnmenucom";
@@ -617,7 +617,7 @@
             this.btnmenuven.FlatAppearance.BorderSize = 0;
             this.btnmenuven.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenuven.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmenuven.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenuven.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenuven.ForeColor = System.Drawing.Color.White;
             this.btnmenuven.Location = new System.Drawing.Point(6, 289);
             this.btnmenuven.Name = "btnmenuven";
@@ -633,7 +633,7 @@
             this.btnmenurh.FlatAppearance.BorderSize = 0;
             this.btnmenurh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
             this.btnmenurh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmenurh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenurh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnmenurh.ForeColor = System.Drawing.Color.White;
             this.btnmenurh.Location = new System.Drawing.Point(8, 248);
             this.btnmenurh.Name = "btnmenurh";
@@ -654,24 +654,6 @@
             this.label3.TabIndex = 64;
             this.label3.Text = "Toc Toc Brasil";
             // 
-            // btnmenucad
-            // 
-            this.btnmenucad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnmenucad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnmenucad.FlatAppearance.BorderSize = 0;
-            this.btnmenucad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
-            this.btnmenucad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnmenucad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnmenucad.ForeColor = System.Drawing.Color.White;
-            this.btnmenucad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnmenucad.Location = new System.Drawing.Point(6, 160);
-            this.btnmenucad.Name = "btnmenucad";
-            this.btnmenucad.Size = new System.Drawing.Size(191, 35);
-            this.btnmenucad.TabIndex = 0;
-            this.btnmenucad.Text = "Cadastro";
-            this.btnmenucad.UseVisualStyleBackColor = true;
-            this.btnmenucad.Click += new System.EventHandler(this.btn1_Click_1);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::RestauranteADM.Properties.Resources.WhatsApp_Image_2018_09_19_at_9_12_01_PM;
@@ -681,6 +663,24 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnmenucad
+            // 
+            this.btnmenucad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnmenucad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnmenucad.FlatAppearance.BorderSize = 0;
+            this.btnmenucad.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.btnmenucad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnmenucad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnmenucad.ForeColor = System.Drawing.Color.White;
+            this.btnmenucad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnmenucad.Location = new System.Drawing.Point(6, 160);
+            this.btnmenucad.Name = "btnmenucad";
+            this.btnmenucad.Size = new System.Drawing.Size(191, 35);
+            this.btnmenucad.TabIndex = 0;
+            this.btnmenucad.Text = "Cadastro";
+            this.btnmenucad.UseVisualStyleBackColor = true;
+            this.btnmenucad.Click += new System.EventHandler(this.btn1_Click_1);
             // 
             // label2
             // 

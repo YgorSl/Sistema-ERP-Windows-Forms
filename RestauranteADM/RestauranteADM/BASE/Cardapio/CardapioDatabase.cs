@@ -2,6 +2,7 @@
 using RestauranteADM.DB;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,21 +11,28 @@ namespace RestauranteADM.BASE.Cardapio
 {
     public class CardapioDatabase
     {
+
+      
         public int Salvar(CardapioDTO dto)
         {
             string script = @"INSERT INTO `mydb`.`tb_cardapio` ( nm_prato, ds_prato, ds_tamanho, vl_valor) 
-                                                        VALUES ( @nm_prato, @ds_prato, @ds_tamanho, @vl_valor);";
+                                                        VALUES ( @nm_prato, @ds_prato, @ds_tamanho, @vl_valor); SELECT SCOPE_IDENTITY();";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_prato", dto.nome_Prato));
             parms.Add(new MySqlParameter("ds_prato", dto.Descrição));
             parms.Add(new MySqlParameter("ds_tamanho", dto.Tamanho));
             parms.Add(new MySqlParameter("vl_valor", dto.Valor));
-      
+
+           
+
+
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
             return pk;
+
+
         }
 
 

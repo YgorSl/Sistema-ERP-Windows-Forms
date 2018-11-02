@@ -216,5 +216,29 @@ namespace RestauranteADM.BASE.Funcionario
 
             return lista;
         }
+
+        public FuncionarioDTO Ganhar()
+        {
+
+            string script = @"select * from tb_funcionarios ";
+
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, null);
+
+           FuncionarioDTO dt = null;
+
+            if (reader.Read() == true)
+            {
+
+                dt = new FuncionarioDTO();
+                dt.Id = reader.GetInt32("id_funcionarios");
+
+
+            }
+            reader.Close();
+            return dt;
+        }
     }
 }

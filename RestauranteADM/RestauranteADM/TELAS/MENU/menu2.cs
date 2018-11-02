@@ -458,7 +458,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button18_Click(object sender, EventArgs e)
         {
-            AbrirForminPanel(new Bater_Ponto());
+            AbrirForminPanel(new bater_ponto());
             SubMenuRH.Visible = false;
         }
 

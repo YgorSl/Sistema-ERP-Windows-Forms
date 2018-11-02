@@ -38,6 +38,8 @@ namespace RestauranteADM.TELAS.Consulta
                 {
                     btnConsultarCardapio.Enabled = false;
                 }
+                int id = acesso.funcionariologado.Id;
+      
 
             }
         }

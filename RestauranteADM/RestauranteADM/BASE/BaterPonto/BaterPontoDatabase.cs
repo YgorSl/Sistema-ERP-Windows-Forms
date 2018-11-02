@@ -35,8 +35,7 @@ namespace RestauranteADM.BASE.BaterPonto
 
                 nome = reader["nm_nome"].ToString();
                 id = reader["id_funcionarios"].ToString();
-                bater_ponto oi = new bater_ponto();
-                oi.LoadScreen(id);
+               
              
                 MessageBox.Show( "olá " + nome + " seja bem vindo");
 
@@ -52,21 +51,17 @@ namespace RestauranteADM.BASE.BaterPonto
 
               public int Salvar(BaterPontoDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_ponto` (id_funcionario, dt_data, hr_entrada, hr_almoço_ida, hr_almoço_volta, hr_saida) 
-                                                        VALUES ( @id_funcionario, @dt_data, @hr_entrada, @hr_almoço_ida, @hr_almoço_volta, @hr_saida);";
+            string script = @"INSERT INTO `mydb`.`tb_ponto10` (id_funcionario, dt_data, hr_entrada, hr_almoço_ida, hr_almoço_volta, hr_saida) VALUES (@id_funcionario,@dt_data,@hr_entrada,@hr_almoço_ida,@hr_almoço_volta,@hr_saida)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             
         
 
-            id = dto.IdFuncionario.ToString();
-
-        
-
-        parms.Add(new MySqlParameter("id_funcionario", id));
+   
+            parms.Add(new MySqlParameter("id_funcionario", dto.IdFuncionario));
             parms.Add(new MySqlParameter("dt_data", dto.Data));
             parms.Add(new MySqlParameter("hr_entrada", dto.Entrada));
-            parms.Add(new MySqlParameter(" hr_almoço_ida", dto.IdaAlmoço));
+            parms.Add(new MySqlParameter("hr_almoço_ida", dto.IdaAlmoço));
             parms.Add(new MySqlParameter("hr_almoço_volta", dto.VoltaAlmoço));
             parms.Add(new MySqlParameter("hr_saida", dto.Saida));
 

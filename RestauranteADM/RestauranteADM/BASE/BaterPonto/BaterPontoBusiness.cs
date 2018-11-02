@@ -27,5 +27,13 @@ namespace RestauranteADM.BASE.BaterPonto
             return pk;
 
         }
+
+        public void Primeiro_ponto(BaterPontoDTO dto)
+        {
+            BaterPontoDatabase database = new BaterPontoDatabase();
+            database.Update(dto);
+          
+
+        }
     }
 }

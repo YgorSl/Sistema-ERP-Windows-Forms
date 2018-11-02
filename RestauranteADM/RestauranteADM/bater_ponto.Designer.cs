@@ -103,6 +103,7 @@
             this.btnalmoçosaida.TabIndex = 5;
             this.btnalmoçosaida.Text = "button2";
             this.btnalmoçosaida.UseVisualStyleBackColor = true;
+            this.btnalmoçosaida.Click += new System.EventHandler(this.btnalmoçosaida_Click);
             // 
             // btnsaida
             // 

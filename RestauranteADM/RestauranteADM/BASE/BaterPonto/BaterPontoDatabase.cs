@@ -70,6 +70,50 @@ namespace RestauranteADM.BASE.BaterPonto
             return pk;
         }
 
+
+
+
+  
+
+        public void Update(BaterPontoDTO dto)
+        {
+            string script = @" UPDATE `mydb`.`tb_ponto10` SET hr_almoço_ida = @hr_almoço_ida WHERE id_ponto = @id_ponto; ";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_ponto", dto.Id));
+            parms.Add(new MySqlParameter("hr_almoço_ida", dto.IdaAlmoço));
+      
+
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
+
+        }
+
+        public BaterPontoDTO atualizar()
+        {
+
+            string script = @"select max(id_ponto) as id_ponto from tb_ponto10";
+
+          
+
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, null);
+
+            BaterPontoDTO dt = null;
+
+            if (reader.Read() == true)
+            {
+
+                dt = new BaterPontoDTO();
+                dt.Id = reader.GetInt32("id_ponto");
+
+
+            }
+            reader.Close();
+            return dt;
+        }
     }
     
 }

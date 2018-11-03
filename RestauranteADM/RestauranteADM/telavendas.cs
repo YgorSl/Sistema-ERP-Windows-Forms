@@ -271,20 +271,20 @@ namespace RestauranteADM
             double des = Convert.ToDouble(txtpor.Text);
             double troco = Convert.ToDouble(txttroco.Text);
 
-            VendasTotal tltl= new VendasTotal();
-            double resultaxa = tltl.CalcularTaxaEntrega(valortaxa, totslprodutos);
-            resultaxa = Math.Round(resultaxa, 2);
-            lblValorTaxa.Text = resultaxa.ToString();
-
-            
+            VendasTotal tltl = new VendasTotal();
             double resuldesconto = tltl.CalcularDesconto(totslprodutos, des);
             resuldesconto = Math.Round(resuldesconto, 2);
             lblValorDesconto.Text = resuldesconto.ToString();
 
 
-            double total = tltl.Calcularvalorfinal(totslprodutos, valortaxa,des);
+            double resultaxa = valortaxa;
+            resultaxa = Math.Round(resultaxa, 2);
+            lblValorTaxa.Text = resultaxa.ToString();
+
+            double total = (totslprodutos - resuldesconto) + resultaxa;
             total = Math.Round(total, 2);
             txtvlfinal.Text = total.ToString();
+
             if (troco >= totslprodutos)
             {
 

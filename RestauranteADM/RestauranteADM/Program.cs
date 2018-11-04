@@ -25,7 +25,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new consultar_conta());
+            Application.Run(new Login());
         }
     }
 }

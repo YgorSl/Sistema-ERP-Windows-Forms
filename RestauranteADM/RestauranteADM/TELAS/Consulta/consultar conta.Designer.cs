@@ -155,6 +155,7 @@
             this.label3.Size = new System.Drawing.Size(37, 39);
             this.label3.TabIndex = 86;
             this.label3.Text = "+";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 

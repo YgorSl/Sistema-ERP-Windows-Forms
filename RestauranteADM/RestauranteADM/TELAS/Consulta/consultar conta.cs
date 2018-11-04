@@ -1,5 +1,6 @@
 ﻿using RestauranteADM.Acesso;
 using RestauranteADM.BASE.Conta_a_Pagar;
+using RestauranteADM.TELAS.Cadastro;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,6 +63,12 @@ namespace RestauranteADM.TELAS.Consulta
                 }
 
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            cadastrar_conta from = new cadastrar_conta();
+            from.ShowDialog();
         }
     }
 }

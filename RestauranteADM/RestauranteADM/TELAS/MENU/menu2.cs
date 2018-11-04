@@ -15,16 +15,84 @@ using RestauranteADM.Acesso;
 using RestauranteADM.TELAS.Consulta;
 using RestauranteADM.TELAS.RH;
 using RestauranteADM.TELAS.Estoque;
+using Microsoft.Speech.Recognition;
+using System.Speech.Synthesis;
+using System.Globalization;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
     public partial class menu2 : Form
     {
+        static CultureInfo ci = new CultureInfo("pt-BR");
+        static SpeechRecognitionEngine reconhecedor;
+        SpeechSynthesizer resposta = new SpeechSynthesizer();
+
+        public string[] listaPalavras = {"oi"};
+
         public menu2()
         {
             InitializeComponent();
             VerificarPermissoes();
+            Init();
         }
+
+        public void Gramaica()
+        {
+            try
+            {
+                reconhecedor = new SpeechRecognitionEngine(ci);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao entender fala" +ex.Message );
+                
+            }
+            var gramatica = new Choices();
+            gramatica.Add(listaPalavras);
+            var gb = new GrammarBuilder();
+            gb.Append(gramatica);
+            try
+            {
+                var g = new Grammar(gb);
+                try
+                {
+                    reconhecedor.RequestRecognizerUpdate();
+                    reconhecedor.LoadGrammarAsync(g);
+                    reconhecedor.SpeechRecognized += Sre_Reconhecimento;
+                    reconhecedor.SetInputToDefaultAudioDevice();
+                    resposta.SetOutputToDefaultAudioDevice();
+                    reconhecedor.RecognizeAsync(RecognizeMode.Multiple);
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao entender fala" + ex.Message);
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao entender fala" + ex.Message);
+
+
+            }
+
+        }
+        public void Init()
+        {
+            resposta.Volume = 100;
+            resposta.Rate = 3;
+        }
+        void Sre_Reconhecimento(object sender, SpeechRecognizedEventArgs e)
+        {
+            string frase = e.Result.Text;
+            if(frase.Equals("oi"))
+            {
+                resposta.SpeakAsync("oi");
+            }
+        }
+
         void VerificarPermissoes()
         {
             if (acesso.usuariologado.permissaototal == false)

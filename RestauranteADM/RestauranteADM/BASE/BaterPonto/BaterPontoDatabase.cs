@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace RestauranteADM.BASE.BaterPonto
 {
     public class BaterPontoDatabase
@@ -44,7 +45,7 @@ namespace RestauranteADM.BASE.BaterPonto
             else
             {
                 MessageBox.Show("seu cpf estar errado");
-
+                
 
             }
         }

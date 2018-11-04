@@ -38,20 +38,20 @@ namespace RestauranteADM
 
         private void btnok_Click(object sender, EventArgs e)
         {
+            
 
-            cpf = txtcpf.Text;
+            cpf = mtbcpf.Text;
 
             BaterPontoBusiness bunisess = new BaterPontoBusiness();
             bunisess.verificar(cpf);
 
             btnebtrada.Enabled = true;
-            btnok.Enabled = false;
         }
 
         private void btnebtrada_Click(object sender, EventArgs e)
         {
 
-            if (txtcpf.Text != string.Empty)
+            if (mtbcpf.Text != string.Empty)
             {
                 int id = acesso.funcionariologado.Id;
                 BaterPontoDTO dto = new BaterPontoDTO();
@@ -68,6 +68,7 @@ namespace RestauranteADM
                 btnalmoçosaida.Enabled = true;
                 btnsaida.Enabled = true;
                 btnebtrada.Enabled = false;
+                btnok.Enabled = false;
             }
 
             BaterPontoDatabase bpft = new BaterPontoDatabase();

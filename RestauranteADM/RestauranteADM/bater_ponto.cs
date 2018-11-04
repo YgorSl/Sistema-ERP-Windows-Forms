@@ -1,5 +1,6 @@
 ﻿using RestauranteADM.Acesso;
 using RestauranteADM.BASE.BaterPonto;
+using RestauranteADM.TELAS._1._0._1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,6 +43,9 @@ namespace RestauranteADM
 
             BaterPontoBusiness bunisess = new BaterPontoBusiness();
             bunisess.verificar(cpf);
+
+            btnebtrada.Enabled = true;
+            btnok.Enabled = false;
         }
 
         private void btnebtrada_Click(object sender, EventArgs e)
@@ -61,6 +65,9 @@ namespace RestauranteADM
                 bunisess.Salvar(dto);
 
                 MessageBox.Show("foi");
+                btnalmoçosaida.Enabled = true;
+                btnsaida.Enabled = true;
+                btnebtrada.Enabled = false;
             }
 
             BaterPontoDatabase bpft = new BaterPontoDatabase();
@@ -92,6 +99,8 @@ namespace RestauranteADM
             bunisess.Primeiro_ponto(dto);
 
             MessageBox.Show("foi");
+            brnalmoçoentrada.Enabled = true;
+            btnalmoçosaida.Enabled = false;
         }
 
         private void btnsaida_Click(object sender, EventArgs e)
@@ -107,7 +116,10 @@ namespace RestauranteADM
             BaterPontoBusiness bunisess = new BaterPontoBusiness();
             bunisess.terceiro_ponto(dto);
 
-            MessageBox.Show("foi");
+            MessageBox.Show("Obrigado pelo dia de trabalho");
+
+            btnsaida.Enabled = false;
+       
         }
 
         private void brnalmoçoentrada_Click(object sender, EventArgs e)
@@ -124,6 +136,9 @@ namespace RestauranteADM
             bunisess.segundo_ponto(dto);
 
             MessageBox.Show("foi");
+
+            brnalmoçoentrada.Enabled = false;
+            
 
 
         }

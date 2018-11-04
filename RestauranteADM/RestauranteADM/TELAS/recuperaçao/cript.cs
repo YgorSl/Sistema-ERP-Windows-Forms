@@ -39,6 +39,7 @@ namespace RestauranteADM
         private void button1_Click_1(object sender, EventArgs e)
         {
             txtmensagem.Text = login.recuperaçao(txtRecuperacao.Text);
+            pan1.Enabled = true;
         }
 
         private void cript_Load(object sender, EventArgs e)
@@ -54,6 +55,11 @@ namespace RestauranteADM
               oi.verificacao(txtcodigo.Text);
 
             Close();
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -127,12 +127,6 @@
     </Compile>
     <Compile Include="TELAS\Estoque\RetirarEstoque.Designer.cs">
       <DependentUpon>RetirarEstoque.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\recuperaçao\adicionar o codigo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\recuperaçao\adicionar o codigo.Designer.cs">
-      <DependentUpon>adicionar o codigo.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Alterar\alterarcardapio.cs">
       <SubType>Form</SubType>
@@ -407,9 +401,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Estoque\RetirarEstoque.resx">
       <DependentUpon>RetirarEstoque.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\recuperaçao\adicionar o codigo.resx">
-      <DependentUpon>adicionar o codigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Alterar\alterarcardapio.resx">
       <DependentUpon>alterarcardapio.cs</DependentUpon>

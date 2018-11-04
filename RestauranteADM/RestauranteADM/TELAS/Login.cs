@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using RestauranteADM.Acesso;
 using RestauranteADM.TELAS._1._0._1;
-using RestauranteADM.TELAS.recuperaçao;
 using RestauranteADM.BASE.criptografia;
 using RestauranteADM.BASE.Funcionario;
 

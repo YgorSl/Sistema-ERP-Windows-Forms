@@ -19,9 +19,9 @@ namespace RestauranteADM
             InitializeComponent();
         }
         private string cpf;
-  
 
-   
+
+
 
         private void tmr_Tick(object sender, EventArgs e)
         {
@@ -47,32 +47,31 @@ namespace RestauranteADM
         private void btnebtrada_Click(object sender, EventArgs e)
         {
 
-            BaterPontoDatabase bpft = new BaterPontoDatabase();
-
-            int id = acesso.funcionariologado.Id;
-
-            BaterPontoDTO dto = new BaterPontoDTO();
-             dto.IdFuncionario = Convert.ToInt32(id);
-             dto.Data =Convert.ToDateTime( lbldata.Text);
-             dto.Entrada = Convert.ToDateTime(lblhora.Text);
-           
-
-
-            BaterPontoBusiness bunisess = new BaterPontoBusiness();
-            bunisess.Salvar(dto);
-
-            MessageBox.Show("foi");
+            if (txtcpf.Text != string.Empty)
+            {
+                int id = acesso.funcionariologado.Id;
+                BaterPontoDTO dto = new BaterPontoDTO();
+                dto.IdFuncionario = Convert.ToInt32(id);
+                dto.Data = Convert.ToDateTime(lbldata.Text);
+                dto.Entrada = Convert.ToDateTime(lblhora.Text);
 
 
 
-           BaterPontoDTO baterponto =bpft.atualizar();
+                BaterPontoBusiness bunisess = new BaterPontoBusiness();
+                bunisess.Salvar(dto);
 
-            
-            acesso.BaterPonto = baterponto;
-
+                MessageBox.Show("foi");
             }
 
-            
+            BaterPontoDatabase bpft = new BaterPontoDatabase();
+            BaterPontoDTO baterponto = bpft.atualizar();
+            acesso.BaterPonto = baterponto;
+
+
+        }
+
+
+
 
         private void bater_ponto_Load(object sender, EventArgs e)
         {
@@ -84,15 +83,52 @@ namespace RestauranteADM
             int idponto = acesso.BaterPonto.Id;
 
             BaterPontoDTO dto = new BaterPontoDTO();
-            dto.IdFuncionario = Convert.ToInt32(idponto);
+            dto.Id = Convert.ToInt32(idponto);
             dto.IdaAlmoço = Convert.ToDateTime(lblhora.Text);
 
 
 
             BaterPontoBusiness bunisess = new BaterPontoBusiness();
-            bunisess.Salvar(dto);
+            bunisess.Primeiro_ponto(dto);
 
             MessageBox.Show("foi");
         }
+
+        private void btnsaida_Click(object sender, EventArgs e)
+        {
+            int idponto = acesso.BaterPonto.Id;
+
+            BaterPontoDTO dto = new BaterPontoDTO();
+            dto.Id = Convert.ToInt32(idponto);
+            dto.VoltaAlmoço = Convert.ToDateTime(lblhora.Text);
+
+
+
+            BaterPontoBusiness bunisess = new BaterPontoBusiness();
+            bunisess.terceiro_ponto(dto);
+
+            MessageBox.Show("foi");
+        }
+
+        private void brnalmoçoentrada_Click(object sender, EventArgs e)
+        {
+            int idponto = acesso.BaterPonto.Id;
+
+            BaterPontoDTO dto = new BaterPontoDTO();
+            dto.Id = Convert.ToInt32(idponto);
+            dto.VoltaAlmoço = Convert.ToDateTime(lblhora.Text);
+
+
+
+            BaterPontoBusiness bunisess = new BaterPontoBusiness();
+            bunisess.segundo_ponto(dto);
+
+            MessageBox.Show("foi");
+
+
+        }
     }
 }
+
+
+

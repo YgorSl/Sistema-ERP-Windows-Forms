@@ -113,6 +113,7 @@
             this.btnsaida.TabIndex = 6;
             this.btnsaida.Text = "button3";
             this.btnsaida.UseVisualStyleBackColor = true;
+            this.btnsaida.Click += new System.EventHandler(this.btnsaida_Click);
             // 
             // brnalmoçoentrada
             // 
@@ -122,6 +123,7 @@
             this.brnalmoçoentrada.TabIndex = 7;
             this.brnalmoçoentrada.Text = "button4";
             this.brnalmoçoentrada.UseVisualStyleBackColor = true;
+            this.brnalmoçoentrada.Click += new System.EventHandler(this.brnalmoçoentrada_Click);
             // 
             // btnebtrada
             // 

@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.dgvfluxo = new System.Windows.Forms.DataGridView();
             this.dtpfim = new System.Windows.Forms.DateTimePicker();
             this.dtpinicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ganhor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perdau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvfluxo = new System.Windows.Forms.DataGridView();
+            this.tipo_de_operaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Movimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perda = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfluxo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,21 +52,6 @@
             this.button1.TabIndex = 73;
             this.button1.Text = "buscar";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // dgvfluxo
-            // 
-            this.dgvfluxo.AllowUserToAddRows = false;
-            this.dgvfluxo.AllowUserToDeleteRows = false;
-            this.dgvfluxo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvfluxo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ganhor,
-            this.perdau,
-            this.Column1,
-            this.Column2});
-            this.dgvfluxo.Location = new System.Drawing.Point(11, 187);
-            this.dgvfluxo.Name = "dgvfluxo";
-            this.dgvfluxo.Size = new System.Drawing.Size(752, 244);
-            this.dgvfluxo.TabIndex = 72;
             // 
             // dtpfim
             // 
@@ -109,28 +95,52 @@
             this.label1.TabIndex = 68;
             this.label1.Text = "Início";
             // 
-            // ganhor
+            // dgvfluxo
             // 
-            this.ganhor.DataPropertyName = "ganhor";
-            this.ganhor.HeaderText = "Ganhou";
-            this.ganhor.Name = "ganhor";
+            this.dgvfluxo.AllowUserToAddRows = false;
+            this.dgvfluxo.AllowUserToDeleteRows = false;
+            this.dgvfluxo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvfluxo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.tipo_de_operaca,
+            this.Total,
+            this.Movimento,
+            this.perda,
+            this.Saldo});
+            this.dgvfluxo.Location = new System.Drawing.Point(12, 169);
+            this.dgvfluxo.Name = "dgvfluxo";
+            this.dgvfluxo.Size = new System.Drawing.Size(752, 244);
+            this.dgvfluxo.TabIndex = 74;
             // 
-            // perdau
+            // tipo_de_operaca
             // 
-            this.perdau.DataPropertyName = "perdeu";
-            this.perdau.HeaderText = "Perdar";
-            this.perdau.Name = "perdau";
+            this.tipo_de_operaca.DataPropertyName = "Periodo_inicial";
+            this.tipo_de_operaca.HeaderText = "Data Inicial";
+            this.tipo_de_operaca.Name = "tipo_de_operaca";
             // 
-            // Column1
+            // Total
             // 
-            this.Column1.DataPropertyName = "saldo";
-            this.Column1.HeaderText = "Saldo";
-            this.Column1.Name = "Column1";
+            this.Total.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Total.DataPropertyName = "Perido_final";
+            this.Total.HeaderText = "Data Final";
+            this.Total.Name = "Total";
             // 
-            // Column2
+            // Movimento
             // 
-            this.Column2.HeaderText = "Periodo inicial";
-            this.Column2.Name = "Column2";
+            this.Movimento.DataPropertyName = "ganhor";
+            this.Movimento.HeaderText = "Ganho";
+            this.Movimento.Name = "Movimento";
+            // 
+            // perda
+            // 
+            this.perda.DataPropertyName = "perdeu";
+            this.perda.HeaderText = "Perda";
+            this.perda.Name = "perda";
+            // 
+            // Saldo
+            // 
+            this.Saldo.DataPropertyName = "saldo";
+            this.Saldo.HeaderText = "Saldo";
+            this.Saldo.Name = "Saldo";
             // 
             // Consultar_fluxo_caixa
             // 
@@ -138,8 +148,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(774, 529);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvfluxo);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpfim);
             this.Controls.Add(this.dtpinicio);
             this.Controls.Add(this.label2);
@@ -155,14 +165,15 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dgvfluxo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ganhor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn perdau;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DateTimePicker dtpfim;
         private System.Windows.Forms.DateTimePicker dtpinicio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dgvfluxo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_de_operaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Movimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perda;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Saldo;
     }
 }

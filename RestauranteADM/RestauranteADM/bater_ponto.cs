@@ -1,5 +1,6 @@
 ﻿using RestauranteADM.Acesso;
 using RestauranteADM.BASE.BaterPonto;
+using RestauranteADM.TELAS._1._0._1;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,9 +20,9 @@ namespace RestauranteADM
             InitializeComponent();
         }
         private string cpf;
-  
 
-   
+
+
 
         private void tmr_Tick(object sender, EventArgs e)
         {
@@ -42,37 +43,42 @@ namespace RestauranteADM
 
             BaterPontoBusiness bunisess = new BaterPontoBusiness();
             bunisess.verificar(cpf);
+
+            btnebtrada.Enabled = true;
+            btnok.Enabled = false;
         }
 
         private void btnebtrada_Click(object sender, EventArgs e)
         {
 
-            BaterPontoDatabase bpft = new BaterPontoDatabase();
-
-            int id = acesso.funcionariologado.Id;
-
-            BaterPontoDTO dto = new BaterPontoDTO();
-             dto.IdFuncionario = Convert.ToInt32(id);
-             dto.Data =Convert.ToDateTime( lbldata.Text);
-             dto.Entrada = Convert.ToDateTime(lblhora.Text);
-           
-
-
-            BaterPontoBusiness bunisess = new BaterPontoBusiness();
-            bunisess.Salvar(dto);
-
-            MessageBox.Show("foi");
+            if (txtcpf.Text != string.Empty)
+            {
+                int id = acesso.funcionariologado.Id;
+                BaterPontoDTO dto = new BaterPontoDTO();
+                dto.IdFuncionario = Convert.ToInt32(id);
+                dto.Data = Convert.ToDateTime(lbldata.Text);
+                dto.Entrada = Convert.ToDateTime(lblhora.Text);
 
 
 
-           BaterPontoDTO baterponto =bpft.atualizar();
+                BaterPontoBusiness bunisess = new BaterPontoBusiness();
+                bunisess.Salvar(dto);
 
-            
-            acesso.BaterPonto = baterponto;
-
+                MessageBox.Show("foi");
+                btnalmoçosaida.Enabled = true;
+                btnsaida.Enabled = true;
+                btnebtrada.Enabled = false;
             }
 
-            
+            BaterPontoDatabase bpft = new BaterPontoDatabase();
+            BaterPontoDTO baterponto = bpft.atualizar();
+            acesso.BaterPonto = baterponto;
+
+
+        }
+
+
+
 
         private void bater_ponto_Load(object sender, EventArgs e)
         {
@@ -84,15 +90,60 @@ namespace RestauranteADM
             int idponto = acesso.BaterPonto.Id;
 
             BaterPontoDTO dto = new BaterPontoDTO();
-            dto.IdFuncionario = Convert.ToInt32(idponto);
+            dto.Id = Convert.ToInt32(idponto);
             dto.IdaAlmoço = Convert.ToDateTime(lblhora.Text);
 
 
 
             BaterPontoBusiness bunisess = new BaterPontoBusiness();
-            bunisess.Salvar(dto);
+            bunisess.Primeiro_ponto(dto);
 
             MessageBox.Show("foi");
+            brnalmoçoentrada.Enabled = true;
+            btnalmoçosaida.Enabled = false;
+        }
+
+        private void btnsaida_Click(object sender, EventArgs e)
+        {
+            int idponto = acesso.BaterPonto.Id;
+
+            BaterPontoDTO dto = new BaterPontoDTO();
+            dto.Id = Convert.ToInt32(idponto);
+            dto.VoltaAlmoço = Convert.ToDateTime(lblhora.Text);
+
+
+
+            BaterPontoBusiness bunisess = new BaterPontoBusiness();
+            bunisess.terceiro_ponto(dto);
+
+            MessageBox.Show("Obrigado pelo dia de trabalho");
+
+            btnsaida.Enabled = false;
+       
+        }
+
+        private void brnalmoçoentrada_Click(object sender, EventArgs e)
+        {
+            int idponto = acesso.BaterPonto.Id;
+
+            BaterPontoDTO dto = new BaterPontoDTO();
+            dto.Id = Convert.ToInt32(idponto);
+            dto.VoltaAlmoço = Convert.ToDateTime(lblhora.Text);
+
+
+
+            BaterPontoBusiness bunisess = new BaterPontoBusiness();
+            bunisess.segundo_ponto(dto);
+
+            MessageBox.Show("foi");
+
+            brnalmoçoentrada.Enabled = false;
+            
+
+
         }
     }
 }
+
+
+

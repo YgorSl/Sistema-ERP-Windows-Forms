@@ -65,6 +65,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Cadastro\cadastrar conta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Cadastro\cadastrar conta.Designer.cs">
+      <DependentUpon>cadastrar conta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Consulta\consultar conta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Consulta\consultar conta.Designer.cs">
+      <DependentUpon>consultar conta.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Consulta\Consultar_fluxo_caixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,12 +132,6 @@
     </Compile>
     <Compile Include="TELAS\Estoque\RetirarEstoque.Designer.cs">
       <DependentUpon>RetirarEstoque.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TELAS\recuperaçao\adicionar o codigo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TELAS\recuperaçao\adicionar o codigo.Designer.cs">
-      <DependentUpon>adicionar o codigo.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Alterar\alterarcardapio.cs">
       <SubType>Form</SubType>
@@ -377,6 +383,12 @@
     <EmbeddedResource Include="bater_ponto.resx">
       <DependentUpon>bater_ponto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Cadastro\cadastrar conta.resx">
+      <DependentUpon>cadastrar conta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Consulta\consultar conta.resx">
+      <DependentUpon>consultar conta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\Consultar_fluxo_caixa.resx">
       <DependentUpon>Consultar_fluxo_caixa.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,9 +406,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Estoque\RetirarEstoque.resx">
       <DependentUpon>RetirarEstoque.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\recuperaçao\adicionar o codigo.resx">
-      <DependentUpon>adicionar o codigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Alterar\alterarcardapio.resx">
       <DependentUpon>alterarcardapio.cs</DependentUpon>

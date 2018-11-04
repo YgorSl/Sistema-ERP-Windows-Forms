@@ -12,7 +12,7 @@ namespace RestauranteADM.BASE.BaterPonto
     public class BaterPontoDatabase
     {
 
-       public string id, nome;
+        public string id, nome;
 
 
         public void Consultar(string cpf)
@@ -35,9 +35,9 @@ namespace RestauranteADM.BASE.BaterPonto
 
                 nome = reader["nm_nome"].ToString();
                 id = reader["id_funcionarios"].ToString();
-               
-             
-                MessageBox.Show( "olá " + nome + " seja bem vindo");
+
+
+                MessageBox.Show("olá " + nome + " seja bem vindo");
 
                 reader.Close();
             }
@@ -47,17 +47,14 @@ namespace RestauranteADM.BASE.BaterPonto
 
 
             }
-       }
+        }
 
-              public int Salvar(BaterPontoDTO dto)
+        public int Salvar(BaterPontoDTO dto)
         {
             string script = @"INSERT INTO `mydb`.`tb_ponto10` (id_funcionario, dt_data, hr_entrada, hr_almoço_ida, hr_almoço_volta, hr_saida) VALUES (@id_funcionario,@dt_data,@hr_entrada,@hr_almoço_ida,@hr_almoço_volta,@hr_saida)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            
-        
 
-   
             parms.Add(new MySqlParameter("id_funcionario", dto.IdFuncionario));
             parms.Add(new MySqlParameter("dt_data", dto.Data));
             parms.Add(new MySqlParameter("hr_entrada", dto.Entrada));
@@ -73,7 +70,7 @@ namespace RestauranteADM.BASE.BaterPonto
 
 
 
-  
+
 
         public void Update(BaterPontoDTO dto)
         {
@@ -82,19 +79,57 @@ namespace RestauranteADM.BASE.BaterPonto
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_ponto", dto.Id));
             parms.Add(new MySqlParameter("hr_almoço_ida", dto.IdaAlmoço));
-      
+
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
 
         }
 
+        public void Update2(BaterPontoDTO dto)
+        {
+            string script = @" UPDATE `mydb`.`tb_ponto10` SET hr_almoço_volta = @hr_almoço_volta WHERE id_ponto = @id_ponto; ";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_ponto", dto.Id));
+            parms.Add(new MySqlParameter("hr_almoço_volta", dto.VoltaAlmoço));
+
+
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
+
+        }
+
+        public void Update3(BaterPontoDTO dto)
+        {
+            string script = @" UPDATE `mydb`.`tb_ponto10` SET hr_saida = @hr_saida WHERE id_ponto = @id_ponto; ";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_ponto", dto.Id));
+            parms.Add(new MySqlParameter("hr_saida", dto.VoltaAlmoço));
+
+
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
         public BaterPontoDTO atualizar()
         {
 
             string script = @"select max(id_ponto) as id_ponto from tb_ponto10";
-
-          
 
 
 
@@ -115,5 +150,5 @@ namespace RestauranteADM.BASE.BaterPonto
             return dt;
         }
     }
-    
+
 }

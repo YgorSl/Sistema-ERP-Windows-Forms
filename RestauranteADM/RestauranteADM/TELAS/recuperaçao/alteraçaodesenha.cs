@@ -40,24 +40,34 @@ namespace RestauranteADM
 
         private void btnentrar_Click(object sender, EventArgs e)
         {
+            if (txtsenha.Text==txtsenha2.Text)
+            {
+                criptgrafia criptografia = new criptgrafia();
+                string Login = criptografia.Codificar(txtnome.Text);
+                string Senhar = criptografia.Codificar(txtsenha.Text);
 
 
-            criptgrafia criptografia = new criptgrafia();
-            string Login = criptografia.Codificar(txtnome.Text);
-            string Senhar = criptografia.Codificar(txtsenha.Text);
+                int oi = Convert.ToInt32(id);
+
+                AlteraçaoBunisess bunisess = new AlteraçaoBunisess();
+                bunisess.alteraçao(oi, Login, Senhar);
+
+                MessageBox.Show("senha e login alterandos por favor ");
+
+                Login login = new Login();
+                login.Show();
+
+                Close();
+
+            }
+            else
+            {
+                MessageBox.Show("As duas mensagem nao estao iguais por favor verifique");
 
 
-           int oi = Convert.ToInt32(id);
+            }
 
-            AlteraçaoBunisess bunisess = new AlteraçaoBunisess();
-            bunisess.alteraçao(oi, Login, Senhar);
-
-            MessageBox.Show("senha e login alterandos por favor ");
-
-            Login login = new Login();
-            login.Show();
-
-            Close();
+          
 
 
 

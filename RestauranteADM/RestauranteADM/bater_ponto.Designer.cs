@@ -33,19 +33,19 @@
             this.tmr = new System.Windows.Forms.Timer(this.components);
             this.lbldata = new System.Windows.Forms.Label();
             this.btnok = new System.Windows.Forms.Button();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnalmoçosaida = new System.Windows.Forms.Button();
             this.btnsaida = new System.Windows.Forms.Button();
             this.brnalmoçoentrada = new System.Windows.Forms.Button();
             this.btnebtrada = new System.Windows.Forms.Button();
+            this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblhora
             // 
             this.lblhora.AutoSize = true;
             this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhora.Location = new System.Drawing.Point(210, 74);
+            this.lblhora.Location = new System.Drawing.Point(187, 74);
             this.lblhora.Name = "lblhora";
             this.lblhora.Size = new System.Drawing.Size(284, 73);
             this.lblhora.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.lbldata.AutoSize = true;
             this.lbldata.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldata.Location = new System.Drawing.Point(319, 156);
+            this.lbldata.Location = new System.Drawing.Point(291, 158);
             this.lbldata.Name = "lbldata";
             this.lbldata.Size = new System.Drawing.Size(60, 24);
             this.lbldata.TabIndex = 1;
@@ -69,27 +69,19 @@
             // 
             // btnok
             // 
-            this.btnok.Location = new System.Drawing.Point(562, 211);
+            this.btnok.Location = new System.Drawing.Point(480, 217);
             this.btnok.Name = "btnok";
-            this.btnok.Size = new System.Drawing.Size(98, 29);
+            this.btnok.Size = new System.Drawing.Size(98, 25);
             this.btnok.TabIndex = 2;
-            this.btnok.Text = "ok";
+            this.btnok.Text = "Confirmar";
             this.btnok.UseVisualStyleBackColor = true;
             this.btnok.Click += new System.EventHandler(this.btnok_Click);
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcpf.Location = new System.Drawing.Point(190, 211);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(366, 29);
-            this.txtcpf.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 215);
+            this.label1.Location = new System.Drawing.Point(104, 217);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 25);
             this.label1.TabIndex = 4;
@@ -97,53 +89,69 @@
             // 
             // btnalmoçosaida
             // 
-            this.btnalmoçosaida.Location = new System.Drawing.Point(281, 320);
+            this.btnalmoçosaida.Enabled = false;
+            this.btnalmoçosaida.Location = new System.Drawing.Point(238, 321);
             this.btnalmoçosaida.Name = "btnalmoçosaida";
             this.btnalmoçosaida.Size = new System.Drawing.Size(98, 43);
             this.btnalmoçosaida.TabIndex = 5;
-            this.btnalmoçosaida.Text = "button2";
+            this.btnalmoçosaida.Text = "Almoço ";
             this.btnalmoçosaida.UseVisualStyleBackColor = true;
             this.btnalmoçosaida.Click += new System.EventHandler(this.btnalmoçosaida_Click);
             // 
             // btnsaida
             // 
-            this.btnsaida.Location = new System.Drawing.Point(523, 320);
+            this.btnsaida.Enabled = false;
+            this.btnsaida.Location = new System.Drawing.Point(480, 321);
             this.btnsaida.Name = "btnsaida";
             this.btnsaida.Size = new System.Drawing.Size(98, 43);
             this.btnsaida.TabIndex = 6;
-            this.btnsaida.Text = "button3";
+            this.btnsaida.Text = "Saida";
             this.btnsaida.UseVisualStyleBackColor = true;
+            this.btnsaida.Click += new System.EventHandler(this.btnsaida_Click);
             // 
             // brnalmoçoentrada
             // 
-            this.brnalmoçoentrada.Location = new System.Drawing.Point(405, 320);
+            this.brnalmoçoentrada.Enabled = false;
+            this.brnalmoçoentrada.Location = new System.Drawing.Point(362, 321);
             this.brnalmoçoentrada.Name = "brnalmoçoentrada";
             this.brnalmoçoentrada.Size = new System.Drawing.Size(98, 43);
             this.brnalmoçoentrada.TabIndex = 7;
-            this.brnalmoçoentrada.Text = "button4";
+            this.brnalmoçoentrada.Text = "Almoço volta";
             this.brnalmoçoentrada.UseVisualStyleBackColor = true;
+            this.brnalmoçoentrada.Click += new System.EventHandler(this.brnalmoçoentrada_Click);
             // 
             // btnebtrada
             // 
-            this.btnebtrada.Location = new System.Drawing.Point(162, 320);
+            this.btnebtrada.Enabled = false;
+            this.btnebtrada.Location = new System.Drawing.Point(119, 321);
             this.btnebtrada.Name = "btnebtrada";
             this.btnebtrada.Size = new System.Drawing.Size(98, 43);
             this.btnebtrada.TabIndex = 8;
-            this.btnebtrada.Text = "button1";
+            this.btnebtrada.Text = "Entrada";
             this.btnebtrada.UseVisualStyleBackColor = true;
             this.btnebtrada.Click += new System.EventHandler(this.btnebtrada_Click);
+            // 
+            // mtbcpf
+            // 
+            this.mtbcpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbcpf.Location = new System.Drawing.Point(176, 217);
+            this.mtbcpf.Mask = "999.999.999-00";
+            this.mtbcpf.Name = "mtbcpf";
+            this.mtbcpf.Size = new System.Drawing.Size(282, 24);
+            this.mtbcpf.TabIndex = 9;
             // 
             // bater_ponto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(698, 410);
+            this.Controls.Add(this.mtbcpf);
             this.Controls.Add(this.btnebtrada);
             this.Controls.Add(this.brnalmoçoentrada);
             this.Controls.Add(this.btnsaida);
             this.Controls.Add(this.btnalmoçosaida);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtcpf);
             this.Controls.Add(this.btnok);
             this.Controls.Add(this.lbldata);
             this.Controls.Add(this.lblhora);
@@ -161,11 +169,11 @@
         private System.Windows.Forms.Timer tmr;
         private System.Windows.Forms.Label lbldata;
         private System.Windows.Forms.Button btnok;
-        private System.Windows.Forms.TextBox txtcpf;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnalmoçosaida;
         private System.Windows.Forms.Button btnsaida;
         private System.Windows.Forms.Button brnalmoçoentrada;
         private System.Windows.Forms.Button btnebtrada;
+        private System.Windows.Forms.MaskedTextBox mtbcpf;
     }
 }

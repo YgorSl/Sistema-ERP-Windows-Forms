@@ -35,6 +35,8 @@
             this.txtnome = new System.Windows.Forms.TextBox();
             this.txtsenha = new System.Windows.Forms.TextBox();
             this.btnentrar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtsenha2 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +44,8 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtsenha2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
@@ -57,7 +61,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(66, 135);
+            this.label3.Location = new System.Drawing.Point(66, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 50;
@@ -98,7 +102,7 @@
             // 
             this.txtsenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.txtsenha.ForeColor = System.Drawing.Color.White;
-            this.txtsenha.Location = new System.Drawing.Point(69, 155);
+            this.txtsenha.Location = new System.Drawing.Point(69, 140);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.Size = new System.Drawing.Size(200, 20);
             this.txtsenha.TabIndex = 46;
@@ -116,6 +120,26 @@
             this.btnentrar.Text = "Alterar";
             this.btnentrar.UseVisualStyleBackColor = false;
             this.btnentrar.Click += new System.EventHandler(this.btnentrar_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(66, 177);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 16);
+            this.label4.TabIndex = 52;
+            this.label4.Text = "Confirmação de senha";
+            // 
+            // txtsenha2
+            // 
+            this.txtsenha2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.txtsenha2.ForeColor = System.Drawing.Color.White;
+            this.txtsenha2.Location = new System.Drawing.Point(69, 196);
+            this.txtsenha2.Name = "txtsenha2";
+            this.txtsenha2.Size = new System.Drawing.Size(200, 20);
+            this.txtsenha2.TabIndex = 51;
             // 
             // alteraçaodesenha
             // 
@@ -144,5 +168,7 @@
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.TextBox txtsenha;
         private System.Windows.Forms.Button btnentrar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtsenha2;
     }
 }

@@ -4,7 +4,6 @@ using RestauranteADM.TELAS.Alterar;
 using RestauranteADM.TELAS.Cadastro;
 using RestauranteADM.TELAS.Consulta;
 using RestauranteADM.TELAS.Financeiro;
-using RestauranteADM.TELAS.recuperaçao;
 using RestauranteADM.TELAS.RH;
 using System;
 using System.Collections.Generic;

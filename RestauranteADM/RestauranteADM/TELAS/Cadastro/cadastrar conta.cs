@@ -38,5 +38,10 @@ namespace RestauranteADM.TELAS.Cadastro
 
             MessageBox.Show("conta Salvo com sucesso! :)");
         }
+
+        private void cadastrar_conta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

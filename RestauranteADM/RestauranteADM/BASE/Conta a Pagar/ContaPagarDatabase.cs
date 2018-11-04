@@ -69,13 +69,31 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
                 dto.tipo = reader.GetString("tipo");
                 dto.validade = reader.GetDateTime("dt_validade");
                 dto.Preço = reader.GetDouble("vl_preço");
-
+                dto.pagou = reader.GetBoolean("pg_pagou");
 
                 lista.Add(dto);
             }
             reader.Close();
 
             return lista;
+
+        }
+
+        public void Update(ContaPagarDTO dto)
+        {
+            string script = @"UPDATE `mydb`.`tb_conta_pagar` SET pg_pagou = 1 WHERE id_conta_pagar=@id_conta_pagar";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_conta_pagar", dto.Id));
+
+
+
+
+
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
+         
+
 
         }
     }

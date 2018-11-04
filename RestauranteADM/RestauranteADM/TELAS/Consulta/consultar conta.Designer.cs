@@ -30,14 +30,15 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dgvconta = new System.Windows.Forms.DataGridView();
-            this.data_de_recebimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtpfim = new System.Windows.Forms.DateTimePicker();
             this.dtpinicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.data_de_recebimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estrapago = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvconta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,42 +56,19 @@
             // 
             // dgvconta
             // 
-            this.dgvconta.AllowUserToAddRows = false;
             this.dgvconta.AllowUserToDeleteRows = false;
             this.dgvconta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvconta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.data_de_recebimento,
             this.data_validade,
             this.Valor,
-            this.Tipo});
-            this.dgvconta.Location = new System.Drawing.Point(3, 150);
+            this.Tipo,
+            this.estrapago});
+            this.dgvconta.Location = new System.Drawing.Point(67, 183);
             this.dgvconta.Name = "dgvconta";
             this.dgvconta.Size = new System.Drawing.Size(718, 244);
             this.dgvconta.TabIndex = 84;
-            // 
-            // data_de_recebimento
-            // 
-            this.data_de_recebimento.DataPropertyName = "chegou";
-            this.data_de_recebimento.HeaderText = "data de recebimento";
-            this.data_de_recebimento.Name = "data_de_recebimento";
-            // 
-            // data_validade
-            // 
-            this.data_validade.DataPropertyName = "validade";
-            this.data_validade.HeaderText = "data validade";
-            this.data_validade.Name = "data_validade";
-            // 
-            // Valor
-            // 
-            this.Valor.DataPropertyName = "preço";
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            // 
-            // Tipo
-            // 
-            this.Tipo.DataPropertyName = "tipo";
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
+            this.dgvconta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvconta_CellContentClick);
             // 
             // dtpfim
             // 
@@ -134,10 +112,42 @@
             this.label1.TabIndex = 80;
             this.label1.Text = "Início";
             // 
+            // data_de_recebimento
+            // 
+            this.data_de_recebimento.DataPropertyName = "chegou";
+            this.data_de_recebimento.HeaderText = "data de recebimento";
+            this.data_de_recebimento.Name = "data_de_recebimento";
+            this.data_de_recebimento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // data_validade
+            // 
+            this.data_validade.DataPropertyName = "validade";
+            this.data_validade.HeaderText = "data validade";
+            this.data_validade.Name = "data_validade";
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "preço";
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            // 
+            // Tipo
+            // 
+            this.Tipo.DataPropertyName = "tipo";
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            // 
+            // estrapago
+            // 
+            this.estrapago.DataPropertyName = "pagou";
+            this.estrapago.HeaderText = "Estar pagor";
+            this.estrapago.Name = "estrapago";
+            // 
             // consultar_conta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(797, 453);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvconta);
@@ -147,6 +157,7 @@
             this.Controls.Add(this.label1);
             this.Name = "consultar_conta";
             this.Text = "consultar_conta";
+            this.Load += new System.EventHandler(this.consultar_conta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvconta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -157,13 +168,14 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dgvconta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data_de_recebimento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn data_validade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
         private System.Windows.Forms.DateTimePicker dtpfim;
         private System.Windows.Forms.DateTimePicker dtpinicio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn data_de_recebimento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn data_validade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn estrapago;
     }
 }

@@ -14,6 +14,6 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
         public DateTime chegou { get; set; }
         public double Preço { get; set; }
         public DateTime validade { get; set; }
-
+        public bool pagou { get; set; }
     }
 }

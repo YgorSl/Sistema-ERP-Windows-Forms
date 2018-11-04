@@ -55,9 +55,6 @@ namespace RestauranteADM.BASE.BaterPonto
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
 
-
-
-
             parms.Add(new MySqlParameter("id_funcionario", dto.IdFuncionario));
             parms.Add(new MySqlParameter("dt_data", dto.Data));
             parms.Add(new MySqlParameter("hr_entrada", dto.Entrada));

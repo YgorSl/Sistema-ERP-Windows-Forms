@@ -20,5 +20,12 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
             ContaPagarDatabase db = new ContaPagarDatabase();
             db.Remover(id);
         }
+
+        public void Update(ContaPagarDTO dto)
+        {
+            ContaPagarDatabase db = new ContaPagarDatabase();
+            db.Update(dto);
+
+        }
     }
 }

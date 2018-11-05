@@ -52,7 +52,7 @@ namespace RestauranteADM.BASE.BaterPonto
 
         public int Salvar(BaterPontoDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_ponto10` (id_funcionario, dt_data, hr_entrada, hr_almoço_ida, hr_almoço_volta, hr_saida) VALUES (@id_funcionario,@dt_data,@hr_entrada,@hr_almoço_ida,@hr_almoço_volta,@hr_saida)";
+            string script = @"INSERT INTO `mydb`.`tb_ponto10` (id_funcionario, dt_data,hr_entrada,hr_almoço_ida,hr_almoço_volta,hr_saida) VALUES (@id_funcionario,@dt_data,@hr_entrada,@hr_almoço_ida,@hr_almoço_volta,@hr_saida)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
 

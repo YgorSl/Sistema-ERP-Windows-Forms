@@ -14,10 +14,12 @@ namespace RestauranteADM.BASE.vendas
 
         public int Salvar(VendasDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_venda` (data_venda, id_cliente) VALUES (@data_venda,@id_cliente)";
+            string script = @"INSERT INTO `mydb`.`tb_venda` (data_venda, id_cliente,vl_final) VALUES (@data_venda,@id_cliente,@vl_final)";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("data_venda", dto.Data));
             parms.Add(new MySqlParameter("id_cliente", dto.cliente.Id));
+            parms.Add(new MySqlParameter("vl_final", dto.vlfinal));
+            
 
 
             Database db = new Database();

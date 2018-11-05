@@ -146,6 +146,7 @@ namespace RestauranteADM
 
             VendasDTO compra = new VendasDTO();
             compra.Data = dtpdata.Value;
+            compra.vlfinal = Convert.ToDouble(txtfn.Text);
             compra.cliente = forn;
 
 

@@ -13,5 +13,7 @@ namespace RestauranteADM.BASE.vendas
         public int Id { get; set; }
         public DateTime Data { get; set; }
         public ClienteDTO cliente{ get; set; }
+
+        public double vlfinal { get; set; }
     }
 }

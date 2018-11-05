@@ -15,9 +15,10 @@ using RestauranteADM.Acesso;
 using RestauranteADM.TELAS.Consulta;
 using RestauranteADM.TELAS.RH;
 using RestauranteADM.TELAS.Estoque;
-using Microsoft.Speech.Recognition;
+///using Microsoft.Speech.Recognition;
 using System.Speech.Synthesis;
 using System.Globalization;
+using System.Speech.Recognition;
 
 namespace RestauranteADM.TELAS._1._0._1
 {

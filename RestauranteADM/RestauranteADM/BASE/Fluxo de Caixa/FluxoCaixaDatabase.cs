@@ -15,12 +15,13 @@ namespace RestauranteADM.BASE.Fluxo_de_Caixa
 
         public int Salvar(FluxoCaixaDTO dto)
         {
-            string script = @" INSERT INTO `mydb`.`tb_fluxo_de_caixa` ( vl_ganhar, vl_perdeu, vl_saldo, dt_periodo_inicio, dt_periodo_final) 
+            string script = @" INSERT INTO `mydb`.`tb_fluxo_de_caixa` (vl_ganhar,vl_perdeu,vl_saldo,dt_periodo_inicio,dt_periodo_final) 
                                                                VALUES ( @vl_ganhar, @vl_perdeu, @vl_saldo, @dt_periodo_inicio, @dt_periodo_final);";
 
 
 
 
+    
 
 
             List<MySqlParameter> parms = new List<MySqlParameter>();

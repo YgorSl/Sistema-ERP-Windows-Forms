@@ -122,7 +122,7 @@ namespace RestauranteADM.TELAS.Financeiro
 
             dto.ganhor = Convert.ToDouble(lblentrada.Text);
             dto.perdar = Convert.ToDouble(lblsaida.Text);
-            dto.saldo = Convert.ToSByte(lblsituaca.Text);
+            dto.saldo = Convert.ToSingle(lblsituaca.Text);
             dto.Perido_inicial = dtpinicio.Value;
             dto.Perido_final = dtpfim.Value;
 

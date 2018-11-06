@@ -126,9 +126,9 @@ namespace RestauranteADM.TELAS.Financeiro
             dto.Perido_inicial = dtpinicio.Value;
             dto.Perido_final = dtpfim.Value;
 
-            
 
-            FluxoCaixaDatabase ft = new FluxoCaixaDatabase();
+
+            FluxoCaixaBusiness ft = new FluxoCaixaBusiness();
             ft.Salvar(dto);
             MessageBox.Show("foi");
         }

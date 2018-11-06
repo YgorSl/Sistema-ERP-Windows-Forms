@@ -76,22 +76,22 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(150, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 17);
+            this.label2.Size = new System.Drawing.Size(30, 16);
             this.label2.TabIndex = 53;
             this.label2.Text = "Fim";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(141, 141);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 17);
+            this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 52;
             this.label1.Text = "Início";
             // 
@@ -107,6 +107,7 @@
             this.Column1});
             this.dgvfluxo.Location = new System.Drawing.Point(0, 226);
             this.dgvfluxo.Name = "dgvfluxo";
+            this.dgvfluxo.ReadOnly = true;
             this.dgvfluxo.Size = new System.Drawing.Size(752, 244);
             this.dgvfluxo.TabIndex = 61;
             this.dgvfluxo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfluxo_CellContentClick);
@@ -117,56 +118,60 @@
             this.Data.DataPropertyName = "data";
             this.Data.HeaderText = "Data";
             this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
             // 
             // Valor
             // 
             this.Valor.DataPropertyName = "valortotal";
             this.Valor.HeaderText = "Valor";
             this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
             // 
             // Movimento
             // 
             this.Movimento.DataPropertyName = "movimento";
             this.Movimento.HeaderText = "Movimento";
             this.Movimento.Name = "Movimento";
+            this.Movimento.ReadOnly = true;
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "tipo_de_operacao";
             this.Column1.HeaderText = "Operação";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(294, 51);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(157, 24);
+            this.label36.Size = new System.Drawing.Size(152, 25);
             this.label36.TabIndex = 64;
             this.label36.Text = "Fluxo de caixa";
             // 
             // lblsituaçao
             // 
             this.lblsituaçao.AutoSize = true;
-            this.lblsituaçao.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsituaçao.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsituaçao.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblsituaçao.Location = new System.Drawing.Point(542, 481);
             this.lblsituaçao.Name = "lblsituaçao";
-            this.lblsituaçao.Size = new System.Drawing.Size(91, 22);
+            this.lblsituaçao.Size = new System.Drawing.Size(82, 24);
             this.lblsituaçao.TabIndex = 65;
             this.lblsituaçao.Text = "Situação";
             // 
             // lblsituaca
             // 
             this.lblsituaca.AutoSize = true;
-            this.lblsituaca.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsituaca.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsituaca.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblsituaca.Location = new System.Drawing.Point(638, 481);
             this.lblsituaca.Name = "lblsituaca";
-            this.lblsituaca.Size = new System.Drawing.Size(52, 22);
+            this.lblsituaca.Size = new System.Drawing.Size(52, 24);
             this.lblsituaca.TabIndex = 66;
             this.lblsituaca.Text = "-------";
             // 
@@ -185,11 +190,11 @@
             // lblsaida
             // 
             this.lblsaida.AutoSize = true;
-            this.lblsaida.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsaida.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsaida.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblsaida.Location = new System.Drawing.Point(224, 476);
             this.lblsaida.Name = "lblsaida";
-            this.lblsaida.Size = new System.Drawing.Size(52, 22);
+            this.lblsaida.Size = new System.Drawing.Size(52, 24);
             this.lblsaida.TabIndex = 69;
             this.lblsaida.Text = "-------";
             this.lblsaida.Click += new System.EventHandler(this.lblsaida_Click);
@@ -197,32 +202,32 @@
             // lblcompra
             // 
             this.lblcompra.AutoSize = true;
-            this.lblcompra.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcompra.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblcompra.Location = new System.Drawing.Point(128, 476);
             this.lblcompra.Name = "lblcompra";
-            this.lblcompra.Size = new System.Drawing.Size(61, 22);
+            this.lblcompra.Size = new System.Drawing.Size(57, 24);
             this.lblcompra.TabIndex = 68;
             this.lblcompra.Text = "Saída";
             // 
             // lblvenda
             // 
             this.lblvenda.AutoSize = true;
-            this.lblvenda.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblvenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvenda.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblvenda.Location = new System.Drawing.Point(224, 498);
             this.lblvenda.Name = "lblvenda";
-            this.lblvenda.Size = new System.Drawing.Size(0, 22);
+            this.lblvenda.Size = new System.Drawing.Size(0, 24);
             this.lblvenda.TabIndex = 71;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label7.Location = new System.Drawing.Point(128, 498);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 22);
+            this.label7.Size = new System.Drawing.Size(75, 24);
             this.label7.TabIndex = 70;
             this.label7.Text = "Entrada";
             // 
@@ -241,11 +246,11 @@
             // lblentrada
             // 
             this.lblentrada.AutoSize = true;
-            this.lblentrada.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblentrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblentrada.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lblentrada.Location = new System.Drawing.Point(224, 498);
             this.lblentrada.Name = "lblentrada";
-            this.lblentrada.Size = new System.Drawing.Size(52, 22);
+            this.lblentrada.Size = new System.Drawing.Size(52, 24);
             this.lblentrada.TabIndex = 73;
             this.lblentrada.Text = "-------";
             // 

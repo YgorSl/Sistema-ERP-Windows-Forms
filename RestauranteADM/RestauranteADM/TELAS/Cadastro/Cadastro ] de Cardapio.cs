@@ -37,8 +37,7 @@ namespace RestauranteADM.TELAS.Cadastro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+            
 
                 CardapioDTO dto = new CardapioDTO();
 
@@ -54,11 +53,7 @@ namespace RestauranteADM.TELAS.Cadastro
 
 
                 MessageBox.Show("Prato salvo com sucesso! :)");
-            }
-            catch
-            {
-                MessageBox.Show("Ocorreu um erro! Verifique se todos os campos estão preenchidos corretamente ou entre em contato com o administrador. :(");
-            }
+     
         }
 
         private void txtValor_KeyPress(object sender, KeyPressEventArgs e)

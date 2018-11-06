@@ -91,11 +91,11 @@
             // 
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.Transparent;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(263, 42);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(173, 25);
+            this.label36.Size = new System.Drawing.Size(183, 24);
             this.label36.TabIndex = 47;
             this.label36.Text = "Consultar cliente";
             // 

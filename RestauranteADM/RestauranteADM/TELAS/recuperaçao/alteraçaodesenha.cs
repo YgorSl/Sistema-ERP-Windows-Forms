@@ -35,7 +35,7 @@ namespace RestauranteADM
 
         private void alteraçaodesenha_Load(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void btnentrar_Click(object sender, EventArgs e)

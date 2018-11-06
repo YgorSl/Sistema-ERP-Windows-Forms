@@ -270,12 +270,21 @@ namespace RestauranteADM.TELAS
         
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
+            try
+            {
             using (var ws = new WSCorreios.AtendeClienteClient())
             {
                 var result = ws.consultaCEP(mbtcep.Text);
                 txtbairro.Text = result.bairro;
                 txtcidade.Text = result.cidade;
                 txtrua.Text = result.end;
+            }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("CEP Invalido" ,"TocToc Basil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

@@ -60,6 +60,8 @@ namespace RestauranteADM
 
         private void btnentrar_Click(object sender, EventArgs e)
         {
+            try
+            {
             UsuarioBusiness bs = new UsuarioBusiness();
             FuncionarioDatabse db = new FuncionarioDatabse();
 
@@ -82,6 +84,14 @@ namespace RestauranteADM
                 MessageBox.Show("Credenciais Inválidas.", "Toc Toc Brasil",
                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
+            }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Credenciais Inválidas.", "Toc Toc Brasil",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
           
 
@@ -111,6 +121,11 @@ namespace RestauranteADM
         }
 
         private void btnentrar_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void white(object sender, EventArgs e)
         {
 
         }

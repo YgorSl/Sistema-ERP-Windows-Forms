@@ -21,5 +21,11 @@ namespace RestauranteADM.TELAS.Consulta
         {
 
         }
+
+        private void dgvfluxo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+
+        }
     }
 }

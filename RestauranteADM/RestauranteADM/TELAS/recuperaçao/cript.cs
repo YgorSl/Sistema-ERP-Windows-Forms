@@ -31,11 +31,6 @@ namespace RestauranteADM
         
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-      
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             txtmensagem.Text = login.recuperaçao(txtRecuperacao.Text);
@@ -61,6 +56,11 @@ namespace RestauranteADM
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

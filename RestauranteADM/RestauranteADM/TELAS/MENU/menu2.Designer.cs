@@ -70,6 +70,7 @@
             this.btnmenucad = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.SubMenuConsultar.SuspendLayout();
@@ -686,24 +687,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(343, 278);
+            this.label2.Font = new System.Drawing.Font("Old English Text MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.LightYellow;
+            this.label2.Location = new System.Drawing.Point(386, 293);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 42);
+            this.label2.Size = new System.Drawing.Size(102, 44);
             this.label2.TabIndex = 63;
-            this.label2.Text = "Olá!";
+            this.label2.Text = "Seja ";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(200, 34);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(752, 649);
             this.panel2.TabIndex = 74;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Old English Text MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LightYellow;
+            this.label1.Location = new System.Drawing.Point(331, 341);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(209, 44);
+            this.label1.TabIndex = 64;
+            this.label1.Text = "Bem-Vindo!";
             // 
             // menu2
             // 
@@ -776,5 +790,6 @@
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
     }
 }

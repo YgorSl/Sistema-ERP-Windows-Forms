@@ -28,15 +28,7 @@ namespace RestauranteADM.TELAS
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+      
 
         private void label5_Click(object sender, EventArgs e)
         {
@@ -53,20 +45,8 @@ namespace RestauranteADM.TELAS
 
         }
 
-        private void label8_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label9_Click(object sender, EventArgs e)
         {
@@ -78,20 +58,13 @@ namespace RestauranteADM.TELAS
 
         }
 
-        private void textBox8_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void label4_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -103,26 +76,14 @@ namespace RestauranteADM.TELAS
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox9_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
             dtphoje.Value = DateTime.Now;
@@ -188,7 +149,7 @@ namespace RestauranteADM.TELAS
             catch (Exception)
             {
 
-                MessageBox.Show("errou");
+                MessageBox.Show("Por favor preencha todos os campos!"); 
             }
            
         }
@@ -232,12 +193,22 @@ namespace RestauranteADM.TELAS
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
+            try
+            {
             using (var ws = new WSCorreios.AtendeClienteClient())
             {
                 var result = ws.consultaCEP(mbtcep.Text);
                 txtbairro.Text = result.bairro;
                 txtcidade.Text = result.cidade;
                 txtrua.Text = result.end;
+            }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("CEP Invalido.", "Toc Toc Brasil",
+                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

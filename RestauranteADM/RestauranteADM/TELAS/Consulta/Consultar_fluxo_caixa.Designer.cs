@@ -39,6 +39,7 @@
             this.Movimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.perda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label36 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfluxo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,9 +47,9 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(532, 115);
+            this.button1.Location = new System.Drawing.Point(522, 119);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 29);
+            this.button1.Size = new System.Drawing.Size(67, 25);
             this.button1.TabIndex = 73;
             this.button1.Text = "buscar";
             this.button1.UseVisualStyleBackColor = false;
@@ -107,10 +108,12 @@
             this.Movimento,
             this.perda,
             this.Saldo});
-            this.dgvfluxo.Location = new System.Drawing.Point(12, 169);
+            this.dgvfluxo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvfluxo.Location = new System.Drawing.Point(0, 197);
             this.dgvfluxo.Name = "dgvfluxo";
-            this.dgvfluxo.Size = new System.Drawing.Size(752, 244);
+            this.dgvfluxo.Size = new System.Drawing.Size(752, 452);
             this.dgvfluxo.TabIndex = 74;
+            this.dgvfluxo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfluxo_CellContentClick);
             // 
             // tipo_de_operaca
             // 
@@ -143,18 +146,32 @@
             this.Saldo.HeaderText = "Saldo";
             this.Saldo.Name = "Saldo";
             // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.White;
+            this.label36.Location = new System.Drawing.Point(254, 42);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(263, 24);
+            this.label36.TabIndex = 75;
+            this.label36.Text = "Consultar Fluxo de Caixa";
+            // 
             // Consultar_fluxo_caixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(774, 529);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(752, 649);
+            this.Controls.Add(this.label36);
             this.Controls.Add(this.dgvfluxo);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpfim);
             this.Controls.Add(this.dtpinicio);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Consultar_fluxo_caixa";
             this.Text = "Consultar_fluxo_caixa";
             ((System.ComponentModel.ISupportInitialize)(this.dgvfluxo)).EndInit();
@@ -176,5 +193,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Movimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn perda;
         private System.Windows.Forms.DataGridViewTextBoxColumn Saldo;
+        private System.Windows.Forms.Label label36;
     }
 }

@@ -22,9 +22,8 @@ namespace RestauranteADM.TELAS
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-
-
+            try
+            {
             ProvedorDTO forn = new ProvedorDTO();
                 forn.Nome = txtnome.Text;
                 forn.Cnpj = txtcnpj.Text;
@@ -41,6 +40,15 @@ namespace RestauranteADM.TELAS
                 bus.Salvar1(forn);
 
                 MessageBox.Show("Fornecedor Cadastrado com Sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Verifique se todos os campos estão preenchidos corretamente", "TocToc Basil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+
            
         }
 
@@ -98,6 +106,8 @@ namespace RestauranteADM.TELAS
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
+            try
+            {
             using (var ws = new WSCorreios.AtendeClienteClient())
             {
                 var result = ws.consultaCEP(txtcep.Text);
@@ -106,6 +116,13 @@ namespace RestauranteADM.TELAS
                 txtend.Text = result.end;
                 txtest.Text = result.uf;
 
+            }
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("CEP Invalido", "TocToc Basil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

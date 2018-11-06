@@ -30,14 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvfuncio = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnConsultarFuncionario = new System.Windows.Forms.Button();
-            this.a = new System.Windows.Forms.Label();
-            this.txtfuncio = new System.Windows.Forms.TextBox();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtcpf = new System.Windows.Forms.TextBox();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CPF = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rg = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +42,14 @@
             this.Gmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnConsultarFuncionario = new System.Windows.Forms.Button();
+            this.a = new System.Windows.Forms.Label();
+            this.txtfuncio = new System.Windows.Forms.TextBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtcpf = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfuncio)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,88 +87,6 @@
             this.dgvfuncio.Size = new System.Drawing.Size(752, 412);
             this.dgvfuncio.TabIndex = 33;
             this.dgvfuncio.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(309, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 25);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Usuário";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnConsultarFuncionario
-            // 
-            this.btnConsultarFuncionario.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnConsultarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFuncionario.Location = new System.Drawing.Point(635, 79);
-            this.btnConsultarFuncionario.Name = "btnConsultarFuncionario";
-            this.btnConsultarFuncionario.Size = new System.Drawing.Size(81, 30);
-            this.btnConsultarFuncionario.TabIndex = 31;
-            this.btnConsultarFuncionario.Text = "Consultar";
-            this.btnConsultarFuncionario.UseVisualStyleBackColor = false;
-            this.btnConsultarFuncionario.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // a
-            // 
-            this.a.AutoSize = true;
-            this.a.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.a.ForeColor = System.Drawing.Color.White;
-            this.a.Location = new System.Drawing.Point(52, 91);
-            this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(81, 16);
-            this.a.TabIndex = 28;
-            this.a.Text = "Funcionario:";
-            // 
-            // txtfuncio
-            // 
-            this.txtfuncio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfuncio.Location = new System.Drawing.Point(154, 82);
-            this.txtfuncio.Name = "txtfuncio";
-            this.txtfuncio.Size = new System.Drawing.Size(465, 25);
-            this.txtfuncio.TabIndex = 27;
-            this.txtfuncio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKeypressFuncionario);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.FillWeight = 300F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::RestauranteADM.Properties.Resources._1;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::RestauranteADM.Properties.Resources.erro;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(52, 133);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 16);
-            this.label2.TabIndex = 35;
-            this.label2.Text = "CPF";
-            // 
-            // txtcpf
-            // 
-            this.txtcpf.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtcpf.Location = new System.Drawing.Point(154, 124);
-            this.txtcpf.Name = "txtcpf";
-            this.txtcpf.Size = new System.Drawing.Size(465, 25);
-            this.txtcpf.TabIndex = 34;
             // 
             // Nome
             // 
@@ -267,6 +185,88 @@
             this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Column1.Width = 50;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(309, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 24);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "Usuário";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnConsultarFuncionario
+            // 
+            this.btnConsultarFuncionario.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFuncionario.Location = new System.Drawing.Point(636, 121);
+            this.btnConsultarFuncionario.Name = "btnConsultarFuncionario";
+            this.btnConsultarFuncionario.Size = new System.Drawing.Size(81, 30);
+            this.btnConsultarFuncionario.TabIndex = 31;
+            this.btnConsultarFuncionario.Text = "Consultar";
+            this.btnConsultarFuncionario.UseVisualStyleBackColor = false;
+            this.btnConsultarFuncionario.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // a
+            // 
+            this.a.AutoSize = true;
+            this.a.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a.ForeColor = System.Drawing.Color.White;
+            this.a.Location = new System.Drawing.Point(52, 91);
+            this.a.Name = "a";
+            this.a.Size = new System.Drawing.Size(81, 16);
+            this.a.TabIndex = 28;
+            this.a.Text = "Funcionario:";
+            // 
+            // txtfuncio
+            // 
+            this.txtfuncio.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfuncio.Location = new System.Drawing.Point(154, 82);
+            this.txtfuncio.Name = "txtfuncio";
+            this.txtfuncio.Size = new System.Drawing.Size(465, 25);
+            this.txtfuncio.TabIndex = 27;
+            this.txtfuncio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKeypressFuncionario);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.FillWeight = 300F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::RestauranteADM.Properties.Resources._1;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::RestauranteADM.Properties.Resources.erro;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(96, 133);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 16);
+            this.label2.TabIndex = 35;
+            this.label2.Text = "CPF:";
+            // 
+            // txtcpf
+            // 
+            this.txtcpf.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcpf.Location = new System.Drawing.Point(154, 124);
+            this.txtcpf.Name = "txtcpf";
+            this.txtcpf.Size = new System.Drawing.Size(465, 25);
+            this.txtcpf.TabIndex = 34;
             // 
             // crud_funcionario
             // 

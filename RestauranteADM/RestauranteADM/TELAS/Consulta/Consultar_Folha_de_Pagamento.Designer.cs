@@ -60,7 +60,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(229, 41);
+            this.label36.Location = new System.Drawing.Point(200, 41);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(332, 24);
             this.label36.TabIndex = 54;

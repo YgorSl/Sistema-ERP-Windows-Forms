@@ -49,9 +49,9 @@
             // cboforn
             // 
             this.cboforn.FormattingEnabled = true;
-            this.cboforn.Location = new System.Drawing.Point(34, 39);
+            this.cboforn.Location = new System.Drawing.Point(24, 39);
             this.cboforn.Name = "cboforn";
-            this.cboforn.Size = new System.Drawing.Size(204, 21);
+            this.cboforn.Size = new System.Drawing.Size(214, 21);
             this.cboforn.TabIndex = 1;
             // 
             // label1

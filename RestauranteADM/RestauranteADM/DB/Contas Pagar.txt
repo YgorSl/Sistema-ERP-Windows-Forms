@@ -1,0 +1,16 @@
+﻿CREATE TABLE IF NOT EXISTS `mydb`.`tb_conta_pagar` (
+  `id_conta_pagar` INT(11) NOT NULL AUTO_INCREMENT,
+  `vl_valor` double NULL DEFAULT NULL,
+  `ds_prestador` varchar(50) NULL DEFAULT NULL,
+  `dt_vencimento` datetime NULL DEFAULT NULL,
+  `dt_data` DATE NULL DEFAULT NULL,
+  `ds_documento` VARCHAR(50) NOT NULL,
+  `ds_operacao` varchar(50) NOT NULL,
+  `ds_agencia` varchar(50) NULL DEFAULT NULL,
+  `ds_conta` varchar(50) NULL DEFAULT NULL,
+   `nm_banco` varchar(50) NULL DEFAULT NULL,
+    `ds_ok` tinyint(1) NULL DEFAULT NULL,
+  PRIMARY KEY (`id_conta_pagar`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 4
+DEFAULT CHARACTER SET = utf8;

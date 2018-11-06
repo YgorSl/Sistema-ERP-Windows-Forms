@@ -40,7 +40,37 @@ namespace RestauranteADM.BASE.Fornecedor
             return forn;
         }
 
+        public int Salvar1(ProvedorDTO dto)
+        {
+            FornecedorDatabase db = new FornecedorDatabase();
+            return db.Salvar1(dto);
+        }
 
+        public void Alterar1(ProvedorDTO dto)
+        {
+            FornecedorDatabase db = new FornecedorDatabase();
+            db.Alterar1(dto);
+        }
+
+        public void Excluir1(int id)
+        {
+            FornecedorDatabase db = new FornecedorDatabase();
+            db.Excluir1(id);
+        }
+
+        public List<ProvedorDTO> filtro1(string Nome, string Cnpj)
+        {
+            FornecedorDatabase db = new FornecedorDatabase();
+            List<ProvedorDTO> forn = db.filtro1(Nome, Cnpj);
+            return forn;
+
+        }
+        public List<ProvedorDTO> Listar1()
+        {
+            FornecedorDatabase db = new FornecedorDatabase();
+            List<ProvedorDTO> forn = db.Listar1();
+            return forn;
+        }
 
     }
 }

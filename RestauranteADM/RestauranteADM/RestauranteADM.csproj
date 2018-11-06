@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.11.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -50,6 +50,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acesso\acesso.cs" />
+    <Compile Include="BASE\CP_Pagar\CP_Business.cs" />
+    <Compile Include="BASE\CP_Pagar\CP_Database.cs" />
+    <Compile Include="BASE\CP_Pagar\CP_DTO.cs" />
+    <Compile Include="BASE\Fornecedor\ProvedorDTO.cs" />
     <Compile Include="bater_ponto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,17 +65,47 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Alterar\AlterarContas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Alterar\AlterarContas.Designer.cs">
+      <DependentUpon>AlterarContas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Alterar\AlterarProvedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Alterar\AlterarProvedor.Designer.cs">
+      <DependentUpon>AlterarProvedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Cadastro\cadastrar conta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TELAS\Cadastro\cadastrar conta.Designer.cs">
       <DependentUpon>cadastrar conta.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Cadastro\Cadastro_de_Prestador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Cadastro\Cadastro_de_Prestador.Designer.cs">
+      <DependentUpon>Cadastro_de_Prestador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Cadastro\ContasPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Cadastro\ContasPagar.Designer.cs">
+      <DependentUpon>ContasPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Consulta\consultar conta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TELAS\Consulta\consultar conta.Designer.cs">
       <DependentUpon>consultar conta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\Consulta\ConsultarProvedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Consulta\ConsultarProvedor.Designer.cs">
+      <DependentUpon>ConsultarProvedor.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Consulta\Consultar_fluxo_caixa.cs">
       <SubType>Form</SubType>
@@ -379,11 +413,26 @@
     <EmbeddedResource Include="bater_ponto.resx">
       <DependentUpon>bater_ponto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Alterar\AlterarContas.resx">
+      <DependentUpon>AlterarContas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Alterar\AlterarProvedor.resx">
+      <DependentUpon>AlterarProvedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro\cadastrar conta.resx">
       <DependentUpon>cadastrar conta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Cadastro\Cadastro_de_Prestador.resx">
+      <DependentUpon>Cadastro_de_Prestador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Cadastro\ContasPagar.resx">
+      <DependentUpon>ContasPagar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\consultar conta.resx">
       <DependentUpon>consultar conta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Consulta\ConsultarProvedor.resx">
+      <DependentUpon>ConsultarProvedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\Consultar_fluxo_caixa.resx">
       <DependentUpon>Consultar_fluxo_caixa.cs</DependentUpon>
@@ -665,6 +714,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="DB\Contas Pagar.txt" />
     <Content Include="DB\script.txt" />
     <Content Include="DB\ScriptEstranho.txt" />
     <None Include="Resources\lupa.png" />
@@ -707,5 +757,6 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\WSCorreios\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

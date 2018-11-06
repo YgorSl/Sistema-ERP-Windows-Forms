@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using RestauranteADM.DB;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -80,27 +82,6 @@ namespace RestauranteADM.BASE.CP_Pagar
             return lista;
 
         }
-        public List<CP_DTO> Consultar(double Valor, DateTime chegou, string Prestador, DateTime vencimento, string documento, string operacao, int agencia, int conta, string banco, bool ok)
-        {
 
-
-            string script = @"select *from tb_conta_pagar where nm_nome like @nome and ds_cpf like @cpf";
-
-            List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("vl_valor", "%" + Valor + "%"));
-            parms.Add(new MySqlParameter("dt_data", "%" + chegou + "%"));
-            parms.Add(new MySqlParameter("ds_prestador", "%" + Prestador + "%"));
-            parms.Add(new MySqlParameter("dt_vencimento", "%" + vencimento + "%"));
-            parms.Add(new MySqlParameter("ds_documento", "%" + documento + "%"));
-            parms.Add(new MySqlParameter("ds_operacao", "%" + operacao + "%"));
-            parms.Add(new MySqlParameter("ds_agencia", "%" + agencia + "%"));
-            parms.Add(new MySqlParameter("ds_conta", "%" + conta + "%"));
-            parms.Add(new MySqlParameter("nm_banco", "%" + banco + "%"));
-            parms.Add(new MySqlParameter("ds_ok", "%" + ok + "%"));
-
-            Database db = new Database();
-            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-
-        }
     }
 }

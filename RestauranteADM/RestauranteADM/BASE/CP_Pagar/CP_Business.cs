@@ -23,26 +23,9 @@ namespace RestauranteADM.BASE.CP_Pagar
             db.Remover(id);
         }
 
-        public void Update(CP_DTO funcio)
-        {
-            CP_Database usuarioDB = new CP_Database();
-            usuarioDB.Update(funcio);
-        }
+    
 
-        public List<CP_DTO> lista()
-        {
-            CP_Database db = new CP_Database();
-            List<CP_DTO> tb = db.lista();
-
-            return tb;
-        }
-        public List<CP_DTO> filtro(string nome, string cpf)
-        {
-            CP_Database db = new CP_Database();
-            List<CP_DTO> tb = db.Filtro(start, end);
-
-            return tb;
-        }
+      
 
 
     }

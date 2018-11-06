@@ -33,6 +33,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvfluxo = new System.Windows.Forms.DataGridView();
+            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Movimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label36 = new System.Windows.Forms.Label();
             this.lblsituaçao = new System.Windows.Forms.Label();
             this.lblsituaca = new System.Windows.Forms.Label();
@@ -44,10 +48,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.lblentrada = new System.Windows.Forms.Label();
             this.btnfluxo = new System.Windows.Forms.Button();
-            this.Data = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Movimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvfluxo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,10 +107,39 @@
             this.Column1});
             this.dgvfluxo.Location = new System.Drawing.Point(0, 226);
             this.dgvfluxo.Name = "dgvfluxo";
+            this.dgvfluxo.ReadOnly = true;
             this.dgvfluxo.Size = new System.Drawing.Size(752, 244);
             this.dgvfluxo.TabIndex = 61;
             this.dgvfluxo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfluxo_CellContentClick);
             this.dgvfluxo.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvfluxo_DataBindingComplete);
+            // 
+            // Data
+            // 
+            this.Data.DataPropertyName = "data";
+            this.Data.HeaderText = "Data";
+            this.Data.Name = "Data";
+            this.Data.ReadOnly = true;
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "valortotal";
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            this.Valor.ReadOnly = true;
+            // 
+            // Movimento
+            // 
+            this.Movimento.DataPropertyName = "movimento";
+            this.Movimento.HeaderText = "Movimento";
+            this.Movimento.Name = "Movimento";
+            this.Movimento.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "tipo_de_operacao";
+            this.Column1.HeaderText = "Operação";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // label36
             // 
@@ -236,30 +265,6 @@
             this.btnfluxo.Text = "Salvar Fluxo";
             this.btnfluxo.UseVisualStyleBackColor = false;
             this.btnfluxo.Click += new System.EventHandler(this.btnfluxo_Click);
-            // 
-            // Data
-            // 
-            this.Data.DataPropertyName = "data";
-            this.Data.HeaderText = "Data";
-            this.Data.Name = "Data";
-            // 
-            // Valor
-            // 
-            this.Valor.DataPropertyName = "valortotal";
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            // 
-            // Movimento
-            // 
-            this.Movimento.DataPropertyName = "movimento";
-            this.Movimento.HeaderText = "Movimento";
-            this.Movimento.Name = "Movimento";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "tipo_de_operacao";
-            this.Column1.HeaderText = "Operação";
-            this.Column1.Name = "Column1";
             // 
             // Fluxo_de_Caixa
             // 

@@ -14,7 +14,7 @@ namespace RestauranteADM.BASE.FluxoDeCaixa
         public List<FluxodecaixaView> Filtro(DateTime start, DateTime end)
         {
 
-            string script = @"select* from Fluxo_view where dt_data>= @start and @end <= dt_data";
+            string script = @"select* from fluxo_view where dt_data>= @start and @end <= dt_data";
 
 
  

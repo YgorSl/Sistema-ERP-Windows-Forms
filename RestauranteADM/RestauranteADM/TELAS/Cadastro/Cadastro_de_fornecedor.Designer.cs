@@ -123,6 +123,7 @@
             this.txtend.Name = "txtend";
             this.txtend.Size = new System.Drawing.Size(204, 20);
             this.txtend.TabIndex = 7;
+            this.txtend.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtRua);
             // 
             // txtest
             // 
@@ -193,6 +194,7 @@
             this.txtcep.Size = new System.Drawing.Size(204, 20);
             this.txtcep.TabIndex = 4;
             this.txtcep.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mbtcep_MaskInputRejected);
+            this.txtcep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCEP);
             // 
             // label7
             // 
@@ -211,6 +213,7 @@
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(204, 20);
             this.txtbairro.TabIndex = 8;
+            this.txtbairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtBairro);
             // 
             // label9
             // 
@@ -230,6 +233,7 @@
             this.txttelefone.Name = "txttelefone";
             this.txttelefone.Size = new System.Drawing.Size(204, 20);
             this.txttelefone.TabIndex = 3;
+            this.txttelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtTelefone);
             // 
             // txtcnpj
             // 
@@ -238,6 +242,7 @@
             this.txtcnpj.Name = "txtcnpj";
             this.txtcnpj.Size = new System.Drawing.Size(204, 20);
             this.txtcnpj.TabIndex = 2;
+            this.txtcnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCNPJ);
             // 
             // groupBox1
             // 

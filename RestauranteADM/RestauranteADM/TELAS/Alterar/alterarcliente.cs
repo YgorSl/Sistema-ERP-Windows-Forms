@@ -11,8 +11,11 @@ using System.Windows.Forms;
 
 namespace RestauranteADM.TELAS.Alterar
 {
+
     public partial class alterarcliente : Form
     {
+        Validacao v = new Validacao();
+
         public alterarcliente()
         {
             InitializeComponent();
@@ -136,7 +139,51 @@ namespace RestauranteADM.TELAS.Alterar
 
         }
 
-      
+        private void KeyPress_txtNome(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void Keypress_txtCPF(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void Keypress_txtTelefone(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtCEP(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtCidade(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtBairro(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtRua(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void Keypress_txtNumero(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtCNPJ(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
     }
     }
 

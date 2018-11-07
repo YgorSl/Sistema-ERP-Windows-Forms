@@ -13,6 +13,8 @@ namespace RestauranteADM
 {
     public partial class alterarcardapio : Form
     {
+        Validacao v = new Validacao();
+
         public alterarcardapio()
         {
             InitializeComponent();
@@ -98,6 +100,21 @@ namespace RestauranteADM
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void KeyPress_txtNome(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtTamanho(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtvalor(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
         }
     }
 }

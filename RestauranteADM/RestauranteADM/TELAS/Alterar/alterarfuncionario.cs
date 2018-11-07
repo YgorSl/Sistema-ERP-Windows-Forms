@@ -15,6 +15,8 @@ namespace RestauranteADM.TELAS.Consulta
 {
     public partial class alterarfuncionario : Form
     {
+        Validacao v = new Validacao();
+
         public alterarfuncionario()
         {
             InitializeComponent();
@@ -96,6 +98,21 @@ namespace RestauranteADM.TELAS.Consulta
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Keypress_txtNome(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void Keypress_txtCPF(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void Keypress_txtRG(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
         }
     }
 }

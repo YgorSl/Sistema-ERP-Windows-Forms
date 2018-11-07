@@ -187,6 +187,7 @@
             this.txtcpf.Name = "txtcpf";
             this.txtcpf.Size = new System.Drawing.Size(219, 20);
             this.txtcpf.TabIndex = 2;
+            this.txtcpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Keypress_txtCPF);
             // 
             // txtnome
             // 
@@ -194,6 +195,7 @@
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(219, 20);
             this.txtnome.TabIndex = 1;
+            this.txtnome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Keypress_txtNome);
             // 
             // label12
             // 
@@ -307,6 +309,7 @@
             this.txtrg.Name = "txtrg";
             this.txtrg.Size = new System.Drawing.Size(219, 20);
             this.txtrg.TabIndex = 81;
+            this.txtrg.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Keypress_txtRG);
             // 
             // RG
             // 

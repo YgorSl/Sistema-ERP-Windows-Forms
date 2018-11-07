@@ -15,6 +15,8 @@ namespace RestauranteADM.TELAS
 {
     public partial class AlterarProvedor : Form
     {
+        Validacao v = new Validacao();
+
         public AlterarProvedor()
         {
             InitializeComponent();
@@ -71,6 +73,41 @@ namespace RestauranteADM.TELAS
         private void maskedTextBox2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void Keypress_txtNome(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void Keypress_txtCNPJ(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void Keypress_txtCEP(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void Keypress_txtTelefone(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtCidade(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void Keypress_txtEstado(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void Keypress_txtBairro(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
         }
     }
 }

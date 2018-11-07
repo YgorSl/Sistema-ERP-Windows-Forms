@@ -73,6 +73,7 @@
             this.txtvalor.Size = new System.Drawing.Size(187, 20);
             this.txtvalor.TabIndex = 3;
             this.txtvalor.TextChanged += new System.EventHandler(this.txtvalor_TextChanged);
+            this.txtvalor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtvalor);
             // 
             // txttamanho
             // 
@@ -81,6 +82,7 @@
             this.txttamanho.Size = new System.Drawing.Size(187, 20);
             this.txttamanho.TabIndex = 2;
             this.txttamanho.TextChanged += new System.EventHandler(this.txttamanho_TextChanged);
+            this.txttamanho.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtTamanho);
             // 
             // txtnomeprato
             // 
@@ -89,6 +91,7 @@
             this.txtnomeprato.Size = new System.Drawing.Size(187, 20);
             this.txtnomeprato.TabIndex = 1;
             this.txtnomeprato.TextChanged += new System.EventHandler(this.txtnomeprato_TextChanged);
+            this.txtnomeprato.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtNome);
             // 
             // label5
             // 

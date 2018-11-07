@@ -207,6 +207,7 @@
             this.txtnome.Size = new System.Drawing.Size(245, 20);
             this.txtnome.TabIndex = 1;
             this.txtnome.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtnome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtNome);
             // 
             // txtbairro
             // 
@@ -215,6 +216,7 @@
             this.txtbairro.Size = new System.Drawing.Size(245, 20);
             this.txtbairro.TabIndex = 6;
             this.txtbairro.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.txtbairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtBairro);
             // 
             // txtnumcasa
             // 
@@ -223,6 +225,7 @@
             this.txtnumcasa.Size = new System.Drawing.Size(245, 20);
             this.txtnumcasa.TabIndex = 8;
             this.txtnumcasa.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.txtnumcasa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtNumero);
             // 
             // label1
             // 
@@ -289,6 +292,7 @@
             this.txtrua.Name = "txtrua";
             this.txtrua.Size = new System.Drawing.Size(245, 20);
             this.txtrua.TabIndex = 7;
+            this.txtrua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtRua);
             // 
             // label11
             // 
@@ -307,6 +311,7 @@
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(245, 20);
             this.txtcidade.TabIndex = 5;
+            this.txtcidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCidade);
             // 
             // mtbcpf
             // 
@@ -316,6 +321,7 @@
             this.mtbcpf.Size = new System.Drawing.Size(245, 20);
             this.mtbcpf.TabIndex = 2;
             this.mtbcpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbcpf_MaskInputRejected);
+            this.mtbcpf.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCPF);
             // 
             // mbtcep
             // 
@@ -325,6 +331,7 @@
             this.mbtcep.Size = new System.Drawing.Size(245, 20);
             this.mbtcep.TabIndex = 4;
             this.mbtcep.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mbtcep_MaskInputRejected);
+            this.mbtcep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCEP);
             // 
             // mtbcnpj
             // 
@@ -333,6 +340,7 @@
             this.mtbcnpj.Name = "mtbcnpj";
             this.mtbcnpj.Size = new System.Drawing.Size(245, 20);
             this.mtbcnpj.TabIndex = 9;
+            this.mtbcnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCNPJ);
             // 
             // mtbtelefone
             // 
@@ -341,6 +349,7 @@
             this.mtbtelefone.Name = "mtbtelefone";
             this.mtbtelefone.Size = new System.Drawing.Size(245, 20);
             this.mtbtelefone.TabIndex = 3;
+            this.mtbtelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtTelefone);
             // 
             // pictureBox1
             // 

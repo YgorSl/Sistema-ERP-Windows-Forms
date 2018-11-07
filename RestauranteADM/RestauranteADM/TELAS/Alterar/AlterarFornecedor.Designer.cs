@@ -61,6 +61,7 @@
             this.txtcid.Name = "txtcid";
             this.txtcid.Size = new System.Drawing.Size(203, 20);
             this.txtcid.TabIndex = 5;
+            this.txtcid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCidade);
             // 
             // label2
             // 
@@ -134,6 +135,7 @@
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(203, 20);
             this.txtnome.TabIndex = 1;
+            this.txtnome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtNome);
             // 
             // txtest
             // 
@@ -141,6 +143,7 @@
             this.txtest.Name = "txtest";
             this.txtest.Size = new System.Drawing.Size(203, 20);
             this.txtest.TabIndex = 6;
+            this.txtest.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtEstado);
             // 
             // txtend
             // 
@@ -238,6 +241,7 @@
             this.txtcep.Name = "txtcep";
             this.txtcep.Size = new System.Drawing.Size(203, 20);
             this.txtcep.TabIndex = 3;
+            this.txtcep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCEP);
             // 
             // label7
             // 
@@ -256,6 +260,7 @@
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(203, 20);
             this.txtbairro.TabIndex = 8;
+            this.txtbairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtBairro);
             // 
             // label9
             // 
@@ -275,6 +280,7 @@
             this.txtcnpj.Name = "txtcnpj";
             this.txtcnpj.Size = new System.Drawing.Size(204, 20);
             this.txtcnpj.TabIndex = 2;
+            this.txtcnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCNPJ);
             // 
             // txttelefone
             // 
@@ -284,6 +290,7 @@
             this.txttelefone.Size = new System.Drawing.Size(204, 20);
             this.txttelefone.TabIndex = 4;
             this.txttelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox2_MaskInputRejected);
+            this.txttelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtTelefone);
             // 
             // AlterarFornecedor
             // 

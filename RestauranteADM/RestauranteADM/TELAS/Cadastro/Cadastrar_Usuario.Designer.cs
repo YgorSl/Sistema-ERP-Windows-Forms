@@ -1280,6 +1280,7 @@
             this.txtgmail.Name = "txtgmail";
             this.txtgmail.Size = new System.Drawing.Size(248, 20);
             this.txtgmail.TabIndex = 3;
+            this.txtgmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtGmail);
             // 
             // label52
             // 
@@ -1299,6 +1300,7 @@
             this.txtnome.Name = "txtnome";
             this.txtnome.Size = new System.Drawing.Size(248, 20);
             this.txtnome.TabIndex = 1;
+            this.txtnome.TextChanged += new System.EventHandler(this.txtnome_TextChanged);
             // 
             // label16
             // 
@@ -1393,6 +1395,7 @@
             this.txtnumerocasa.Name = "txtnumerocasa";
             this.txtnumerocasa.Size = new System.Drawing.Size(176, 20);
             this.txtnumerocasa.TabIndex = 8;
+            this.txtnumerocasa.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtNumero);
             // 
             // label13
             // 
@@ -1412,6 +1415,7 @@
             this.mbtcep.Name = "mbtcep";
             this.mbtcep.Size = new System.Drawing.Size(242, 20);
             this.mbtcep.TabIndex = 6;
+            this.mbtcep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCEP);
             // 
             // txtcidade
             // 
@@ -1419,6 +1423,7 @@
             this.txtcidade.Name = "txtcidade";
             this.txtcidade.Size = new System.Drawing.Size(242, 20);
             this.txtcidade.TabIndex = 7;
+            this.txtcidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtCidade);
             // 
             // label54
             // 
@@ -1437,6 +1442,7 @@
             this.txtrua.Name = "txtrua";
             this.txtrua.Size = new System.Drawing.Size(262, 20);
             this.txtrua.TabIndex = 10;
+            this.txtrua.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtRua);
             // 
             // label55
             // 
@@ -1455,6 +1461,7 @@
             this.txtbairro.Name = "txtbairro";
             this.txtbairro.Size = new System.Drawing.Size(262, 20);
             this.txtbairro.TabIndex = 9;
+            this.txtbairro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPress_txtBairro);
             // 
             // label56
             // 

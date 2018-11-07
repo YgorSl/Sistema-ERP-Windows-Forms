@@ -13,6 +13,8 @@ namespace RestauranteADM.TELAS
 {
     public partial class Cadastrar_cliente : Form
     {
+        Validacao v = new Validacao();
+
         public Cadastrar_cliente()
         {
             InitializeComponent();
@@ -220,6 +222,51 @@ namespace RestauranteADM.TELAS
         private void mtbcpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void KeyPress_txtNome(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtCPF(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtTelefone(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtCEP(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtCidade(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtBairro(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtRua(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtNumero(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtCNPJ(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
         }
     }
 }

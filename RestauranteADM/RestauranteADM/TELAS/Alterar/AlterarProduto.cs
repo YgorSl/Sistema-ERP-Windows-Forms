@@ -14,6 +14,8 @@ namespace RestauranteADM.TELAS
 {
     public partial class AlterarProduto : Form
     {
+        Validacao v = new Validacao();
+
         public AlterarProduto()
         {
             InitializeComponent();
@@ -83,6 +85,11 @@ namespace RestauranteADM.TELAS
             Close();
 
 
+        }
+
+        private void Keypress_txtValor(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
         }
     }
 }

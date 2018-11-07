@@ -41,7 +41,7 @@ namespace RestauranteADM
         {
             try
             {
-                if (char.IsNumber(e.KeyChar))
+                if (char.IsNumber(e.KeyChar) )
                 {
                     e.Handled = false;
 

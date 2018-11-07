@@ -105,6 +105,7 @@
             this.txtpre.Name = "txtpre";
             this.txtpre.Size = new System.Drawing.Size(204, 20);
             this.txtpre.TabIndex = 3;
+            this.txtpre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Keypress_txtValor);
             // 
             // label3
             // 

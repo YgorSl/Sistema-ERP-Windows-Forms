@@ -288,7 +288,40 @@ namespace RestauranteADM.TELAS
             }
         }
 
-       
+        private void txtnome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KeyPress_txtGmail(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void KeyPress_txtCEP(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtCidade(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtNumero(object sender, KeyPressEventArgs e)
+        {
+            v.sonumeros(e);
+        }
+
+        private void KeyPress_txtBairro(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
+
+        private void KeyPress_txtRua(object sender, KeyPressEventArgs e)
+        {
+            v.soletras(e);
+        }
     }
 }
     

@@ -14,23 +14,31 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 
         public int Salvar(ContaPagarDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_conta_pagar2` (ds_tipo_cobrança, nm_conta_contabil, ds_conta_contabil, ds_conta, ds_agencia, ds_banco, ds_observaçao, dt_emissao, dt_data, dt_vencimento, valor_titulo, ds_parcelados) 
-                                                                   VALUES (@ds_tipo_cobrança,@nm_conta_contabil,@ds_conta_contabil,@ds_conta,@ds_agencia,@ds_banco,@ds_observaçao,@dt_emissao,@dt_data,@dt_vencimento,@valor_titulo,@ds_parcelados)";
+            string script = @"INSERT INTO `mydb`.`tb_conta_paga1` (ds_tipo_cobrança,nm_conta_contabil,ds_conta_contabil,ds_agencia,ds_banco,ds_conta,ds_observaçao,dt_emissao,dt_data,dt_vencimento,vl_preço,ds_parcelados)
+                                                         VALUES   (@ds_tipo_cobrança,@nm_conta_contabil,@ds_conta_contabil,@ds_agencia,@ds_banco,@ds_conta,@ds_observaçao,@dt_emissao,@dt_data,@dt_vencimento,@vl_preço,@ds_parcelados)";
+
+
+
+
 
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("ds_tipo_cobrança", dto.tipo_cobrança));
             parms.Add(new MySqlParameter("nm_conta_contabil", dto.conta_contabil));
             parms.Add(new MySqlParameter("ds_conta_contabil", dto.conta_contabil_ds));
-            parms.Add(new MySqlParameter("ds_conta", dto.conta));
             parms.Add(new MySqlParameter("ds_agencia", dto.agencia));
             parms.Add(new MySqlParameter("ds_banco", dto.banco));
+            parms.Add(new MySqlParameter("ds_conta", dto.conta));
             parms.Add(new MySqlParameter("ds_observaçao", dto.observaçao));
             parms.Add(new MySqlParameter("dt_emissao", dto.emissao));
             parms.Add(new MySqlParameter("dt_data", dto.data_cadastro));
             parms.Add(new MySqlParameter("dt_vencimento", dto.vencimento));
-            parms.Add(new MySqlParameter("valor_titulo", dto.valor_titulo));
+            parms.Add(new MySqlParameter("vl_preço", dto.valor_titulo));
             parms.Add(new MySqlParameter("ds_parcelados", dto.parcelados));
+            parms.Add(new MySqlParameter("vl_preço", dto.valor_titulo));
+            parms.Add(new MySqlParameter("ds_parcelados", dto.parcelados));
+
+
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);

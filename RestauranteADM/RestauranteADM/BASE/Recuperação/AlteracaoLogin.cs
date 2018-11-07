@@ -54,7 +54,7 @@ namespace RestauranteADM.BASE.Recuperação
 
 
 
-                Gmail = reader["Gmail"].ToString();
+                   Gmail = reader["Gmail"].ToString();
                     Nome = reader["Nome"].ToString();
                     id = reader["idfuncio"].ToString();
                     enviaremailalteraçao();

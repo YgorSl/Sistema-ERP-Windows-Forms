@@ -17,6 +17,7 @@ namespace RestauranteADM.BASE.CP_Pagar
         public teste1()
         {
             InitializeComponent();
+            CarregarCombo();
         }
         void CarregarCombo()
         {
@@ -28,7 +29,8 @@ namespace RestauranteADM.BASE.CP_Pagar
             cboforn.DisplayMember = "Nome";
             cboforn.ValueMember = "Id";
 
-          
+            FornecedorDTO dto = cboforn.SelectedItem as FornecedorDTO;
+            lbl1.Text = dto.Cnpj;
 
 
 
@@ -42,7 +44,7 @@ namespace RestauranteADM.BASE.CP_Pagar
         private void button1_Click(object sender, EventArgs e)
         {
             ContaPagarDTO dto = new ContaPagarDTO();
-            FornecedorDTO forn = cboforn.SelectedItem as FornecedorDTO;
+
 
             dto.tipo_cobrança = cbmtipocobraça.Text;
 
@@ -50,7 +52,7 @@ namespace RestauranteADM.BASE.CP_Pagar
             dto.conta_contabil_ds = txtcontabil.Text;
             dto.conta = txtconta.Text;
             dto.agencia = txtagencia.Text;
-            dto.banco = txtagencia.Text;
+            dto.banco = txtbanco.Text;
             dto.observaçao = rtvanotaçoes.Text;
             dto.emissao = Convert.ToDateTime(dtpemissa.Value);
             dto.data_cadastro = Convert.ToDateTime(dtpdatacadastro.Value);

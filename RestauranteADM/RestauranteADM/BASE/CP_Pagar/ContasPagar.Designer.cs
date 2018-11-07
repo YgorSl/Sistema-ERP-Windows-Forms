@@ -40,7 +40,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dtphoje = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvbanco = new System.Windows.Forms.DataGridView();
+            this.txt3 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cboforn = new System.Windows.Forms.ComboBox();
             this.vencimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.operacao = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -50,15 +55,14 @@
             this.ok = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cboforn = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.txt1 = new System.Windows.Forms.TextBox();
+            this.txt4 = new System.Windows.Forms.TextBox();
+            this.txt2 = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbanco)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -192,10 +196,10 @@
             this.dtphoje.Size = new System.Drawing.Size(200, 20);
             this.dtphoje.TabIndex = 117;
             // 
-            // dataGridView1
+            // dgvbanco
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvbanco.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvbanco.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.vencimento,
             this.Valor,
             this.operacao,
@@ -205,80 +209,19 @@
             this.ok,
             this.Column1,
             this.Column2});
-            this.dataGridView1.Location = new System.Drawing.Point(16, 316);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(574, 150);
-            this.dataGridView1.TabIndex = 116;
-            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            this.dgvbanco.Location = new System.Drawing.Point(16, 316);
+            this.dgvbanco.Name = "dgvbanco";
+            this.dgvbanco.Size = new System.Drawing.Size(574, 150);
+            this.dgvbanco.TabIndex = 116;
+            this.dgvbanco.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvbanco_CellContentClick);
+            this.dgvbanco.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
             // 
-            // vencimento
+            // txt3
             // 
-            this.vencimento.HeaderText = "Vencimento";
-            this.vencimento.Name = "vencimento";
-            // 
-            // Valor
-            // 
-            this.Valor.DataPropertyName = "valor";
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            // 
-            // operacao
-            // 
-            this.operacao.DataPropertyName = "operacao";
-            this.operacao.HeaderText = "Operação";
-            this.operacao.Items.AddRange(new object[] {
-            "Boleto Bancário",
-            "Débito Automático",
-            "Transferencia Bancária",
-            "Caixa Pequeno",
-            "Cheque",
-            "Cartão de Crédito"});
-            this.operacao.Name = "operacao";
-            // 
-            // conta
-            // 
-            this.conta.DataPropertyName = "conta";
-            this.conta.HeaderText = "Conta";
-            this.conta.Name = "conta";
-            // 
-            // banco
-            // 
-            this.banco.HeaderText = "Banco";
-            this.banco.Name = "banco";
-            this.banco.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.banco.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // agencia
-            // 
-            this.agencia.HeaderText = "Agencia";
-            this.agencia.Name = "agencia";
-            this.agencia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.agencia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // ok
-            // 
-            this.ok.DataPropertyName = "ok";
-            this.ok.HeaderText = "OK";
-            this.ok.Name = "ok";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "alterar";
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "excluir";
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(16, 155);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 115;
+            this.txt3.Location = new System.Drawing.Point(16, 155);
+            this.txt3.Name = "txt3";
+            this.txt3.Size = new System.Drawing.Size(100, 20);
+            this.txt3.TabIndex = 115;
             // 
             // label3
             // 
@@ -320,6 +263,106 @@
             this.cboforn.Name = "cboforn";
             this.cboforn.Size = new System.Drawing.Size(312, 21);
             this.cboforn.TabIndex = 111;
+            this.cboforn.SelectedIndexChanged += new System.EventHandler(this.cboforn_SelectedIndexChanged);
+            // 
+            // vencimento
+            // 
+            this.vencimento.DataPropertyName = "vencimento";
+            this.vencimento.HeaderText = "Vencimento";
+            this.vencimento.Name = "vencimento";
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "Valor";
+            this.Valor.HeaderText = "Valor";
+            this.Valor.Name = "Valor";
+            // 
+            // operacao
+            // 
+            this.operacao.DataPropertyName = "Operacao";
+            this.operacao.HeaderText = "Operação";
+            this.operacao.Items.AddRange(new object[] {
+            "Boleto Bancário",
+            "Débito Automático",
+            "Transferencia Bancária",
+            "Caixa Pequeno",
+            "Cheque",
+            "Cartão de Crédito"});
+            this.operacao.Name = "operacao";
+            // 
+            // conta
+            // 
+            this.conta.DataPropertyName = "Conta";
+            this.conta.HeaderText = "Conta";
+            this.conta.Name = "conta";
+            // 
+            // banco
+            // 
+            this.banco.DataPropertyName = "Banco";
+            this.banco.HeaderText = "Banco";
+            this.banco.Name = "banco";
+            this.banco.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.banco.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // agencia
+            // 
+            this.agencia.DataPropertyName = "Agencia";
+            this.agencia.HeaderText = "Agencia";
+            this.agencia.Name = "agencia";
+            this.agencia.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.agencia.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // ok
+            // 
+            this.ok.DataPropertyName = "ok";
+            this.ok.HeaderText = "OK";
+            this.ok.Name = "ok";
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "alterar";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "excluir";
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SeaGreen;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(259, 472);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(84, 36);
+            this.button3.TabIndex = 121;
+            this.button3.Text = "Cancelar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // txt1
+            // 
+            this.txt1.Location = new System.Drawing.Point(16, 207);
+            this.txt1.Name = "txt1";
+            this.txt1.Size = new System.Drawing.Size(100, 20);
+            this.txt1.TabIndex = 122;
+            // 
+            // txt4
+            // 
+            this.txt4.Location = new System.Drawing.Point(16, 256);
+            this.txt4.Name = "txt4";
+            this.txt4.Size = new System.Drawing.Size(100, 20);
+            this.txt4.TabIndex = 123;
+            // 
+            // txt2
+            // 
+            this.txt2.Location = new System.Drawing.Point(13, 233);
+            this.txt2.Name = "txt2";
+            this.txt2.Size = new System.Drawing.Size(100, 20);
+            this.txt2.TabIndex = 124;
             // 
             // ContasPagar
             // 
@@ -327,24 +370,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(610, 525);
+            this.Controls.Add(this.txt2);
+            this.Controls.Add(this.txt4);
+            this.Controls.Add(this.txt1);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtphoje);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvbanco);
+            this.Controls.Add(this.txt3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboforn);
             this.Name = "ContasPagar";
             this.Text = "ContasPagar";
+            this.Load += new System.EventHandler(this.ContasPagar_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvbanco)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +412,12 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dtphoje;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvbanco;
+        private System.Windows.Forms.TextBox txt3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboforn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vencimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
         private System.Windows.Forms.DataGridViewComboBoxColumn operacao;
@@ -374,10 +427,9 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn ok;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn Column2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cboforn;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txt1;
+        private System.Windows.Forms.TextBox txt4;
+        private System.Windows.Forms.TextBox txt2;
     }
 }

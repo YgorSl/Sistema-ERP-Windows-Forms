@@ -20,21 +20,7 @@ namespace RestauranteADM.TELAS.Cadastro
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ContaPagarDTO dto = new ContaPagarDTO();
-
-            dto.tipo = txttipo.Text;
-            dto.chegou = Convert.ToDateTime(dtphoje.Text);
-            dto.validade = Convert.ToDateTime(txtvalidade.Text);
-            dto.Preço = Convert.ToDouble(txtpreço.Text);
-
-
-
-
-
-
-
-            ContaPagarBusiness ft = new ContaPagarBusiness();
-            ft.Salvar(dto);
+            
 
             MessageBox.Show("conta Salvo com sucesso! :)");
         }

@@ -1,4 +1,5 @@
-﻿using RestauranteADM.TELAS;
+﻿using RestauranteADM.BASE.CP_Pagar;
+using RestauranteADM.TELAS;
 using RestauranteADM.TELAS._1._0._1;
 using RestauranteADM.TELAS.Alterar;
 using RestauranteADM.TELAS.Cadastro;
@@ -24,7 +25,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Login());
+            Application.Run(new teste1());
         }
     }
 }

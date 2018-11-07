@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -53,6 +53,12 @@
     <Compile Include="BASE\CP_Pagar\CP_Business.cs" />
     <Compile Include="BASE\CP_Pagar\CP_Database.cs" />
     <Compile Include="BASE\CP_Pagar\CP_DTO.cs" />
+    <Compile Include="BASE\CP_Pagar\teste1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE\CP_Pagar\teste1.Designer.cs">
+      <DependentUpon>teste1.cs</DependentUpon>
+    </Compile>
     <Compile Include="BASE\Fornecedor\ProvedorDTO.cs" />
     <Compile Include="bater_ponto.cs">
       <SubType>Form</SubType>
@@ -89,10 +95,10 @@
     <Compile Include="TELAS\Cadastro\Cadastro_de_Prestador.Designer.cs">
       <DependentUpon>Cadastro_de_Prestador.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Cadastro\ContasPagar.cs">
+    <Compile Include="BASE\CP_Pagar\ContasPagar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\Cadastro\ContasPagar.Designer.cs">
+    <Compile Include="BASE\CP_Pagar\ContasPagar.Designer.cs">
       <DependentUpon>ContasPagar.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Consulta\consultar conta.cs">
@@ -410,6 +416,9 @@
       <DependentUpon>telavendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Validacao.cs" />
+    <EmbeddedResource Include="BASE\CP_Pagar\teste1.resx">
+      <DependentUpon>teste1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="bater_ponto.resx">
       <DependentUpon>bater_ponto.cs</DependentUpon>
     </EmbeddedResource>
@@ -425,7 +434,7 @@
     <EmbeddedResource Include="TELAS\Cadastro\Cadastro_de_Prestador.resx">
       <DependentUpon>Cadastro_de_Prestador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Cadastro\ContasPagar.resx">
+    <EmbeddedResource Include="BASE\CP_Pagar\ContasPagar.resx">
       <DependentUpon>ContasPagar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\consultar conta.resx">

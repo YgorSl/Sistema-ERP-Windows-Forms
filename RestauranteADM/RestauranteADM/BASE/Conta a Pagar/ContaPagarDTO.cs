@@ -10,10 +10,27 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
     {
 
         public int Id { get; set; }
-        public string tipo { get; set; }
-        public DateTime chegou { get; set; }
-        public double Preço { get; set; }
-        public DateTime validade { get; set; }
+        public string tipo_cobrança{ get; set; }
+        public string conta_contabil { get; set; }
+        public string conta_contabil_ds { get; set; }
+        public string conta { get; set; }
+        public string agencia { get; set; }
+        public string banco { get; set; }
+        public string observaçao { get; set; }
+        public DateTime emissao { get; set; }
+        public DateTime data_cadastro { get; set; }
+        public DateTime vencimento { get; set; }
+        public double valor_titulo { get; set; }
+        public int parcelados { get; set; }
+
+
+
+
         public bool pagou { get; set; }
+
+
+
+
+
     }
 }

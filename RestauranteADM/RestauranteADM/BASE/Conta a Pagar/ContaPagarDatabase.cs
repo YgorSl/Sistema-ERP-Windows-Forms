@@ -14,17 +14,23 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 
         public int Salvar(ContaPagarDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_conta_pagar` ( vl_preço, dt_data,tipo, dt_validade) VALUES (@vl_preço,@dt_data,@tipo,@dt_validade)";
+            string script = @"INSERT INTO `mydb`.`tb_conta_pagar2` (ds_tipo_cobrança, nm_conta_contabil, ds_conta_contabil, ds_conta, ds_agencia, ds_banco, ds_observaçao, dt_emissao, dt_data, dt_vencimento, valor_titulo, ds_parcelados) 
+                                                                   VALUES (@ds_tipo_cobrança,@nm_conta_contabil,@ds_conta_contabil,@ds_conta,@ds_agencia,@ds_banco,@ds_observaçao,@dt_emissao,@dt_data,@dt_vencimento,@valor_titulo,@ds_parcelados)";
+
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("vl_preço", dto.Preço));
-            parms.Add(new MySqlParameter("dt_data", dto.chegou));
-            parms.Add(new MySqlParameter("tipo", dto.tipo));
-            parms.Add(new MySqlParameter("dt_validade", dto.validade));
-
-
-
-
+            parms.Add(new MySqlParameter("ds_tipo_cobrança", dto.tipo_cobrança));
+            parms.Add(new MySqlParameter("nm_conta_contabil", dto.conta_contabil));
+            parms.Add(new MySqlParameter("ds_conta_contabil", dto.conta_contabil_ds));
+            parms.Add(new MySqlParameter("ds_conta", dto.conta));
+            parms.Add(new MySqlParameter("ds_agencia", dto.agencia));
+            parms.Add(new MySqlParameter("ds_banco", dto.banco));
+            parms.Add(new MySqlParameter("ds_observaçao", dto.observaçao));
+            parms.Add(new MySqlParameter("dt_emissao", dto.emissao));
+            parms.Add(new MySqlParameter("dt_data", dto.data_cadastro));
+            parms.Add(new MySqlParameter("dt_vencimento", dto.vencimento));
+            parms.Add(new MySqlParameter("valor_titulo", dto.valor_titulo));
+            parms.Add(new MySqlParameter("ds_parcelados", dto.parcelados));
 
             Database db = new Database();
             int pk = db.ExecuteInsertScriptWithPk(script, parms);
@@ -63,15 +69,9 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
             List<ContaPagarDTO> lista = new List<ContaPagarDTO>();
             while (reader.Read())
             {
-                ContaPagarDTO dto = new ContaPagarDTO();
-                dto.Id = reader.GetInt32("id_conta_pagar");
-                dto.chegou = reader.GetDateTime("dt_data");
-                dto.tipo = reader.GetString("tipo");
-                dto.validade = reader.GetDateTime("dt_validade");
-                dto.Preço = reader.GetDouble("vl_preço");
-                dto.pagou = reader.GetBoolean("pg_pagou");
+                ///
 
-                lista.Add(dto);
+               /// lista.Add(dto);
             }
             reader.Close();
 

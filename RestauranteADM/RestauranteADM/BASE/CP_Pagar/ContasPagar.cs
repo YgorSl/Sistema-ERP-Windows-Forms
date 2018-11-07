@@ -61,17 +61,17 @@ namespace RestauranteADM.TELAS.Cadastro
         {
             ProvedorDTO forn = cboforn.SelectedItem as ProvedorDTO;
 
-            DateTime vencimento = Convert.ToDateTime(dataGridView1.Columns[1]);
-            double valor = Convert.ToDouble(dataGridView1.Columns[2]);
-            string operação = Convert.ToString(dataGridView1.Columns[3]);
-            int conta = Convert.ToInt32(dataGridView1.Columns[4]);
-            string banco = Convert.ToString(dataGridView1.Columns[5]);
-            int agencia = Convert.ToInt32(dataGridView1.Columns[6]);
-            bool ok = Convert.ToBoolean(dataGridView1.Columns[7]);
+            DateTime vencimento = Convert.ToDateTime(dgvbanco.Columns[1]);
+            double valor = Convert.ToDouble(dgvbanco.Columns[2]);
+            string operação = Convert.ToString(dgvbanco.Columns[3]);
+            int conta = Convert.ToInt32(dgvbanco.Columns[4]);
+            string banco = Convert.ToString(dgvbanco.Columns[5]);
+            int agencia = Convert.ToInt32(dgvbanco.Columns[6]);
+            bool ok = Convert.ToBoolean(dgvbanco.Columns[7]);
 
             CP_DTO compra = new CP_DTO();
             compra.Prestador = cboforn.Text;
-            compra.Documento = textBox1.Text;
+            compra.Documento = txt3.Text;
             compra.vencimento = vencimento;
             compra.Valor = valor;
             compra.Operacao = operação;
@@ -87,6 +87,32 @@ namespace RestauranteADM.TELAS.Cadastro
             bus.Salvar(compra);
 
             
+        }
+
+        private void ContasPagar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+          
+                
+
+            
+
+            
+
+        }
+
+        private void dgvbanco_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cboforn_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

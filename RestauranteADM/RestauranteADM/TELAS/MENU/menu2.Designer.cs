@@ -68,7 +68,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnmenucad = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
@@ -684,23 +683,11 @@
             this.btnmenucad.UseVisualStyleBackColor = true;
             this.btnmenucad.Click += new System.EventHandler(this.btn1_Click_1);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Old English Text MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.LightYellow;
-            this.label2.Location = new System.Drawing.Point(386, 293);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 44);
-            this.label2.TabIndex = 63;
-            this.label2.Text = "Seja ";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(200, 34);
             this.panel2.Name = "panel2";
@@ -713,7 +700,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Old English Text MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightYellow;
-            this.label1.Location = new System.Drawing.Point(331, 341);
+            this.label1.Location = new System.Drawing.Point(346, 291);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 44);
             this.label1.TabIndex = 64;
@@ -788,7 +775,6 @@
         private System.Windows.Forms.Panel SubMenuEstoque;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnEstoque;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
     }

@@ -267,35 +267,46 @@ namespace RestauranteADM
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            CardapioDTO dto = cbmprato.SelectedItem as CardapioDTO;
+
             double valortaxa = Convert.ToDouble(txttaxa.Text);
             double totslprodutos = Convert.ToDouble(txtfn.Text);
             double des = Convert.ToDouble(txtpor.Text);
-            double troco = Convert.ToDouble(txttroco.Text);
-
-            VendasTotal tltl = new VendasTotal();
-            double resuldesconto = tltl.CalcularDesconto(totslprodutos, des);
-            resuldesconto = Math.Round(resuldesconto, 2);
-            lblValorDesconto.Text = resuldesconto.ToString();
-
-
-            double resultaxa = valortaxa;
-            resultaxa = Math.Round(resultaxa, 2);
-            lblValorTaxa.Text = resultaxa.ToString();
-
-            double total = (totslprodutos - resuldesconto) + resultaxa;
-            total = Math.Round(total, 2);
-            txtvlfinal.Text = total.ToString();
-
-            if (troco >= totslprodutos)
+            double descontomaximo = dto.Desconto;
+            if (des > descontomaximo)
+            {
+                MessageBox.Show("O desconto excedeu seu limite!", "TocToc Brasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
             {
 
-                double trocofinal = troco - total;
-                trocofinal = Math.Round(trocofinal, 2);
-                lbltroco.Text = trocofinal.ToString();
+
+                double troco = Convert.ToDouble(txttroco.Text);
+
+                VendasTotal tltl = new VendasTotal();
+                double resuldesconto = tltl.CalcularDesconto(totslprodutos, des);
+                resuldesconto = Math.Round(resuldesconto, 2);
+                lblValorDesconto.Text = resuldesconto.ToString();
+
+
+                double resultaxa = valortaxa;
+                resultaxa = Math.Round(resultaxa, 2);
+                lblValorTaxa.Text = resultaxa.ToString();
+
+                double total = (totslprodutos - resuldesconto) + resultaxa;
+                total = Math.Round(total, 2);
+                txtvlfinal.Text = total.ToString();
+
+                if (troco >= totslprodutos)
+                {
+
+                    double trocofinal = troco - total;
+                    trocofinal = Math.Round(trocofinal, 2);
+                    lbltroco.Text = trocofinal.ToString();
+
+                }
 
             }
-
-
         }
 
         private void label9_Click(object sender, EventArgs e)

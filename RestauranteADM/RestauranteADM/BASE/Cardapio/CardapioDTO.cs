@@ -13,5 +13,6 @@ namespace RestauranteADM.BASE.Cardapio
         public string Descrição { get; set; }
         public string Tamanho { get; set; }
         public double Valor { get; set; }
+        public double Desconto { get; set; }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpdata = new System.Windows.Forms.DateTimePicker();
             this.cmbcliente = new System.Windows.Forms.ComboBox();
@@ -83,7 +83,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(66, 70);
+            this.label2.Location = new System.Drawing.Point(19, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 58;
@@ -91,7 +91,7 @@
             // 
             // dtpdata
             // 
-            this.dtpdata.Location = new System.Drawing.Point(525, 63);
+            this.dtpdata.Location = new System.Drawing.Point(478, 63);
             this.dtpdata.Name = "dtpdata";
             this.dtpdata.Size = new System.Drawing.Size(226, 20);
             this.dtpdata.TabIndex = 61;
@@ -100,7 +100,7 @@
             // cmbcliente
             // 
             this.cmbcliente.FormattingEnabled = true;
-            this.cmbcliente.Location = new System.Drawing.Point(126, 66);
+            this.cmbcliente.Location = new System.Drawing.Point(79, 66);
             this.cmbcliente.Name = "cmbcliente";
             this.cmbcliente.Size = new System.Drawing.Size(374, 21);
             this.cmbcliente.TabIndex = 62;
@@ -110,7 +110,7 @@
             // 
             this.btnnova.BackColor = System.Drawing.Color.SeaGreen;
             this.btnnova.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnnova.Location = new System.Drawing.Point(600, 97);
+            this.btnnova.Location = new System.Drawing.Point(553, 97);
             this.btnnova.Name = "btnnova";
             this.btnnova.Size = new System.Drawing.Size(141, 23);
             this.btnnova.TabIndex = 65;
@@ -141,16 +141,16 @@
             this.panel.Controls.Add(this.cbmprato);
             this.panel.Controls.Add(this.label4);
             this.panel.Controls.Add(this.dgvvendas);
-            this.panel.Location = new System.Drawing.Point(18, 126);
+            this.panel.Location = new System.Drawing.Point(9, 135);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(784, 537);
+            this.panel.Size = new System.Drawing.Size(733, 473);
             this.panel.TabIndex = 66;
             this.panel.Visible = false;
             this.panel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtvlfinal
             // 
-            this.txtvlfinal.Location = new System.Drawing.Point(154, 503);
+            this.txtvlfinal.Location = new System.Drawing.Point(134, 436);
             this.txtvlfinal.Name = "txtvlfinal";
             this.txtvlfinal.Size = new System.Drawing.Size(82, 20);
             this.txtvlfinal.TabIndex = 131;
@@ -159,7 +159,7 @@
             // 
             this.button4.BackColor = System.Drawing.Color.SeaGreen;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(25, 228);
+            this.button4.Location = new System.Drawing.Point(5, 221);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(110, 28);
             this.button4.TabIndex = 130;
@@ -169,7 +169,7 @@
             // 
             // txtfn
             // 
-            this.txtfn.Location = new System.Drawing.Point(172, 261);
+            this.txtfn.Location = new System.Drawing.Point(152, 254);
             this.txtfn.Name = "txtfn";
             this.txtfn.Size = new System.Drawing.Size(82, 20);
             this.txtfn.TabIndex = 126;
@@ -178,20 +178,20 @@
             // txttota
             // 
             this.txttota.AutoSize = true;
-            this.txttota.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttota.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttota.ForeColor = System.Drawing.Color.White;
-            this.txttota.Location = new System.Drawing.Point(32, 259);
+            this.txttota.Location = new System.Drawing.Point(3, 256);
             this.txttota.Name = "txttota";
-            this.txttota.Size = new System.Drawing.Size(134, 20);
+            this.txttota.Size = new System.Drawing.Size(136, 18);
             this.txttota.TabIndex = 129;
-            this.txttota.Text = "Total de Produtos";
+            this.txttota.Text = "Valor dos Produtos";
             this.txttota.Click += new System.EventHandler(this.txttota_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.SeaGreen;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(598, 277);
+            this.button3.Location = new System.Drawing.Point(558, 270);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 28);
             this.button3.TabIndex = 104;
@@ -206,7 +206,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox3.Location = new System.Drawing.Point(492, 91);
+            this.groupBox3.Location = new System.Drawing.Point(452, 84);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(269, 80);
             this.groupBox3.TabIndex = 127;
@@ -258,7 +258,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(492, 5);
+            this.groupBox2.Location = new System.Drawing.Point(452, -2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(269, 80);
             this.groupBox2.TabIndex = 126;
@@ -310,7 +310,7 @@
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(492, 177);
+            this.groupBox1.Location = new System.Drawing.Point(452, 170);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(269, 94);
             this.groupBox1.TabIndex = 125;
@@ -359,7 +359,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(32, 503);
+            this.label10.Location = new System.Drawing.Point(12, 436);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 20);
             this.label10.TabIndex = 115;
@@ -370,7 +370,7 @@
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(353, 18);
+            this.button1.Location = new System.Drawing.Point(333, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 67);
             this.button1.TabIndex = 114;
@@ -383,7 +383,7 @@
             this.lbltotal.AutoSize = true;
             this.lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltotal.ForeColor = System.Drawing.Color.White;
-            this.lbltotal.Location = new System.Drawing.Point(172, 123);
+            this.lbltotal.Location = new System.Drawing.Point(152, 116);
             this.lbltotal.Name = "lbltotal";
             this.lbltotal.Size = new System.Drawing.Size(40, 20);
             this.lbltotal.TabIndex = 110;
@@ -395,7 +395,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(32, 123);
+            this.label5.Location = new System.Drawing.Point(12, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 20);
             this.label5.TabIndex = 109;
@@ -407,7 +407,7 @@
             this.lblpreço.AutoSize = true;
             this.lblpreço.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpreço.ForeColor = System.Drawing.Color.White;
-            this.lblpreço.Location = new System.Drawing.Point(204, 41);
+            this.lblpreço.Location = new System.Drawing.Point(184, 34);
             this.lblpreço.Name = "lblpreço";
             this.lblpreço.Size = new System.Drawing.Size(32, 16);
             this.lblpreço.TabIndex = 108;
@@ -418,7 +418,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(135, 41);
+            this.label6.Location = new System.Drawing.Point(115, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 16);
             this.label6.TabIndex = 107;
@@ -426,7 +426,7 @@
             // 
             // nupqnt
             // 
-            this.nupqnt.Location = new System.Drawing.Point(129, 83);
+            this.nupqnt.Location = new System.Drawing.Point(109, 76);
             this.nupqnt.Name = "nupqnt";
             this.nupqnt.Size = new System.Drawing.Size(199, 20);
             this.nupqnt.TabIndex = 106;
@@ -437,7 +437,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(33, 87);
+            this.label7.Location = new System.Drawing.Point(13, 80);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 16);
             this.label7.TabIndex = 105;
@@ -448,7 +448,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(71, 18);
+            this.label8.Location = new System.Drawing.Point(51, 11);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(40, 16);
             this.label8.TabIndex = 104;
@@ -457,7 +457,7 @@
             // cbmprato
             // 
             this.cbmprato.FormattingEnabled = true;
-            this.cbmprato.Location = new System.Drawing.Point(129, 17);
+            this.cbmprato.Location = new System.Drawing.Point(109, 10);
             this.cbmprato.Name = "cbmprato";
             this.cbmprato.Size = new System.Drawing.Size(199, 21);
             this.cbmprato.TabIndex = 103;
@@ -468,7 +468,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.label4.Location = new System.Drawing.Point(71, 299);
+            this.label4.Location = new System.Drawing.Point(51, 280);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 101;
@@ -483,18 +483,18 @@
             this.dgvvendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nome,
             this.valor_final});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvvendas.Location = new System.Drawing.Point(75, 329);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvvendas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvvendas.Location = new System.Drawing.Point(55, 310);
             this.dgvvendas.Name = "dgvvendas";
             this.dgvvendas.ReadOnly = true;
-            this.dgvvendas.Size = new System.Drawing.Size(634, 167);
+            this.dgvvendas.Size = new System.Drawing.Size(634, 120);
             this.dgvvendas.TabIndex = 99;
             this.dgvvendas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvvendas_CellContentClick);
             // 
@@ -517,7 +517,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(586, 678);
+            this.button2.Location = new System.Drawing.Point(526, 612);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(216, 28);
             this.button2.TabIndex = 102;
@@ -531,7 +531,7 @@
             this.label36.BackColor = System.Drawing.Color.Transparent;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.White;
-            this.label36.Location = new System.Drawing.Point(341, 26);
+            this.label36.Location = new System.Drawing.Point(294, 26);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(91, 25);
             this.label36.TabIndex = 103;
@@ -542,7 +542,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(814, 742);
+            this.ClientSize = new System.Drawing.Size(752, 649);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.btnnova);

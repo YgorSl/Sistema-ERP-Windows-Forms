@@ -15,16 +15,16 @@ namespace RestauranteADM.BASE.Cardapio
       
         public int Salvar(CardapioDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_cardapio` ( nm_prato, ds_prato, ds_tamanho, vl_valor) 
-                                                        VALUES ( @nm_prato, @ds_prato, @ds_tamanho, @vl_valor); SELECT SCOPE_IDENTITY();";
+            string script = @"INSERT INTO `mydb`.`tb_cardapio` ( nm_prato, ds_prato, ds_tamanho, vl_valor, vl_desconto) 
+                                                        VALUES ( @nm_prato, @ds_prato, @ds_tamanho, @vl_valor, @vl_desconto)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_prato", dto.nome_Prato));
             parms.Add(new MySqlParameter("ds_prato", dto.Descrição));
             parms.Add(new MySqlParameter("ds_tamanho", dto.Tamanho));
             parms.Add(new MySqlParameter("vl_valor", dto.Valor));
+            parms.Add(new MySqlParameter("vl_desconto", dto.Desconto));
 
-           
 
 
 
@@ -40,7 +40,7 @@ namespace RestauranteADM.BASE.Cardapio
 
         public void Update(CardapioDTO dto)
         {
-            string script = @"UPDATE tb_cardapio SET nm_prato=@nm_prato, ds_prato=@ds_prato , ds_tamanho=@ds_tamanho , vl_valor=@vl_valor   where id_cardapio=@id_cardapio";
+            string script = @"UPDATE tb_cardapio SET nm_prato=@nm_prato, ds_prato=@ds_prato , ds_tamanho=@ds_tamanho , vl_valor=@vl_valor, vl_desconto=@vl_desconto   where id_cardapio=@id_cardapio";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_cardapio", dto.Id));
@@ -48,6 +48,7 @@ namespace RestauranteADM.BASE.Cardapio
             parms.Add(new MySqlParameter("ds_prato", dto.Descrição));
             parms.Add(new MySqlParameter("ds_tamanho", dto.Tamanho));
             parms.Add(new MySqlParameter("vl_valor", dto.Valor));
+            parms.Add(new MySqlParameter("vl_desconto", dto.Desconto));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -88,6 +89,7 @@ namespace RestauranteADM.BASE.Cardapio
                 dto.Descrição = reader.GetString("ds_prato");
                 dto.Tamanho = reader.GetString("ds_tamanho");
                 dto.Valor = reader.GetDouble("vl_valor");
+                dto.Desconto = reader.GetDouble("vl_desconto");
                 lista.Add(dto);
             }
             reader.Close();
@@ -115,6 +117,8 @@ namespace RestauranteADM.BASE.Cardapio
                 dto.Descrição = reader.GetString("ds_prato");
                 dto.Tamanho = reader.GetString("ds_tamanho");
                 dto.Valor = reader.GetDouble("vl_valor");
+                dto.Desconto = reader.GetDouble("vl_desconto");
+
                 lista.Add(dto);
             }
             reader.Close();

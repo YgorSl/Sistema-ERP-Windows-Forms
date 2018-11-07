@@ -47,6 +47,7 @@ namespace RestauranteADM.TELAS.Cadastro
 
                 dto.Descrição = rtvanotaçoes.Text;
                 dto.Valor = Convert.ToDouble(txtvalor.Text);
+                dto.Desconto = Convert.ToDouble(nupdes.Value);
 
                 CardapioBusiness bus = new CardapioBusiness();
                 bus.salvar(dto);
@@ -64,6 +65,11 @@ namespace RestauranteADM.TELAS.Cadastro
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
         {
             v.soletras(e);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

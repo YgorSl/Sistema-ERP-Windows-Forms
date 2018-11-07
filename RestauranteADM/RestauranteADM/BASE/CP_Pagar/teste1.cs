@@ -59,6 +59,8 @@ namespace RestauranteADM.BASE.CP_Pagar
             dto.vencimento = Convert.ToDateTime(dtpvencimento.Value);
             dto.valor_titulo = Convert.ToInt32(txtvalortitulo.Text);
             dto.parcelados = Convert.ToInt32(nudparcelas.TextAlign);
+            dto.Cnpj = mtbcnpj.Text;
+            dto.Prestador = txtnomeprestador.Text;
 
         ContaPagarBusiness ft = new ContaPagarBusiness();
             ft.Salvar(dto);

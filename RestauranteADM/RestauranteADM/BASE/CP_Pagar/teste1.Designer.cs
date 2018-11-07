@@ -61,6 +61,7 @@
             this.nudparcelas = new System.Windows.Forms.NumericUpDown();
             this.rdb1 = new System.Windows.Forms.RadioButton();
             this.mtbcnpj = new System.Windows.Forms.MaskedTextBox();
+            this.txtnomeprestador = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudparcelas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -360,11 +361,19 @@
             this.mtbcnpj.Size = new System.Drawing.Size(126, 20);
             this.mtbcnpj.TabIndex = 146;
             // 
+            // txtnomeprestador
+            // 
+            this.txtnomeprestador.Location = new System.Drawing.Point(299, 34);
+            this.txtnomeprestador.Name = "txtnomeprestador";
+            this.txtnomeprestador.Size = new System.Drawing.Size(85, 20);
+            this.txtnomeprestador.TabIndex = 147;
+            // 
             // teste1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 384);
+            this.Controls.Add(this.txtnomeprestador);
             this.Controls.Add(this.mtbcnpj);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.rdb2);
@@ -442,5 +451,6 @@
         private System.Windows.Forms.NumericUpDown nudparcelas;
         private System.Windows.Forms.RadioButton rdb1;
         private System.Windows.Forms.MaskedTextBox mtbcnpj;
+        private System.Windows.Forms.TextBox txtnomeprestador;
     }
 }

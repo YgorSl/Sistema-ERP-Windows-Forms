@@ -23,6 +23,9 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
         public double valor_titulo { get; set; }
         public int parcelados { get; set; }
 
+        public string Prestador { get; set; }
+        public string Cnpj { get; set; }
+
 
 
 

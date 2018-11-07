@@ -60,6 +60,8 @@
             this.rdb2 = new System.Windows.Forms.RadioButton();
             this.nudparcelas = new System.Windows.Forms.NumericUpDown();
             this.rdb1 = new System.Windows.Forms.RadioButton();
+            this.mtbcnpj = new System.Windows.Forms.MaskedTextBox();
+            this.txtnomeprestador = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudparcelas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(224, 76);
+            this.label1.Location = new System.Drawing.Point(224, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 2;
@@ -90,7 +92,7 @@
             // 
             // dtpdatacadastro
             // 
-            this.dtpdatacadastro.Location = new System.Drawing.Point(303, 72);
+            this.dtpdatacadastro.Location = new System.Drawing.Point(303, 76);
             this.dtpdatacadastro.Name = "dtpdatacadastro";
             this.dtpdatacadastro.Size = new System.Drawing.Size(57, 20);
             this.dtpdatacadastro.TabIndex = 3;
@@ -101,7 +103,7 @@
             this.cbmtipocobraça.Items.AddRange(new object[] {
             "Dinheiro",
             "Boleto bancario"});
-            this.cbmtipocobraça.Location = new System.Drawing.Point(527, 68);
+            this.cbmtipocobraça.Location = new System.Drawing.Point(524, 72);
             this.cbmtipocobraça.Name = "cbmtipocobraça";
             this.cbmtipocobraça.Size = new System.Drawing.Size(121, 21);
             this.cbmtipocobraça.TabIndex = 4;
@@ -109,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(429, 76);
+            this.label2.Location = new System.Drawing.Point(426, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 5;
@@ -219,7 +221,7 @@
             this.label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(680, 74);
+            this.label8.Location = new System.Drawing.Point(648, 50);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 16);
             this.label8.TabIndex = 125;
@@ -237,16 +239,16 @@
             "insumos",
             "investimentos",
             ""});
-            this.cbxcontabil.Location = new System.Drawing.Point(683, 95);
+            this.cbxcontabil.Location = new System.Drawing.Point(651, 71);
             this.cbxcontabil.Name = "cbxcontabil";
             this.cbxcontabil.Size = new System.Drawing.Size(104, 21);
             this.cbxcontabil.TabIndex = 124;
             // 
             // txtcontabil
             // 
-            this.txtcontabil.Location = new System.Drawing.Point(793, 95);
+            this.txtcontabil.Location = new System.Drawing.Point(761, 71);
             this.txtcontabil.Name = "txtcontabil";
-            this.txtcontabil.Size = new System.Drawing.Size(100, 20);
+            this.txtcontabil.Size = new System.Drawing.Size(85, 20);
             this.txtcontabil.TabIndex = 127;
             // 
             // txttitpodocumento
@@ -351,11 +353,28 @@
             this.rdb1.Text = "Sim";
             this.rdb1.UseVisualStyleBackColor = true;
             // 
+            // mtbcnpj
+            // 
+            this.mtbcnpj.Location = new System.Drawing.Point(167, 35);
+            this.mtbcnpj.Mask = "99.999.999/9999-99";
+            this.mtbcnpj.Name = "mtbcnpj";
+            this.mtbcnpj.Size = new System.Drawing.Size(126, 20);
+            this.mtbcnpj.TabIndex = 146;
+            // 
+            // txtnomeprestador
+            // 
+            this.txtnomeprestador.Location = new System.Drawing.Point(299, 34);
+            this.txtnomeprestador.Name = "txtnomeprestador";
+            this.txtnomeprestador.Size = new System.Drawing.Size(85, 20);
+            this.txtnomeprestador.TabIndex = 147;
+            // 
             // teste1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(890, 384);
+            this.Controls.Add(this.txtnomeprestador);
+            this.Controls.Add(this.mtbcnpj);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.rdb2);
             this.Controls.Add(this.nudparcelas);
@@ -431,5 +450,7 @@
         private System.Windows.Forms.RadioButton rdb2;
         private System.Windows.Forms.NumericUpDown nudparcelas;
         private System.Windows.Forms.RadioButton rdb1;
+        private System.Windows.Forms.MaskedTextBox mtbcnpj;
+        private System.Windows.Forms.TextBox txtnomeprestador;
     }
 }

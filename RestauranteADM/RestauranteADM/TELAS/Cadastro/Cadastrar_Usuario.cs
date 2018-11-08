@@ -183,7 +183,10 @@ namespace RestauranteADM.TELAS
 
         private void btnCadastrarusuario_Click(object sender, EventArgs e)
         {
-          
+            try
+            {
+
+           
 
             FuncionarioDTO dto = new FuncionarioDTO();
 
@@ -258,7 +261,12 @@ namespace RestauranteADM.TELAS
             ft.Salvar(dto, usuario);
 
             MessageBox.Show("Usuário Salvo com sucesso! :)");
-           
+        }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por favor preencha todos os campos corretamente!", "TocTocBrasil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
          
         }
 

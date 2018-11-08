@@ -30,12 +30,6 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dgvconta = new System.Windows.Forms.DataGridView();
-            this.dtpfim = new System.Windows.Forms.DateTimePicker();
-            this.dtpinicio = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.Prestador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,6 +44,12 @@
             this.Total_Parcelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parcelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estrapago = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dtpfim = new System.Windows.Forms.DateTimePicker();
+            this.dtpinicio = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvconta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,74 +90,9 @@
             this.dgvconta.TabIndex = 84;
             this.dgvconta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvconta_CellContentClick);
             // 
-            // dtpfim
-            // 
-            this.dtpfim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpfim.Location = new System.Drawing.Point(144, 86);
-            this.dtpfim.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
-            this.dtpfim.Name = "dtpfim";
-            this.dtpfim.Size = new System.Drawing.Size(394, 20);
-            this.dtpfim.TabIndex = 83;
-            this.dtpfim.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
-            // 
-            // dtpinicio
-            // 
-            this.dtpinicio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpinicio.Location = new System.Drawing.Point(144, 60);
-            this.dtpinicio.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
-            this.dtpinicio.Name = "dtpinicio";
-            this.dtpinicio.Size = new System.Drawing.Size(394, 20);
-            this.dtpinicio.TabIndex = 82;
-            this.dtpinicio.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(92, 90);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 16);
-            this.label2.TabIndex = 81;
-            this.label2.Text = "Fim";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(83, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 16);
-            this.label1.TabIndex = 80;
-            this.label1.Text = "Início";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(670, 388);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 39);
-            this.label3.TabIndex = 86;
-            this.label3.Text = "+";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(523, 401);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(141, 24);
-            this.label4.TabIndex = 87;
-            this.label4.Text = "Adicionar conta";
-            // 
             // Prestador
             // 
-            this.Prestador.DataPropertyName = "   Prestador ";
+            this.Prestador.DataPropertyName = "Prestador";
             this.Prestador.HeaderText = "Prestador";
             this.Prestador.Name = "Prestador";
             // 
@@ -239,6 +174,71 @@
             this.estrapago.DataPropertyName = "pagou";
             this.estrapago.HeaderText = "Estar pagor";
             this.estrapago.Name = "estrapago";
+            // 
+            // dtpfim
+            // 
+            this.dtpfim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpfim.Location = new System.Drawing.Point(144, 86);
+            this.dtpfim.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
+            this.dtpfim.Name = "dtpfim";
+            this.dtpfim.Size = new System.Drawing.Size(394, 20);
+            this.dtpfim.TabIndex = 83;
+            this.dtpfim.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
+            // 
+            // dtpinicio
+            // 
+            this.dtpinicio.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpinicio.Location = new System.Drawing.Point(144, 60);
+            this.dtpinicio.MaxDate = new System.DateTime(9998, 12, 1, 0, 0, 0, 0);
+            this.dtpinicio.Name = "dtpinicio";
+            this.dtpinicio.Size = new System.Drawing.Size(394, 20);
+            this.dtpinicio.TabIndex = 82;
+            this.dtpinicio.Value = new System.DateTime(2018, 9, 19, 0, 0, 0, 0);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(92, 90);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 16);
+            this.label2.TabIndex = 81;
+            this.label2.Text = "Fim";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(83, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(39, 16);
+            this.label1.TabIndex = 80;
+            this.label1.Text = "Início";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(670, 388);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 39);
+            this.label3.TabIndex = 86;
+            this.label3.Text = "+";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(523, 401);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 24);
+            this.label4.TabIndex = 87;
+            this.label4.Text = "Adicionar conta";
             // 
             // consultar_conta
             // 

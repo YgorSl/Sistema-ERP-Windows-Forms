@@ -105,9 +105,9 @@
             this.label36.ForeColor = System.Drawing.Color.White;
             this.label36.Location = new System.Drawing.Point(247, 67);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(241, 24);
+            this.label36.Size = new System.Drawing.Size(211, 24);
             this.label36.TabIndex = 47;
-            this.label36.Text = "Cadastrar Fornecedor ";
+            this.label36.Text = "Cadastrar Prestador";
             // 
             // txtnome
             // 
@@ -264,7 +264,7 @@
             this.groupBox1.TabIndex = 98;
             this.groupBox1.TabStop = false;
             // 
-            // Cadastro_de_fornecedor
+            // Cadastro_de_Prestador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -277,7 +277,7 @@
             this.Controls.Add(this.button1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Cadastro_de_fornecedor";
+            this.Name = "Cadastro_de_Prestador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro_de_fornecedor";
             this.Load += new System.EventHandler(this.Cadastro_de_fornecedor_Load);

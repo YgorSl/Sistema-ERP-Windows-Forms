@@ -29,8 +29,8 @@ namespace RestauranteADM.BASE.CP_Pagar
             cboforn.DisplayMember = "Nome";
             cboforn.ValueMember = "Id";
 
-            FornecedorDTO dto = cboforn.SelectedItem as FornecedorDTO;
-            mtbcnpj.Text = dto.Cnpj;
+            ProvedorDTO dto = cboforn.SelectedItem as ProvedorDTO;
+            dto.Cnpj = mtbcnpj.Text;
 
 
 
@@ -43,35 +43,67 @@ namespace RestauranteADM.BASE.CP_Pagar
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ContaPagarDTO dto = new ContaPagarDTO();
+
+            if (rdb1.Checked == true)
+            {
+                ContaPagarDTO dto = new ContaPagarDTO();
 
 
-            dto.tipo_cobrança = cbmtipocobraça.Text;
+                dto.tipo_cobrança = cbmtipocobraça.Text;
 
-            dto.conta_contabil = cbxcontabil.Text;
-            dto.conta_contabil_ds = txtcontabil.Text;
-            dto.conta = txtconta.Text;
-            dto.agencia = txtagencia.Text;
-            dto.banco = txtbanco.Text;
-            dto.observaçao = rtvanotaçoes.Text;
-            dto.emissao = Convert.ToDateTime(dtpemissa.Value);
-            dto.data_cadastro = Convert.ToDateTime(dtpdatacadastro.Value);
-            dto.vencimento = Convert.ToDateTime(dtpvencimento.Value);
-            dto.valor_titulo = Convert.ToInt32(txtvalortitulo.Text);
-            dto.parcelados = Convert.ToInt32(nudparcelas.Value);
-            dto.Cnpj = mtbcnpj.Text;
-            dto.Prestador = cboforn.Text;
-            dto.valor_parcelas = Convert.ToDouble(txtparcelas.Text);
+                dto.conta_contabil = cbxcontabil.Text;
+                dto.conta_contabil_ds = txtcontabil.Text;
+                dto.conta = txtconta.Text;
+                dto.agencia = txtagencia.Text;
+                dto.banco = txtbanco.Text;
+                dto.observaçao = rtvanotaçoes.Text;
+                dto.emissao = Convert.ToDateTime(dtpemissa.Value);
+                dto.data_cadastro = Convert.ToDateTime(dtpdatacadastro.Value);
+                dto.vencimento = Convert.ToDateTime(dtpvencimento.Value);
+                dto.valor_titulo = Convert.ToInt32(txtvalortitulo.Text);
+                dto.parcelados = Convert.ToInt32(nudparcelas.Value);
+                dto.Cnpj = mtbcnpj.Text;
+                dto.Prestador = cboforn.Text;
+                dto.valor_parcelas = Convert.ToDouble(txtparcelas.Text);
 
-            ContaPagarBusiness ft = new ContaPagarBusiness();
-            ft.Salvar(dto);
+                ContaPagarBusiness ft = new ContaPagarBusiness();
+                ft.Salvar(dto);
 
-            MessageBox.Show("mensagem foi salva");
+                MessageBox.Show("mensagem foi salva");
+            }
+            else if( rdb2.Checked==false)
+            {
+                ContaPagarDTO dto = new ContaPagarDTO();
+
+
+                dto.tipo_cobrança = cbmtipocobraça.Text;
+
+                dto.conta_contabil = cbxcontabil.Text;
+                dto.conta_contabil_ds = txtcontabil.Text;
+                dto.conta = txtconta.Text;
+                dto.agencia = txtagencia.Text;
+                dto.banco = txtbanco.Text;
+                dto.observaçao = rtvanotaçoes.Text;
+                dto.emissao = Convert.ToDateTime(dtpemissa.Value);
+                dto.data_cadastro = Convert.ToDateTime(dtpdatacadastro.Value);
+                dto.vencimento = Convert.ToDateTime(dtpvencimento.Value);
+                dto.valor_titulo = Convert.ToInt32(txtvalortitulo.Text);
+                dto.Cnpj = mtbcnpj.Text;
+                dto.Prestador = cboforn.Text;
+        
+
+                ContaPagarBusiness ft = new ContaPagarBusiness();
+                ft.Salvar(dto);
+
+                MessageBox.Show("mensagem foi salva");
+
+            }
         }
 
         private void cboforn_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            ProvedorDTO dto = cboforn.SelectedItem as ProvedorDTO;
+            mtbcnpj.Text = dto.Cnpj;
         }
 
         private void rdb1_CheckedChanged(object sender, EventArgs e)
@@ -84,6 +116,10 @@ namespace RestauranteADM.BASE.CP_Pagar
         {
             pnl1.Enabled = false;
             pnl1.Visible = false;
+
+       
+
+
         }
     }
 }

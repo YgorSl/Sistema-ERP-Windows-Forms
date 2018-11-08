@@ -36,9 +36,7 @@
             this.btnConsultarVenda = new System.Windows.Forms.Button();
             this.dgvvendas = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome_prato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvvendas)).BeginInit();
             this.SuspendLayout();
@@ -111,9 +109,7 @@
             this.dgvvendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvvendas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column2,
-            this.Column3,
             this.Column4,
-            this.Nome_prato,
             this.Column1});
             this.dgvvendas.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvvendas.Location = new System.Drawing.Point(0, 193);
@@ -131,14 +127,6 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.DataPropertyName = "Qtd";
-            this.Column3.HeaderText = "Quantidade";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -146,13 +134,6 @@
             this.Column4.HeaderText = "Cliente";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            // 
-            // Nome_prato
-            // 
-            this.Nome_prato.DataPropertyName = "Nome_prato";
-            this.Nome_prato.HeaderText = "Prato";
-            this.Nome_prato.Name = "Nome_prato";
-            this.Nome_prato.ReadOnly = true;
             // 
             // Column1
             // 
@@ -195,9 +176,7 @@
         private System.Windows.Forms.Button btnConsultarVenda;
         private System.Windows.Forms.DataGridView dgvvendas;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome_prato;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

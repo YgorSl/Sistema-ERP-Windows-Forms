@@ -30,10 +30,8 @@ namespace RestauranteADM.BASE.vendas
             while (reader.Read() == true)
             {
                 VendasViewDto vw = new VendasViewDto();
-                vw.Nome_prato = reader.GetString("nm_prato");
                 vw.Data = reader.GetDateTime("data_venda");
-                vw.Qtd = reader.GetInt32("ds_qtd");
-                vw.Total = reader.GetInt32("vl_total");
+                vw.Total = reader.GetInt32("vl_final");
                 vw.Nome_cliente = reader.GetString("nm_nome");
 
                 lista.Add(vw);

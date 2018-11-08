@@ -63,6 +63,7 @@
             this.txtsenha.ForeColor = System.Drawing.Color.White;
             this.txtsenha.Location = new System.Drawing.Point(69, 155);
             this.txtsenha.Name = "txtsenha";
+            this.txtsenha.PasswordChar = '*';
             this.txtsenha.Size = new System.Drawing.Size(200, 21);
             this.txtsenha.TabIndex = 2;
             // 

@@ -70,7 +70,7 @@
             // 
             // txtntitulo
             // 
-            this.txtntitulo.Location = new System.Drawing.Point(64, 59);
+            this.txtntitulo.Location = new System.Drawing.Point(89, 168);
             this.txtntitulo.Name = "txtntitulo";
             this.txtntitulo.Size = new System.Drawing.Size(100, 20);
             this.txtntitulo.TabIndex = 0;
@@ -78,7 +78,8 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(17, 62);
+            this.lbl1.ForeColor = System.Drawing.Color.White;
+            this.lbl1.Location = new System.Drawing.Point(42, 171);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(41, 13);
             this.lbl1.TabIndex = 1;
@@ -87,7 +88,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(180, 66);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(205, 175);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 2;
@@ -95,7 +97,7 @@
             // 
             // dtpdatacadastro
             // 
-            this.dtpdatacadastro.Location = new System.Drawing.Point(259, 62);
+            this.dtpdatacadastro.Location = new System.Drawing.Point(284, 171);
             this.dtpdatacadastro.Name = "dtpdatacadastro";
             this.dtpdatacadastro.Size = new System.Drawing.Size(57, 20);
             this.dtpdatacadastro.TabIndex = 3;
@@ -106,7 +108,7 @@
             this.cbmtipocobraça.Items.AddRange(new object[] {
             "Dinheiro",
             "Boleto bancario"});
-            this.cbmtipocobraça.Location = new System.Drawing.Point(378, 32);
+            this.cbmtipocobraça.Location = new System.Drawing.Point(403, 141);
             this.cbmtipocobraça.Name = "cbmtipocobraça";
             this.cbmtipocobraça.Size = new System.Drawing.Size(121, 21);
             this.cbmtipocobraça.TabIndex = 4;
@@ -114,7 +116,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(280, 35);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(305, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 5;
@@ -123,10 +126,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Location = new System.Drawing.Point(37, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(165, 16);
             this.label3.TabIndex = 114;
@@ -135,7 +138,7 @@
             // cboforn
             // 
             this.cboforn.FormattingEnabled = true;
-            this.cboforn.Location = new System.Drawing.Point(16, 32);
+            this.cboforn.Location = new System.Drawing.Point(41, 141);
             this.cboforn.Name = "cboforn";
             this.cboforn.Size = new System.Drawing.Size(116, 21);
             this.cboforn.TabIndex = 113;
@@ -143,7 +146,7 @@
             // 
             // dtpvencimento
             // 
-            this.dtpvencimento.Location = new System.Drawing.Point(107, 108);
+            this.dtpvencimento.Location = new System.Drawing.Point(132, 217);
             this.dtpvencimento.Name = "dtpvencimento";
             this.dtpvencimento.Size = new System.Drawing.Size(57, 20);
             this.dtpvencimento.TabIndex = 116;
@@ -151,7 +154,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 115);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(47, 224);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 115;
@@ -160,7 +164,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 93);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(47, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 13);
             this.label5.TabIndex = 117;
@@ -168,7 +173,7 @@
             // 
             // dtpemissa
             // 
-            this.dtpemissa.Location = new System.Drawing.Point(107, 87);
+            this.dtpemissa.Location = new System.Drawing.Point(132, 196);
             this.dtpemissa.Name = "dtpemissa";
             this.dtpemissa.Size = new System.Drawing.Size(57, 20);
             this.dtpemissa.TabIndex = 118;
@@ -176,7 +181,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(180, 92);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(205, 201);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(71, 13);
             this.label6.TabIndex = 119;
@@ -184,7 +190,7 @@
             // 
             // txtvalortitulo
             // 
-            this.txtvalortitulo.Location = new System.Drawing.Point(183, 108);
+            this.txtvalortitulo.Location = new System.Drawing.Point(208, 217);
             this.txtvalortitulo.Name = "txtvalortitulo";
             this.txtvalortitulo.Size = new System.Drawing.Size(100, 20);
             this.txtvalortitulo.TabIndex = 120;
@@ -193,16 +199,17 @@
             // rtvanotaçoes
             // 
             this.rtvanotaçoes.BackColor = System.Drawing.Color.LightYellow;
-            this.rtvanotaçoes.Location = new System.Drawing.Point(33, 221);
+            this.rtvanotaçoes.Location = new System.Drawing.Point(58, 330);
             this.rtvanotaçoes.Name = "rtvanotaçoes";
-            this.rtvanotaçoes.Size = new System.Drawing.Size(302, 101);
+            this.rtvanotaçoes.Size = new System.Drawing.Size(302, 85);
             this.rtvanotaçoes.TabIndex = 121;
             this.rtvanotaçoes.Text = "";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(30, 196);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(55, 305);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 13);
             this.label7.TabIndex = 122;
@@ -210,21 +217,23 @@
             // 
             // cadastrar
             // 
-            this.cadastrar.Location = new System.Drawing.Point(532, 318);
+            this.cadastrar.BackColor = System.Drawing.Color.SeaGreen;
+            this.cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cadastrar.Location = new System.Drawing.Point(557, 427);
             this.cadastrar.Name = "cadastrar";
             this.cadastrar.Size = new System.Drawing.Size(98, 43);
             this.cadastrar.TabIndex = 123;
             this.cadastrar.Text = "cadastrar";
-            this.cadastrar.UseVisualStyleBackColor = true;
+            this.cadastrar.UseVisualStyleBackColor = false;
             this.cadastrar.Click += new System.EventHandler(this.button1_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(502, 12);
+            this.label8.Location = new System.Drawing.Point(527, 121);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 16);
             this.label8.TabIndex = 125;
@@ -242,21 +251,21 @@
             "insumos",
             "investimentos",
             ""});
-            this.cbxcontabil.Location = new System.Drawing.Point(505, 33);
+            this.cbxcontabil.Location = new System.Drawing.Point(530, 142);
             this.cbxcontabil.Name = "cbxcontabil";
             this.cbxcontabil.Size = new System.Drawing.Size(104, 21);
             this.cbxcontabil.TabIndex = 124;
             // 
             // txtcontabil
             // 
-            this.txtcontabil.Location = new System.Drawing.Point(615, 33);
+            this.txtcontabil.Location = new System.Drawing.Point(640, 142);
             this.txtcontabil.Name = "txtcontabil";
             this.txtcontabil.Size = new System.Drawing.Size(85, 20);
             this.txtcontabil.TabIndex = 127;
             // 
             // txttitpodocumento
             // 
-            this.txttitpodocumento.Location = new System.Drawing.Point(312, 111);
+            this.txttitpodocumento.Location = new System.Drawing.Point(337, 220);
             this.txttitpodocumento.Name = "txttitpodocumento";
             this.txttitpodocumento.Size = new System.Drawing.Size(100, 20);
             this.txttitpodocumento.TabIndex = 129;
@@ -264,7 +273,8 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(309, 90);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(334, 199);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 13);
             this.label9.TabIndex = 128;
@@ -272,7 +282,7 @@
             // 
             // txtagencia
             // 
-            this.txtagencia.Location = new System.Drawing.Point(142, 161);
+            this.txtagencia.Location = new System.Drawing.Point(167, 270);
             this.txtagencia.Name = "txtagencia";
             this.txtagencia.Size = new System.Drawing.Size(100, 20);
             this.txtagencia.TabIndex = 136;
@@ -280,7 +290,8 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(139, 140);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(164, 249);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 13);
             this.label13.TabIndex = 135;
@@ -288,7 +299,7 @@
             // 
             // txtbanco
             // 
-            this.txtbanco.Location = new System.Drawing.Point(269, 161);
+            this.txtbanco.Location = new System.Drawing.Point(294, 270);
             this.txtbanco.Name = "txtbanco";
             this.txtbanco.Size = new System.Drawing.Size(100, 20);
             this.txtbanco.TabIndex = 138;
@@ -296,7 +307,8 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(266, 140);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(291, 249);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(38, 13);
             this.label14.TabIndex = 137;
@@ -304,7 +316,7 @@
             // 
             // txtconta
             // 
-            this.txtconta.Location = new System.Drawing.Point(25, 161);
+            this.txtconta.Location = new System.Drawing.Point(50, 270);
             this.txtconta.Name = "txtconta";
             this.txtconta.Size = new System.Drawing.Size(100, 20);
             this.txtconta.TabIndex = 140;
@@ -312,7 +324,8 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(22, 140);
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(47, 249);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(34, 13);
             this.label15.TabIndex = 139;
@@ -321,6 +334,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.White;
             this.label16.Location = new System.Drawing.Point(132, 14);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 13);
@@ -330,7 +344,8 @@
             // rdb2
             // 
             this.rdb2.AutoSize = true;
-            this.rdb2.Location = new System.Drawing.Point(366, 235);
+            this.rdb2.ForeColor = System.Drawing.Color.White;
+            this.rdb2.Location = new System.Drawing.Point(391, 344);
             this.rdb2.Name = "rdb2";
             this.rdb2.Size = new System.Drawing.Size(45, 17);
             this.rdb2.TabIndex = 143;
@@ -349,7 +364,8 @@
             // rdb1
             // 
             this.rdb1.AutoSize = true;
-            this.rdb1.Location = new System.Drawing.Point(366, 205);
+            this.rdb1.ForeColor = System.Drawing.Color.White;
+            this.rdb1.Location = new System.Drawing.Point(391, 314);
             this.rdb1.Name = "rdb1";
             this.rdb1.Size = new System.Drawing.Size(42, 17);
             this.rdb1.TabIndex = 142;
@@ -360,7 +376,7 @@
             // 
             // mtbcnpj
             // 
-            this.mtbcnpj.Location = new System.Drawing.Point(136, 33);
+            this.mtbcnpj.Location = new System.Drawing.Point(161, 142);
             this.mtbcnpj.Mask = "99.999.999/9999-99";
             this.mtbcnpj.Name = "mtbcnpj";
             this.mtbcnpj.Size = new System.Drawing.Size(126, 20);
@@ -376,12 +392,13 @@
             // 
             // pnl1
             // 
+            this.pnl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnl1.Controls.Add(this.label10);
             this.pnl1.Controls.Add(this.txtparcelas);
             this.pnl1.Controls.Add(this.nudparcelas);
             this.pnl1.Controls.Add(this.label16);
             this.pnl1.Enabled = false;
-            this.pnl1.Location = new System.Drawing.Point(417, 183);
+            this.pnl1.Location = new System.Drawing.Point(442, 292);
             this.pnl1.Name = "pnl1";
             this.pnl1.Size = new System.Drawing.Size(213, 100);
             this.pnl1.TabIndex = 149;
@@ -390,17 +407,19 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(12, 14);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(88, 13);
             this.label10.TabIndex = 149;
             this.label10.Text = "valor da parcelas";
             // 
-            // teste1
+            // ContaPagar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 384);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(752, 649);
             this.Controls.Add(this.pnl1);
             this.Controls.Add(this.mtbcnpj);
             this.Controls.Add(this.rdb2);
@@ -433,7 +452,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.txtntitulo);
-            this.Name = "teste1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "ContaPagar";
             this.Text = "teste1";
             this.Load += new System.EventHandler(this.teste1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudparcelas)).EndInit();

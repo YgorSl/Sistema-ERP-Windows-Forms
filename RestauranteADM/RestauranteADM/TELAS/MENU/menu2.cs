@@ -19,6 +19,7 @@ using RestauranteADM.TELAS.Estoque;
 using System.Speech.Synthesis;
 using System.Globalization;
 using System.Speech.Recognition;
+using RestauranteADM.BASE.CP_Pagar;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
@@ -500,7 +501,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirForminPanel(new cadastrar_conta());
+            AbrirForminPanel(new ContaPagar());
             SubMenuCadastro.Visible = false;
         }
 

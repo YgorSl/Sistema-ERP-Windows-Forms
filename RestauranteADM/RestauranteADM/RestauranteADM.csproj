@@ -287,12 +287,6 @@
     <Compile Include="TELAS\Cadastro\PedidoCompra.Designer.cs">
       <DependentUpon>PedidoCompra.cs</DependentUpon>
     </Compile>
-    <None Include="TELAS\Alterar\alterarfuncionarioscs">
-      <SubType>Form</SubType>
-    </None>
-    <Compile Include="TELAS\Alterar\alterarfuncionario.Designer.cs">
-      <DependentUpon>alterarfuncionarioscs</DependentUpon>
-    </Compile>
     <Compile Include="TELAS\Consulta\Consultar Cardapio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -493,9 +487,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro\PedidoCompra.resx">
       <DependentUpon>PedidoCompra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\Alterar\alterarfuncionario.resx">
-      <DependentUpon>alterarfuncionarioscs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\Consultar Cardapio.resx">
       <DependentUpon>Consultar Cardapio.cs</DependentUpon>

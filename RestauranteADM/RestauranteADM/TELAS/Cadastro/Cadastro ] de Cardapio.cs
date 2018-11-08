@@ -37,6 +37,9 @@ namespace RestauranteADM.TELAS.Cadastro
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+
             
 
                 CardapioDTO dto = new CardapioDTO();
@@ -54,6 +57,12 @@ namespace RestauranteADM.TELAS.Cadastro
 
 
                 MessageBox.Show("Prato salvo com sucesso! :)");
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por favor preencha todos os campos corretamente!", "TocTocBrasil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
      
         }
 

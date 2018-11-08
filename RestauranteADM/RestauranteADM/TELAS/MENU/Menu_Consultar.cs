@@ -95,5 +95,10 @@ namespace RestauranteADM.TELAS.MENU
         {
             AbrirForminPanel(new ConsultarVendas());
         }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
     }
 }

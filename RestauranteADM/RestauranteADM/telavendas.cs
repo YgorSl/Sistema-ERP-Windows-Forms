@@ -141,6 +141,9 @@ namespace RestauranteADM
 
         private void button2_Click(object sender, EventArgs e)
         {
+            try
+            {
+
             ClienteDTO forn = cmbcliente.SelectedItem as ClienteDTO;
             CardapioDTO cardapio = cbmprato.SelectedItem as CardapioDTO;
 
@@ -169,11 +172,19 @@ namespace RestauranteADM
 
 
             MessageBox.Show("Compra Feita com sucesso!", "Compras", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por favor preencha todos os campos corretamente!", "TocTocBrasil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            try
+            {
+
            
 
             ClienteDTO cliente = cmbcliente.SelectedItem as ClienteDTO;
@@ -201,6 +212,12 @@ namespace RestauranteADM
 
             }
 
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por favor preencha todos os campos corretamente!", "TocTocBrasil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
 
 
@@ -267,6 +284,9 @@ namespace RestauranteADM
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+
             CardapioDTO dto = cbmprato.SelectedItem as CardapioDTO;
 
             double valortaxa = Convert.ToDouble(txttaxa.Text);
@@ -307,6 +327,12 @@ namespace RestauranteADM
                 }
 
             }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por favor preencha todos os campos corretamente!", "TocTocBrasil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void label9_Click(object sender, EventArgs e)
@@ -333,7 +359,7 @@ namespace RestauranteADM
             txtfn.Text = totalentrada.ToString();
             }
        
-private void button4_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
 
             double totalganho = 0;

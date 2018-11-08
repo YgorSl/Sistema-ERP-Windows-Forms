@@ -40,6 +40,9 @@ namespace RestauranteADM
 
         private void btnentrar_Click(object sender, EventArgs e)
         {
+            try
+            {
+
             if (txtsenha.Text==txtsenha2.Text)
             {
                 criptgrafia criptografia = new criptgrafia();
@@ -67,6 +70,12 @@ namespace RestauranteADM
 
             }
 
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por favor preencha todos os campos corretamente!", "TocTocBrasil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
           
 
 

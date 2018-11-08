@@ -10,12 +10,12 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 {
    public class ContaPagarDatabase
     {
-      
+
 
         public int Salvar(ContaPagarDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_conta_paga1` (ds_tipo_cobrança,nm_conta_contabil,ds_conta_contabil,ds_agencia,ds_banco,ds_conta,ds_observaçao,dt_emissao,dt_data,dt_vencimento,vl_preço,ds_parcelados,nm_prestador,ds_cnpj)
-                                                         VALUES   (@ds_tipo_cobrança,@nm_conta_contabil,@ds_conta_contabil,@ds_agencia,@ds_banco,@ds_conta,@ds_observaçao,@dt_emissao,@dt_data,@dt_vencimento,@vl_preço,@ds_parcelados,@nm_prestador,@ds_cnpj)";
+            string script = @"INSERT INTO `mydb`.`tb_conta_paga1` (ds_tipo_cobrança,nm_conta_contabil,ds_conta_contabil,ds_agencia,ds_banco,ds_conta,ds_observaçao,dt_emissao,dt_data,dt_vencimento,vl_preço,ds_parcelados,nm_prestador,ds_cnpj,vl_parcela,pg_pagou)
+                                                         VALUES   (@ds_tipo_cobrança,@nm_conta_contabil,@ds_conta_contabil,@ds_agencia,@ds_banco,@ds_conta,@ds_observaçao,@dt_emissao,@dt_data,@dt_vencimento,@vl_preço,@ds_parcelados,@nm_prestador,@ds_cnpj,@vl_parcela,0)";
 
 
 
@@ -37,7 +37,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
             parms.Add(new MySqlParameter("ds_parcelados", dto.parcelados));
             parms.Add(new MySqlParameter("nm_prestador", dto.Prestador));
             parms.Add(new MySqlParameter("ds_cnpj", dto.Cnpj));
-
+            parms.Add(new MySqlParameter("vl_parcela", dto.valor_parcelas));
 
 
             Database db = new Database();
@@ -49,10 +49,10 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 
         public void Remover(int id)
         {
-            string script = @"DELETE FROM tb_conta_pagar WHERE id_conta_pagar = @id_conta_pagar ";
+            string script = @"DELETE FROM tb_conta_pagar WHERE tb_conta_paga1 = @id_conta_pagar2 ";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_conta_pagar ", id));
+            parms.Add(new MySqlParameter("id_conta_pagar2 ", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -63,7 +63,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
         {
 
 
-            string script = @"select* from tb_conta_pagar where dt_data>= @start and dt_validade <= @end";
+            string script = @"select* from tb_conta_paga1 where dt_data>= @start and dt_validade <= @end";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("start", start));
@@ -77,9 +77,11 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
             List<ContaPagarDTO> lista = new List<ContaPagarDTO>();
             while (reader.Read())
             {
-                ///
+                ContaPagarDTO dto = new ContaPagarDTO();
+                ///dto.Id = reader.GetInt32("id_conta_pagar2");
+                ///dto./
 
-               /// lista.Add(dto);
+                ///lista.Add(dto);
             }
             reader.Close();
 
@@ -89,7 +91,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 
         public void Update(ContaPagarDTO dto)
         {
-            string script = @"UPDATE `mydb`.`tb_conta_pagar` SET pg_pagou = 1 WHERE id_conta_pagar=@id_conta_pagar";
+            string script = @"UPDATE `mydb`.`tb_conta_paga1` SET pg_pagou = 1 WHERE id_conta_pagar2r=@id_conta_pagar2";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_conta_pagar", dto.Id));
@@ -100,7 +102,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
-         
+
 
 
         }

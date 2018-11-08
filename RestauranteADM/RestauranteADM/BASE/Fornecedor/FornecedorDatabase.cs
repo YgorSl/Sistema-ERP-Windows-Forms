@@ -139,7 +139,7 @@ namespace RestauranteADM.BASE.Fornecedor
         }
         public int Salvar1(ProvedorDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_fornecedor` (nm_nome, ds_cnpj, ds_telefone, ds_endereço, ds_cidade, ds_estado, ds_bairro, ds_cep) 
+            string script = @"INSERT INTO `mydb`.`tb_prestador` (nm_nome, ds_cnpj, ds_telefone, ds_endereço, ds_cidade, ds_estado, ds_bairro, ds_cep) 
                                                          VALUES (@nm_nome, @ds_cnpj, @ds_telefone, @ds_endereço, @ds_cidade, @ds_estado, @ds_bairro, @ds_cep)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -163,7 +163,7 @@ namespace RestauranteADM.BASE.Fornecedor
 
         public List<ProvedorDTO> filtro1(string Nome, string Cnpj)
         {
-            string script = @"select *from tb_fornecedor where nm_nome like @nome and ds_cnpj like @cnpj  ";
+            string script = @"select *from tb_prestador where nm_nome like @nome and ds_cnpj like @cnpj";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nome", "%" + Nome + "%"));
@@ -179,7 +179,7 @@ namespace RestauranteADM.BASE.Fornecedor
             {
 
                 ProvedorDTO funcio = new ProvedorDTO();
-                funcio.Id = reader.GetInt32("id_´provedor");
+                funcio.Id = reader.GetInt32("id_prestador");
                 funcio.Nome = reader.GetString("nm_nome");
                 funcio.Cnpj = reader.GetString("ds_cnpj");
                 funcio.Telefone = reader.GetString("ds_telefone");
@@ -198,10 +198,10 @@ namespace RestauranteADM.BASE.Fornecedor
 
         public void Excluir1(int id)
         {
-            string script = @"DELETE FROM  tb_provedor WHERE id_provedor = @id_provedor";
+            string script = @"DELETE FROM  tb_prestador WHERE id_prestador = @id_prestador";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_provedor", id));
+            parms.Add(new MySqlParameter("id_prestador", id));
 
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
@@ -212,13 +212,13 @@ namespace RestauranteADM.BASE.Fornecedor
             string script = @"UPDATE 
 
 
-  tb_provedor SET nm_nome = @nm_nome, ds_cnpj = @ds_cnpj, ds_telefone = @ds_telefone, ds_endereço =@ds_endereço , ds_cidade = @ds_cidade , ds_estado = @ds_estado
+  tb_prestador SET nm_nome = @nm_nome, ds_cnpj = @ds_cnpj, ds_telefone = @ds_telefone, ds_endereço =@ds_endereço , ds_cidade = @ds_cidade , ds_estado = @ds_estado
                             
 
-                              WHERE id_provedor= @id_provedor";
+                              WHERE id_prestador= @id_prestador";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_provedor", dto.Id));
+            parms.Add(new MySqlParameter("id_prestador", dto.Id));
             parms.Add(new MySqlParameter("nm_nome", dto.Nome));
             parms.Add(new MySqlParameter("ds_cnpj", dto.Cnpj));
             parms.Add(new MySqlParameter("ds_telefone", dto.Telefone));
@@ -234,9 +234,11 @@ namespace RestauranteADM.BASE.Fornecedor
             db.ExecuteInsertScript(script, parms);
 
         }
-        public List<ProvedorDTO> Listar1()
+
+        public List<ProvedorDTO> Consultar()
         {
-            string script = @"select *from tb_provedor";
+            string script = @"select *from tb_prestador";
+
 
 
 
@@ -249,7 +251,7 @@ namespace RestauranteADM.BASE.Fornecedor
             {
 
                 ProvedorDTO funcio = new ProvedorDTO();
-                funcio.Id = reader.GetInt32("id_provedor");
+                funcio.Id = reader.GetInt32("id_prestador");
                 funcio.Nome = reader.GetString("nm_nome");
                 funcio.Cnpj = reader.GetString("ds_cnpj");
                 funcio.Telefone = reader.GetString("ds_telefone");
@@ -259,10 +261,12 @@ namespace RestauranteADM.BASE.Fornecedor
                 funcio.Bairro = reader.GetString("ds_bairro");
                 funcio.CEP = reader.GetString("ds_cep");
 
+
                 lista.Add(funcio);
 
             }
             return lista;
         }
+
     }
 }

@@ -65,11 +65,13 @@ namespace RestauranteADM.BASE.Fornecedor
             return forn;
 
         }
-        public List<ProvedorDTO> Listar1()
+
+        public List<ProvedorDTO> Consultar()
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            List<ProvedorDTO> forn = db.Listar1();
+            List<ProvedorDTO> forn = db.Consultar();
             return forn;
+
         }
 
     }

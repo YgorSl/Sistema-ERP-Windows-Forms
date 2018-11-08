@@ -10,7 +10,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
     {
 
         public int Id { get; set; }
-        public string tipo_cobrança{ get; set; }
+        public string tipo_cobrança { get; set; }
         public string conta_contabil { get; set; }
         public string conta_contabil_ds { get; set; }
         public string conta { get; set; }
@@ -25,7 +25,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 
         public string Prestador { get; set; }
         public string Cnpj { get; set; }
-
+        public double valor_parcelas { get; set; }
 
 
 

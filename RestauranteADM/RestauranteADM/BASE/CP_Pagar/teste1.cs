@@ -22,7 +22,7 @@ namespace RestauranteADM.BASE.CP_Pagar
         void CarregarCombo()
         {
             FornecedorBusiness bus = new FornecedorBusiness();
-            List<FornecedorDTO> comp = bus.Listar();
+            List<ProvedorDTO> comp = bus.Consultar();
 
 
             cboforn.DataSource = comp;
@@ -30,7 +30,7 @@ namespace RestauranteADM.BASE.CP_Pagar
             cboforn.ValueMember = "Id";
 
             FornecedorDTO dto = cboforn.SelectedItem as FornecedorDTO;
-            lbl1.Text = dto.Cnpj;
+            mtbcnpj.Text = dto.Cnpj;
 
 
 
@@ -58,17 +58,32 @@ namespace RestauranteADM.BASE.CP_Pagar
             dto.data_cadastro = Convert.ToDateTime(dtpdatacadastro.Value);
             dto.vencimento = Convert.ToDateTime(dtpvencimento.Value);
             dto.valor_titulo = Convert.ToInt32(txtvalortitulo.Text);
-            dto.parcelados = Convert.ToInt32(nudparcelas.TextAlign);
+            dto.parcelados = Convert.ToInt32(nudparcelas.Value);
             dto.Cnpj = mtbcnpj.Text;
-            dto.Prestador = txtnomeprestador.Text;
+            dto.Prestador = cboforn.Text;
+            dto.valor_parcelas = Convert.ToDouble(txtparcelas.Text);
 
-        ContaPagarBusiness ft = new ContaPagarBusiness();
+            ContaPagarBusiness ft = new ContaPagarBusiness();
             ft.Salvar(dto);
+
+            MessageBox.Show("mensagem foi salva");
         }
 
         private void cboforn_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void rdb1_CheckedChanged(object sender, EventArgs e)
+        {
+            pnl1.Enabled = true;
+            pnl1.Visible = true;
+        }
+
+        private void rdb2_CheckedChanged(object sender, EventArgs e)
+        {
+            pnl1.Enabled = false;
+            pnl1.Visible = false;
         }
     }
 }

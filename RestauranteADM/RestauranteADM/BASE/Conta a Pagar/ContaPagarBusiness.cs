@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestauranteADM.BASE.Conta_a_Pagar
 {
-  public  class ContaPagarBusiness
+    public class ContaPagarBusiness
     {
         public int Salvar(ContaPagarDTO dto)
         {
@@ -28,4 +28,5 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 
         }
     }
+
 }

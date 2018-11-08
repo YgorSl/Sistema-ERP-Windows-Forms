@@ -27,6 +27,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
             db.Update(dto);
 
         }
+        
     }
 
 }

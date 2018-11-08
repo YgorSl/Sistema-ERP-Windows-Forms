@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace RestauranteADM.BASE.CP_Pagar
 {
-    public partial class teste1 : Form
+    public partial class ContaPagar : Form
     {
-        public teste1()
+        public ContaPagar()
         {
             InitializeComponent();
             CarregarCombo();

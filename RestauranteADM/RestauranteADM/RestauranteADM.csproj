@@ -53,11 +53,11 @@
     <Compile Include="BASE\CP_Pagar\CP_Business.cs" />
     <Compile Include="BASE\CP_Pagar\CP_Database.cs" />
     <Compile Include="BASE\CP_Pagar\CP_DTO.cs" />
-    <Compile Include="BASE\CP_Pagar\teste1.cs">
+    <Compile Include="BASE\CP_Pagar\ContaPagar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BASE\CP_Pagar\teste1.Designer.cs">
-      <DependentUpon>teste1.cs</DependentUpon>
+    <Compile Include="BASE\CP_Pagar\ContaPagar.Designer.cs">
+      <DependentUpon>ContaPagar.cs</DependentUpon>
     </Compile>
     <Compile Include="BASE\Fornecedor\ProvedorDTO.cs" />
     <Compile Include="bater_ponto.cs">
@@ -94,12 +94,6 @@
     </Compile>
     <Compile Include="TELAS\Cadastro\Cadastro_de_Prestador.Designer.cs">
       <DependentUpon>Cadastro_de_Prestador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="BASE\CP_Pagar\ContasPagar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BASE\CP_Pagar\ContasPagar.Designer.cs">
-      <DependentUpon>ContasPagar.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Consulta\consultar conta.cs">
       <SubType>Form</SubType>
@@ -416,8 +410,8 @@
       <DependentUpon>telavendas.cs</DependentUpon>
     </Compile>
     <Compile Include="Validacao.cs" />
-    <EmbeddedResource Include="BASE\CP_Pagar\teste1.resx">
-      <DependentUpon>teste1.cs</DependentUpon>
+    <EmbeddedResource Include="BASE\CP_Pagar\ContaPagar.resx">
+      <DependentUpon>ContaPagar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="bater_ponto.resx">
       <DependentUpon>bater_ponto.cs</DependentUpon>
@@ -433,9 +427,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro\Cadastro_de_Prestador.resx">
       <DependentUpon>Cadastro_de_Prestador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BASE\CP_Pagar\ContasPagar.resx">
-      <DependentUpon>ContasPagar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\consultar conta.resx">
       <DependentUpon>consultar conta.cs</DependentUpon>

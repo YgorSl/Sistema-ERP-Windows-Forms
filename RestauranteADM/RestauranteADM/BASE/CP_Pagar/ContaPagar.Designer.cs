@@ -1,6 +1,6 @@
 ﻿namespace RestauranteADM.BASE.CP_Pagar
 {
-    partial class teste1
+    partial class ContaPagar
     {
         /// <summary>
         /// Required designer variable.

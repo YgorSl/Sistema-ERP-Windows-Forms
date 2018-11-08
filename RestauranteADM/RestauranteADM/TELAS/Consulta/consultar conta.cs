@@ -1,5 +1,6 @@
 ﻿using RestauranteADM.Acesso;
 using RestauranteADM.BASE.Conta_a_Pagar;
+using RestauranteADM.BASE.Fornecedor;
 using RestauranteADM.TELAS.Cadastro;
 using System;
 using System.Collections.Generic;
@@ -37,38 +38,39 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void dgvconta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-       
-            if (e.ColumnIndex == 4 )
+            foreach (DataGridViewRow item in dgvconta.SelectedRows)
             {
 
+                ContaPagarDTO dto = item.DataBoundItem as ContaPagarDTO;
 
-                DialogResult r = MessageBox.Show("A conta estar pagar?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                if (r == DialogResult.Yes)
-                {
-                    ContaPagarDTO forn = dgvconta.Rows[e.RowIndex].DataBoundItem as ContaPagarDTO;
+                Pagor(dto);
 
-                    ContaPagarDatabase bus = new ContaPagarDatabase();
-                    bus.Update(forn);
-
-                    MessageBox.Show("A conta foi pagar", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    estrapago.ThreeState = true;
-
-
-                }
-                else  
-                {
-                 
-
-
-                }
 
             }
+            
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
             cadastrar_conta from = new cadastrar_conta();
             from.ShowDialog();
+        }
+        private void Pagor(ContaPagarDTO dto)
+        {
+
+            if(dto.pagou==true)
+            {
+                MessageBox.Show("Essa conta ja foi pagar");
+
+            }
+            else
+            {
+                dto.pagou = true;
+
+                ContaPagarBusiness business = new ContaPagarBusiness();
+                business.Update(dto);
+
+            }
         }
     }
 }

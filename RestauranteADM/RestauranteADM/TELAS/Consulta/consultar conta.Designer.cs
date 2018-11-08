@@ -30,17 +30,26 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.dgvconta = new System.Windows.Forms.DataGridView();
-            this.data_de_recebimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.data_validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estrapago = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dtpfim = new System.Windows.Forms.DateTimePicker();
             this.dtpinicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.Prestador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Conta_Contabil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conta_contabil_ds = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Banco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Agencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Conta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_de_recebimento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.data_validade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Valor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Parcelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Parcelas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estrapago = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvconta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,47 +70,25 @@
             this.dgvconta.AllowUserToDeleteRows = false;
             this.dgvconta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvconta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Prestador,
+            this.Cnpj,
+            this.Tipo,
+            this.Conta_Contabil,
+            this.conta_contabil_ds,
+            this.Banco,
+            this.Agencia,
+            this.Conta,
             this.data_de_recebimento,
             this.data_validade,
             this.Valor,
-            this.Tipo,
+            this.Total_Parcelas,
+            this.Parcelas,
             this.estrapago});
             this.dgvconta.Location = new System.Drawing.Point(11, 112);
             this.dgvconta.Name = "dgvconta";
             this.dgvconta.Size = new System.Drawing.Size(710, 244);
             this.dgvconta.TabIndex = 84;
             this.dgvconta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvconta_CellContentClick);
-            // 
-            // data_de_recebimento
-            // 
-            this.data_de_recebimento.DataPropertyName = "chegou";
-            this.data_de_recebimento.HeaderText = "data de recebimento";
-            this.data_de_recebimento.Name = "data_de_recebimento";
-            this.data_de_recebimento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // data_validade
-            // 
-            this.data_validade.DataPropertyName = "validade";
-            this.data_validade.HeaderText = "data validade";
-            this.data_validade.Name = "data_validade";
-            // 
-            // Valor
-            // 
-            this.Valor.DataPropertyName = "preço";
-            this.Valor.HeaderText = "Valor";
-            this.Valor.Name = "Valor";
-            // 
-            // Tipo
-            // 
-            this.Tipo.DataPropertyName = "tipo";
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            // 
-            // estrapago
-            // 
-            this.estrapago.DataPropertyName = "pagou";
-            this.estrapago.HeaderText = "Estar pagor";
-            this.estrapago.Name = "estrapago";
             // 
             // dtpfim
             // 
@@ -168,6 +155,91 @@
             this.label4.TabIndex = 87;
             this.label4.Text = "Adicionar conta";
             // 
+            // Prestador
+            // 
+            this.Prestador.DataPropertyName = "   Prestador ";
+            this.Prestador.HeaderText = "Prestador";
+            this.Prestador.Name = "Prestador";
+            // 
+            // Cnpj
+            // 
+            this.Cnpj.DataPropertyName = "Cnpj";
+            this.Cnpj.HeaderText = "Cnpj";
+            this.Cnpj.Name = "Cnpj";
+            // 
+            // Tipo
+            // 
+            this.Tipo.DataPropertyName = "tipo_cobrança";
+            this.Tipo.HeaderText = "Tipo Cobrança";
+            this.Tipo.Name = "Tipo";
+            // 
+            // Conta_Contabil
+            // 
+            this.Conta_Contabil.DataPropertyName = "conta_contabil";
+            this.Conta_Contabil.HeaderText = "Conta Contabil";
+            this.Conta_Contabil.Name = "Conta_Contabil";
+            // 
+            // conta_contabil_ds
+            // 
+            this.conta_contabil_ds.DataPropertyName = "conta_contabil";
+            this.conta_contabil_ds.HeaderText = "Conta_Descrição";
+            this.conta_contabil_ds.Name = "conta_contabil_ds";
+            // 
+            // Banco
+            // 
+            this.Banco.DataPropertyName = "banco";
+            this.Banco.HeaderText = "Banco";
+            this.Banco.Name = "Banco";
+            // 
+            // Agencia
+            // 
+            this.Agencia.DataPropertyName = "agencia";
+            this.Agencia.HeaderText = "Agencia";
+            this.Agencia.Name = "Agencia";
+            // 
+            // Conta
+            // 
+            this.Conta.DataPropertyName = "conta";
+            this.Conta.HeaderText = "Conta";
+            this.Conta.Name = "Conta";
+            // 
+            // data_de_recebimento
+            // 
+            this.data_de_recebimento.DataPropertyName = "data_cadastro";
+            this.data_de_recebimento.HeaderText = "Data Cadastro";
+            this.data_de_recebimento.Name = "data_de_recebimento";
+            this.data_de_recebimento.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // data_validade
+            // 
+            this.data_validade.DataPropertyName = "vencimento";
+            this.data_validade.HeaderText = "Vencimento";
+            this.data_validade.Name = "data_validade";
+            // 
+            // Valor
+            // 
+            this.Valor.DataPropertyName = "valor_titulo";
+            this.Valor.HeaderText = "ValorTtitulo";
+            this.Valor.Name = "Valor";
+            // 
+            // Total_Parcelas
+            // 
+            this.Total_Parcelas.DataPropertyName = "parcelados";
+            this.Total_Parcelas.HeaderText = "Total Parcelas";
+            this.Total_Parcelas.Name = "Total_Parcelas";
+            // 
+            // Parcelas
+            // 
+            this.Parcelas.DataPropertyName = "valor_parcelas";
+            this.Parcelas.HeaderText = "Valor_Parcelas";
+            this.Parcelas.Name = "Parcelas";
+            // 
+            // estrapago
+            // 
+            this.estrapago.DataPropertyName = "pagou";
+            this.estrapago.HeaderText = "Estar pagor";
+            this.estrapago.Name = "estrapago";
+            // 
             // consultar_conta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,12 +272,21 @@
         private System.Windows.Forms.DateTimePicker dtpinicio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Prestador;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cnpj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Conta_Contabil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn conta_contabil_ds;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Banco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Agencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Conta;
         private System.Windows.Forms.DataGridViewTextBoxColumn data_de_recebimento;
         private System.Windows.Forms.DataGridViewTextBoxColumn data_validade;
         private System.Windows.Forms.DataGridViewTextBoxColumn Valor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total_Parcelas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Parcelas;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estrapago;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
     }
 }

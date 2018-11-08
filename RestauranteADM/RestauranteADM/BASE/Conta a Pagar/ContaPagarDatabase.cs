@@ -78,10 +78,25 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
             while (reader.Read())
             {
                 ContaPagarDTO dto = new ContaPagarDTO();
-                ///dto.Id = reader.GetInt32("id_conta_pagar2");
-                ///dto./
+                dto.Id = reader.GetInt32("id_conta_pagar2");
+                dto.tipo_cobrança = reader.GetString("ds_tipo_cobrança");
+                dto.conta_contabil = reader.GetString("nm_conta_contabil");
+                    dto.conta_contabil_ds = reader.GetString("ds_conta_contabil");
+                dto.agencia = reader.GetString("ds_agencia");
+                dto.banco = reader.GetString("ds_banco");
+                dto.conta = reader.GetString("ds_conta");
+                dto.observaçao = reader.GetString("ds_observaçao");
+                dto.emissao = reader.GetDateTime("dt_emissao");
+                    dto.data_cadastro = reader.GetDateTime("dt_data");
+                dto.vencimento = reader.GetDateTime("dt_vencimento");
+                dto.valor_titulo = reader.GetDouble("vl_preço");
+                dto.parcelados = reader.GetInt32("ds_parcelados");
+                    dto.Prestador = reader.GetString("nm_prestador");
+                dto.Cnpj = reader.GetString("ds_cnpj");
+                dto.valor_parcelas = reader.GetDouble("vl_parcela");
+                    dto.pagou = reader.GetBoolean("pg_pagou");
 
-                ///lista.Add(dto);
+                lista.Add(dto);
             }
             reader.Close();
 

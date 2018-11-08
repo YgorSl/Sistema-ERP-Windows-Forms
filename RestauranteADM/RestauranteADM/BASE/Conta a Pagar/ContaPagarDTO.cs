@@ -27,7 +27,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
         public string Cnpj { get; set; }
         public double valor_parcelas { get; set; }
 
-
+     
 
         public bool pagou { get; set; }
 

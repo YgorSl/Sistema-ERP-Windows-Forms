@@ -38,17 +38,30 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void dgvconta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (DataGridViewRow item in dgvconta.SelectedRows)
+
+            if (e.ColumnIndex == 13)
             {
+                if
 
-                ContaPagarDTO dto = item.DataBoundItem as ContaPagarDTO;
+                DialogResult r = MessageBox.Show("A conta estar pagar?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (r == DialogResult.Yes)
+                {
+                    ContaPagarDTO forn = dgvconta.Rows[e.RowIndex].DataBoundItem as ContaPagarDTO;
 
-                Pagor(dto);
+                    ContaPagarDatabase bus = new ContaPagarDatabase();
+                    bus.Update(forn);
 
+                    MessageBox.Show("A conta foi pagar", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    estrapago.ThreeState = true;
+
+
+                }
+            }
 
             }
-            
-        }
+
+
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -58,7 +71,7 @@ namespace RestauranteADM.TELAS.Consulta
         private void Pagor(ContaPagarDTO dto)
         {
 
-            if(dto.pagou==true)
+            if (dto.pagou == true)
             {
                 MessageBox.Show("Essa conta ja foi pagar");
 
@@ -67,10 +80,25 @@ namespace RestauranteADM.TELAS.Consulta
             {
                 dto.pagou = true;
 
-                ContaPagarBusiness business = new ContaPagarBusiness();
+                ContaPagarDatabase business = new ContaPagarDatabase();
                 business.Update(dto);
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+         
+                foreach (DataGridViewRow item in dgvconta.SelectedRows)
+                {
+
+                    ContaPagarDTO dto = item.DataBoundItem as ContaPagarDTO;
+
+                    Pagor(dto);
+
+
+                }
+            }
+        }
+
     }
-}

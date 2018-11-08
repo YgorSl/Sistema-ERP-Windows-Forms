@@ -63,7 +63,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
         {
 
 
-            string script = @"select* from tb_conta_paga1 where dt_data>= @start and dt_validade <= @end";
+            string script = @"select* from tb_conta_paga1 where dt_data>= @start and dt_vencimento <= @end";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("start", start));
@@ -94,7 +94,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
                     dto.Prestador = reader.GetString("nm_prestador");
                 dto.Cnpj = reader.GetString("ds_cnpj");
                 dto.valor_parcelas = reader.GetDouble("vl_parcela");
-                    dto.pagou = reader.GetBoolean("pg_pagou");
+                 dto.pagou = reader.GetBoolean("pg_pagou");
 
                 lista.Add(dto);
             }
@@ -106,13 +106,10 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 
         public void Update(ContaPagarDTO dto)
         {
-            string script = @"UPDATE `mydb`.`tb_conta_paga1` SET pg_pagou = 1 WHERE id_conta_pagar2r=@id_conta_pagar2";
+            string script = @"UPDATE `mydb`.`tb_conta_paga1` SET pg_pagou =1 WHERE id_conta_pagar2=@id_conta_pagar2";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("id_conta_pagar", dto.Id));
-
-
-
+            parms.Add(new MySqlParameter("id_conta_pagar2", dto.Id));
 
 
             Database db = new Database();

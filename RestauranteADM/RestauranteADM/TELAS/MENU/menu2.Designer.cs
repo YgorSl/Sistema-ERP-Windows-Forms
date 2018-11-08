@@ -70,6 +70,8 @@
             this.btnmenucad = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.SubMenuConsultar.SuspendLayout();
@@ -124,9 +126,9 @@
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
             this.MenuVertical.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MenuVertical.Controls.Add(this.SubMenuConsultar);
+            this.MenuVertical.Controls.Add(this.SubMenuCadastro);
             this.MenuVertical.Controls.Add(this.SubMenuEstoque);
             this.MenuVertical.Controls.Add(this.SubMenuRH);
-            this.MenuVertical.Controls.Add(this.SubMenuCadastro);
             this.MenuVertical.Controls.Add(this.panel9);
             this.MenuVertical.Controls.Add(this.panel8);
             this.MenuVertical.Controls.Add(this.panel6);
@@ -153,6 +155,7 @@
             // SubMenuConsultar
             // 
             this.SubMenuConsultar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SubMenuConsultar.Controls.Add(this.button2);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarVenda);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarPedido);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarFuncionario);
@@ -160,9 +163,9 @@
             this.SubMenuConsultar.Controls.Add(this.btnConsultarProduto);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarFornecedor);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarCliente);
-            this.SubMenuConsultar.Location = new System.Drawing.Point(66, 241);
+            this.SubMenuConsultar.Location = new System.Drawing.Point(61, 241);
             this.SubMenuConsultar.Name = "SubMenuConsultar";
-            this.SubMenuConsultar.Size = new System.Drawing.Size(144, 209);
+            this.SubMenuConsultar.Size = new System.Drawing.Size(144, 236);
             this.SubMenuConsultar.TabIndex = 77;
             this.SubMenuConsultar.Visible = false;
             this.SubMenuConsultar.Paint += new System.Windows.Forms.PaintEventHandler(this.SubMenuConsultar_Paint);
@@ -298,7 +301,7 @@
             this.SubMenuEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SubMenuEstoque.Controls.Add(this.button13);
             this.SubMenuEstoque.Controls.Add(this.btnEstoque);
-            this.SubMenuEstoque.Location = new System.Drawing.Point(67, 419);
+            this.SubMenuEstoque.Location = new System.Drawing.Point(64, 416);
             this.SubMenuEstoque.Name = "SubMenuEstoque";
             this.SubMenuEstoque.Size = new System.Drawing.Size(135, 80);
             this.SubMenuEstoque.TabIndex = 79;
@@ -344,9 +347,9 @@
             this.SubMenuRH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SubMenuRH.Controls.Add(this.btnControlePonto);
             this.SubMenuRH.Controls.Add(this.btnFolhaPagamento);
-            this.SubMenuRH.Location = new System.Drawing.Point(65, 289);
+            this.SubMenuRH.Location = new System.Drawing.Point(67, 289);
             this.SubMenuRH.Name = "SubMenuRH";
-            this.SubMenuRH.Size = new System.Drawing.Size(133, 108);
+            this.SubMenuRH.Size = new System.Drawing.Size(133, 87);
             this.SubMenuRH.TabIndex = 78;
             this.SubMenuRH.Visible = false;
             // 
@@ -360,9 +363,9 @@
             this.btnControlePonto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnControlePonto.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnControlePonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnControlePonto.Location = new System.Drawing.Point(3, 58);
+            this.btnControlePonto.Location = new System.Drawing.Point(3, 54);
             this.btnControlePonto.Name = "btnControlePonto";
-            this.btnControlePonto.Size = new System.Drawing.Size(131, 49);
+            this.btnControlePonto.Size = new System.Drawing.Size(131, 32);
             this.btnControlePonto.TabIndex = 2;
             this.btnControlePonto.Text = "Controle de ponto";
             this.btnControlePonto.UseVisualStyleBackColor = true;
@@ -389,14 +392,15 @@
             // SubMenuCadastro
             // 
             this.SubMenuCadastro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SubMenuCadastro.Controls.Add(this.button1);
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarCardapio);
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarProduto);
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarFuncionario);
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarFornecedor);
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarCliente);
-            this.SubMenuCadastro.Location = new System.Drawing.Point(65, 192);
+            this.SubMenuCadastro.Location = new System.Drawing.Point(63, 201);
             this.SubMenuCadastro.Name = "SubMenuCadastro";
-            this.SubMenuCadastro.Size = new System.Drawing.Size(137, 150);
+            this.SubMenuCadastro.Size = new System.Drawing.Size(137, 184);
             this.SubMenuCadastro.TabIndex = 76;
             this.SubMenuCadastro.Visible = false;
             this.SubMenuCadastro.Click += new System.EventHandler(this.SubMenuCadastro_Click);
@@ -700,11 +704,47 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Old English Text MT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightYellow;
-            this.label1.Location = new System.Drawing.Point(346, 291);
+            this.label1.Location = new System.Drawing.Point(305, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(209, 44);
             this.label1.TabIndex = 64;
             this.label1.Text = "Bem-Vindo!";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(3, 148);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Conta";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(6, 203);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 23);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Conta";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // menu2
             // 
@@ -777,5 +817,7 @@
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

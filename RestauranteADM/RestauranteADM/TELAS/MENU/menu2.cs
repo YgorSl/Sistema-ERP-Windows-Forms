@@ -554,5 +554,17 @@ namespace RestauranteADM.TELAS._1._0._1
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new cadastrar_conta());
+            SubMenuCadastro.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new consultar_conta());
+            SubMenuCadastro.Visible = false;
+        }
     }
 }

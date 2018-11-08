@@ -27,7 +27,14 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
             db.Update(dto);
 
         }
-        
+
+        public void Update2(ContaPagarDTO dto)
+        {
+            ContaPagarDatabase db = new ContaPagarDatabase();
+            db.Update2(dto);
+
+        }
+
     }
 
 }

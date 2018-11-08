@@ -44,7 +44,7 @@ namespace RestauranteADM.TELAS.Consulta
             {
 
 
-                DialogResult r = MessageBox.Show("A conta estar pagar?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                DialogResult r = MessageBox.Show("A conta estar paga?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (r == DialogResult.Yes)
                 {
                     ContaPagarDTO forn1 = dgvconta.Rows[e.RowIndex].DataBoundItem as ContaPagarDTO;
@@ -52,7 +52,7 @@ namespace RestauranteADM.TELAS.Consulta
                     ContaPagarDatabase bus = new ContaPagarDatabase();
                     bus.Update(forn1);
 
-                    MessageBox.Show("A conta foi pagar", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("A conta foi paga", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
                 else if (r == DialogResult.No)
@@ -68,7 +68,7 @@ namespace RestauranteADM.TELAS.Consulta
             }
               else if  ( e.ColumnIndex == 13 && forn.pagou ==true)
                 {
-                 MessageBox.Show("A conta ja foi pagar", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                  MessageBox.Show("A conta ja foi paga", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ContaPagarDatabase bus = new ContaPagarDatabase();
                 List<ContaPagarDTO> compra = bus.Filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
 

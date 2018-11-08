@@ -106,7 +106,7 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
 
         public void Update(ContaPagarDTO dto)
         {
-            string script = @"UPDATE `mydb`.`tb_conta_paga1` SET pg_pagou =1 WHERE id_conta_pagar2=@id_conta_pagar2";
+            string script = @"UPDATE `mydb`.`tb_conta_paga1` SET pg_pagou = 1 WHERE id_conta_pagar2=@id_conta_pagar2";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_conta_pagar2", dto.Id));
@@ -115,8 +115,18 @@ namespace RestauranteADM.BASE.Conta_a_Pagar
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
 
+        }
+
+        public void Update2 (ContaPagarDTO dto)
+        {
+            string script = @"UPDATE `mydb`.`tb_conta_paga1` SET pg_pagou = 0 WHERE id_conta_pagar2=@id_conta_pagar2";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_conta_pagar2", dto.Id));
 
 
+            Database db = new Database();
+            db.ExecuteInsertScript(script, parms);
         }
     }
 }

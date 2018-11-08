@@ -38,17 +38,49 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void dgvconta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            foreach (DataGridViewRow item in dgvconta.SelectedRows)
+            ContaPagarDTO forn = dgvconta.Rows[e.RowIndex].DataBoundItem as ContaPagarDTO;
+
+            if (e.ColumnIndex == 13 && forn.pagou == false)
             {
 
-                ContaPagarDTO dto = item.DataBoundItem as ContaPagarDTO;
 
-                Pagor(dto);
+                DialogResult r = MessageBox.Show("A conta estar pagar?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (r == DialogResult.Yes)
+                {
+                    ContaPagarDTO forn1 = dgvconta.Rows[e.RowIndex].DataBoundItem as ContaPagarDTO;
+
+                    ContaPagarDatabase bus = new ContaPagarDatabase();
+                    bus.Update(forn1);
+
+                    MessageBox.Show("A conta foi pagar", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+                else if (r == DialogResult.No)
+                {
+                    MessageBox.Show("OK", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ContaPagarDatabase bus = new ContaPagarDatabase();
+                    List<ContaPagarDTO> compra = bus.Filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+
+                    dgvconta.DataSource = compra;
+
+
+                }
+            }
+              else if  ( e.ColumnIndex == 13 && forn.pagou ==true)
+                {
+                 MessageBox.Show("A conta ja foi pagar", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ContaPagarDatabase bus = new ContaPagarDatabase();
+                List<ContaPagarDTO> compra = bus.Filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+
+                dgvconta.DataSource = compra;
 
 
             }
-            
+
         }
+
+
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -58,7 +90,7 @@ namespace RestauranteADM.TELAS.Consulta
         private void Pagor(ContaPagarDTO dto)
         {
 
-            if(dto.pagou==true)
+            if (dto.pagou == true)
             {
                 MessageBox.Show("Essa conta ja foi pagar");
 
@@ -67,10 +99,25 @@ namespace RestauranteADM.TELAS.Consulta
             {
                 dto.pagou = true;
 
-                ContaPagarBusiness business = new ContaPagarBusiness();
+                ContaPagarDatabase business = new ContaPagarDatabase();
                 business.Update(dto);
 
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+         
+                foreach (DataGridViewRow item in dgvconta.SelectedRows)
+                {
+
+                    ContaPagarDTO dto = item.DataBoundItem as ContaPagarDTO;
+
+                    Pagor(dto);
+
+
+                }
+            }
+        }
+
     }
-}

@@ -38,27 +38,46 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void dgvconta_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            ContaPagarDTO forn = dgvconta.Rows[e.RowIndex].DataBoundItem as ContaPagarDTO;
 
-            if (e.ColumnIndex == 13)
+            if (e.ColumnIndex == 13 && forn.pagou == false)
             {
-                if
+
 
                 DialogResult r = MessageBox.Show("A conta estar pagar?", "Amazing", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (r == DialogResult.Yes)
                 {
-                    ContaPagarDTO forn = dgvconta.Rows[e.RowIndex].DataBoundItem as ContaPagarDTO;
+                    ContaPagarDTO forn1 = dgvconta.Rows[e.RowIndex].DataBoundItem as ContaPagarDTO;
 
                     ContaPagarDatabase bus = new ContaPagarDatabase();
-                    bus.Update(forn);
+                    bus.Update(forn1);
 
                     MessageBox.Show("A conta foi pagar", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    estrapago.ThreeState = true;
+
+                }
+                else if (r == DialogResult.No)
+                {
+                    MessageBox.Show("OK", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ContaPagarDatabase bus = new ContaPagarDatabase();
+                    List<ContaPagarDTO> compra = bus.Filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+
+                    dgvconta.DataSource = compra;
 
 
                 }
             }
+              else if  ( e.ColumnIndex == 13 && forn.pagou ==true)
+                {
+                 MessageBox.Show("A conta ja foi pagar", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ContaPagarDatabase bus = new ContaPagarDatabase();
+                List<ContaPagarDTO> compra = bus.Filtro(dtpinicio.Value.Date, dtpfim.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59));
+
+                dgvconta.DataSource = compra;
+
 
             }
+
+        }
 
 
 

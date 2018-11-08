@@ -21,15 +21,29 @@ namespace RestauranteADM.TELAS.Estoque
         }
 
         private void button3_Click(object sender, EventArgs e)
-        {            
-            CompraItemBusiness buss = new CompraItemBusiness();
-            List<VerView> item = buss.Filtro(textBox1.Text);
+        {
+            try
+            {
 
-            dgvest.DataSource = item;
+
+                CompraItemBusiness buss = new CompraItemBusiness();
+                List<VerView> item = buss.Filtro(textBox1.Text);
+
+                dgvest.DataSource = item;
+            }
+            catch (Exception)
+
+            {
+
+                MessageBox.Show("Por favor preencha todos os campos corretamente!", "TocTocBrasil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }       
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+
             List<EstoqueDTO> estoq = new List<EstoqueDTO>();
 
             List<VerView> items = dgvest.DataSource as List<VerView>;
@@ -44,6 +58,12 @@ namespace RestauranteADM.TELAS.Estoque
 
             EstoqueBusiness bus = new EstoqueBusiness();
             bus.Salvar(estoq);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

@@ -43,14 +43,17 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.nupdes = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.nupdes)).BeginInit();
             this.SuspendLayout();
             // 
             // rtvanotaçoes
             // 
-            this.rtvanotaçoes.Location = new System.Drawing.Point(92, 148);
+            this.rtvanotaçoes.Location = new System.Drawing.Point(92, 183);
             this.rtvanotaçoes.Name = "rtvanotaçoes";
             this.rtvanotaçoes.Size = new System.Drawing.Size(187, 40);
-            this.rtvanotaçoes.TabIndex = 4;
+            this.rtvanotaçoes.TabIndex = 5;
             this.rtvanotaçoes.Text = "";
             this.rtvanotaçoes.TextChanged += new System.EventHandler(this.rtvanotaçoes_TextChanged);
             // 
@@ -58,7 +61,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(204, 213);
+            this.button1.Location = new System.Drawing.Point(204, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
@@ -110,7 +113,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(9, 148);
+            this.label4.Location = new System.Drawing.Point(13, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 80;
@@ -134,7 +137,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(39, 118);
+            this.label1.Location = new System.Drawing.Point(36, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 78;
@@ -159,14 +162,14 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(309, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 274);
+            this.panel2.Size = new System.Drawing.Size(10, 287);
             this.panel2.TabIndex = 88;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 264);
+            this.panel1.Location = new System.Drawing.Point(0, 277);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(309, 10);
             this.panel1.TabIndex = 89;
@@ -177,7 +180,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 264);
+            this.panel4.Size = new System.Drawing.Size(10, 277);
             this.panel4.TabIndex = 90;
             // 
             // panel3
@@ -193,7 +196,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.SeaGreen;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(123, 213);
+            this.button2.Location = new System.Drawing.Point(123, 248);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
@@ -201,12 +204,32 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(16, 137);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 34);
+            this.label2.TabIndex = 93;
+            this.label2.Text = "Desconto\r\n Maximo";
+            // 
+            // nupdes
+            // 
+            this.nupdes.Location = new System.Drawing.Point(92, 145);
+            this.nupdes.Name = "nupdes";
+            this.nupdes.Size = new System.Drawing.Size(187, 20);
+            this.nupdes.TabIndex = 94;
+            // 
             // alterarcardapio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(319, 274);
+            this.ClientSize = new System.Drawing.Size(319, 287);
+            this.Controls.Add(this.nupdes);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel4);
@@ -227,6 +250,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "alterarcardapio";
             this.Load += new System.EventHandler(this.alterarcardapio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.nupdes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +273,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown nupdes;
     }
 }

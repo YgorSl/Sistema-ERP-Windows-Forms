@@ -94,7 +94,7 @@ namespace RestauranteADM.TELAS.Consulta
                 FuncionarioDTO pr = dgvfuncio.Rows[e.RowIndex].DataBoundItem as FuncionarioDTO;
 
 
-                alterarfuncionario menu = new alterarfuncionario();
+                AlterarUsuario menu = new AlterarUsuario();
                 menu.Loadscreen(pr);
                 menu.ShowDialog();
 

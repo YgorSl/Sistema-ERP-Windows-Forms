@@ -10,9 +10,7 @@ namespace RestauranteADM.BASE.vendas
     {
 
         public string Nome_cliente { get; set; }
-        public string Nome_prato { get; set; }
         public int Total { get; set; }
-        public int Qtd { get; set; }
         public DateTime Data { get; set; }
 
     }

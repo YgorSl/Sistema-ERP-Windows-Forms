@@ -72,7 +72,10 @@ namespace RestauranteADM.TELAS.Cadastro
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FornecedorDTO forn = cboforn.SelectedItem as FornecedorDTO;
+
+            try
+            {
+             FornecedorDTO forn = cboforn.SelectedItem as FornecedorDTO;
 
 
             CompraDTO compra = new CompraDTO();
@@ -92,6 +95,13 @@ namespace RestauranteADM.TELAS.Cadastro
             bus.Salvar(compra, compitem);
 
             MessageBox.Show("Compra Feita com sucesso!", "Compras", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Por favor preencha todos os campos corretamente!", "TocTocBrasil", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+           
 
         }
 

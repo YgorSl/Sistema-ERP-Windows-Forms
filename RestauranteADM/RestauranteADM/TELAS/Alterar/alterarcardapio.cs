@@ -31,7 +31,7 @@ namespace RestauranteADM
             txttamanho.Text = this.cardapio.Tamanho;
             rtvanotaçoes.Text = this.cardapio.Descrição;
             txtvalor.Text = this.cardapio.Valor.ToString();
-
+            nupdes.Value = Convert.ToDecimal(this.cardapio.Desconto);
 
 
 
@@ -40,16 +40,26 @@ namespace RestauranteADM
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
             cardapio.nome_Prato = txtnomeprato.Text;
             cardapio.Tamanho = txttamanho.Text;
             cardapio.Descrição = rtvanotaçoes.Text;
             cardapio.Valor = Convert.ToDouble(txtvalor.Text);
+            cardapio.Desconto = Convert.ToDouble(nupdes.Value);
 
 
             CardapioDatabase oi = new CardapioDatabase();
             oi.Update(cardapio);
             this.Hide();
 
+
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Verifique se preencheu todos os campos corretamente", "TocToc Brasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void txtnomeprato_TextChanged(object sender, EventArgs e)

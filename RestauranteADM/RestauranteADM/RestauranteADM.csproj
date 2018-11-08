@@ -83,6 +83,12 @@
     <Compile Include="TELAS\Alterar\AlterarProvedor.Designer.cs">
       <DependentUpon>AlterarProvedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="TELAS\Alterar\AlterarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\Alterar\AlterarUsuario.Designer.cs">
+      <DependentUpon>AlterarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\Cadastro\cadastrar conta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,11 +287,11 @@
     <Compile Include="TELAS\Cadastro\PedidoCompra.Designer.cs">
       <DependentUpon>PedidoCompra.cs</DependentUpon>
     </Compile>
-    <Compile Include="TELAS\Alterar\alterarfuncionario.cs">
+    <None Include="TELAS\Alterar\alterarfuncionarioscs">
       <SubType>Form</SubType>
-    </Compile>
+    </None>
     <Compile Include="TELAS\Alterar\alterarfuncionario.Designer.cs">
-      <DependentUpon>alterarfuncionario.cs</DependentUpon>
+      <DependentUpon>alterarfuncionarioscs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\Consulta\Consultar Cardapio.cs">
       <SubType>Form</SubType>
@@ -422,6 +428,9 @@
     <EmbeddedResource Include="TELAS\Alterar\AlterarProvedor.resx">
       <DependentUpon>AlterarProvedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\Alterar\AlterarUsuario.resx">
+      <DependentUpon>AlterarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Cadastro\cadastrar conta.resx">
       <DependentUpon>cadastrar conta.cs</DependentUpon>
     </EmbeddedResource>
@@ -486,7 +495,7 @@
       <DependentUpon>PedidoCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Alterar\alterarfuncionario.resx">
-      <DependentUpon>alterarfuncionario.cs</DependentUpon>
+      <DependentUpon>alterarfuncionarioscs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Consulta\Consultar Cardapio.resx">
       <DependentUpon>Consultar Cardapio.cs</DependentUpon>

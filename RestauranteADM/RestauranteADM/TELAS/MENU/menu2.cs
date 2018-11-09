@@ -524,6 +524,16 @@ namespace RestauranteADM.TELAS._1._0._1
         {
             AbrirForminPanel(new ConsultarProvedor());
             SubMenuCadastro.Visible = false;
+
+           
+        }
+
+        private void button5_Click_2(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new Consultar_Folha_de_Pagamento());
+            SubMenuCadastro.Visible = false;
+
+            
         }
     }
 }

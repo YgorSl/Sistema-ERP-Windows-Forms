@@ -74,6 +74,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.SubMenuConsultar.SuspendLayout();
@@ -157,6 +158,7 @@
             // SubMenuConsultar
             // 
             this.SubMenuConsultar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SubMenuConsultar.Controls.Add(this.button5);
             this.SubMenuConsultar.Controls.Add(this.button4);
             this.SubMenuConsultar.Controls.Add(this.button2);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarVenda);
@@ -166,9 +168,9 @@
             this.SubMenuConsultar.Controls.Add(this.btnConsultarProduto);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarFornecedor);
             this.SubMenuConsultar.Controls.Add(this.btnConsultarCliente);
-            this.SubMenuConsultar.Location = new System.Drawing.Point(55, 234);
+            this.SubMenuConsultar.Location = new System.Drawing.Point(53, 234);
             this.SubMenuConsultar.Name = "SubMenuConsultar";
-            this.SubMenuConsultar.Size = new System.Drawing.Size(144, 262);
+            this.SubMenuConsultar.Size = new System.Drawing.Size(144, 317);
             this.SubMenuConsultar.TabIndex = 77;
             this.SubMenuConsultar.Visible = false;
             this.SubMenuConsultar.Paint += new System.Windows.Forms.PaintEventHandler(this.SubMenuConsultar_Paint);
@@ -327,7 +329,7 @@
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarFuncionario);
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarFornecedor);
             this.SubMenuCadastro.Controls.Add(this.btnCadastrarCliente);
-            this.SubMenuCadastro.Location = new System.Drawing.Point(59, 188);
+            this.SubMenuCadastro.Location = new System.Drawing.Point(58, 188);
             this.SubMenuCadastro.Name = "SubMenuCadastro";
             this.SubMenuCadastro.Size = new System.Drawing.Size(137, 215);
             this.SubMenuCadastro.TabIndex = 76;
@@ -786,6 +788,24 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click_2);
             // 
+            // button5
+            // 
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(40)))), ((int)(((byte)(60)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.SeaGreen;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.Location = new System.Drawing.Point(8, 261);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(131, 42);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Folha de pagamento";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_2);
+            // 
             // menu2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -861,5 +881,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

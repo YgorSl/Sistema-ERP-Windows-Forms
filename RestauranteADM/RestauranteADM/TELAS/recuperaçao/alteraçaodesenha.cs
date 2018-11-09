@@ -1,4 +1,5 @@
-﻿using RestauranteADM.BASE.criptografia;
+﻿using RestauranteADM.Acesso;
+using RestauranteADM.BASE.criptografia;
 using RestauranteADM.BASE.Recuperação;
 using System;
 using System.Collections.Generic;
@@ -48,12 +49,12 @@ namespace RestauranteADM
                 criptgrafia criptografia = new criptgrafia();
                 string Login = criptografia.Codificar(txtnome.Text);
                 string Senhar = criptografia.Codificar(txtsenha2.Text);
+                    int id = acesso.funcionariologado.Id;
 
-
-                int oi = Convert.ToInt32(id);
+                 
 
                 AlteraçaoBunisess bunisess = new AlteraçaoBunisess();
-                bunisess.alteraçao(oi, Login, Senhar);
+                bunisess.alteraçao(id, Login, Senhar);
 
                 MessageBox.Show("senha e login alterandos por favor ");
 

@@ -17,5 +17,7 @@ namespace RestauranteADM.Acesso
 
         public static  BaterPontoDTO BaterPonto { get; set; }
 
+       
+
     }
 }

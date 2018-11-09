@@ -240,5 +240,33 @@ namespace RestauranteADM.BASE.Funcionario
             reader.Close();
             return dt;
         }
+        public FuncionarioDTO Ganha(string codigo)
+        {
+
+            string script = @"select * from recuperaçao where Senha=@senha ";
+
+            List<MySqlParameter> parametros = new List<MySqlParameter>();
+            parametros.Add(new MySqlParameter("Senha",codigo));
+
+
+
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parametros);
+
+            FuncionarioDTO dt = null;
+
+            if (reader.Read() == true)
+            {
+
+                dt = new FuncionarioDTO();
+                dt.Id = reader.GetInt32("idfuncio");
+
+
+            }
+            reader.Close();
+            return dt;
+           
+        }
     }
 }

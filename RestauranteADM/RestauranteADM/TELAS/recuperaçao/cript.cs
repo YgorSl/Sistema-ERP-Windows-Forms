@@ -1,4 +1,6 @@
-﻿using RestauranteADM.BASE.criptografia;
+﻿using RestauranteADM.Acesso;
+using RestauranteADM.BASE.criptografia;
+using RestauranteADM.BASE.Funcionario;
 using RestauranteADM.BASE.Recuperação;
 using RestauranteADM.BASE.Usuario;
 using System;
@@ -51,8 +53,9 @@ namespace RestauranteADM
               oi.verificacao(txtcodigo.Text);
             alteraçaodesenha form = new alteraçaodesenha();
             form.Show();
-           
-
+            FuncionarioDatabse i = new FuncionarioDatabse();
+           FuncionarioDTO o= i.Ganha(txtcodigo.Text);
+            acesso.funcionariologado = o;
 
             Close();
 

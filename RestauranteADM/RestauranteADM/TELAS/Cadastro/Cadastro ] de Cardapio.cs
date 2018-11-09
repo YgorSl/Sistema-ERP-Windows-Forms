@@ -50,7 +50,7 @@ namespace RestauranteADM.TELAS.Cadastro
 
                 dto.Descrição = rtvanotaçoes.Text;
                 dto.Valor = Convert.ToDouble(txtvalor.Text);
-                dto.Desconto = Convert.ToDouble(nupdes.Value);
+            
 
                 CardapioBusiness bus = new CardapioBusiness();
                 bus.salvar(dto);

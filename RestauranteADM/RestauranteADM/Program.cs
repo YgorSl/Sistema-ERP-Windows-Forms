@@ -25,7 +25,7 @@ namespace RestauranteADM
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new Cadastro___de_Cardapio());
+            Application.Run(new Login());
         }
     }
 }

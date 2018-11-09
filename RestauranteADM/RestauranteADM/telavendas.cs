@@ -293,12 +293,7 @@ namespace RestauranteADM
             double totslprodutos = Convert.ToDouble(txtfn.Text);
             double des = Convert.ToDouble(txtpor.Text);
             double descontomaximo = dto.Desconto;
-            if (des > descontomaximo)
-            {
-                MessageBox.Show("O desconto excedeu seu limite!", "TocToc Brasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
+           
 
 
                 double troco = Convert.ToDouble(txttroco.Text);
@@ -326,7 +321,7 @@ namespace RestauranteADM
 
                 }
 
-            }
+            
             }
             catch (Exception)
             {

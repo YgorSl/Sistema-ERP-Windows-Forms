@@ -15,8 +15,8 @@ namespace RestauranteADM.BASE.Cardapio
       
         public int Salvar(CardapioDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_cardapio` ( nm_prato, ds_prato, ds_tamanho, vl_valor) 
-                                                        VALUES ( @nm_prato, @ds_prato, @ds_tamanho, @vl_valor)";
+            string script = @"INSERT INTO `mydb`.`tb_cardapio` (nm_prato,ds_prato,ds_tamanho,vl_valor) 
+                                                        VALUES (@nm_prato,@ds_prato,@ds_tamanho,@vl_valor)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_prato", dto.nome_Prato));

@@ -66,7 +66,7 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nome", "%" + Nome + "%"));
-            parms.Add(new MySqlParameter("Cpf", "%" + cpf + "%"));
+            parms.Add(new MySqlParameter("cpf", "%" + cpf + "%"));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -92,10 +92,10 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
                 dto.Bonus = reader.GetDouble("ds_bonus");
                 dto.Nome = reader.GetString("nm_nome");
                 dto.CPF = reader.GetString("ds_cpf");
+                dto.Data = reader.GetString("dt_data");
 
 
 
-       
 
 
                 lista.Add(dto);

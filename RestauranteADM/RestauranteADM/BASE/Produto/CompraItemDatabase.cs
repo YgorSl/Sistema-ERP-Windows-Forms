@@ -29,10 +29,10 @@ namespace RestauranteADM.BASE.Produto
         public List<VerView> Filtro(string forn)
         {
 
-            string script = @"select * from estoqueavw where nm_produto = @nm_produto";
+            string script = @"select * from estoqueavw where nm_produto like @nm_produto";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("nm_produto", forn));
+            parms.Add(new MySqlParameter("nm_produto", "%" + forn + "%"));
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -99,6 +99,8 @@ namespace RestauranteADM.BASE.Produto
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
+
+
     }
     }
 

@@ -82,5 +82,27 @@ namespace RestauranteADM.BASE.Estoque
             Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
+        public List<Estoque_View> Lista3()
+        {
+            string script = @"select *from estoquevw";
+
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, null);
+
+            List<Estoque_View> lista = new List<Estoque_View>();
+            while (reader.Read() == true)
+            {
+                Estoque_View comp = new Estoque_View();
+                comp.Id = reader.GetInt32("id_estoque");
+
+
+                comp.Preço = reader.GetInt32("vl_valor");
+                comp.Produto = reader.GetString("nm_produto");
+                comp.Fornecedor = reader.GetString("nm_nome");
+
+                lista.Add(comp);
+            }
+            return lista;
+        }
     }
 }

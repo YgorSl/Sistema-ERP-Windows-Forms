@@ -64,8 +64,7 @@ namespace RestauranteADM.TELAS.Consulta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
+         
                 
                 FolhaPagamentoBusiness bus = new FolhaPagamentoBusiness();
                 List<FolhaPagamentoDTO> prod = bus.Consultar(txtnome.Text, txtcpf.Text);
@@ -73,11 +72,7 @@ namespace RestauranteADM.TELAS.Consulta
                 dgvcliente.DataSource = prod;
 
 
-            }
-            catch
-            {
-                MessageBox.Show("Ocorreu um erro! Entre em contato com o administrador. :(");
-            }
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

@@ -19,7 +19,7 @@ namespace RestauranteADM
             InitializeComponent();
         }
 
-        private string nome, senha, id;
+        private string id;
   
 
         public void LoadScreen(string idt)
@@ -35,7 +35,7 @@ namespace RestauranteADM
 
         private void alteraçaodesenha_Load(object sender, EventArgs e)
         {
-            Close();
+           
         }
 
         private void btnentrar_Click(object sender, EventArgs e)
@@ -47,7 +47,7 @@ namespace RestauranteADM
             {
                 criptgrafia criptografia = new criptgrafia();
                 string Login = criptografia.Codificar(txtnome.Text);
-                string Senhar = criptografia.Codificar(txtsenha.Text);
+                string Senhar = criptografia.Codificar(txtsenha2.Text);
 
 
                 int oi = Convert.ToInt32(id);

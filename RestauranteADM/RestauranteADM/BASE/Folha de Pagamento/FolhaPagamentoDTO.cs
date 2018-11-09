@@ -29,6 +29,8 @@ namespace RestauranteADM.BASE.Folha_de_Pagamento
 
         public string Nome { get; set; }
 
+        public string Data { get; set; }
+
         public string CPF { get; set; }
 
         public FuncionarioDTO funcio { get; set; }

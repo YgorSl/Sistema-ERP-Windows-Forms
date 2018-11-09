@@ -180,6 +180,7 @@ namespace RestauranteADM.BASE.Recuperação
             parms.Add(new MySqlParameter("nm_login", login));
 
 
+
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 

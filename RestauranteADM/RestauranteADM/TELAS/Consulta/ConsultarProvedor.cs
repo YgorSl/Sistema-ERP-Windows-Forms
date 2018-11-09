@@ -71,7 +71,7 @@ namespace RestauranteADM.TELAS.Consulta
                     ProvedorDTO forn = dgvcliente.Rows[e.RowIndex].DataBoundItem as ProvedorDTO;
 
                     FornecedorBusiness bus = new FornecedorBusiness();
-                    bus.Excluir(forn.Id);
+                    bus.Excluir1(forn.Id);
 
                     MessageBox.Show("Registro Removido com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

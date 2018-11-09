@@ -58,11 +58,15 @@ namespace RestauranteADM.TELAS.Estoque
 
             EstoqueBusiness bus = new EstoqueBusiness();
             bus.Salvar(estoq);
+            MessageBox.Show("Recebido No Estoque");
+                button1.Enabled = false;
+
+
             }
             catch (Exception)
             {
 
-                throw;
+                MessageBox.Show("Verifique se esta tudo certo");
             }
         }
 

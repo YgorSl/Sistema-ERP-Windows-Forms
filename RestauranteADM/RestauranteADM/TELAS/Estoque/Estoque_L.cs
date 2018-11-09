@@ -52,11 +52,12 @@ namespace RestauranteADM.TELAS.Estoque
                     bus.Excluir(forn.Id);
 
                     MessageBox.Show("Retirado Do estoque com sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    CarregarEstoque();
 
                 }
 
             }
         }
+     
     }
 }

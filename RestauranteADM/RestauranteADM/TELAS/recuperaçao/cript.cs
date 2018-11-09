@@ -44,10 +44,15 @@ namespace RestauranteADM
 
         private void btncodigo_Click(object sender, EventArgs e)
         {
+            
             AlteraçaoBunisess oi = new AlteraçaoBunisess();
 
 
               oi.verificacao(txtcodigo.Text);
+            alteraçaodesenha form = new alteraçaodesenha();
+            form.Show();
+           
+
 
             Close();
 

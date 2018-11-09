@@ -535,5 +535,11 @@ namespace RestauranteADM.TELAS._1._0._1
 
             
         }
+
+        private void button13_Click_1(object sender, EventArgs e)
+        {
+            AbrirForminPanel(new ReceberEstoque());
+            SubMenuCadastro.Visible = false;
+        }
     }
 }

@@ -15,8 +15,8 @@ namespace RestauranteADM.BASE.Fluxo_de_Caixa
 
         public int Salvar(FluxoCaixaDTO dto)
         {
-            string script = @"INSERT INTO `mydb`.`tb_fluxo_de_caixa`(vl_ganhar, vl_perdeu, vl_saldo,dt_periodo_comeco,dt_periodo_final)
-                                                                      VALUES(@vl_ganhar,@vl_perdeu,@vl_saldo,@dt_periodo_comeco,@dt_periodo_final)";
+            string script = @"INSERT INTO `mydb`.`tb_fluxo_de_caixa`(vl_ganhar, vl_perdeu, vl_saldo,dt_periodo_comeco,dt_ultimo)
+                                                                      VALUES(@vl_ganhar,@vl_perdeu,@vl_saldo,@dt_periodo_comeco,@dt_ultimo)";
 
 
 
@@ -31,7 +31,7 @@ namespace RestauranteADM.BASE.Fluxo_de_Caixa
             parms.Add(new MySqlParameter("vl_perdeu", dto.perdar));
             parms.Add(new MySqlParameter("vl_saldo", dto.saldo));
             parms.Add(new MySqlParameter("dt_periodo_comeco", dto.Perido_inicial));
-            parms.Add(new MySqlParameter("dt_periodo_final", dto.Perido_final));
+            parms.Add(new MySqlParameter("dt_ultimo", dto.Perido_final));
       
      
 
@@ -65,8 +65,8 @@ namespace RestauranteADM.BASE.Fluxo_de_Caixa
                 vw.ganhor = reader.GetDouble("vl_ganhar");
                 vw.perdar = reader.GetDouble("vl_valor");
                 vw.saldo = reader.GetFloat("vl_saldo");
-                vw.Perido_inicial = reader.GetDateTime("dt_periodo_inicio");
-                vw.Perido_final = reader.GetDateTime("dt_periodo_final");
+                vw.Perido_inicial = reader.GetDateTime("dt_periodo_comeco");
+                vw.Perido_final = reader.GetDateTime("dt_ultimo");
 
                 lista.Add(vw);
             }

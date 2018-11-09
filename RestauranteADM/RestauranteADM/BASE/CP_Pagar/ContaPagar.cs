@@ -70,36 +70,10 @@ namespace RestauranteADM.BASE.CP_Pagar
                 ContaPagarBusiness ft = new ContaPagarBusiness();
                 ft.Salvar(dto);
 
-                MessageBox.Show("mensagem foi salva");
+                MessageBox.Show("a conta foi salva");
             }
-            else if (rdb2.Checked == false)
-            {
-                ContaPagarDTO dto = new ContaPagarDTO();
-
-
-                dto.tipo_cobrança = cbmtipocobraça.Text;
-
-                dto.conta_contabil = cbxcontabil.Text;
-                dto.conta_contabil_ds = txtcontabil.Text;
-                dto.conta = txtconta.Text;
-                dto.agencia = txtagencia.Text;
-                dto.banco = txtbanco.Text;
-                dto.observaçao = rtvanotaçoes.Text;
-                dto.emissao = Convert.ToDateTime(dtpemissa.Value);
-                dto.data_cadastro = Convert.ToDateTime(dtpdatacadastro.Value);
-                dto.vencimento = Convert.ToDateTime(dtpvencimento.Value);
-                dto.valor_titulo = Convert.ToInt32(txtvalortitulo.Text);
-                dto.Cnpj = mtbcnpj.Text;
-                dto.Prestador = cboforn.Text;
-
-
-                ContaPagarBusiness ft = new ContaPagarBusiness();
-                ft.Salvar(dto);
-
-                MessageBox.Show("mensagem foi salva");
-
-            }
-            else if( rdb2.Checked==false)
+          
+            else if( rdb2.Checked==true)
             {
                 ContaPagarDTO dto = new ContaPagarDTO();
 
@@ -123,7 +97,7 @@ namespace RestauranteADM.BASE.CP_Pagar
                 ContaPagarBusiness ft = new ContaPagarBusiness();
                 ft.Salvar(dto);
 
-                MessageBox.Show("mensagem foi salva");
+                MessageBox.Show("a conta foi salva");
 
             }
         }

@@ -39,7 +39,7 @@ namespace RestauranteADM.TELAS
                 FornecedorBusiness bus = new FornecedorBusiness();
                 bus.Salvar1(forn);
 
-                MessageBox.Show("Fornecedor Cadastrado com Sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Prestador Cadastrado com Sucesso", "Amazing", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception)

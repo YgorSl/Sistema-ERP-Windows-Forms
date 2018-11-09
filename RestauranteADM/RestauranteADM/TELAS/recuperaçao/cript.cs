@@ -46,18 +46,31 @@ namespace RestauranteADM
 
         private void btncodigo_Click(object sender, EventArgs e)
         {
-            
-            AlteraçaoBunisess oi = new AlteraçaoBunisess();
+            try
+            {
+                AlteraçaoBunisess oi = new AlteraçaoBunisess();
+
+           
+
+                oi.verificacao(txtcodigo.Text);
+                FuncionarioDatabse i = new FuncionarioDatabse();
+                FuncionarioDTO o = i.Ganha(txtcodigo.Text);
+                acesso.funcionariologado = o;
+                alteraçaodesenha form = new alteraçaodesenha();
+                form.ShowDialog();
+
+               
+
+            }
+            catch (Exception)
+            {
 
 
-              oi.verificacao(txtcodigo.Text);
-            alteraçaodesenha form = new alteraçaodesenha();
-            form.Show();
-            FuncionarioDatabse i = new FuncionarioDatabse();
-           FuncionarioDTO o= i.Ganha(txtcodigo.Text);
-            acesso.funcionariologado = o;
+            }
+           
 
-            Close();
+         
+
 
         }
 

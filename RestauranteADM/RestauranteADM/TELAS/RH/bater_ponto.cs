@@ -23,6 +23,16 @@ namespace RestauranteADM
 
 
 
+        public void ConfirmaçaoPonto(DateTime entrada, DateTime almoçoida, DateTime almoçovolta, DateTime saida)
+        {
+
+
+
+
+        }
+
+
+
 
         private void tmr_Tick(object sender, EventArgs e)
         {
@@ -40,12 +50,34 @@ namespace RestauranteADM
         {
             
 
-            cpf = mtbcpf.Text;
+
+           cpf = mtbcpf.Text;
 
             BaterPontoBusiness bunisess = new BaterPontoBusiness();
             bunisess.verificar(cpf);
 
             btnebtrada.Enabled = true;
+
+
+            int id = acesso.funcionariologado.Id;
+            DateTime agora = DateTime.Now;
+            BaterPontoDatabase ponto = new BaterPontoDatabase();
+            BaterpontoConfirmaçao Confirmaçao = ponto.listar(id, agora);
+            acesso.BaterPontoConfirmaçao = Confirmaçao;
+
+            DateTime entrada = acesso.BaterPontoConfirmaçao.Entrada;
+            DateTime almoçoida = acesso.BaterPontoConfirmaçao.IdaAlmoço;
+            DateTime almoçovolta = acesso.BaterPontoConfirmaçao.VoltaAlmoço;
+            DateTime saida = acesso.BaterPontoConfirmaçao.Saida;
+
+
+
+  
+
+
+
+
+
         }
 
         private void btnebtrada_Click(object sender, EventArgs e)

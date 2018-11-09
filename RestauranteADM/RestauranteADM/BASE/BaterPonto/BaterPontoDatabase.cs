@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
+
 namespace RestauranteADM.BASE.BaterPonto
 {
     public class BaterPontoDatabase
@@ -153,32 +154,40 @@ namespace RestauranteADM.BASE.BaterPonto
 
 
 
-        public List<BaterPontoDTO> listar(DateTime data,int id)
+        public BaterpontoConfirmaçao listar(int id,DateTime data)
         {
 
-            string script = @"select *from tb_cardapio";
+            string script = @"select *from tb_ponto10 where dt_data=@data and id_funcionario=@idfuncio";
+
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("data", data ));
+            parms.Add(new MySqlParameter("idfuncio", id ));
 
 
             Database db = new Database();
-            MySqlDataReader reader = db.ExecuteSelectScript(script, null);
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-            List<CardapioDTO> lista = new List<CardapioDTO>();
+            BaterpontoConfirmaçao lista = new BaterpontoConfirmaçao();
             while (reader.Read())
             {
-                CardapioDTO dto = new CardapioDTO();
+                BaterpontoConfirmaçao dto = new BaterpontoConfirmaçao();
                 dto.Id = reader.GetInt32("id_cardapio");
-                dto.nome_Prato = reader.GetString("nm_prato");
-                dto.Descrição = reader.GetString("ds_prato");
-                dto.Tamanho = reader.GetString("ds_tamanho");
-                dto.Valor = reader.GetDouble("vl_valor");
+                dto.Data = reader.GetDateTime("dt_data");
+                dto.Entrada = reader.GetDateTime("hr_entrada");
+                dto.IdaAlmoço = reader.GetDateTime("hr_almoço_ida");
+                dto.VoltaAlmoço = reader.GetDateTime("hr_almoço_volta");
+                dto.Saida = reader.GetDateTime("hr_saida");
 
-                lista.Add(dto);
+           
             }
             reader.Close();
 
             return lista;
 
         }
+
+      
 
 
 

@@ -398,6 +398,11 @@ namespace RestauranteADM
         {
             v.sonumeros(e);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

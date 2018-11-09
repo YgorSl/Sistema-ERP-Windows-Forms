@@ -159,7 +159,10 @@ namespace RestauranteADM.BASE.Recuperação
             }
             else
             {
-                MessageBox.Show("errou");
+                splash oi = new splash();
+                oi.Show();
+      
+
 
             }
 

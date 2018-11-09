@@ -20,6 +20,7 @@ using System.Speech.Synthesis;
 using System.Globalization;
 using System.Speech.Recognition;
 using RestauranteADM.BASE.CP_Pagar;
+using RestauranteADM.BASE.BaterPonto;
 
 namespace RestauranteADM.TELAS._1._0._1
 {
@@ -473,6 +474,9 @@ namespace RestauranteADM.TELAS._1._0._1
         {
             AbrirForminPanel(new bater_ponto());
             SubMenuRH.Visible = false;
+
+
+           
         }
 
         private void panel10_Paint(object sender, PaintEventArgs e)
@@ -536,7 +540,9 @@ namespace RestauranteADM.TELAS._1._0._1
             
         }
 
-        private void button13_Click_1(object sender, EventArgs e)
+      
+
+        private void button13_Click_2(object sender, EventArgs e)
         {
             AbrirForminPanel(new ReceberEstoque());
             SubMenuCadastro.Visible = false;

@@ -110,7 +110,9 @@ namespace RestauranteADM
         private void label7_Click(object sender, EventArgs e)
         {
             cript sho = new cript();
-            sho.ShowDialog();
+            sho.Show();
+            this.Hide();
+            Close();
 
             
         }

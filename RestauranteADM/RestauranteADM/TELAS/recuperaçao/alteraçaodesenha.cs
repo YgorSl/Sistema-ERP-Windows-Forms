@@ -49,19 +49,19 @@ namespace RestauranteADM
                 criptgrafia criptografia = new criptgrafia();
                 string Login = criptografia.Codificar(txtnome.Text);
                 string Senhar = criptografia.Codificar(txtsenha2.Text);
-                    int id = acesso.funcionariologado.Id;
+                    int oi = acesso.funcionariologado.Id;
 
                  
 
                 AlteraçaoBunisess bunisess = new AlteraçaoBunisess();
-                bunisess.alteraçao(id, Login, Senhar);
+                bunisess.alteraçao(oi, Login, Senhar);
 
                 MessageBox.Show("senha e login alterandos por favor ");
 
                 Login login = new Login();
                 login.Show();
 
-                Close();
+                    this.Close();
 
             }
             else
@@ -82,6 +82,15 @@ namespace RestauranteADM
 
 
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+            Login login = new Login();
+            login.Show();
+
+            this.Hide();
         }
     }
 }

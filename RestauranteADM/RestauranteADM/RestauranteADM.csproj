@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Acesso\acesso.cs" />
+    <Compile Include="BASE\BaterPonto\BaterpontoConfirmaçao.cs" />
     <Compile Include="BASE\CP_Pagar\CP_Business.cs" />
     <Compile Include="BASE\CP_Pagar\CP_Database.cs" />
     <Compile Include="BASE\CP_Pagar\CP_DTO.cs" />
@@ -60,10 +61,10 @@
       <DependentUpon>ContaPagar.cs</DependentUpon>
     </Compile>
     <Compile Include="BASE\Fornecedor\ProvedorDTO.cs" />
-    <Compile Include="bater_ponto.cs">
+    <Compile Include="TELAS\RH\bater_ponto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="bater_ponto.Designer.cs">
+    <Compile Include="TELAS\RH\bater_ponto.Designer.cs">
       <DependentUpon>bater_ponto.cs</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
@@ -413,7 +414,7 @@
     <EmbeddedResource Include="BASE\CP_Pagar\ContaPagar.resx">
       <DependentUpon>ContaPagar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="bater_ponto.resx">
+    <EmbeddedResource Include="TELAS\RH\bater_ponto.resx">
       <DependentUpon>bater_ponto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\Alterar\AlterarContas.resx">

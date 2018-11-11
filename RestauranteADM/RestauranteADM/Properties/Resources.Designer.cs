@@ -153,6 +153,16 @@ namespace RestauranteADM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ok {
+            get {
+                object obj = ResourceManager.GetObject("ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2018_09_19_at_9_12_01_PM {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2018-09-19 at 9.12.01 PM", resourceCulture);

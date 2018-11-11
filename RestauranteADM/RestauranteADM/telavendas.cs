@@ -2,6 +2,7 @@
 using RestauranteADM.BASE.Cliente;
 using RestauranteADM.BASE.Produto;
 using RestauranteADM.BASE.vendas;
+using RestauranteADM.TELAS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace RestauranteADM
     public partial class telavendas : Form
     {
         Validacao v = new Validacao();
+       private string cpf;
 
         public telavendas()
         {
@@ -28,6 +30,7 @@ namespace RestauranteADM
         public CardapioDTO ProdSelec { get; set; }
         public int Qtd { get; set; }
         void CarregarCombo()
+            
         {
             ClienteBusiness bus = new ClienteBusiness();
             List<ClienteDTO> comp = bus.lista();
@@ -36,8 +39,9 @@ namespace RestauranteADM
             cmbcliente.DataSource = comp;
             cmbcliente.DisplayMember = "Nome";
             cmbcliente.ValueMember = "Id";
+           
 
-            CardapioBusiness prod = new CardapioBusiness();
+        CardapioBusiness prod = new CardapioBusiness();
             List<CardapioDTO> pro = prod.lista();
 
             cbmprato.DataSource = pro;
@@ -136,8 +140,9 @@ namespace RestauranteADM
 
         private void cmbcliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
+            ClienteDTO dto = cmbcliente.SelectedItem as ClienteDTO;
+            cpf = dto.Cep;
+    }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -402,6 +407,19 @@ namespace RestauranteADM
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+           
+            
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            google_maps maps = new google_maps();
+            maps.loadscren(cpf);
+            maps.ShowDialog();
         }
     }
 

@@ -91,11 +91,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(134, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 24);
+            this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 47;
             this.label1.Text = "Alterar";
             // 
@@ -145,12 +145,13 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(21, 9);
+            this.label5.Location = new System.Drawing.Point(424, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(15, 18);
             this.label5.TabIndex = 50;
-            this.label5.Text = "Voltar";
+            this.label5.Text = "x";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // alteraçaodesenha

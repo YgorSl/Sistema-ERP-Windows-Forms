@@ -111,8 +111,7 @@ namespace RestauranteADM
         {
             cript sho = new cript();
             sho.Show();
-            this.Hide();
-            Close();
+          
 
             
         }

@@ -61,7 +61,7 @@ namespace RestauranteADM
                 Login login = new Login();
                 login.Show();
 
-                    this.Close();
+                Close();
 
             }
             else
@@ -90,7 +90,7 @@ namespace RestauranteADM
             Login login = new Login();
             login.Show();
 
-            this.Hide();
+            Close();
         }
     }
 }

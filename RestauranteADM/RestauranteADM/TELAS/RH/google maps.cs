@@ -18,6 +18,13 @@ namespace RestauranteADM.TELAS
             InitializeComponent();
         }
 
+        public void loadscren(string cpf)
+        {
+            textBox2.Text = cpf;
+        }
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -83,9 +90,20 @@ namespace RestauranteADM.TELAS
             webBrowser1.Navigate(new Uri(url.ToString()));
         }
 
-      
-    
+        private void splitContainer2_Panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void google_maps_Load_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
 

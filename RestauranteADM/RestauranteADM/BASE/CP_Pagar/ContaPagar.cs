@@ -106,7 +106,8 @@ namespace RestauranteADM.BASE.CP_Pagar
         {
             ProvedorDTO dto = cboforn.SelectedItem as ProvedorDTO;
             mtbcnpj.Text = dto.Cnpj;
-        }
+            
+    }
 
         private void rdb1_CheckedChanged(object sender, EventArgs e)
         {

@@ -61,10 +61,10 @@
       <DependentUpon>ContaPagar.cs</DependentUpon>
     </Compile>
     <Compile Include="BASE\Fornecedor\ProvedorDTO.cs" />
-    <Compile Include="TELAS\google maps.cs">
+    <Compile Include="TELAS\RH\google maps.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TELAS\google maps.Designer.cs">
+    <Compile Include="TELAS\RH\google maps.Designer.cs">
       <DependentUpon>google maps.cs</DependentUpon>
     </Compile>
     <Compile Include="TELAS\RH\bater_ponto.cs">
@@ -420,7 +420,7 @@
     <EmbeddedResource Include="BASE\CP_Pagar\ContaPagar.resx">
       <DependentUpon>ContaPagar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TELAS\google maps.resx">
+    <EmbeddedResource Include="TELAS\RH\google maps.resx">
       <DependentUpon>google maps.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\RH\bater_ponto.resx">
@@ -728,6 +728,7 @@
     <Content Include="DB\script.txt" />
     <Content Include="DB\ScriptEstranho.txt" />
     <None Include="Resources\lupa.png" />
+    <None Include="Resources\ok.png" />
     <Content Include="Script Usuario Antigo.txt" />
     <None Include="Resources\cx.png" />
   </ItemGroup>

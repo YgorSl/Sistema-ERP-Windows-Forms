@@ -124,5 +124,10 @@ namespace RestauranteADM.BASE.CP_Pagar
 
 
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

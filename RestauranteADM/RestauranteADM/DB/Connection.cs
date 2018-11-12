@@ -11,7 +11,7 @@ namespace RestauranteADM.DB
     {
         public MySqlConnection Create()
         {
-            string connectionString = "server=localhost;database=mydb;uid=root;password=1234;sslmode=none";
+            string connectionString = "server=192.168.0.100;database=mydb;uid=nsf;password=nsf@2018;sslmode=none";
 
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();

@@ -33,6 +33,7 @@ namespace RestauranteADM.TELAS._1._0._1
             InitializeComponent();
             VerificarPermissoes();
             
+            
         }
 
        
@@ -268,7 +269,10 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button5_Click(object sender, EventArgs e)
         {
+      
+            lblhora.Visible = false;
             AbrirForminPanel(new Fluxo_de_Caixa());
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -323,8 +327,12 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button1_Click_2(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             SubMenuCadastro.Visible = false;
+
             AbrirForminPanel(new Cadastrar_cliente());
+           
+
         }
 
         private void SubMenuCadastro_Paint(object sender, PaintEventArgs e)
@@ -334,24 +342,32 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button2_Click_2(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             SubMenuCadastro.Visible = false;
+
+
             AbrirForminPanel(new Cadastro_de_fornecedor());
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+
+            lblhora.Visible = false;
             AbrirForminPanel(new Cadastro_usuário_do_sistema());
             SubMenuCadastro.Visible = false;
         }
 
         private void button3_Click_2(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new Cadastro_de_estoque());
             SubMenuCadastro.Visible = false;
         }
 
         private void button5_Click_1(object sender, EventArgs e)
         {
+
+            lblhora.Visible = false;
             AbrirForminPanel(new Cadastro___de_Cardapio());
             SubMenuCadastro.Visible = false;
         }
@@ -363,7 +379,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button14_Click(object sender, EventArgs e)
         {
-
+            lblhora.Visible = false;
             AbrirForminPanel(new Estoque_L());
             SubMenuEstoque.Visible = false;
         }
@@ -424,54 +440,63 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button10_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new Consultar_cliente());
             SubMenuConsultar.Visible = false;
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new Consultar_Fornecedor());
             SubMenuConsultar.Visible = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new Consulta_produto());
             SubMenuConsultar.Visible = false;
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new Consultar_Cardapio());
             SubMenuConsultar.Visible = false;
         }
 
         private void button6_Click_1(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new crud_funcionario());
             SubMenuConsultar.Visible = false;
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new ConsultarPedido());
             SubMenuConsultar.Visible = false;
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new ConsultarVendas());
             SubMenuConsultar.Visible = false;
         }
 
         private void button19_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new Folha_de_Pagamento());
             SubMenuRH.Visible = false;
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new bater_ponto());
             SubMenuRH.Visible = false;
 
@@ -488,7 +513,7 @@ namespace RestauranteADM.TELAS._1._0._1
         
         private void button13_Click(object sender, EventArgs e)
         {
-
+            lblhora.Visible = false;
             AbrirForminPanel(new ReceberEstoque());
             SubMenuEstoque.Visible = false;
         }
@@ -505,19 +530,21 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new ContaPagar());
             SubMenuCadastro.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new consultar_conta());
             SubMenuCadastro.Visible = false;
         }
 
         private void button3_Click_3(object sender, EventArgs e)
         {
-
+            lblhora.Visible = false;
             AbrirForminPanel(new Cadastro_de_Prestador());
             SubMenuCadastro.Visible = false;
 
@@ -526,6 +553,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button4_Click_2(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new ConsultarProvedor());
             SubMenuCadastro.Visible = false;
 
@@ -534,6 +562,7 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button5_Click_2(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new Consultar_Folha_de_Pagamento());
             SubMenuCadastro.Visible = false;
 
@@ -544,8 +573,31 @@ namespace RestauranteADM.TELAS._1._0._1
 
         private void button13_Click_2(object sender, EventArgs e)
         {
+            lblhora.Visible = false;
             AbrirForminPanel(new ReceberEstoque());
             SubMenuCadastro.Visible = false;
+        }
+
+        private void tmr_Tick(object sender, EventArgs e)
+        {
+
+            lblhora.Text = DateTime.Now.ToString("hh:mm:ss");
+            
+        }
+
+        private void lblhora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel10_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblhora_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

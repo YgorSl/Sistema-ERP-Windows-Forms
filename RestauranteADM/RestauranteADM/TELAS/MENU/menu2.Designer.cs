@@ -32,6 +32,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.SubMenuCadastro = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -74,7 +78,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnmenucad = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblhora = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.MenuVertical.SuspendLayout();
             this.SubMenuCadastro.SuspendLayout();
@@ -128,6 +132,10 @@
             // 
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(40)))), ((int)(((byte)(65)))));
             this.MenuVertical.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MenuVertical.Controls.Add(this.label2);
+            this.MenuVertical.Controls.Add(this.label1);
+            this.MenuVertical.Controls.Add(this.panel10);
+            this.MenuVertical.Controls.Add(this.panel11);
             this.MenuVertical.Controls.Add(this.SubMenuCadastro);
             this.MenuVertical.Controls.Add(this.SubMenuEstoque);
             this.MenuVertical.Controls.Add(this.SubMenuConsultar);
@@ -154,6 +162,49 @@
             this.MenuVertical.Size = new System.Drawing.Size(200, 683);
             this.MenuVertical.TabIndex = 66;
             this.MenuVertical.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuVertical_Paint_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label2.Location = new System.Drawing.Point(127, 599);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 16);
+            this.label2.TabIndex = 82;
+            this.label2.Text = "Chat";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.SeaGreen;
+            this.label1.Location = new System.Drawing.Point(12, 599);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 16);
+            this.label1.TabIndex = 66;
+            this.label1.Text = "Notificações";
+            // 
+            // panel10
+            // 
+            this.panel10.BackgroundImage = global::RestauranteADM.Properties.Resources._2;
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel10.Location = new System.Drawing.Point(16, 618);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(65, 49);
+            this.panel10.TabIndex = 80;
+            this.panel10.UseWaitCursor = true;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint_1);
+            // 
+            // panel11
+            // 
+            this.panel11.BackgroundImage = global::RestauranteADM.Properties.Resources.Menu;
+            this.panel11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel11.Location = new System.Drawing.Point(111, 618);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(71, 49);
+            this.panel11.TabIndex = 81;
+            this.panel11.UseWaitCursor = true;
             // 
             // SubMenuCadastro
             // 
@@ -788,7 +839,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lblhora);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(200, 34);
             this.panel2.Name = "panel2";
@@ -796,16 +847,17 @@
             this.panel2.TabIndex = 74;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
+            // lblhora
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightYellow;
-            this.label1.Location = new System.Drawing.Point(305, 269);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 42);
-            this.label1.TabIndex = 64;
-            this.label1.Text = "Bem-Vindo!";
+            this.lblhora.AutoSize = true;
+            this.lblhora.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhora.ForeColor = System.Drawing.Color.White;
+            this.lblhora.Location = new System.Drawing.Point(268, 212);
+            this.lblhora.Name = "lblhora";
+            this.lblhora.Size = new System.Drawing.Size(284, 73);
+            this.lblhora.TabIndex = 1;
+            this.lblhora.Text = "00:00:00";
+            this.lblhora.Click += new System.EventHandler(this.lblhora_Click_1);
             // 
             // menu2
             // 
@@ -876,12 +928,16 @@
         private System.Windows.Forms.Panel SubMenuEstoque;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btnEstoque;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblhora;
     }
 }

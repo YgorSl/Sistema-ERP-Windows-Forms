@@ -729,6 +729,8 @@
     <Content Include="DB\ScriptEstranho.txt" />
     <None Include="Resources\lupa.png" />
     <None Include="Resources\ok.png" />
+    <None Include="Resources\chat.png" />
+    <None Include="Resources\Menu.png" />
     <Content Include="Script Usuario Antigo.txt" />
     <None Include="Resources\cx.png" />
   </ItemGroup>

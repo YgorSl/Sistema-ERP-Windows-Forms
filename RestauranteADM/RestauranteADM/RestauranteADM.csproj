@@ -51,6 +51,9 @@
   <ItemGroup>
     <Compile Include="Acesso\acesso.cs" />
     <Compile Include="BASE\BaterPonto\BaterpontoConfirmaçao.cs" />
+    <Compile Include="BASE\Chat\ChatBunisess.cs" />
+    <Compile Include="BASE\Chat\ChatDatabase.cs" />
+    <Compile Include="BASE\Chat\ChatDTO.cs" />
     <Compile Include="BASE\CP_Pagar\CP_Business.cs" />
     <Compile Include="BASE\CP_Pagar\CP_Database.cs" />
     <Compile Include="BASE\CP_Pagar\CP_DTO.cs" />
@@ -61,6 +64,24 @@
       <DependentUpon>ContaPagar.cs</DependentUpon>
     </Compile>
     <Compile Include="BASE\Fornecedor\ProvedorDTO.cs" />
+    <Compile Include="TELAS\baterpapo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\baterpapo.Designer.cs">
+      <DependentUpon>baterpapo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\chateviar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\chateviar.Designer.cs">
+      <DependentUpon>chateviar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TELAS\chatmensagem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TELAS\chatmensagem.Designer.cs">
+      <DependentUpon>chatmensagem.cs</DependentUpon>
+    </Compile>
     <Compile Include="TELAS\RH\google maps.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,6 +440,15 @@
     <Compile Include="Validacao.cs" />
     <EmbeddedResource Include="BASE\CP_Pagar\ContaPagar.resx">
       <DependentUpon>ContaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\baterpapo.resx">
+      <DependentUpon>baterpapo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\chateviar.resx">
+      <DependentUpon>chateviar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TELAS\chatmensagem.resx">
+      <DependentUpon>chatmensagem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\RH\google maps.resx">
       <DependentUpon>google maps.cs</DependentUpon>

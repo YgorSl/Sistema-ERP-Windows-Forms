@@ -25,10 +25,17 @@ namespace RestauranteADM
 
         public void ConfirmaçaoPonto(DateTime entrada, DateTime almoçoida, DateTime almoçovolta, DateTime saida)
         {
+            if (entrada.Hour > 00 && entrada.Minute > 00 && entrada.Second > 00)
+            {
+                btnebtrada.Visible = false;
+                btnsaida.Visible = true;
+                btnalmoçosaida.Visible = true;
 
-
-
-
+            }
+            else
+            {
+                btnebtrada.Visible = true;
+            }
         }
 
 
@@ -60,24 +67,22 @@ namespace RestauranteADM
 
 
             int id = acesso.funcionariologado.Id;
-            DateTime agora = DateTime.Now;
-            BaterPontoDatabase ponto = new BaterPontoDatabase();
-            BaterpontoConfirmaçao Confirmaçao = ponto.listar(id, agora);
-            acesso.BaterPontoConfirmaçao = Confirmaçao;
-
+            DateTime dataagora = DateTime.Now;
+            ///////metodo para listar e carregar minha variaveis com os valores do banco ,resultador da pesquisa/////////////
+            BaterPontoDatabase business = new BaterPontoDatabase();
+            BaterpontoConfirmaçao carregamentoponto = business.listar(id, dataagora);
+            acesso.BaterPontoConfirmaçao = carregamentoponto;
+////////////////////////////caregamento das informaçoes do banco//////////////////////////////////////////////////////////////
             DateTime entrada = acesso.BaterPontoConfirmaçao.Entrada;
             DateTime almoçoida = acesso.BaterPontoConfirmaçao.IdaAlmoço;
             DateTime almoçovolta = acesso.BaterPontoConfirmaçao.VoltaAlmoço;
             DateTime saida = acesso.BaterPontoConfirmaçao.Saida;
+            //////////////////////////////////////////////////////////////////////////////
+
+            ConfirmaçaoPonto(entrada, almoçoida, almoçovolta, saida);
 
 
-
-  
-
-
-
-
-
+            ////click para ter um grande penis azul //////
         }
 
         private void btnebtrada_Click(object sender, EventArgs e)

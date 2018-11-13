@@ -168,22 +168,24 @@ namespace RestauranteADM.BASE.BaterPonto
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-            BaterpontoConfirmaçao lista = new BaterpontoConfirmaçao();
-            while (reader.Read())
+            BaterpontoConfirmaçao dt = null;
+
+          
+            if (reader.Read())
             {
-                BaterpontoConfirmaçao dto = new BaterpontoConfirmaçao();
-                dto.Id = reader.GetInt32("id_cardapio");
-                dto.Data = reader.GetDateTime("dt_data");
-                dto.Entrada = reader.GetDateTime("hr_entrada");
-                dto.IdaAlmoço = reader.GetDateTime("hr_almoço_ida");
-                dto.VoltaAlmoço = reader.GetDateTime("hr_almoço_volta");
-                dto.Saida = reader.GetDateTime("hr_saida");
+                 dt = new BaterpontoConfirmaçao();
+                dt.Id = reader.GetInt32("id_cardapio");
+                dt.Data = reader.GetDateTime("dt_data");
+                dt.Entrada = reader.GetDateTime("hr_entrada");
+                dt.IdaAlmoço = reader.GetDateTime("hr_almoço_ida");
+                dt.VoltaAlmoço = reader.GetDateTime("hr_almoço_volta");
+                dt.Saida = reader.GetDateTime("hr_saida");
 
            
             }
             reader.Close();
 
-            return lista;
+            return dt;
 
         }
 

@@ -88,7 +88,7 @@ namespace RestauranteADM
 
             foreach (DataGridViewRow row in dgvbibli.Rows)
             {
-                TesteDTO dto = row.DataBoundItem as TesteDTO;
+                LivroDTO dto = row.DataBoundItem as LivroDTO;
                 int id = dto.Id;
                  
                 TesteDatabase database = new TesteDatabase();

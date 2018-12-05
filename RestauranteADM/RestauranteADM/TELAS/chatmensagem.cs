@@ -16,12 +16,7 @@ namespace RestauranteADM.TELAS
         {
             InitializeComponent();
         }
-        public void LoadScreen(string aluno, string turma, string msg, DateTime inclusao)
-        {
-            lblMensagem.Text = msg;
-            lblUsuario.Text = "@" + aluno + " - " + turma;
-            lblHorario.Text = inclusao.ToShortTimeString();
-        }
+       
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 

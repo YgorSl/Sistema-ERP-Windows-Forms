@@ -64,6 +64,21 @@
       <DependentUpon>ContaPagar.cs</DependentUpon>
     </Compile>
     <Compile Include="BASE\Fornecedor\ProvedorDTO.cs" />
+    <Compile Include="BASE\teste\Livrobusiness.cs" />
+    <Compile Include="BASE\teste\LivroDatabase.cs" />
+    <Compile Include="BASE\teste\LivroDTO.cs" />
+    <Compile Include="BASE\teste\LivroTela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE\teste\LivroTela.Designer.cs">
+      <DependentUpon>LivroTela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BASE\teste\TesteBusiness.cs" />
+    <Compile Include="BASE\teste\TesteDatabase.cs" />
+    <Compile Include="BASE\teste\TesteDTO.cs" />
+    <Compile Include="BASE\teste\Teste_item_Business.cs" />
+    <Compile Include="BASE\teste\Teste_item_Database.cs" />
+    <Compile Include="BASE\teste\Teste_item_DTO.cs" />
     <Compile Include="TELAS\baterpapo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -437,9 +452,18 @@
     <Compile Include="telavendas.Designer.cs">
       <DependentUpon>telavendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="BASE\teste\testes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BASE\teste\testes.Designer.cs">
+      <DependentUpon>testes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validacao.cs" />
     <EmbeddedResource Include="BASE\CP_Pagar\ContaPagar.resx">
       <DependentUpon>ContaPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE\teste\LivroTela.resx">
+      <DependentUpon>LivroTela.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TELAS\baterpapo.resx">
       <DependentUpon>baterpapo.cs</DependentUpon>
@@ -597,6 +621,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="telavendas.resx">
       <DependentUpon>telavendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BASE\teste\testes.resx">
+      <DependentUpon>testes.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Connected Services\WSCorreios\AtendeClienteService.wsdl" />
     <None Include="Connected Services\WSCorreios\RestauranteADM.WSCorreios.atualizaPagamentoNaEntregaResponse.datasource">

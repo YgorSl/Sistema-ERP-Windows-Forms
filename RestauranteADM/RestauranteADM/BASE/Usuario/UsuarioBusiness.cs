@@ -63,7 +63,7 @@ namespace RestauranteADM.BASE.Usuario
                 }
                 if (senha == string.Empty)
                 {
-                    throw new ArgumentException("Senha é obrigatória");
+                    throw new ArgumentException("Senha é obrigatóriac");
 
                 }
 
